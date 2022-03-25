@@ -239,7 +239,7 @@ public class KtNamedFunction extends KtTypeParameterListOwnerStub<KotlinFunction
     @Override
     public boolean isLocal() {
         PsiElement parent = getParent();
-        return !(parent instanceof KtFile || parent instanceof KtClassBody);
+        return !(parent instanceof KtFile || parent instanceof KtClassBody || parent instanceof KtStaticBlock);
     }
 
     public boolean isTopLevel() {

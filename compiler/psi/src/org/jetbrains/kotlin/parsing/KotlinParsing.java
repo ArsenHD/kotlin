@@ -1267,6 +1267,12 @@ public class KotlinParsing extends AbstractKotlinParsing {
             }
             declType = CLASS_INITIALIZER;
         }
+        else if (modifierDetector.staticDetected && at(LBRACE)) {
+            advance(); // LBRACE
+            parseMembers(); // parse declarations in static block
+            expect(RBRACE, "Missing '}'");
+            declType = STATIC_BLOCK;
+        }
         else if (at(CONSTRUCTOR_KEYWORD)) {
             parseSecondaryConstructor();
             declType = SECONDARY_CONSTRUCTOR;
@@ -2618,6 +2624,7 @@ public class KotlinParsing extends AbstractKotlinParsing {
     /*package*/ static class ModifierDetector implements Consumer<IElementType> {
         private boolean enumDetected = false;
         private boolean companionDetected = false;
+        private boolean staticDetected = false;
 
         @Override
         public void consume(IElementType item) {
@@ -2627,6 +2634,9 @@ public class KotlinParsing extends AbstractKotlinParsing {
             else if (item == KtTokens.COMPANION_KEYWORD) {
                 companionDetected = true;
             }
+            else if (item == KtTokens.STATIC_KEYWORD) {
+                staticDetected = true;
+            }
         }
 
         public boolean isEnumDetected() {
@@ -2635,6 +2645,10 @@ public class KotlinParsing extends AbstractKotlinParsing {
 
         public boolean isCompanionDetected() {
             return companionDetected;
+        }
+
+        public boolean isStaticDetected() {
+            return staticDetected;
         }
     }
 
