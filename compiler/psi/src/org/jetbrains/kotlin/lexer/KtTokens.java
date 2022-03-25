@@ -323,7 +323,7 @@ public interface KtTokens {
     KtKeywordToken DYNAMIC_KEYWORD   = KtKeywordToken.softKeyword("dynamic", DYNAMIC_KEYWORD_Id);
     KtModifierKeywordToken COMPANION_KEYWORD = KtModifierKeywordToken.softKeywordModifier("companion", COMPANION_KEYWORD_Id);
     KtModifierKeywordToken SEALED_KEYWORD    = KtModifierKeywordToken.softKeywordModifier("sealed", SEALED_KEYWORD_Id);
-    KtModifierKeywordToken STATIC_KEYWORD      = KtModifierKeywordToken.softKeywordModifier("static", STATIC_KEYWORD_Id);
+    KtModifierKeywordToken STATIC_KEYWORD    = KtModifierKeywordToken.softKeywordModifier("static", STATIC_KEYWORD_Id);
 
 
     KtModifierKeywordToken DEFAULT_VISIBILITY_KEYWORD = PUBLIC_KEYWORD;

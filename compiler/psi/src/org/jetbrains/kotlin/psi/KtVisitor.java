@@ -98,6 +98,10 @@ public class KtVisitor<R, D> extends PsiElementVisitor {
         return visitKtElement(classBody, data);
     }
 
+    public R visitStaticBlock(@NotNull KtStaticBlock staticBlock, D data) {
+        return visitKtElement(staticBlock, data);
+    }
+
     public R visitModifierList(@NotNull KtModifierList list, D data) {
         return visitKtElement(list, data);
     }

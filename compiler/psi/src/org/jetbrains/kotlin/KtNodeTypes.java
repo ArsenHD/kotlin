@@ -54,6 +54,7 @@ public interface KtNodeTypes {
     IElementType VALUE_PARAMETER                    = KtStubElementTypes.VALUE_PARAMETER;
 
     IElementType CLASS_BODY                         = KtStubElementTypes.CLASS_BODY;
+    IElementType STATIC_BLOCK                       = KtStubElementTypes.STATIC_BLOCK;
     IElementType IMPORT_LIST                        = KtStubElementTypes.IMPORT_LIST;
     IElementType FILE_ANNOTATION_LIST               = KtStubElementTypes.FILE_ANNOTATION_LIST;
     IElementType IMPORT_DIRECTIVE                   = KtStubElementTypes.IMPORT_DIRECTIVE;
