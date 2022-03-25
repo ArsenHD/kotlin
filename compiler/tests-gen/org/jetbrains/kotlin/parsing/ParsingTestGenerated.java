@@ -2881,6 +2881,44 @@ public class ParsingTestGenerated extends AbstractParsingTest {
             }
         }
 
+        @TestMetadata("compiler/testData/psi/statics")
+        @TestDataPath("$PROJECT_ROOT")
+        @RunWith(JUnit3RunnerWithInners.class)
+        public static class Statics extends AbstractParsingTest {
+            private void runTest(String testDataFilePath) throws Exception {
+                KotlinTestUtils.runTest(this::doParsingTest, this, testDataFilePath);
+            }
+
+            public void testAllFilesPresentInStatics() throws Exception {
+                KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/psi/statics"), Pattern.compile("^(.*)\\.kts?$"), null, true);
+            }
+
+            @TestMetadata("ClassInsideOfStaticBlock.kt")
+            public void testClassInsideOfStaticBlock() throws Exception {
+                runTest("compiler/testData/psi/statics/ClassInsideOfStaticBlock.kt");
+            }
+
+            @TestMetadata("ObjectInsideOfStaticBlock.kt")
+            public void testObjectInsideOfStaticBlock() throws Exception {
+                runTest("compiler/testData/psi/statics/ObjectInsideOfStaticBlock.kt");
+            }
+
+            @TestMetadata("SimpleStaticBlock.kt")
+            public void testSimpleStaticBlock() throws Exception {
+                runTest("compiler/testData/psi/statics/SimpleStaticBlock.kt");
+            }
+
+            @TestMetadata("StaticObject.kt")
+            public void testStaticObject() throws Exception {
+                runTest("compiler/testData/psi/statics/StaticObject.kt");
+            }
+
+            @TestMetadata("StaticObjectInsideOfStaticBlock.kt")
+            public void testStaticObjectInsideOfStaticBlock() throws Exception {
+                runTest("compiler/testData/psi/statics/StaticObjectInsideOfStaticBlock.kt");
+            }
+        }
+
         @TestMetadata("compiler/testData/psi/stringTemplates")
         @TestDataPath("$PROJECT_ROOT")
         @RunWith(JUnit3RunnerWithInners.class)
