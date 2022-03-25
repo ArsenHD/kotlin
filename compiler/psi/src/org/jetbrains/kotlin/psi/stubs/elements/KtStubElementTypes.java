@@ -61,6 +61,9 @@ public interface KtStubElementTypes {
     KtPlaceHolderStubElementType<KtClassBody> CLASS_BODY =
             new KtPlaceHolderStubElementType<>("CLASS_BODY", KtClassBody.class);
 
+    KtPlaceHolderStubElementType<KtStaticBlock> STATIC_BLOCK =
+            new KtPlaceHolderStubElementType<>("STATIC_BLOCK", KtStaticBlock.class);
+
     KtPlaceHolderStubElementType<KtImportList> IMPORT_LIST =
             new KtPlaceHolderStubElementType<>("IMPORT_LIST", KtImportList.class);
 
