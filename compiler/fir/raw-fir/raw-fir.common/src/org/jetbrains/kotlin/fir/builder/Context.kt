@@ -46,8 +46,9 @@ class Context<T> {
     val arraySetArgument = mutableMapOf<T, FirExpression>()
 
     var forcedElementSourceKind: KtSourceElementKind? = null
-    val dispatchReceiverTypesStack = mutableListOf<ConeClassLikeType>()
+    var dispatchReceiverTypesStack = mutableListOf<ConeClassLikeType>()
     var containerIsExpect: Boolean = false
+    var containerIsStatic: Boolean = false
 
     fun pushFirTypeParameters(isInnerOrLocal: Boolean, parameters: List<FirTypeParameterRef>) {
         capturedTypeParameters.add(StatusFirTypeParameterSymbolList(isInnerOrLocal, parameters.map { it.symbol }))

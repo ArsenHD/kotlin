@@ -32,6 +32,7 @@ import org.jetbrains.kotlin.fir.types.ConeClassLikeType
 import org.jetbrains.kotlin.fir.types.FirImplicitTypeRef
 import org.jetbrains.kotlin.fir.types.builder.buildErrorTypeRef
 import org.jetbrains.kotlin.name.CallableId
+import org.jetbrains.kotlin.utils.addToStdlib.runUnless
 
 class ValueParameter(
     private val isVal: Boolean,
@@ -75,7 +76,7 @@ class ValueParameter(
             }
             isVar = this@ValueParameter.isVar
             symbol = FirPropertySymbol(callableId)
-            dispatchReceiverType = currentDispatchReceiver
+            dispatchReceiverType = runUnless(context.containerIsStatic) { currentDispatchReceiver }
             isLocal = false
             status = FirDeclarationStatusImpl(modifiers.getVisibility(), modifiers.getModality(isClassOrObject = false)).apply {
                 this.isExpect = isExpect

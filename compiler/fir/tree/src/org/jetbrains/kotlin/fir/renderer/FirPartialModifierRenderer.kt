@@ -17,7 +17,9 @@ class FirPartialModifierRenderer : FirModifierRenderer() {
         if (memberDeclaration.isActual) {
             renderModifier("actual ")
         }
-        if (memberDeclaration.isStatic) {
+        // no need to print 'static' for static objects here,
+        // for them 'static' will be printed when their class kind is rendered
+        if (memberDeclaration.isStatic && !memberDeclaration.isStaticObject) {
             renderModifier("static ")
         }
         if (memberDeclaration.isInner) {

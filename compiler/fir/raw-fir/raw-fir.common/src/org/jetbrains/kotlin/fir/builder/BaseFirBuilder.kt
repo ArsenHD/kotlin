@@ -26,6 +26,7 @@ import org.jetbrains.kotlin.fir.expressions.builder.*
 import org.jetbrains.kotlin.fir.references.FirReference
 import org.jetbrains.kotlin.fir.references.builder.*
 import org.jetbrains.kotlin.fir.references.impl.FirSimpleNamedReference
+import org.jetbrains.kotlin.fir.scopes.FirScopeProvider
 import org.jetbrains.kotlin.fir.symbols.impl.*
 import org.jetbrains.kotlin.fir.types.ConeClassLikeType
 import org.jetbrains.kotlin.fir.types.FirErrorTypeRef
@@ -36,11 +37,10 @@ import org.jetbrains.kotlin.fir.types.builder.buildResolvedTypeRef
 import org.jetbrains.kotlin.fir.types.impl.ConeClassLikeTypeImpl
 import org.jetbrains.kotlin.fir.types.impl.ConeTypeParameterTypeImpl
 import org.jetbrains.kotlin.lexer.KtTokens.*
-import org.jetbrains.kotlin.name.CallableId
-import org.jetbrains.kotlin.name.FqName
-import org.jetbrains.kotlin.name.Name
-import org.jetbrains.kotlin.name.SpecialNames
+import org.jetbrains.kotlin.name.*
 import org.jetbrains.kotlin.parsing.*
+import org.jetbrains.kotlin.psi.KtClassOrObject
+import org.jetbrains.kotlin.psi.KtDeclaration
 import org.jetbrains.kotlin.psi.KtPsiUtil
 import org.jetbrains.kotlin.types.ConstantValueKind
 import org.jetbrains.kotlin.util.OperatorNameConventions
@@ -75,13 +75,16 @@ abstract class BaseFirBuilder<T>(val baseSession: FirSession, val context: Conte
         name: Name,
         isExpect: Boolean,
         forceLocalContext: Boolean = false,
+        isStatic: Boolean = false,
         l: () -> T
     ): T {
         context.className = context.className.child(name)
         val oldForcedLocalContext = context.forcedLocalContext
         context.forcedLocalContext = forceLocalContext || context.forcedLocalContext
         val previousIsExpect = context.containerIsExpect
+        val previousIsStatic = context.containerIsStatic
         context.containerIsExpect = previousIsExpect || isExpect
+        context.containerIsStatic = isStatic
         val dispatchReceiversNumber = context.dispatchReceiverTypesStack.size
         return try {
             l()
@@ -97,6 +100,20 @@ abstract class BaseFirBuilder<T>(val baseSession: FirSession, val context: Conte
             context.className = context.className.parent()
             context.forcedLocalContext = oldForcedLocalContext
             context.containerIsExpect = previousIsExpect
+            context.containerIsStatic = previousIsStatic
+        }
+    }
+
+    /**
+     * This method wraps processing of static blocks
+     */
+    inline fun <T> withStaticScope(l: () -> T): T {
+        val previousIsStatic = context.containerIsStatic
+        context.containerIsStatic = true
+        return try {
+            l()
+        } finally {
+            context.containerIsStatic = previousIsStatic
         }
     }
 
@@ -1190,6 +1207,37 @@ abstract class BaseFirBuilder<T>(val baseSession: FirSession, val context: Conte
     protected fun FirCallableDeclaration.initContainingClassAttr() {
         initContainingClassAttr(context)
     }
+
+    protected fun initSelfStaticObject(scopeProvider: FirScopeProvider): FirRegularClassBuilder {
+        return FirRegularClassBuilder().apply {
+            moduleData = baseModuleData
+            origin = FirDeclarationOrigin.Source
+            this.name = SpecialNames.SELF_STATIC_OBJECT
+            status = FirDeclarationStatusImpl(
+                Visibilities.Public,
+                Modality.FINAL,
+            ).apply {
+                isStatic = true
+            }
+            classKind = ClassKind.STATIC_OBJECT
+            this.scopeProvider = scopeProvider
+            symbol = FirRegularClassSymbol(context.currentClassId.selfStaticObjectId)
+        }
+    }
+
+    private val ClassId.selfStaticObjectId: ClassId
+        get() = createNestedClassId(SpecialNames.SELF_STATIC_OBJECT)
+
+    protected val KtDeclaration.modality: Modality?
+        get() = with(modifierList) {
+            when {
+                this == null -> null
+                hasModifier(FINAL_KEYWORD) -> Modality.FINAL
+                hasModifier(SEALED_KEYWORD) -> if (this@modality is KtClassOrObject) Modality.SEALED else null
+                hasModifier(ABSTRACT_KEYWORD) -> Modality.ABSTRACT
+                else -> if (hasModifier(OPEN_KEYWORD)) Modality.OPEN else null
+            }
+        }
 
     protected inline fun <R> withDefaultSourceElementKind(newDefault: KtSourceElementKind, action: () -> R): R {
         val currentForced = context.forcedElementSourceKind

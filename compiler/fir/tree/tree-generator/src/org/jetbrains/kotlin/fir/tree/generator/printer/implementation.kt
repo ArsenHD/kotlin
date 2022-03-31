@@ -107,7 +107,9 @@ fun SmartPrinter.printImplementation(implementation: Implementation) {
 
 
             element.allFields.filter {
-                it.withBindThis && it.type.contains("Symbol") && it !is FieldList && it.name != "companionObjectSymbol"
+                it.withBindThis && it.type.contains("Symbol") && it !is FieldList &&
+                        it.name != "companionObjectSymbol" &&
+                        it.name != "selfStaticObjectSymbol"
             }.takeIf {
                 it.isNotEmpty() && !isInterface && !isAbstract &&
                         !element.type.contains("Reference")

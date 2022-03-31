@@ -49,6 +49,7 @@ internal class FirRegularClassImpl(
     override val name: Name,
     override val symbol: FirRegularClassSymbol,
     override var companionObjectSymbol: FirRegularClassSymbol?,
+    override var selfStaticObjectSymbol: FirRegularClassSymbol?,
     override val superTypeRefs: MutableList<FirTypeRef>,
     override val contextReceivers: MutableList<FirContextReceiver>,
 ) : FirRegularClass() {
@@ -119,6 +120,10 @@ internal class FirRegularClassImpl(
 
     override fun replaceCompanionObjectSymbol(newCompanionObjectSymbol: FirRegularClassSymbol?) {
         companionObjectSymbol = newCompanionObjectSymbol
+    }
+
+    override fun replaceSelfStaticObjectSymbol(newSelfStaticObjectSymbol: FirRegularClassSymbol?) {
+        selfStaticObjectSymbol = newSelfStaticObjectSymbol
     }
 
     override fun replaceSuperTypeRefs(newSuperTypeRefs: List<FirTypeRef>) {

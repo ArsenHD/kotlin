@@ -47,6 +47,7 @@ import org.jetbrains.kotlin.types.expressions.OperatorConventions
 import org.jetbrains.kotlin.util.OperatorNameConventions
 import org.jetbrains.kotlin.utils.addToStdlib.firstIsInstanceOrNull
 import org.jetbrains.kotlin.utils.addToStdlib.runIf
+import org.jetbrains.kotlin.utils.addToStdlib.runUnless
 
 open class RawFirBuilder(
     session: FirSession,
@@ -144,17 +145,6 @@ open class RawFirBuilder(
                 hasModifier(PUBLIC_KEYWORD) -> Visibilities.Public
                 hasModifier(PROTECTED_KEYWORD) -> Visibilities.Protected
                 else -> if (hasModifier(INTERNAL_KEYWORD)) Visibilities.Internal else Visibilities.Unknown
-            }
-        }
-
-    private val KtDeclaration.modality: Modality?
-        get() = with(modifierList) {
-            when {
-                this == null -> null
-                hasModifier(FINAL_KEYWORD) -> Modality.FINAL
-                hasModifier(SEALED_KEYWORD) -> if (this@modality is KtClassOrObject) Modality.SEALED else null
-                hasModifier(ABSTRACT_KEYWORD) -> Modality.ABSTRACT
-                else -> if (hasModifier(OPEN_KEYWORD)) Modality.OPEN else null
             }
         }
 
@@ -392,6 +382,7 @@ open class RawFirBuilder(
                             this@toFirPropertyAccessor?.hasModifier(INLINE_KEYWORD) == true
                     isExternal = property.hasModifier(EXTERNAL_KEYWORD) ||
                             this@toFirPropertyAccessor?.hasModifier(EXTERNAL_KEYWORD) == true
+                    isStatic = this@RawFirBuilder.context.containerIsStatic
                 }
             val propertyTypeRefToUse = propertyTypeRef.copyWithNewSourceKind(KtFakeSourceElementKind.ImplicitTypeRef)
             return when {
@@ -484,6 +475,7 @@ open class RawFirBuilder(
                 isExternal = property.hasModifier(EXTERNAL_KEYWORD) ||
                         declaration?.hasModifier(EXTERNAL_KEYWORD) == true
                 isLateInit = declaration?.hasModifier(LATEINIT_KEYWORD) == true
+                isStatic = context.containerIsStatic
             }
         }
 
@@ -585,6 +577,7 @@ open class RawFirBuilder(
                 isOverride = hasModifier(OVERRIDE_KEYWORD)
                 isConst = hasModifier(CONST_KEYWORD)
                 isLateInit = false
+                isStatic = this@RawFirBuilder.context.containerIsStatic
             }
             val propertySource = toFirSourceElement(KtFakeSourceElementKind.PropertyFromParameter)
             val propertyName = nameAsSafeName
@@ -650,7 +643,9 @@ open class RawFirBuilder(
                             it.useSiteTarget == PROPERTY_DELEGATE_FIELD
                 }
 
-                dispatchReceiverType = currentDispatchReceiverType()
+                dispatchReceiverType = runUnless(this@RawFirBuilder.context.containerIsStatic) {
+                    currentDispatchReceiverType()
+                }
             }.apply {
                 if (firParameter.isVararg) {
                     isFromVararg = true
@@ -928,6 +923,7 @@ open class RawFirBuilder(
                 isInner = owner.hasModifier(INNER_KEYWORD)
                 isFromSealedClass = owner.hasModifier(SEALED_KEYWORD) && explicitVisibility !== Visibilities.Private
                 isFromEnumClass = owner.hasModifier(ENUM_KEYWORD)
+                isStatic = this@RawFirBuilder.context.containerIsStatic
             }
             return buildPrimaryConstructor {
                 source = constructorSource
@@ -935,7 +931,9 @@ open class RawFirBuilder(
                 origin = FirDeclarationOrigin.Source
                 returnTypeRef = delegatedSelfTypeRef
                 this.status = status
-                dispatchReceiverType = owner.obtainDispatchReceiverForConstructor()
+                dispatchReceiverType = runUnless(this@RawFirBuilder.context.containerIsStatic) {
+                    owner.obtainDispatchReceiverForConstructor()
+                }
                 symbol = FirConstructorSymbol(callableIdForClassConstructor())
                 delegatedConstructor = firDelegatedCall
                 typeParameters += constructorTypeParametersFromConstructedClass(ownerTypeParameters)
@@ -1087,13 +1085,18 @@ open class RawFirBuilder(
             // NB: enum entry nested classes are considered local by FIR design (see discussion in KT-45115)
             val isLocal = classOrObject.isLocal || classOrObject.getStrictParentOfType<KtEnumEntry>() != null
             val classIsExpect = classOrObject.hasExpectModifier() || context.containerIsExpect
+            val objectIsStatic = classOrObject.hasStaticModifier()
             return withChildClassName(
                 classOrObject.nameAsSafeName,
                 isExpect = classIsExpect,
-                forceLocalContext = isLocal
+                forceLocalContext = isLocal,
+                isStatic = objectIsStatic
             ) {
                 val classKind = when (classOrObject) {
-                    is KtObjectDeclaration -> ClassKind.OBJECT
+                    is KtObjectDeclaration -> when {
+                        objectIsStatic -> ClassKind.STATIC_OBJECT
+                        else -> ClassKind.OBJECT
+                    }
                     is KtClass -> when {
                         classOrObject.isInterface() -> ClassKind.INTERFACE
                         classOrObject.isEnum() -> ClassKind.ENUM_CLASS
@@ -1114,10 +1117,12 @@ open class RawFirBuilder(
                     isInline = classOrObject.hasModifier(INLINE_KEYWORD) || classOrObject.hasModifier(VALUE_KEYWORD)
                     isFun = classOrObject.hasModifier(FUN_KEYWORD)
                     isExternal = classOrObject.hasModifier(EXTERNAL_KEYWORD)
+                    isStatic = objectIsStatic
                 }
 
                 withCapturedTypeParameters(status.isInner || isLocal, classOrObject.toFirSourceElement(), listOf()) {
                     var delegatedFieldsMap: Map<Int, FirFieldSymbol>?
+                    val staticObjectBuilder = initSelfStaticObject(baseScopeProvider)
                     buildRegularClass {
                         source = classOrObject.toFirSourceElement()
                         moduleData = baseModuleData
@@ -1163,16 +1168,26 @@ open class RawFirBuilder(
                         }
 
                         for (declaration in classOrObject.declarations) {
-                            addDeclaration(
-                                declaration.toFirDeclaration(
-                                    delegatedSuperType,
-                                    delegatedSelfType,
-                                    classOrObject,
-                                    this,
-                                    typeParameters
-                                ),
-                            )
+                            when (declaration) {
+                                is KtStaticBlock -> processStaticBlock(declaration, staticObjectBuilder)
+                                else -> addDeclaration(
+                                    declaration.toFirDeclaration(
+                                        delegatedSuperType,
+                                        delegatedSelfType,
+                                        classOrObject,
+                                        this,
+                                        typeParameters
+                                    )
+                                )
+                            }
                         }
+
+                        // Once we convert all static blocks, the static object builder
+                        // contains all declarations from them and is ready to build an object,
+                        // which is added into the list of class' declarations.
+                        addDeclaration(staticObjectBuilder.build())
+                        // We are keeping the symbol of the self static object
+                        selfStaticObjectSymbol = staticObjectBuilder.symbol
 
                         if (classOrObject.hasModifier(DATA_KEYWORD) && firPrimaryConstructor != null) {
                             val zippedParameters =
@@ -1316,7 +1331,7 @@ open class RawFirBuilder(
                     name = function.nameAsSafeName
                     labelName = runIf(!name.isSpecial) { name.identifier }
                     symbol = FirNamedFunctionSymbol(callableIdForName(function.nameAsSafeName))
-                    dispatchReceiverType = currentDispatchReceiverType()
+                    dispatchReceiverType = runUnless(context.containerIsStatic) { currentDispatchReceiverType() }
                     status = FirDeclarationStatusImpl(
                         if (function.isLocal) Visibilities.Local else function.visibility,
                         function.modality,
@@ -1330,6 +1345,7 @@ open class RawFirBuilder(
                         isTailRec = function.hasModifier(TAILREC_KEYWORD)
                         isExternal = function.hasModifier(EXTERNAL_KEYWORD)
                         isSuspend = function.hasModifier(SUSPEND_KEYWORD)
+                        isStatic = context.containerIsStatic
                     }
 
                     contextReceivers.addAll(convertContextReceivers(function.contextReceivers))
@@ -1377,6 +1393,9 @@ open class RawFirBuilder(
                 bindFunctionTarget(target, it)
                 if (it is FirSimpleFunction) {
                     function.fillDanglingConstraintsTo(it)
+                }
+                if (context.containerIsStatic) {
+                    it.initContainingClassAttr()
                 }
             }
             return if (firFunction is FirAnonymousFunction) {
@@ -1518,8 +1537,11 @@ open class RawFirBuilder(
                     isInner = owner.hasModifier(INNER_KEYWORD)
                     isFromSealedClass = owner.hasModifier(SEALED_KEYWORD) && explicitVisibility !== Visibilities.Private
                     isFromEnumClass = owner.hasModifier(ENUM_KEYWORD)
+                    isStatic = this@RawFirBuilder.context.containerIsStatic
                 }
-                dispatchReceiverType = owner.obtainDispatchReceiverForConstructor()
+                dispatchReceiverType = runUnless(this@RawFirBuilder.context.containerIsStatic) {
+                    owner.obtainDispatchReceiverForConstructor()
+                }
                 symbol = FirConstructorSymbol(callableIdForClassConstructor())
                 delegatedConstructor = getDelegationCall().convert(
                     delegatedSuperTypeRef,
@@ -1537,6 +1559,15 @@ open class RawFirBuilder(
             }.also {
                 it.containingClassForStaticMemberAttr = currentDispatchReceiverType()!!.lookupTag
                 bindFunctionTarget(target, it)
+            }
+        }
+
+        private fun processStaticBlock(
+            staticBlock: KtStaticBlock,
+            selfStaticObjectBuilder: FirRegularClassBuilder
+        ) = withStaticScope {
+            for (declaration in staticBlock.declarations) {
+                selfStaticObjectBuilder.addDeclaration(declaration.convert())
             }
         }
 
@@ -1646,7 +1677,7 @@ open class RawFirBuilder(
                     isLocal = false
                     receiverTypeRef = receiverTypeReference.convertSafe()
                     symbol = FirPropertySymbol(callableIdForName(propertyName))
-                    dispatchReceiverType = currentDispatchReceiverType()
+                    dispatchReceiverType = runUnless(context.containerIsStatic) { currentDispatchReceiverType() }
                     extractTypeParametersTo(this, symbol)
                     withCapturedTypeParameters(true, propertySource, this.typeParameters) {
                         backingField = this@toFirProperty.fieldDeclaration.toFirBackingField(
@@ -1679,6 +1710,7 @@ open class RawFirBuilder(
                             isConst = hasModifier(CONST_KEYWORD)
                             isLateInit = hasModifier(LATEINIT_KEYWORD)
                             isExternal = hasModifier(EXTERNAL_KEYWORD)
+                            isStatic = this@RawFirBuilder.context.containerIsStatic
                         }
 
                         if (hasDelegate()) {
@@ -1717,6 +1749,9 @@ open class RawFirBuilder(
             }.also {
                 if (!isLocal) {
                     fillDanglingConstraintsTo(it)
+                }
+                if (context.containerIsStatic) {
+                    it.initContainingClassAttr()
                 }
             }
         }
