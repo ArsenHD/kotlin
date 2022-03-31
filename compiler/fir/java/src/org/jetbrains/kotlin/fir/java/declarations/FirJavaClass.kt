@@ -87,7 +87,12 @@ class FirJavaClass @FirImplementationDetail internal constructor(
     override val companionObjectSymbol: FirRegularClassSymbol?
         get() = null
 
+    override val selfStaticObjectSymbol: FirRegularClassSymbol?
+        get() = null
+
     override fun replaceCompanionObjectSymbol(newCompanionObjectSymbol: FirRegularClassSymbol?) {}
+
+    override fun replaceSelfStaticObjectSymbol(newSelfStaticObjectSymbol: FirRegularClassSymbol?) {}
 
     override fun <R, D> acceptChildren(visitor: FirVisitor<R, D>, data: D) {
         declarations.forEach { it.accept(visitor, data) }

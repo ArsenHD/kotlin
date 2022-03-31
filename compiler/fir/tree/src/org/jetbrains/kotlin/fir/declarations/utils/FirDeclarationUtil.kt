@@ -5,6 +5,7 @@
 
 package org.jetbrains.kotlin.fir.declarations.utils
 
+import org.jetbrains.kotlin.descriptors.ClassKind
 import org.jetbrains.kotlin.fir.declarations.*
 import org.jetbrains.kotlin.fir.types.ConeClassLikeType
 import org.jetbrains.kotlin.fir.types.coneTypeSafe
@@ -22,6 +23,9 @@ val FirClass.anonymousInitializers: List<FirAnonymousInitializer>
 
 val FirClass.delegateFields: List<FirField>
     get() = declarations.filterIsInstance<FirField>().filter { it.isSynthetic }
+
+val FirDeclaration.isStaticObject: Boolean
+    get() = (this as? FirRegularClass)?.classKind == ClassKind.STATIC_OBJECT
 
 inline val FirDeclaration.isJava: Boolean
     get() = origin is FirDeclarationOrigin.Java

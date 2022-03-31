@@ -20,6 +20,9 @@ object SpecialNames {
     val NO_NAME_PROVIDED = Name.special("<no name provided>")
 
     @JvmField
+    val SELF_STATIC_OBJECT = Name.special("<SELF_STATIC_OBJECT>")
+
+    @JvmField
     val ROOT_PACKAGE = Name.special("<root package>")
 
     @JvmField

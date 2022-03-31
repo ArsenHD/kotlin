@@ -283,6 +283,7 @@ object NodeConfigurator : AbstractFieldConfigurator<FirTreeBuilder>(FirTreeBuild
             +symbol("FirRegularClassSymbol")
             +booleanField("hasLazyNestedClassifiers")
             +field("companionObjectSymbol", regularClassSymbolType, nullable = true, withReplace = true)
+            +field("selfStaticObjectSymbol", regularClassSymbolType, nullable = true, withReplace = true)
             +superTypeRefs(withReplace = true)
             +fieldList(contextReceiver, useMutableOrEmpty = true)
         }

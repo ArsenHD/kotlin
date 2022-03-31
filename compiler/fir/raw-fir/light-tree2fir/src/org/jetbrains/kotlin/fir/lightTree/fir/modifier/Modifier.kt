@@ -46,6 +46,8 @@ open class Modifier(var modifiers: Long = ModifierFlag.NONE.value) {
 
     fun isFunctionalInterface(): Boolean = hasFlag(ModifierFlag.CLASS_FUN)
 
+    fun hasStatic(): Boolean = hasFlag(ModifierFlag.OBJECT_STATIC)
+
     fun hasOverride(): Boolean = hasFlag(ModifierFlag.MEMBER_OVERRIDE)
 
     fun hasLateinit(): Boolean = hasFlag(ModifierFlag.MEMBER_LATEINIT)

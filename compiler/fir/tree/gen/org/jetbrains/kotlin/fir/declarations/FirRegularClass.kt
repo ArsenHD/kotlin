@@ -40,6 +40,7 @@ abstract class FirRegularClass : FirClass(), FirControlFlowGraphOwner {
     abstract override val symbol: FirRegularClassSymbol
     abstract val hasLazyNestedClassifiers: Boolean
     abstract val companionObjectSymbol: FirRegularClassSymbol?
+    abstract val selfStaticObjectSymbol: FirRegularClassSymbol?
     abstract override val superTypeRefs: List<FirTypeRef>
     abstract val contextReceivers: List<FirContextReceiver>
 
@@ -58,6 +59,8 @@ abstract class FirRegularClass : FirClass(), FirControlFlowGraphOwner {
     abstract override fun replaceControlFlowGraphReference(newControlFlowGraphReference: FirControlFlowGraphReference?)
 
     abstract fun replaceCompanionObjectSymbol(newCompanionObjectSymbol: FirRegularClassSymbol?)
+
+    abstract fun replaceSelfStaticObjectSymbol(newSelfStaticObjectSymbol: FirRegularClassSymbol?)
 
     abstract override fun replaceSuperTypeRefs(newSuperTypeRefs: List<FirTypeRef>)
 
