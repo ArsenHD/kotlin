@@ -458,6 +458,7 @@ class DeclarationsConverter(
                 isInline = modifiers.isInlineClass()
                 isFun = modifiers.isFunctionalInterface()
                 isExternal = modifiers.hasExternal()
+                isStatic = modifiers.hasStatic()
             }
 
             val classSymbol = FirRegularClassSymbol(context.currentClassId)
@@ -466,6 +467,7 @@ class DeclarationsConverter(
 
             withCapturedTypeParameters(status.isInner || isLocal, classNode.toFirSourceElement(), firTypeParameters) {
                 var delegatedFieldsMap: Map<Int, FirFieldSymbol>? = null
+                val staticObjectBuilder = initSelfStaticObject(baseScopeProvider)
                 buildRegularClass {
                     source = classNode.toFirSourceElement()
                     moduleData = baseModuleData
@@ -560,8 +562,18 @@ class DeclarationsConverter(
 
                     //parse declarations
                     classBody?.let {
-                        addDeclarations(convertClassBody(it, classWrapper))
+                        // It is important to pass staticObjectBuilder here,
+                        // it will be used to collect all declarations from static blocks
+                        // into a hidden static object inside of the given class
+                        addDeclarations(convertClassBody(it, classWrapper, staticObjectBuilder))
                     }
+
+                    // Once we convert all static blocks, the static object builder
+                    // contains all declarations from them and is ready to build an object,
+                    // which is added into the list of class' declarations.
+                    addDeclaration(staticObjectBuilder.build())
+                    // We are keeping the symbol of the self static object
+                    selfStaticObjectSymbol = staticObjectBuilder.symbol
 
                     //parse data class
                     if (modifiers.isDataClass() && firPrimaryConstructor != null) {
@@ -601,6 +613,18 @@ class DeclarationsConverter(
         }.also {
             it.initContainingClassForLocalAttr()
             fillDanglingConstraintsTo(firTypeParameters, typeConstraints, it)
+        }
+    }
+
+    private fun processStaticBlock(
+        staticBlock: LighterASTNode,
+        classWrapper: ClassWrapper,
+        selfStaticObjectBuilder: FirRegularClassBuilder
+    ) {
+        withStaticScope {
+            convertStaticBlockDeclarations(staticBlock, classWrapper).forEach { declaration ->
+                selfStaticObjectBuilder.addDeclaration(declaration)
+            }
         }
     }
 
@@ -804,8 +828,16 @@ class DeclarationsConverter(
     /**
      * @see org.jetbrains.kotlin.parsing.KotlinParsing.parseClassBody
      * @see org.jetbrains.kotlin.parsing.KotlinParsing.parseEnumClassBody
+     *
+     * @param staticObjectBuilder is optional, it is only needed when converting
+     * regular classes (not enums or objects). Each class has its own hidden static object
+     * which contains all the declarations from all of the static blocks
      */
-    private fun convertClassBody(classBody: LighterASTNode, classWrapper: ClassWrapper): List<FirDeclaration> {
+    private fun convertClassBody(
+        classBody: LighterASTNode,
+        classWrapper: ClassWrapper,
+        staticObjectBuilder: FirRegularClassBuilder? = null
+    ): List<FirDeclaration> {
         return classBody.forEachChildrenReturnList { node, container ->
             @Suppress("RemoveRedundantQualifierName")
             when (node.tokenType) {
@@ -817,6 +849,13 @@ class DeclarationsConverter(
                 OBJECT_DECLARATION -> container += convertClass(node)
                 CLASS_INITIALIZER -> container += convertAnonymousInitializer(node) //anonymousInitializer
                 SECONDARY_CONSTRUCTOR -> container += convertSecondaryConstructor(node, classWrapper)
+                STATIC_BLOCK -> {
+                    // static blocks are allowed only on regular classes,
+                    // so in case of enums, objects, annotation classes nothing will be done here
+                    if (staticObjectBuilder != null) {
+                        processStaticBlock(node, classWrapper, staticObjectBuilder)
+                    }
+                }
             }
         }
     }
@@ -884,6 +923,7 @@ class DeclarationsConverter(
             isInner = classWrapper.isInner()
             isFromSealedClass = classWrapper.isSealed() && explicitVisibility !== Visibilities.Private
             isFromEnumClass = classWrapper.isEnum()
+            isStatic = context.containerIsStatic
         }
 
         return PrimaryConstructor(
@@ -893,7 +933,9 @@ class DeclarationsConverter(
                 moduleData = baseModuleData
                 origin = FirDeclarationOrigin.Source
                 returnTypeRef = classWrapper.delegatedSelfTypeRef
-                dispatchReceiverType = classWrapper.obtainDispatchReceiverForConstructor()
+                dispatchReceiverType = runUnless(context.containerIsStatic) {
+                    classWrapper.obtainDispatchReceiverForConstructor()
+                }
                 this.status = status
                 symbol = FirConstructorSymbol(callableIdForClassConstructor())
                 annotations += modifiers.annotations
@@ -955,6 +997,7 @@ class DeclarationsConverter(
             isInner = classWrapper.isInner()
             isFromSealedClass = classWrapper.isSealed() && explicitVisibility !== Visibilities.Private
             isFromEnumClass = classWrapper.isEnum()
+            isStatic = context.containerIsStatic
         }
 
         val target = FirFunctionTarget(labelName = null, isLambda = false)
@@ -963,7 +1006,9 @@ class DeclarationsConverter(
             moduleData = baseModuleData
             origin = FirDeclarationOrigin.Source
             returnTypeRef = delegatedSelfTypeRef
-            dispatchReceiverType = classWrapper.obtainDispatchReceiverForConstructor()
+            dispatchReceiverType = runUnless(context.containerIsStatic) {
+                classWrapper.obtainDispatchReceiverForConstructor()
+            }
             this.status = status
             symbol = FirConstructorSymbol(callableIdForClassConstructor())
             delegatedConstructor = constructorDelegationCall
@@ -1118,7 +1163,7 @@ class DeclarationsConverter(
         val propertyName = identifier.nameAsSafeName()
 
         val parentNode = property.getParent()
-        val isLocal = !(parentNode?.tokenType == KT_FILE || parentNode?.tokenType == CLASS_BODY)
+        val isLocal = !parentNode?.tokenType.let { it == KT_FILE || it == CLASS_BODY || it == STATIC_BLOCK }
         val propertySource = property.toFirSourceElement()
 
         return buildProperty {
@@ -1164,7 +1209,7 @@ class DeclarationsConverter(
             } else {
                 this.isLocal = false
                 receiverTypeRef = receiverType
-                dispatchReceiverType = currentDispatchReceiverType()
+                dispatchReceiverType = runUnless(context.containerIsStatic) { currentDispatchReceiverType() }
                 withCapturedTypeParameters(true, propertySource, firTypeParameters) {
                     typeParameters += firTypeParameters
 
@@ -1225,6 +1270,7 @@ class DeclarationsConverter(
                         isConst = modifiers.isConst()
                         isLateInit = modifiers.hasLateinit()
                         isExternal = modifiers.hasExternal()
+                        isStatic = context.containerIsStatic
                     }
 
                     generateAccessorsByDelegate(
@@ -1245,6 +1291,9 @@ class DeclarationsConverter(
             contextReceivers.addAll(convertContextReceivers(property))
         }.also {
             fillDanglingConstraintsTo(firTypeParameters, typeConstraints, it)
+            if (context.containerIsStatic) {
+                it.initContainingClassAttr()
+            }
         }
     }
 
@@ -1357,6 +1406,7 @@ class DeclarationsConverter(
             FirDeclarationStatusImpl(accessorVisibility, modifiers.getModality(isClassOrObject = false)).apply {
                 isInline = propertyModifiers.hasInline() || modifiers.hasInline()
                 isExternal = propertyModifiers.hasExternal() || modifiers.hasExternal()
+                isStatic = context.containerIsStatic
             }
         val sourceElement = getterOrSetter.toFirSourceElement()
         val accessorAdditionalAnnotations = propertyModifiers.annotations.filterUseSiteTarget(
@@ -1477,6 +1527,7 @@ class DeclarationsConverter(
             isInline = propertyModifiers.hasInline() || modifiers.hasInline()
             isExternal = propertyModifiers.hasExternal() || modifiers.hasExternal()
             isLateInit = modifiers.hasLateinit()
+            isStatic = context.containerIsStatic
         }
     }
 
@@ -1542,6 +1593,22 @@ class DeclarationsConverter(
         }
     }
 
+    private fun convertStaticBlockDeclarations(staticBlock: LighterASTNode, classWrapper: ClassWrapper): List<FirDeclaration> {
+        return staticBlock.forEachChildrenReturnList { node, container ->
+            when (node.tokenType) {
+                ENUM_ENTRY -> container += convertEnumEntry(node, classWrapper)
+                CLASS -> container += convertClass(node)
+                FUN -> container += convertFunctionDeclaration(node) as FirDeclaration
+                PROPERTY -> container += convertPropertyDeclaration(node, classWrapper)
+                TYPEALIAS -> container += convertTypeAlias(node)
+                OBJECT_DECLARATION -> container += convertClass(node)
+                CLASS_INITIALIZER -> container += convertAnonymousInitializer(node) //anonymousInitializer
+                SECONDARY_CONSTRUCTOR -> container += convertSecondaryConstructor(node, classWrapper)
+                STATIC_BLOCK -> container += convertStaticBlockDeclarations(node, classWrapper)
+            }
+        }
+    }
+
     /**
      * @see org.jetbrains.kotlin.parsing.KotlinParsing.parseFunction
      */
@@ -1581,7 +1648,7 @@ class DeclarationsConverter(
         }
 
         val parentNode = functionDeclaration.getParent()
-        val isLocal = !(parentNode?.tokenType == KT_FILE || parentNode?.tokenType == CLASS_BODY)
+        val isLocal = !parentNode?.tokenType.let { it == KT_FILE || it == CLASS_BODY || it == STATIC_BLOCK }
         val target: FirFunctionTarget
         val functionSource = functionDeclaration.toFirSourceElement()
         val functionSymbol: FirFunctionSymbol<*>
@@ -1620,10 +1687,11 @@ class DeclarationsConverter(
                     isTailRec = modifiers.hasTailrec()
                     isExternal = modifiers.hasExternal()
                     isSuspend = modifiers.hasSuspend()
+                    isStatic = context.containerIsStatic
                 }
 
                 symbol = functionSymbol
-                dispatchReceiverType = currentDispatchReceiverType()
+                dispatchReceiverType = runUnless(context.containerIsStatic) { currentDispatchReceiverType() }
                 contextReceivers.addAll(convertContextReceivers(functionDeclaration))
             }
         }
@@ -1670,6 +1738,9 @@ class DeclarationsConverter(
             target.bind(it)
             if (it is FirSimpleFunction) {
                 fillDanglingConstraintsTo(firTypeParameters, typeConstraints, it)
+            }
+            if (context.containerIsStatic) {
+                it.initContainingClassAttr()
             }
         }
         return if (function is FirAnonymousFunction) {
