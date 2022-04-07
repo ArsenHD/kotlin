@@ -1,0 +1,17 @@
+FILE: StaticObject.kt
+    public? final? static object MyObject : R|kotlin/Any| {
+        private [ContainingClassKey=MyObject] constructor(): R|MyObject| {
+            super<R|kotlin/Any|>()
+        }
+
+        public? final? static [ContainingClassKey=MyObject] fun foo(): R|kotlin/Unit| {
+            print#(String(foo))
+        }
+
+        public? final? static [ContainingClassKey=MyObject] val x: Int = IntegerLiteral(10)
+            [ContainingClassKey=MyObject] public? get(): Int
+
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
+    }

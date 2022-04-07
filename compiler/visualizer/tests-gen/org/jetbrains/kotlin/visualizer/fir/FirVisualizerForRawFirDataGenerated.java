@@ -348,6 +348,46 @@ public class FirVisualizerForRawFirDataGenerated extends AbstractFirVisualizerTe
                 runTest("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/noParameterType/noParameterTypRefInSetter.kt");
             }
         }
+
+        @Nested
+        @TestMetadata("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics")
+        @TestDataPath("$PROJECT_ROOT")
+        public class Statics {
+            @Test
+            public void testAllFilesPresentInStatics() throws Exception {
+                KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics"), Pattern.compile("^(.+)\\.kt$"), null, true);
+            }
+
+            @Test
+            @TestMetadata("ClassInsideOfStaticBlock.kt")
+            public void testClassInsideOfStaticBlock() throws Exception {
+                runTest("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/ClassInsideOfStaticBlock.kt");
+            }
+
+            @Test
+            @TestMetadata("ObjectInsideOfStaticBlock.kt")
+            public void testObjectInsideOfStaticBlock() throws Exception {
+                runTest("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/ObjectInsideOfStaticBlock.kt");
+            }
+
+            @Test
+            @TestMetadata("SimpleStaticBlock.kt")
+            public void testSimpleStaticBlock() throws Exception {
+                runTest("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/SimpleStaticBlock.kt");
+            }
+
+            @Test
+            @TestMetadata("StaticObject.kt")
+            public void testStaticObject() throws Exception {
+                runTest("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/StaticObject.kt");
+            }
+
+            @Test
+            @TestMetadata("StaticObjectInsideOfStaticBlock.kt")
+            public void testStaticObjectInsideOfStaticBlock() throws Exception {
+                runTest("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/StaticObjectInsideOfStaticBlock.kt");
+            }
+        }
     }
 
     @Nested

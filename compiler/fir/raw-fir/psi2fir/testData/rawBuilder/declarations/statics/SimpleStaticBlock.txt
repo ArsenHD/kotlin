@@ -1,0 +1,21 @@
+FILE: SimpleStaticBlock.kt
+    public? final? class A : R|kotlin/Any| {
+        public? [ContainingClassKey=A] constructor(): R|A| {
+            super<R|kotlin/Any|>()
+        }
+
+        public? final? fun foo(): R|kotlin/Unit| {
+            println#(String(foo))
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
+            public? final? static [ContainingClassKey=A] fun bar(): R|kotlin/Unit| {
+                println#(String(bar))
+            }
+
+            public? final? static [ContainingClassKey=A] val x: Int = IntegerLiteral(10)
+                [ContainingClassKey=A] public? get(): Int
+
+        }
+
+    }
