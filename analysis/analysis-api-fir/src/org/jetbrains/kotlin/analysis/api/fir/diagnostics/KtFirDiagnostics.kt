@@ -447,6 +447,10 @@ sealed class KtFirDiagnostic<PSI : PsiElement> : KtDiagnosticWithPsi<PSI> {
         override val diagnosticClass get() = ConstructorInObject::class
     }
 
+    abstract class ConstructorInStaticObject : KtFirDiagnostic<KtDeclaration>() {
+        override val diagnosticClass get() = ConstructorInStaticObject::class
+    }
+
     abstract class ConstructorInInterface : KtFirDiagnostic<KtDeclaration>() {
         override val diagnosticClass get() = ConstructorInInterface::class
     }

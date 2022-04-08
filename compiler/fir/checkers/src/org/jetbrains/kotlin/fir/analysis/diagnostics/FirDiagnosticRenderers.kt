@@ -71,6 +71,7 @@ object FirDiagnosticRenderers {
         val name = classSymbol.classId.relativeClassName.asString()
         val classOrObject = when (classSymbol.classKind) {
             ClassKind.OBJECT -> "Object"
+            ClassKind.STATIC_OBJECT -> "Static object"
             ClassKind.INTERFACE -> "Interface"
             else -> "Class"
         }

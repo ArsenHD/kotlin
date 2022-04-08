@@ -625,6 +625,7 @@ class HtmlFirDump internal constructor(private var linkResolver: FirLinkResolver
             ClassKind.ENUM_ENTRY -> Unit // ?
             ClassKind.ANNOTATION_CLASS -> keyword("annotation class")
             ClassKind.OBJECT -> keyword("object")
+            ClassKind.STATIC_OBJECT -> keyword("static object")
         }
     }
 

@@ -43,6 +43,7 @@ object CommonRenderers {
             ClassKind.ENUM_ENTRY -> "enum entry"
             ClassKind.ANNOTATION_CLASS -> "annotation class"
             ClassKind.OBJECT -> "object"
+            ClassKind.STATIC_OBJECT -> "static object"
         }
     }
 

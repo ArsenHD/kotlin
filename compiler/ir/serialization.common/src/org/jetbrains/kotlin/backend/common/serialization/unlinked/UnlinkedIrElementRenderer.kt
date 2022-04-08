@@ -78,6 +78,7 @@ private enum class DeclarationKind(private val displayName: String) {
     ENUM_ENTRY("enum entry"),
     ANNOTATION_CLASS("annotation class"),
     OBJECT("object"),
+    STATIC_OBJECT("static object"),
     ANONYMOUS_OBJECT("anonymous object"),
     COMPANION_OBJECT("companion object"),
     MUTABLE_VARIABLE("var"),
@@ -103,6 +104,7 @@ private val IrDeclaration.declarationKind: DeclarationKind
             ClassKind.ENUM_ENTRY -> ENUM_ENTRY
             ClassKind.ANNOTATION_CLASS -> ANNOTATION_CLASS
             ClassKind.OBJECT -> if (isCompanion) COMPANION_OBJECT else OBJECT
+            ClassKind.STATIC_OBJECT -> STATIC_OBJECT
         }
         is IrVariable -> if (isVar) MUTABLE_VARIABLE else IMMUTABLE_VARIABLE
         is IrValueParameter -> VALUE_PARAMETER

@@ -17,6 +17,7 @@ fun ClassKind.toKtClassKind(isCompanionObject: Boolean): KtClassKind = when (thi
     ClassKind.CLASS -> KtClassKind.CLASS
     ClassKind.OBJECT -> if (isCompanionObject) KtClassKind.COMPANION_OBJECT else KtClassKind.OBJECT
     ClassKind.ENUM_ENTRY -> invalidEnumEntryAsClassKind()
+    ClassKind.STATIC_OBJECT -> KtClassKind.STATIC_OBJECT
 }
 
 @KtAnalysisApiInternals

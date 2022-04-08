@@ -94,6 +94,7 @@ public enum class KtClassKind {
     ANNOTATION_CLASS,
     OBJECT,
     COMPANION_OBJECT,
+    STATIC_OBJECT,
     INTERFACE,
     ANONYMOUS_OBJECT;
 
