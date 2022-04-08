@@ -45,7 +45,8 @@ class SomeAdditionalSupertypeGenerator(session: FirSession) : FirSupertypeGenera
         when (classLikeDeclaration.classKind) {
             ClassKind.CLASS,
             ClassKind.INTERFACE,
-            ClassKind.OBJECT-> {}
+            ClassKind.OBJECT,
+            ClassKind.STATIC_OBJECT -> {}
 
             ClassKind.ENUM_CLASS,
             ClassKind.ENUM_ENTRY,

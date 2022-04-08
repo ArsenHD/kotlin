@@ -611,6 +611,12 @@ internal val KT_DIAGNOSTIC_CONVERTER = KtDiagnosticConverterBuilder.buildConvert
             token,
         )
     }
+    add(FirErrors.CONSTRUCTOR_IN_STATIC_OBJECT) { firDiagnostic ->
+        ConstructorInStaticObjectImpl(
+            firDiagnostic as KtPsiDiagnostic,
+            token,
+        )
+    }
     add(FirErrors.CONSTRUCTOR_IN_INTERFACE) { firDiagnostic ->
         ConstructorInInterfaceImpl(
             firDiagnostic as KtPsiDiagnostic,

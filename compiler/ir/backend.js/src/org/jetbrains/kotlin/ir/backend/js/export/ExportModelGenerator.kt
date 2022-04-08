@@ -202,6 +202,7 @@ class ExportModelGenerator(val context: JsIrBackendContext, val generateNamespac
                 return Exportability.Prohibited("Class ${klass.fqNameWhenAvailable} with kind: ${klass.kind}")
 
             ClassKind.OBJECT,
+            ClassKind.STATIC_OBJECT,
             ClassKind.CLASS,
             ClassKind.INTERFACE,
             ClassKind.ENUM_CLASS,
@@ -609,7 +610,7 @@ class ExportModelGenerator(val context: JsIrBackendContext, val generateNamespac
                     ClassKind.ENUM_ENTRY ->
                         ExportedType.ErrorType("Class $name with kind: ${klass.kind}")
 
-                    ClassKind.OBJECT ->
+                    ClassKind.OBJECT, ClassKind.STATIC_OBJECT ->
                         ExportedType.TypeOf(name)
 
                     ClassKind.CLASS,

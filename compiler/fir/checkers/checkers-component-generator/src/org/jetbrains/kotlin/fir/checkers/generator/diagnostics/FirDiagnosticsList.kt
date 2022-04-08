@@ -210,6 +210,7 @@ object DIAGNOSTICS_LIST : DiagnosticList("FirErrors") {
 
     val CONSTRUCTOR_PROBLEMS by object : DiagnosticGroup("Constructor problems") {
         val CONSTRUCTOR_IN_OBJECT by error<KtDeclaration>(PositioningStrategy.DECLARATION_SIGNATURE)
+        val CONSTRUCTOR_IN_STATIC_OBJECT by error<KtDeclaration>(PositioningStrategy.DECLARATION_SIGNATURE)
         val CONSTRUCTOR_IN_INTERFACE by error<KtDeclaration>(PositioningStrategy.DECLARATION_SIGNATURE)
         val NON_PRIVATE_CONSTRUCTOR_IN_ENUM by error<PsiElement>()
         val NON_PRIVATE_OR_PROTECTED_CONSTRUCTOR_IN_SEALED by error<PsiElement>()

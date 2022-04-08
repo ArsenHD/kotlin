@@ -26,6 +26,7 @@ public interface KtNamedClassOrObjectSymbolRenderer {
                 KtClassKind.ENUM_CLASS -> listOf(KtTokens.ENUM_KEYWORD, KtTokens.CLASS_KEYWORD)
                 KtClassKind.ANNOTATION_CLASS -> listOf(KtTokens.ANNOTATION_KEYWORD, KtTokens.CLASS_KEYWORD)
                 KtClassKind.OBJECT -> listOf(KtTokens.OBJECT_KEYWORD)
+                KtClassKind.STATIC_OBJECT -> listOf(KtTokens.STATIC_KEYWORD, KtTokens.OBJECT_KEYWORD)
                 KtClassKind.COMPANION_OBJECT -> listOf(KtTokens.COMPANION_KEYWORD, KtTokens.OBJECT_KEYWORD)
                 KtClassKind.INTERFACE -> listOf(KtTokens.INTERFACE_KEYWORD)
                 KtClassKind.ANONYMOUS_OBJECT -> error("KtNamedClassOrObjectSymbol cannot be KtAnonymousObjectSymbol")
