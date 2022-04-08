@@ -68,6 +68,7 @@ internal class KtFe10DescNamedClassOrObjectSymbol(
                 ClassKind.ENUM_ENTRY -> KtClassKind.ENUM_ENTRY
                 ClassKind.ANNOTATION_CLASS -> KtClassKind.ANNOTATION_CLASS
                 ClassKind.OBJECT -> KtClassKind.OBJECT
+                ClassKind.STATIC_OBJECT -> KtClassKind.STATIC_OBJECT
             }
         }
 

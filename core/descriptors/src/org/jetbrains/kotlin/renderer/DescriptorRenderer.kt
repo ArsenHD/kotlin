@@ -180,6 +180,7 @@ abstract class DescriptorRenderer {
                     ClassKind.INTERFACE -> "interface"
                     ClassKind.ENUM_CLASS -> "enum class"
                     ClassKind.OBJECT -> "object"
+                    ClassKind.STATIC_OBJECT -> "static object"
                     ClassKind.ANNOTATION_CLASS -> "annotation class"
                     ClassKind.ENUM_ENTRY -> "enum entry"
                 }

@@ -21,7 +21,8 @@ enum class ClassKind(val codeRepresentation: String?) {
     ENUM_CLASS( "enum class"),
     ENUM_ENTRY( null),
     ANNOTATION_CLASS( "annotation class"),
-    OBJECT("object");
+    OBJECT("object"),
+    STATIC_OBJECT("static object");
 
     val isSingleton: Boolean
         get() = this == OBJECT || this == ENUM_ENTRY
