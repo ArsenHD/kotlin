@@ -125,6 +125,7 @@ import org.jetbrains.kotlin.fir.analysis.diagnostics.FirErrors.CONFLICTING_UPPER
 import org.jetbrains.kotlin.fir.analysis.diagnostics.FirErrors.CONFUSING_BRANCH_CONDITION
 import org.jetbrains.kotlin.fir.analysis.diagnostics.FirErrors.CONSTRUCTOR_IN_INTERFACE
 import org.jetbrains.kotlin.fir.analysis.diagnostics.FirErrors.CONSTRUCTOR_IN_OBJECT
+import org.jetbrains.kotlin.fir.analysis.diagnostics.FirErrors.CONSTRUCTOR_IN_STATIC_OBJECT
 import org.jetbrains.kotlin.fir.analysis.diagnostics.FirErrors.CONST_VAL_NOT_TOP_LEVEL_OR_OBJECT
 import org.jetbrains.kotlin.fir.analysis.diagnostics.FirErrors.CONST_VAL_WITHOUT_INITIALIZER
 import org.jetbrains.kotlin.fir.analysis.diagnostics.FirErrors.CONST_VAL_WITH_DELEGATE
@@ -768,6 +769,7 @@ object FirErrorsDefaultMessages : BaseDiagnosticRendererFactory() {
 
         // Constructor problems
         map.put(CONSTRUCTOR_IN_OBJECT, "Constructors are not allowed for objects")
+        map.put(CONSTRUCTOR_IN_STATIC_OBJECT, "Constructors are not allowed for static objects")
         map.put(CONSTRUCTOR_IN_INTERFACE, "An interface may not have a constructor")
         map.put(NON_PRIVATE_CONSTRUCTOR_IN_ENUM, "Constructor must be private in enum class")
         map.put(NON_PRIVATE_OR_PROTECTED_CONSTRUCTOR_IN_SEALED, "Constructor must be private or protected in sealed class")
