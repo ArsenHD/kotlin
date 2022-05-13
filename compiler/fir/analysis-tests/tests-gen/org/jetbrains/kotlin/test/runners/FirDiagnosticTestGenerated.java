@@ -6469,5 +6469,57 @@ public class FirDiagnosticTestGenerated extends AbstractFirDiagnosticTest {
                 runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/smartcasts/tryWithLambdaInside.kt");
             }
         }
+
+        @Nested
+        @TestMetadata("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics")
+        @TestDataPath("$PROJECT_ROOT")
+        public class Statics {
+            @Test
+            public void testAllFilesPresentInStatics() throws Exception {
+                KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics"), Pattern.compile("^([^.]+)\\.kt$"), null, true);
+            }
+
+            @Test
+            @TestMetadata("ClassInsideOfStaticBlock.kt")
+            public void testClassInsideOfStaticBlock() throws Exception {
+                runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/ClassInsideOfStaticBlock.kt");
+            }
+
+            @Test
+            @TestMetadata("NonStaticInStaticScope.kt")
+            public void testNonStaticInStaticScope() throws Exception {
+                runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/NonStaticInStaticScope.kt");
+            }
+
+            @Test
+            @TestMetadata("ObjectInsideOfStaticBlock.kt")
+            public void testObjectInsideOfStaticBlock() throws Exception {
+                runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/ObjectInsideOfStaticBlock.kt");
+            }
+
+            @Test
+            @TestMetadata("SimpleStaticBlock.kt")
+            public void testSimpleStaticBlock() throws Exception {
+                runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/SimpleStaticBlock.kt");
+            }
+
+            @Test
+            @TestMetadata("StaticInNonStaticScope.kt")
+            public void testStaticInNonStaticScope() throws Exception {
+                runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/StaticInNonStaticScope.kt");
+            }
+
+            @Test
+            @TestMetadata("StaticObject.kt")
+            public void testStaticObject() throws Exception {
+                runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/StaticObject.kt");
+            }
+
+            @Test
+            @TestMetadata("StaticObjectInsideOfStaticBlock.kt")
+            public void testStaticObjectInsideOfStaticBlock() throws Exception {
+                runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/StaticObjectInsideOfStaticBlock.kt");
+            }
+        }
     }
 }
