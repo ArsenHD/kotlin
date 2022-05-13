@@ -183,6 +183,7 @@ val possibleTargetMap = mapOf(
     PRIVATE_KEYWORD to defaultVisibilityTargets + KotlinTarget.BACKING_FIELD,
     PUBLIC_KEYWORD to defaultVisibilityTargets,
     INTERNAL_KEYWORD to defaultVisibilityTargets + KotlinTarget.BACKING_FIELD,
+    STATIC_KEYWORD to EnumSet.of(KotlinTarget.OBJECT),
     PROTECTED_KEYWORD to EnumSet.of(
         KotlinTarget.CLASS_ONLY,
         KotlinTarget.OBJECT,
