@@ -94,6 +94,7 @@ public interface KtStubElementTypes {
             new KtPlaceHolderStubElementType<>("TYPE_REFERENCE", KtTypeReference.class);
 
     KtUserTypeElementType USER_TYPE = new KtUserTypeElementType("USER_TYPE");
+    KtStaticUserTypeElementType STATIC_USER_TYPE = new KtStaticUserTypeElementType("STATIC_USER_TYPE");
     KtPlaceHolderStubElementType<KtDynamicType> DYNAMIC_TYPE =
             new KtPlaceHolderStubElementType<>("DYNAMIC_TYPE", KtDynamicType.class);
 
@@ -110,6 +111,7 @@ public interface KtStubElementTypes {
             new KtPlaceHolderStubElementType<>("FUNCTION_TYPE_RECEIVER", KtFunctionTypeReceiver.class);
 
     KtNameReferenceExpressionElementType REFERENCE_EXPRESSION = new KtNameReferenceExpressionElementType("REFERENCE_EXPRESSION");
+    KtNameReferenceExpressionElementType STATIC_REFERENCE_EXPRESSION = new KtNameReferenceExpressionElementType("STATIC_REFERENCE_EXPRESSION");
     KtDotQualifiedExpressionElementType DOT_QUALIFIED_EXPRESSION = new KtDotQualifiedExpressionElementType("DOT_QUALIFIED_EXPRESSION");
     KtEnumEntrySuperClassReferenceExpressionElementType
             ENUM_ENTRY_SUPERCLASS_REFERENCE_EXPRESSION = new KtEnumEntrySuperClassReferenceExpressionElementType("ENUM_ENTRY_SUPERCLASS_REFERENCE_EXPRESSION");

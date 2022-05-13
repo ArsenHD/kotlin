@@ -386,6 +386,10 @@ public class KtVisitor<R, D> extends PsiElementVisitor {
         return visitTypeElement(type, data);
     }
 
+    public R visitStaticUserType(@NotNull KtStaticUserType type, D data) {
+        return visitTypeElement(type, data);
+    }
+
     public R visitDynamicType(@NotNull KtDynamicType type, D data) {
         return visitTypeElement(type, data);
     }
