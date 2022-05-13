@@ -2337,11 +2337,13 @@ public class KotlinParsing extends AbstractKotlinParsing {
         while (true) {
             recoverOnParenthesizedWordForPlatformTypes(0, "Mutable", true);
 
-            if (expect(IDENTIFIER, "Expecting type name",
+            if (at(STATIC_KEYWORD)) {
+                advance();
+                reference.done(STATIC_REFERENCE_EXPRESSION);
+            } else if (expect(IDENTIFIER, "Expecting type name",
                        TokenSet.orSet(KotlinExpressionParsing.EXPRESSION_FIRST, KotlinExpressionParsing.EXPRESSION_FOLLOW, DECLARATION_FIRST))) {
                 reference.done(REFERENCE_EXPRESSION);
-            }
-            else {
+            } else {
                 reference.drop();
                 break;
             }
@@ -2367,7 +2369,11 @@ public class KotlinParsing extends AbstractKotlinParsing {
             reference = mark();
         }
 
-        userType.done(USER_TYPE);
+        if (STATIC_KEYWORD.equals(myBuilder.rawLookup(-1))) {
+            userType.done(STATIC_USER_TYPE);
+        } else {
+            userType.done(USER_TYPE);
+        }
     }
 
     private boolean atParenthesizedMutableForPlatformTypes(int offset) {

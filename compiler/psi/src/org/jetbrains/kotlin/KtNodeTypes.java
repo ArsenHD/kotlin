@@ -74,6 +74,7 @@ public interface KtNodeTypes {
     IElementType TYPE_REFERENCE                     = KtStubElementTypes.TYPE_REFERENCE;
 
     IElementType USER_TYPE                = KtStubElementTypes.USER_TYPE;
+    IElementType STATIC_USER_TYPE         = KtStubElementTypes.STATIC_USER_TYPE;
     IElementType DYNAMIC_TYPE             = KtStubElementTypes.DYNAMIC_TYPE;
     IElementType FUNCTION_TYPE            = KtStubElementTypes.FUNCTION_TYPE;
     IElementType FUNCTION_TYPE_RECEIVER   = KtStubElementTypes.FUNCTION_TYPE_RECEIVER;
@@ -128,6 +129,7 @@ public interface KtNodeTypes {
     IElementType ANNOTATED_EXPRESSION      = new KtNodeType("ANNOTATED_EXPRESSION", KtAnnotatedExpression.class);
 
     IElementType REFERENCE_EXPRESSION     = KtStubElementTypes.REFERENCE_EXPRESSION;
+    IElementType STATIC_REFERENCE_EXPRESSION = KtStubElementTypes.STATIC_REFERENCE_EXPRESSION;
     IElementType ENUM_ENTRY_SUPERCLASS_REFERENCE_EXPRESSION = KtStubElementTypes.ENUM_ENTRY_SUPERCLASS_REFERENCE_EXPRESSION;
     IElementType OPERATION_REFERENCE       = new KtNodeType("OPERATION_REFERENCE", KtOperationReferenceExpression.class);
     IElementType LABEL                     = new KtNodeType("LABEL", KtLabelReferenceExpression.class);

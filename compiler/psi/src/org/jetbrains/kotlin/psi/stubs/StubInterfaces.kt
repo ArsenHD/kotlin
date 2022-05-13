@@ -166,6 +166,8 @@ interface KotlinTypeProjectionStub : StubElement<KtTypeProjection> {
 
 interface KotlinUserTypeStub : StubElement<KtUserType>
 
+interface KotlinStaticUserTypeStub : StubElement<KtStaticUserType>
+
 interface KotlinScriptStub : KotlinStubWithFqName<KtScript> {
     override fun getFqName(): FqName
 }
