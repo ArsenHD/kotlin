@@ -70,6 +70,12 @@ class FirKotlinScopeProvider(
     ): FirContainingNamesAwareScope? {
         return when (klass.classKind) {
             ClassKind.ENUM_CLASS -> FirNameAwareOnlyCallablesScope(FirStaticScope(useSiteSession.declaredMemberScope(klass)))
+            ClassKind.STATIC_OBJECT -> FirNameAwareOnlyCallablesScope(useSiteSession.declaredMemberScope(klass))
+            ClassKind.CLASS -> {
+                if (klass !is FirRegularClass) return null
+                val selfStaticObject = klass.selfStaticObjectSymbol?.fir ?: return null
+                FirNameAwareOnlyCallablesScope(useSiteSession.declaredMemberScope(selfStaticObject))
+            }
             else -> null
         }
     }
