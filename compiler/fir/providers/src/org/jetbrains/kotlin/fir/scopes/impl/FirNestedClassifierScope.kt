@@ -21,6 +21,7 @@ import org.jetbrains.kotlin.fir.symbols.impl.FirTypeParameterSymbol
 import org.jetbrains.kotlin.fir.types.ConeKotlinType
 import org.jetbrains.kotlin.fir.types.impl.ConeTypeParameterTypeImpl
 import org.jetbrains.kotlin.name.Name
+import org.jetbrains.kotlin.utils.addToStdlib.runUnless
 import org.jetbrains.kotlin.utils.addToStdlib.shouldNotBeCalled
 
 abstract class FirNestedClassifierScope(val klass: FirClass, val useSiteSession: FirSession) : FirContainingNamesAwareScope() {
@@ -45,13 +46,34 @@ abstract class FirNestedClassifierScope(val klass: FirClass, val useSiteSession:
 class FirNestedClassifierScopeImpl(klass: FirClass, useSiteSession: FirSession) : FirNestedClassifierScope(klass, useSiteSession) {
     private val classIndex: Map<Name, FirClassLikeSymbol<*>> = run {
         val result = mutableMapOf<Name, FirClassLikeSymbol<*>>()
+
+        val selfStaticObject = (klass as? FirRegularClass)?.selfStaticObjectSymbol?.fir
         for (declaration in klass.declarations) {
             when (declaration) {
-                is FirRegularClass -> result[declaration.name] = declaration.symbol
+                // collect all regular classes and type aliases declared inside of klass directly,
+                // but ignore the self static object of klass
+                is FirRegularClass -> runUnless(declaration.symbol == selfStaticObject?.symbol) {
+                    result[declaration.name] = declaration.symbol
+                }
                 is FirTypeAlias -> result[declaration.name] = declaration.symbol
                 else -> {}
             }
         }
+
+        if (selfStaticObject != null) {
+            // collect all regular classes and type aliases declared inside of self static object of klass,
+            // but ignore the self static object of self static object
+            for (declaration in selfStaticObject.declarations) {
+                when (declaration) {
+                    is FirRegularClass -> runUnless(declaration.symbol == selfStaticObject.selfStaticObjectSymbol) {
+                        result[declaration.name] = declaration.symbol
+                    }
+                    is FirTypeAlias -> result[declaration.name] = declaration.symbol
+                    else -> {}
+                }
+            }
+        }
+
         result
     }
 
