@@ -1,0 +1,3 @@
+FILE: FunctionalArgumentWithStaticReceiver.kt
+    public? final? fun test1(block: ( A.static.() -> Unit )): R|kotlin/Unit| {
+    }
