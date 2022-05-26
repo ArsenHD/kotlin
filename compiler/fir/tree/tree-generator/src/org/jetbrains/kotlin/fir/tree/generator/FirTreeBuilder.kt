@@ -170,6 +170,7 @@ object FirTreeBuilder : AbstractFirTreeBuilder() {
     val errorTypeRef by element(TypeRef, resolvedTypeRef, diagnosticHolder)
     val typeRefWithNullability by element(TypeRef, typeRef)
     val userTypeRef by element(TypeRef, typeRefWithNullability)
+    val staticUserTypeRef by element(TypeRef, userTypeRef)
     val dynamicTypeRef by element(TypeRef, typeRefWithNullability)
     val functionTypeRef by element(TypeRef, typeRefWithNullability)
     val intersectionTypeRef by element(TypeRef, typeRefWithNullability)

@@ -550,6 +550,7 @@ object ImplementationConfigurator : AbstractFirTreeImplementationConfigurator() 
         }
 
         noImpl(userTypeRef)
+        noImpl(staticUserTypeRef)
 
         impl(file) {
             default("annotations") {

@@ -140,6 +140,7 @@ import org.jetbrains.kotlin.fir.types.FirResolvedTypeRef
 import org.jetbrains.kotlin.fir.types.FirErrorTypeRef
 import org.jetbrains.kotlin.fir.types.FirTypeRefWithNullability
 import org.jetbrains.kotlin.fir.types.FirUserTypeRef
+import org.jetbrains.kotlin.fir.types.FirStaticUserTypeRef
 import org.jetbrains.kotlin.fir.types.FirDynamicTypeRef
 import org.jetbrains.kotlin.fir.types.FirFunctionTypeRef
 import org.jetbrains.kotlin.fir.types.FirIntersectionTypeRef
@@ -693,6 +694,10 @@ abstract class FirTransformer<in D> : FirVisitor<FirElement, D>() {
 
     open fun transformUserTypeRef(userTypeRef: FirUserTypeRef, data: D): FirTypeRef {
         return transformElement(userTypeRef, data)
+    }
+
+    open fun transformStaticUserTypeRef(staticUserTypeRef: FirStaticUserTypeRef, data: D): FirTypeRef {
+        return transformElement(staticUserTypeRef, data)
     }
 
     open fun transformDynamicTypeRef(dynamicTypeRef: FirDynamicTypeRef, data: D): FirTypeRef {
@@ -1269,6 +1274,10 @@ abstract class FirTransformer<in D> : FirVisitor<FirElement, D>() {
 
     final override fun visitUserTypeRef(userTypeRef: FirUserTypeRef, data: D): FirTypeRef {
         return transformUserTypeRef(userTypeRef, data)
+    }
+
+    final override fun visitStaticUserTypeRef(staticUserTypeRef: FirStaticUserTypeRef, data: D): FirTypeRef {
+        return transformStaticUserTypeRef(staticUserTypeRef, data)
     }
 
     final override fun visitDynamicTypeRef(dynamicTypeRef: FirDynamicTypeRef, data: D): FirTypeRef {
