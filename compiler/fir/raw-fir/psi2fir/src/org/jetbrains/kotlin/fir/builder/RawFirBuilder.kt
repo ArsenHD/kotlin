@@ -1812,13 +1812,18 @@ open class RawFirBuilder(
                     this.source = source
                     isMarkedNullable = isNullable
                 }
-                is KtUserType -> {
+                is KtAbstractUserType<*> -> {
+                    val typeRefBuilder = when (unwrappedElement) {
+                        is KtUserType -> FirUserTypeRefBuilder()
+                        is KtStaticUserType -> FirStaticUserTypeRefBuilder()
+                        else -> error("Invalid user type: ${unwrappedElement::class}")
+                    }
                     var referenceExpression = unwrappedElement.referenceExpression
                     if (referenceExpression != null) {
-                        FirUserTypeRefBuilder().apply {
+                        typeRefBuilder.apply {
                             this.source = source
                             isMarkedNullable = isNullable
-                            var ktQualifier: KtUserType? = unwrappedElement
+                            var ktQualifier: KtAbstractUserType<*>? = unwrappedElement
 
                             do {
                                 val firQualifier = FirQualifierPartImpl(

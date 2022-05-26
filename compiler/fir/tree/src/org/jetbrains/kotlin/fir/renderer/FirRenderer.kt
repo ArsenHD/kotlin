@@ -730,6 +730,10 @@ class FirRenderer(
             visitTypeRefWithNullability(userTypeRef)
         }
 
+        override fun visitStaticUserTypeRef(staticUserTypeRef: FirStaticUserTypeRef) {
+            visitUserTypeRef(staticUserTypeRef)
+        }
+
         override fun visitTypeProjection(typeProjection: FirTypeProjection) {
             visitElement(typeProjection)
         }
