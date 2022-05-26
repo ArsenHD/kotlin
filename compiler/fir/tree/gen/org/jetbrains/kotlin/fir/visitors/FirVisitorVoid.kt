@@ -131,6 +131,7 @@ import org.jetbrains.kotlin.fir.types.FirResolvedTypeRef
 import org.jetbrains.kotlin.fir.types.FirErrorTypeRef
 import org.jetbrains.kotlin.fir.types.FirTypeRefWithNullability
 import org.jetbrains.kotlin.fir.types.FirUserTypeRef
+import org.jetbrains.kotlin.fir.types.FirStaticUserTypeRef
 import org.jetbrains.kotlin.fir.types.FirDynamicTypeRef
 import org.jetbrains.kotlin.fir.types.FirFunctionTypeRef
 import org.jetbrains.kotlin.fir.types.FirIntersectionTypeRef
@@ -647,6 +648,10 @@ abstract class FirVisitorVoid : FirVisitor<Unit, Nothing?>() {
 
     open fun visitUserTypeRef(userTypeRef: FirUserTypeRef) {
         visitElement(userTypeRef)
+    }
+
+    open fun visitStaticUserTypeRef(staticUserTypeRef: FirStaticUserTypeRef) {
+        visitElement(staticUserTypeRef)
     }
 
     open fun visitDynamicTypeRef(dynamicTypeRef: FirDynamicTypeRef) {
@@ -1187,6 +1192,10 @@ abstract class FirVisitorVoid : FirVisitor<Unit, Nothing?>() {
 
     final override fun visitUserTypeRef(userTypeRef: FirUserTypeRef, data: Nothing?) {
         visitUserTypeRef(userTypeRef)
+    }
+
+    final override fun visitStaticUserTypeRef(staticUserTypeRef: FirStaticUserTypeRef, data: Nothing?) {
+        visitStaticUserTypeRef(staticUserTypeRef)
     }
 
     final override fun visitDynamicTypeRef(dynamicTypeRef: FirDynamicTypeRef, data: Nothing?) {
