@@ -25,7 +25,7 @@ import org.jetbrains.kotlin.psi.KtStaticUserType;
 import org.jetbrains.kotlin.psi.stubs.KotlinStaticUserTypeStub;
 import org.jetbrains.kotlin.psi.stubs.impl.KotlinStaticUserTypeStubImpl;
 
-public class KtStaticUserTypeElementType extends KtStubElementType<KotlinStaticUserTypeStub, KtStaticUserType> {
+public class KtStaticUserTypeElementType extends KtAbstractUserTypeElementType<KtStaticUserType> {
     public KtStaticUserTypeElementType(@NotNull @NonNls String debugName) {
         super(debugName, KtStaticUserType.class, KotlinStaticUserTypeStub.class);
     }
@@ -35,11 +35,6 @@ public class KtStaticUserTypeElementType extends KtStubElementType<KotlinStaticU
     public KotlinStaticUserTypeStub createStub(@NotNull KtStaticUserType psi, StubElement parentStub) {
         return new KotlinStaticUserTypeStubImpl((StubElement<?>) parentStub);
     }
-
-    @Override
-    public void serialize(@NotNull KotlinStaticUserTypeStub stub, @NotNull StubOutputStream dataStream) {
-    }
-
     @NotNull
     @Override
     public KotlinStaticUserTypeStub deserialize(@NotNull StubInputStream dataStream, StubElement parentStub) {

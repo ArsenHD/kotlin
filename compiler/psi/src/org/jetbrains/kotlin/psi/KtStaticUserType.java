@@ -29,7 +29,7 @@ import org.jetbrains.kotlin.psi.stubs.elements.KtStubElementTypes;
 import java.util.Collections;
 import java.util.List;
 
-public class KtStaticUserType extends KtElementImplStub<KotlinStaticUserTypeStub> implements KtTypeElement {
+public class KtStaticUserType extends KtAbstractUserType<KtStaticUserType> {
     public KtStaticUserType(@NotNull ASTNode node) {
         super(node);
     }
@@ -43,50 +43,9 @@ public class KtStaticUserType extends KtElementImplStub<KotlinStaticUserTypeStub
         return visitor.visitStaticUserType(this, data);
     }
 
-    @Nullable
-    public KtTypeArgumentList getTypeArgumentList() {
-        return getStubOrPsiChild(KtStubElementTypes.TYPE_ARGUMENT_LIST);
-    }
-
-    @NotNull
-    public List<KtTypeProjection> getTypeArguments() {
-        // TODO: empty elements in PSI
-        KtTypeArgumentList typeArgumentList = getTypeArgumentList();
-        return typeArgumentList == null ? Collections.emptyList() : typeArgumentList.getArguments();
-    }
-
-    @NotNull
     @Override
-    public List<KtTypeReference> getTypeArgumentsAsTypes() {
-        List<KtTypeReference> result = Lists.newArrayList();
-        for (KtTypeProjection projection : getTypeArguments()) {
-            result.add(projection.getTypeReference());
-        }
-        return result;
-    }
-
     @Nullable @IfNotParsed
     public KtSimpleNameExpression getReferenceExpression() {
         return getStubOrPsiChild(KtStubElementTypes.STATIC_REFERENCE_EXPRESSION);
-    }
-
-    @Nullable
-    public KtStaticUserType getQualifier() {
-        return getStubOrPsiChild(KtStubElementTypes.STATIC_USER_TYPE);
-    }
-
-    public void deleteQualifier() {
-        KtStaticUserType qualifier = getQualifier();
-        assert qualifier != null;
-        PsiElement dot = findChildByType(KtTokens.DOT);
-        assert dot != null;
-        qualifier.delete();
-        dot.delete();
-    }
-
-    @Nullable
-    public String getReferencedName() {
-        KtSimpleNameExpression referenceExpression = getReferenceExpression();
-        return referenceExpression == null ? null : referenceExpression.getReferencedName();
     }
 }
