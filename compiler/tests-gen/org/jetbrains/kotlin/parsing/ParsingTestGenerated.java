@@ -2917,6 +2917,39 @@ public class ParsingTestGenerated extends AbstractParsingTest {
             public void testStaticObjectInsideOfStaticBlock() throws Exception {
                 runTest("compiler/testData/psi/statics/StaticObjectInsideOfStaticBlock.kt");
             }
+
+            @TestMetadata("compiler/testData/psi/statics/extensions")
+            @TestDataPath("$PROJECT_ROOT")
+            @RunWith(JUnit3RunnerWithInners.class)
+            public static class Extensions extends AbstractParsingTest {
+                private void runTest(String testDataFilePath) throws Exception {
+                    KotlinTestUtils.runTest(this::doParsingTest, this, testDataFilePath);
+                }
+
+                public void testAllFilesPresentInExtensions() throws Exception {
+                    KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/psi/statics/extensions"), Pattern.compile("^(.*)\\.kts?$"), null, true);
+                }
+
+                @TestMetadata("ComplexStaticExtension.kt")
+                public void testComplexStaticExtension() throws Exception {
+                    runTest("compiler/testData/psi/statics/extensions/ComplexStaticExtension.kt");
+                }
+
+                @TestMetadata("FunctionalArgumentWithComplexStaticReceiver.kt")
+                public void testFunctionalArgumentWithComplexStaticReceiver() throws Exception {
+                    runTest("compiler/testData/psi/statics/extensions/FunctionalArgumentWithComplexStaticReceiver.kt");
+                }
+
+                @TestMetadata("FunctionalArgumentWithStaticReceiver.kt")
+                public void testFunctionalArgumentWithStaticReceiver() throws Exception {
+                    runTest("compiler/testData/psi/statics/extensions/FunctionalArgumentWithStaticReceiver.kt");
+                }
+
+                @TestMetadata("SimpleStaticExtension.kt")
+                public void testSimpleStaticExtension() throws Exception {
+                    runTest("compiler/testData/psi/statics/extensions/SimpleStaticExtension.kt");
+                }
+            }
         }
 
         @TestMetadata("compiler/testData/psi/stringTemplates")
