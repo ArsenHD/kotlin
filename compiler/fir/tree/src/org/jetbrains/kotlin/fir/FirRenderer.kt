@@ -1153,6 +1153,10 @@ open class FirRenderer(builder: StringBuilder, protected val mode: RenderMode = 
         visitTypeRefWithNullability(userTypeRef)
     }
 
+    override fun visitStaticUserTypeRef(staticUserTypeRef: FirStaticUserTypeRef) {
+        visitUserTypeRef(staticUserTypeRef)
+    }
+
     override fun visitTypeProjection(typeProjection: FirTypeProjection) {
         visitElement(typeProjection)
     }
