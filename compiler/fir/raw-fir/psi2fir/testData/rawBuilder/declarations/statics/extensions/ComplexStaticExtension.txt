@@ -1,0 +1,3 @@
+FILE: ComplexStaticExtension.kt
+    public? final? fun MyClass.MyNestedClass.AnotherNestedClass.static.test1(): R|kotlin/Unit| {
+    }

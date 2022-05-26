@@ -405,6 +405,40 @@ public class FirVisualizerForRawFirDataGenerated extends AbstractFirVisualizerTe
             public void testStaticObjectInsideOfStaticBlock() throws Exception {
                 runTest("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/StaticObjectInsideOfStaticBlock.kt");
             }
+
+            @Nested
+            @TestMetadata("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/extensions")
+            @TestDataPath("$PROJECT_ROOT")
+            public class Extensions {
+                @Test
+                public void testAllFilesPresentInExtensions() throws Exception {
+                    KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/extensions"), Pattern.compile("^(.+)\\.kt$"), null, true);
+                }
+
+                @Test
+                @TestMetadata("ComplexStaticExtension.kt")
+                public void testComplexStaticExtension() throws Exception {
+                    runTest("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/extensions/ComplexStaticExtension.kt");
+                }
+
+                @Test
+                @TestMetadata("FunctionalArgumentWithComplexStaticReceiver.kt")
+                public void testFunctionalArgumentWithComplexStaticReceiver() throws Exception {
+                    runTest("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/extensions/FunctionalArgumentWithComplexStaticReceiver.kt");
+                }
+
+                @Test
+                @TestMetadata("FunctionalArgumentWithStaticReceiver.kt")
+                public void testFunctionalArgumentWithStaticReceiver() throws Exception {
+                    runTest("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/extensions/FunctionalArgumentWithStaticReceiver.kt");
+                }
+
+                @Test
+                @TestMetadata("SimpleStaticExtension.kt")
+                public void testSimpleStaticExtension() throws Exception {
+                    runTest("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/extensions/SimpleStaticExtension.kt");
+                }
+            }
         }
     }
 
