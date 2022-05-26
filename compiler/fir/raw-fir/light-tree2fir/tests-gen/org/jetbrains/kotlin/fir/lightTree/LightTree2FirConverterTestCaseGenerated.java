@@ -359,6 +359,39 @@ public class LightTree2FirConverterTestCaseGenerated extends AbstractLightTree2F
             public void testStaticObjectInsideOfStaticBlock() throws Exception {
                 runTest("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/StaticObjectInsideOfStaticBlock.kt");
             }
+
+            @TestMetadata("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/extensions")
+            @TestDataPath("$PROJECT_ROOT")
+            @RunWith(JUnit3RunnerWithInners.class)
+            public static class Extensions extends AbstractLightTree2FirConverterTestCase {
+                private void runTest(String testDataFilePath) throws Exception {
+                    KotlinTestUtils.runTest(this::doTest, this, testDataFilePath);
+                }
+
+                public void testAllFilesPresentInExtensions() throws Exception {
+                    KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/extensions"), Pattern.compile("^(.+)\\.kt$"), null, true);
+                }
+
+                @TestMetadata("ComplexStaticExtension.kt")
+                public void testComplexStaticExtension() throws Exception {
+                    runTest("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/extensions/ComplexStaticExtension.kt");
+                }
+
+                @TestMetadata("FunctionalArgumentWithComplexStaticReceiver.kt")
+                public void testFunctionalArgumentWithComplexStaticReceiver() throws Exception {
+                    runTest("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/extensions/FunctionalArgumentWithComplexStaticReceiver.kt");
+                }
+
+                @TestMetadata("FunctionalArgumentWithStaticReceiver.kt")
+                public void testFunctionalArgumentWithStaticReceiver() throws Exception {
+                    runTest("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/extensions/FunctionalArgumentWithStaticReceiver.kt");
+                }
+
+                @TestMetadata("SimpleStaticExtension.kt")
+                public void testSimpleStaticExtension() throws Exception {
+                    runTest("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/extensions/SimpleStaticExtension.kt");
+                }
+            }
         }
     }
 
