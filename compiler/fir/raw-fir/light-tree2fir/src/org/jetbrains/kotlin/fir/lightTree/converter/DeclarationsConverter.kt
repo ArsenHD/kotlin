@@ -2101,7 +2101,7 @@ class DeclarationsConverter(
             when (it.tokenType) {
                 TYPE_REFERENCE -> firType = convertType(it)
                 MODIFIER_LIST -> allTypeModifiers += convertTypeModifierList(it)
-                USER_TYPE -> firType = convertUserType(typeRefSource, it)
+                USER_TYPE, STATIC_USER_TYPE -> firType = convertUserType(typeRefSource, it)
                 NULLABLE_TYPE -> firType = convertNullableType(typeRefSource, it, allTypeModifiers)
                 FUNCTION_TYPE -> firType = convertFunctionType(typeRefSource, it, isSuspend = allTypeModifiers.hasSuspend())
                 DYNAMIC_TYPE -> firType = buildDynamicTypeRef {
@@ -2207,10 +2207,14 @@ class DeclarationsConverter(
         var identifierSource: KtSourceElement? = null
         val firTypeArguments = mutableListOf<FirTypeProjection>()
         var typeArgumentsSource: KtSourceElement? = null
+        val firTypeBuilder = when {
+            userType.getChildNodeByType(STATIC_REFERENCE_EXPRESSION) != null -> FirStaticUserTypeRefBuilder()
+            else -> FirUserTypeRefBuilder()
+        }
         userType.forEachChildren {
             when (it.tokenType) {
                 USER_TYPE -> simpleFirUserType = convertUserType(typeRefSource, it) as? FirUserTypeRef //simple user type
-                REFERENCE_EXPRESSION -> {
+                REFERENCE_EXPRESSION, STATIC_REFERENCE_EXPRESSION -> {
                     identifierSource = it.toFirSourceElement()
                     identifier = it.asText
                 }
@@ -2235,12 +2239,14 @@ class DeclarationsConverter(
             }
         )
 
-        return buildUserTypeRef {
+        firTypeBuilder.apply {
             source = typeRefSource
             isMarkedNullable = isNullable
             qualifier.add(qualifierPart)
             simpleFirUserType?.qualifier?.let { this.qualifier.addAll(0, it) }
         }
+
+        return firTypeBuilder.build()
     }
 
     /**
