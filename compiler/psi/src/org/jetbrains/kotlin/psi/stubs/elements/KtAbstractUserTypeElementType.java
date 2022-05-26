@@ -17,28 +17,21 @@
 package org.jetbrains.kotlin.psi.stubs.elements;
 
 import com.intellij.psi.stubs.StubElement;
-import com.intellij.psi.stubs.StubInputStream;
 import com.intellij.psi.stubs.StubOutputStream;
 import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.kotlin.psi.KtUserType;
-import org.jetbrains.kotlin.psi.stubs.KotlinUserTypeStub;
-import org.jetbrains.kotlin.psi.stubs.impl.KotlinUserTypeStubImpl;
+import org.jetbrains.kotlin.psi.KtAbstractUserType;
 
-public class KtUserTypeElementType extends KtAbstractUserTypeElementType<KtUserType> {
-    public KtUserTypeElementType(@NotNull @NonNls String debugName) {
-        super(debugName, KtUserType.class, KotlinUserTypeStub.class);
+public abstract class KtAbstractUserTypeElementType<T extends KtAbstractUserType<T>> extends KtStubElementType<StubElement<T>, T> {
+    public KtAbstractUserTypeElementType(
+            @NotNull @NonNls String debugName,
+            Class<T> typeClass,
+            Class<? extends StubElement<T>> stubClass
+    ) {
+        super(debugName, typeClass, stubClass);
     }
 
-    @NotNull
     @Override
-    public KotlinUserTypeStub createStub(@NotNull KtUserType psi, StubElement parentStub) {
-        return new KotlinUserTypeStubImpl((StubElement<?>) parentStub);
-    }
-
-    @NotNull
-    @Override
-    public KotlinUserTypeStub deserialize(@NotNull StubInputStream dataStream, StubElement parentStub) {
-        return new KotlinUserTypeStubImpl((StubElement<?>) parentStub);
+    public void serialize(@NotNull StubElement<T> stub, @NotNull StubOutputStream dataStream) {
     }
 }
