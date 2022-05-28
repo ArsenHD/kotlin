@@ -40,6 +40,10 @@ abstract class FirDefaultTransformer<D> : FirTransformer<D>() {
         return transformTypeRefWithNullability(userTypeRef, data)
     }
 
+    override fun transformStaticUserTypeRef(staticUserTypeRef: FirStaticUserTypeRef, data: D): FirTypeRef {
+        return transformTypeRef(staticUserTypeRef, data)
+    }
+
     override fun transformIntersectionTypeRef(intersectionTypeRef: FirIntersectionTypeRef, data: D): FirTypeRef {
         return transformTypeRef(intersectionTypeRef, data)
     }

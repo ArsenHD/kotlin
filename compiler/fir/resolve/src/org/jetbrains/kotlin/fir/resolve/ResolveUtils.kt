@@ -248,11 +248,14 @@ internal fun typeForQualifierByDeclaration(declaration: FirDeclaration, resultTy
             )
         } else {
             val companionObjectSymbol = declaration.companionObjectSymbol
-            if (companionObjectSymbol != null) {
-                return resultType.resolvedTypeFromPrototype(
-                    companionObjectSymbol.constructType(emptyArray(), false),
+            val selfStaticObjectSymbol = declaration.selfStaticObjectSymbol
+            val coneType = session.typeContext.intersectTypesOrNull(
+                listOfNotNull(
+                    selfStaticObjectSymbol?.constructType(emptyArray(), false),
+                    companionObjectSymbol?.constructType(emptyArray(), false)
                 )
-            }
+            ) ?: return null
+            return resultType.resolvedTypeFromPrototype(coneType)
         }
     }
     return null
