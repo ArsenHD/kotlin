@@ -1,0 +1,33 @@
+FILE: FunctionalArgumentWithComplexStaticReceiver.kt
+    public final class MyClass : R|kotlin/Any| {
+        public constructor(): R|MyClass| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final class A : R|kotlin/Any| {
+            public constructor(): R|MyClass.A| {
+                super<R|kotlin/Any|>()
+            }
+
+            public final class B : R|kotlin/Any| {
+                public constructor(): R|MyClass.A.B| {
+                    super<R|kotlin/Any|>()
+                }
+
+                public final static object <SELF_STATIC_OBJECT> {
+                }
+
+            }
+
+            public final static object <SELF_STATIC_OBJECT> {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
+    }
+    public final fun test1(block: R|MyClass.A.B.<SELF_STATIC_OBJECT>.() -> kotlin/Unit|): R|kotlin/Unit| {
+        R|<local>/block|.R|SubstitutionOverride<kotlin/Function1.invoke: R|kotlin/Unit|>|(Q|MyClass.A.B|)
+    }
