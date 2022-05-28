@@ -2151,7 +2151,7 @@ class DeclarationsConverter(
         isNullable: Boolean = false
     ): FirTypeRef {
         var simpleFirUserType: FirUserTypeRef? = null
-        var identifier: String? = null
+        var identifier: Name? = null
         var identifierSource: KtSourceElement? = null
         val firTypeArguments = mutableListOf<FirTypeProjection>()
         var typeArgumentsSource: KtSourceElement? = null
@@ -2162,9 +2162,13 @@ class DeclarationsConverter(
         userType.forEachChildren {
             when (it.tokenType) {
                 USER_TYPE -> simpleFirUserType = convertUserType(typeRefSource, it) as? FirUserTypeRef //simple user type
-                REFERENCE_EXPRESSION, STATIC_REFERENCE_EXPRESSION -> {
+                REFERENCE_EXPRESSION -> {
                     identifierSource = it.toFirSourceElement()
-                    identifier = it.asText
+                    identifier = it.asText.nameAsSafeName()
+                }
+                STATIC_REFERENCE_EXPRESSION -> {
+                    identifierSource = it.toFirSourceElement()
+                    identifier = SpecialNames.SELF_STATIC_OBJECT
                 }
                 TYPE_ARGUMENT_LIST -> {
                     typeArgumentsSource = it.toFirSourceElement()
@@ -2179,9 +2183,10 @@ class DeclarationsConverter(
                 diagnostic = ConeSimpleDiagnostic("Incomplete user type", DiagnosticKind.Syntax)
             }
 
+        val qualifierPartName = identifier ?: SpecialNames.NO_NAME_PROVIDED
         val qualifierPart = FirQualifierPartImpl(
             identifierSource!!,
-            identifier.nameAsSafeName(),
+            qualifierPartName,
             FirTypeArgumentListImpl(typeArgumentsSource ?: typeRefSource).apply {
                 typeArguments += firTypeArguments
             }

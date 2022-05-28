@@ -8,6 +8,7 @@ package org.jetbrains.kotlin.fir.builder
 import com.intellij.psi.PsiElement
 import com.intellij.psi.tree.IElementType
 import org.jetbrains.kotlin.*
+import org.jetbrains.kotlin.KtNodeTypes.STATIC_REFERENCE_EXPRESSION
 import org.jetbrains.kotlin.builtins.StandardNames.BACKING_FIELD
 import org.jetbrains.kotlin.config.LanguageFeature
 import org.jetbrains.kotlin.descriptors.ClassKind
@@ -1826,9 +1827,13 @@ open class RawFirBuilder(
                             var ktQualifier: KtAbstractUserType<*>? = unwrappedElement
 
                             do {
+                                val referencedName = when (referenceExpression!!.elementType) {
+                                    STATIC_REFERENCE_EXPRESSION -> SpecialNames.SELF_STATIC_OBJECT
+                                    else -> referenceExpression!!.getReferencedNameAsName()
+                                }
                                 val firQualifier = FirQualifierPartImpl(
                                     referenceExpression!!.toFirSourceElement(),
-                                    referenceExpression!!.getReferencedNameAsName(),
+                                    referencedName,
                                     FirTypeArgumentListImpl(ktQualifier?.typeArgumentList?.toKtPsiSourceElement() ?: source).apply {
                                         typeArguments.appendTypeArguments(ktQualifier!!.typeArguments)
                                     }
