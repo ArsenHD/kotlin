@@ -1206,26 +1206,6 @@ abstract class BaseFirBuilder<T>(val baseSession: FirSession, val context: Conte
         initContainingClassAttr(context)
     }
 
-    protected fun initSelfStaticObject(scopeProvider: FirScopeProvider): FirRegularClassBuilder {
-        return FirRegularClassBuilder().apply {
-            moduleData = baseModuleData
-            origin = FirDeclarationOrigin.Source
-            this.name = SpecialNames.SELF_STATIC_OBJECT
-            status = FirDeclarationStatusImpl(
-                Visibilities.Public,
-                Modality.FINAL,
-            ).apply {
-                isStatic = true
-            }
-            classKind = ClassKind.STATIC_OBJECT
-            this.scopeProvider = scopeProvider
-            symbol = FirRegularClassSymbol(context.currentClassId.selfStaticObjectId)
-        }
-    }
-
-    private val ClassId.selfStaticObjectId: ClassId
-        get() = createNestedClassId(SpecialNames.SELF_STATIC_OBJECT)
-
     protected val KtDeclaration.modality: Modality?
         get() = with(modifierList) {
             when {

@@ -45,6 +45,7 @@ class FirJavaClass @FirImplementationDetail internal constructor(
     override val declarations: MutableList<FirDeclaration>,
     override val scopeProvider: FirScopeProvider,
     override val symbol: FirRegularClassSymbol,
+    override var selfStaticObjectSymbol: FirRegularClassSymbol?,
     private val unenhnancedSuperTypes: List<FirTypeRef>,
     override val typeParameters: MutableList<FirTypeParameterRef>,
     internal val javaPackage: JavaPackage?,
@@ -85,9 +86,6 @@ class FirJavaClass @FirImplementationDetail internal constructor(
     override fun replaceControlFlowGraphReference(newControlFlowGraphReference: FirControlFlowGraphReference?) {}
 
     override val companionObjectSymbol: FirRegularClassSymbol?
-        get() = null
-
-    override val selfStaticObjectSymbol: FirRegularClassSymbol?
         get() = null
 
     override fun replaceCompanionObjectSymbol(newCompanionObjectSymbol: FirRegularClassSymbol?) {}
@@ -175,6 +173,7 @@ class FirJavaClassBuilder : FirRegularClassBuilder(), FirAnnotationContainerBuil
             declarations,
             scopeProvider,
             symbol,
+            selfStaticObjectSymbol,
             superTypeRefs,
             typeParameters,
             javaPackage,
