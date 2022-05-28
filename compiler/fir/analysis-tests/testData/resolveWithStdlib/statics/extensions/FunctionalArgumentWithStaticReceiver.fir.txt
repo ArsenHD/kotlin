@@ -1,0 +1,13 @@
+FILE: FunctionalArgumentWithStaticReceiver.kt
+    public final class A : R|kotlin/Any| {
+        public constructor(): R|A| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
+    }
+    public final fun test1(block: R|A.<SELF_STATIC_OBJECT>.() -> kotlin/Unit|): R|kotlin/Unit| {
+        R|<local>/block|.R|SubstitutionOverride<kotlin/Function1.invoke: R|kotlin/Unit|>|(Q|A|)
+    }

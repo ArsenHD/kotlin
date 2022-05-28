@@ -1,0 +1,15 @@
+FILE: SimpleStaticExtension.kt
+    public final class A : R|kotlin/Any| {
+        public constructor(): R|A| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
+    }
+    public final fun R|A.<SELF_STATIC_OBJECT>|.test1(): R|kotlin/Unit| {
+    }
+    public final fun foo(): R|kotlin/Unit| {
+        Q|A|.R|/test1|()
+    }
