@@ -24,6 +24,8 @@ import org.jetbrains.kotlin.fir.declarations.builder.buildEnumEntry
 import org.jetbrains.kotlin.fir.declarations.builder.buildOuterClassTypeParameterRef
 import org.jetbrains.kotlin.fir.declarations.builder.buildTypeParameter
 import org.jetbrains.kotlin.fir.declarations.impl.FirResolvedDeclarationStatusImpl
+import org.jetbrains.kotlin.fir.declarations.utils.addDeclaration
+import org.jetbrains.kotlin.fir.declarations.utils.createEmptySelfStaticObject
 import org.jetbrains.kotlin.fir.declarations.utils.effectiveVisibility
 import org.jetbrains.kotlin.fir.declarations.utils.modality
 import org.jetbrains.kotlin.fir.expressions.FirConstExpression
@@ -34,6 +36,7 @@ import org.jetbrains.kotlin.fir.java.enhancement.FirSignatureEnhancement
 import org.jetbrains.kotlin.fir.resolve.constructType
 import org.jetbrains.kotlin.fir.resolve.defaultType
 import org.jetbrains.kotlin.fir.resolve.providers.symbolProvider
+import org.jetbrains.kotlin.fir.scopes.kotlinScopeProvider
 import org.jetbrains.kotlin.fir.symbols.ConeTypeParameterLookupTag
 import org.jetbrains.kotlin.fir.symbols.FirBasedSymbol
 import org.jetbrains.kotlin.fir.symbols.impl.*
@@ -315,6 +318,11 @@ abstract class FirJavaFacade(
                     }
                 }
             }
+
+            val selfStaticObject = createEmptySelfStaticObject(classId, moduleData, session.kotlinScopeProvider)
+            addDeclaration(selfStaticObject)
+            selfStaticObjectSymbol = selfStaticObject.symbol
+
             val javaClassDeclaredConstructors = javaClass.constructors
             val constructorId = CallableId(classId.packageFqName, classId.relativeClassName, classId.shortClassName)
 
