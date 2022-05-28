@@ -6520,6 +6520,46 @@ public class FirDiagnosticTestGenerated extends AbstractFirDiagnosticTest {
             public void testStaticObjectInsideOfStaticBlock() throws Exception {
                 runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/StaticObjectInsideOfStaticBlock.kt");
             }
+
+            @Nested
+            @TestMetadata("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions")
+            @TestDataPath("$PROJECT_ROOT")
+            public class Extensions {
+                @Test
+                public void testAllFilesPresentInExtensions() throws Exception {
+                    KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions"), Pattern.compile("^([^.]+)\\.kt$"), null, true);
+                }
+
+                @Test
+                @TestMetadata("ComplexStaticExtension.kt")
+                public void testComplexStaticExtension() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/ComplexStaticExtension.kt");
+                }
+
+                @Test
+                @TestMetadata("FunctionalArgumentWithComplexStaticReceiver.kt")
+                public void testFunctionalArgumentWithComplexStaticReceiver() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/FunctionalArgumentWithComplexStaticReceiver.kt");
+                }
+
+                @Test
+                @TestMetadata("FunctionalArgumentWithStaticReceiver.kt")
+                public void testFunctionalArgumentWithStaticReceiver() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/FunctionalArgumentWithStaticReceiver.kt");
+                }
+
+                @Test
+                @TestMetadata("JavaClassStaticExtension.kt")
+                public void testJavaClassStaticExtension() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/JavaClassStaticExtension.kt");
+                }
+
+                @Test
+                @TestMetadata("SimpleStaticExtension.kt")
+                public void testSimpleStaticExtension() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/SimpleStaticExtension.kt");
+                }
+            }
         }
     }
 }

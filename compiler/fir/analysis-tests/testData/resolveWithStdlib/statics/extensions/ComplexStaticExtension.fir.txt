@@ -1,0 +1,35 @@
+FILE: ComplexStaticExtension.kt
+    public final class MyClass : R|kotlin/Any| {
+        public constructor(): R|MyClass| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final class MyNestedClass : R|kotlin/Any| {
+            public constructor(): R|MyClass.MyNestedClass| {
+                super<R|kotlin/Any|>()
+            }
+
+            public final class AnotherNestedClass : R|kotlin/Any| {
+                public constructor(): R|MyClass.MyNestedClass.AnotherNestedClass| {
+                    super<R|kotlin/Any|>()
+                }
+
+                public final static object <SELF_STATIC_OBJECT> {
+                }
+
+            }
+
+            public final static object <SELF_STATIC_OBJECT> {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
+    }
+    public final fun R|MyClass.MyNestedClass.AnotherNestedClass.<SELF_STATIC_OBJECT>|.test1(): R|kotlin/Unit| {
+    }
+    public final fun foo(): R|kotlin/Unit| {
+        Q|MyClass.MyNestedClass.AnotherNestedClass|.R|/test1|()
+    }
