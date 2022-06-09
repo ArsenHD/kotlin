@@ -60,8 +60,8 @@ internal class LlvmDeclarations(private val unique: Map<UniqueKind, UniqueLlvmDe
 
 internal class ClassLlvmDeclarations(
         val bodyType: LLVMTypeRef,
-        val typeInfoGlobal: StaticData.Global,
-        val writableTypeInfoGlobal: StaticData.Global?,
+        val typeInfoGlobal: StaticDataBase.Global,
+        val writableTypeInfoGlobal: StaticDataBase.Global?,
         val typeInfo: ConstPointer,
         val singletonDeclarations: SingletonLlvmDeclarations?,
         val objCDeclarations: KotlinObjCClassLlvmDeclarations?)
@@ -69,8 +69,8 @@ internal class ClassLlvmDeclarations(
 internal class SingletonLlvmDeclarations(val instanceStorage: AddressAccess)
 
 internal class KotlinObjCClassLlvmDeclarations(
-        val classInfoGlobal: StaticData.Global,
-        val bodyOffsetGlobal: StaticData.Global
+        val classInfoGlobal: StaticDataBase.Global,
+        val bodyOffsetGlobal: StaticDataBase.Global
 )
 
 internal class FieldLlvmDeclarations(val index: Int, val classBodyType: LLVMTypeRef)
@@ -165,7 +165,7 @@ private class DeclarationsGeneratorVisitor(override val context: Context) :
         val bodyType = createClassBodyType("kclassbody:$internalName", fields)
 
         val typeInfoPtr: ConstPointer
-        val typeInfoGlobal: StaticData.Global
+        val typeInfoGlobal: StaticDataBase.Global
 
         val typeInfoSymbolName = if (declaration.isExported()) {
             declaration.computeTypeInfoSymbolName()

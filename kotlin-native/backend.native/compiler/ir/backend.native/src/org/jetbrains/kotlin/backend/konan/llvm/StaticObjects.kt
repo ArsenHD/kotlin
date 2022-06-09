@@ -9,6 +9,7 @@ import kotlinx.cinterop.cValuesOf
 import llvm.*
 import org.jetbrains.kotlin.backend.konan.ir.llvmSymbolOrigin
 import org.jetbrains.kotlin.ir.declarations.IrClass
+import org.jetbrains.kotlin.ir.expressions.IrConst
 
 private fun ConstPointer.add(index: Int): ConstPointer {
     return constPointer(LLVMConstGEP(llvm, cValuesOf(Int32(index).llvm), 1)!!)
@@ -105,3 +106,13 @@ internal fun ContextUtils.unique(kind: UniqueKind): ConstPointer {
 
 internal val ContextUtils.theUnitInstanceRef: ConstPointer
     get() = this.unique(UniqueKind.UNIT)
+
+/**
+ * Creates static instance of `konan.ImmutableByteArray` with given values of elements.
+ *
+ * @param args data for constant creation.
+ */
+internal fun StaticData.createImmutableBlob(value: IrConst<String>): LLVMValueRef {
+    val args = value.value.map { Int8(it.code.toByte()).llvm }
+    return createConstKotlinArray(context.ir.symbols.immutableBlob.owner, args)
+}

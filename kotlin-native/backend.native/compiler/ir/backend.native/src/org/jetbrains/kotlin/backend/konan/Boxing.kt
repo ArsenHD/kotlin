@@ -182,7 +182,7 @@ internal fun initializeCachedBoxes(context: Context) {
  * Adds global that refers to the cache.
  */
 private fun initCache(cache: BoxCache, context: Context, cacheName: String,
-                      rangeStartName: String, rangeEndName: String, declareOnly: Boolean) : StaticData.Global {
+                      rangeStartName: String, rangeEndName: String, declareOnly: Boolean) : StaticDataBase.Global {
 
     val kotlinType = context.irBuiltIns.getKotlinClass(cache)
     val staticData = context.llvm.staticData

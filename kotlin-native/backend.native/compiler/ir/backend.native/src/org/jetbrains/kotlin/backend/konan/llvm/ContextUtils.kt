@@ -588,7 +588,7 @@ internal class Llvm(val context: Context, val llvmModule: LLVMModuleRef) : Runti
     var fileUsesThreadLocalObjects = false
     val globalSharedObjects = mutableSetOf<LLVMValueRef>()
     val initializersGenerationState = InitializersGenerationState()
-    val boxCacheGlobals = mutableMapOf<BoxCache, StaticData.Global>()
+    val boxCacheGlobals = mutableMapOf<BoxCache, StaticDataBase.Global>()
 
     val runtimeAnnotationMap by lazy {
         context.llvm.staticData.getGlobal("llvm.global.annotations")

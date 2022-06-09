@@ -7,17 +7,19 @@ package org.jetbrains.kotlin.backend.konan.llvm
 
 import llvm.*
 import org.jetbrains.kotlin.backend.konan.Context
-import org.jetbrains.kotlin.ir.expressions.IrConst
 
 /**
  * Provides utilities to create static data.
  */
-internal class StaticData(override val context: Context): ContextUtils {
+internal abstract class StaticDataBase {
+
+    abstract val module: LLVMModuleRef
+    abstract val targetData: LLVMTargetDataRef
 
     /**
      * Represents the LLVM global variable.
      */
-    class Global private constructor(val staticData: StaticData, val llvmGlobal: LLVMValueRef) {
+    class Global private constructor(val staticData: StaticDataBase, val llvmGlobal: LLVMValueRef) {
         companion object {
 
             private fun createLlvmGlobal(module: LLVMModuleRef,
@@ -40,20 +42,18 @@ internal class StaticData(override val context: Context): ContextUtils {
                 return llvmGlobal
             }
 
-            fun create(staticData: StaticData, type: LLVMTypeRef, name: String, isExported: Boolean): Global {
-                val module = staticData.context.llvmModule
-
+            fun create(staticData: StaticDataBase, type: LLVMTypeRef, name: String, isExported: Boolean): Global {
                 val isUnnamed = (name == "") // LLVM will select the unique index and represent the global as `@idx`.
                 if (isUnnamed && isExported) {
                     throw IllegalArgumentException("unnamed global can't be exported")
                 }
 
-                val llvmGlobal = createLlvmGlobal(module!!, type, name, isExported)
+                val llvmGlobal = createLlvmGlobal(staticData.module, type, name, isExported)
                 return Global(staticData, llvmGlobal)
             }
 
-            fun get(staticData: StaticData, name: String): Global? {
-                val llvmGlobal = LLVMGetNamedGlobal(staticData.context.llvmModule, name) ?: return null
+            fun get(staticData: StaticDataBase, name: String): Global? {
+                val llvmGlobal = LLVMGetNamedGlobal(staticData.module, name) ?: return null
                 return Global(staticData, llvmGlobal)
             }
         }
@@ -115,7 +115,7 @@ internal class StaticData(override val context: Context): ContextUtils {
         }
 
         private fun getElementOffset(index: Int): Long {
-            val llvmTargetData = global.staticData.llvmTargetData
+            val llvmTargetData = global.staticData.targetData
             val type = LLVMGetElementType(delegate.llvmType)
             return when (LLVMGetTypeKind(type)) {
                 LLVMTypeKind.LLVMStructTypeKind -> LLVMOffsetOfElement(llvmTargetData, type, index)
@@ -179,22 +179,40 @@ internal class StaticData(override val context: Context): ContextUtils {
         return global
     }
 
-    private val stringLiterals = mutableMapOf<String, ConstPointer>()
     private val cStringLiterals = mutableMapOf<String, ConstPointer>()
 
-    fun cStringLiteral(value: String) =
-            cStringLiterals.getOrPut(value) { placeCStringLiteral(value) }
+    internal fun placeGlobalConstArray(name: String,
+                                       elemType: LLVMTypeRef,
+                                       elements: List<ConstValue>,
+                                       isExported: Boolean = false): ConstPointer {
+        if (elements.isNotEmpty() || isExported) {
+            val global = placeGlobalArray(name, elemType, elements, isExported)
+            global.setConstant(true)
+            return global.pointer.getElementPtr(0)
+        } else {
+            return NullPointer(elemType)
+        }
+    }
 
+    internal fun placeCStringLiteral(value: String) : ConstPointer {
+        val chars = value.toByteArray(Charsets.UTF_8).map { Int8(it) } + Int8(0)
+
+        return placeGlobalConstArray("", int8Type, chars)
+    }
+
+    internal fun cStringLiteral(value: String) = cStringLiterals.getOrPut(value) { placeCStringLiteral(value) }
+
+}
+
+internal class StaticData(override val context: Context) : ContextUtils, StaticDataBase() {
+    override val module: LLVMModuleRef
+        get() = context.llvmModule!!
+    override val targetData: LLVMTargetDataRef
+        get() = llvmTargetData
+
+    private val stringLiterals = mutableMapOf<String, ConstPointer>()
     fun kotlinStringLiteral(value: String) =
-        stringLiterals.getOrPut(value) { createKotlinStringLiteral(value) }
+            stringLiterals.getOrPut(value) { createKotlinStringLiteral(value) }
 }
 
-/**
- * Creates static instance of `konan.ImmutableByteArray` with given values of elements.
- *
- * @param args data for constant creation.
- */
-internal fun StaticData.createImmutableBlob(value: IrConst<String>): LLVMValueRef {
-    val args = value.value.map { Int8(it.code.toByte()).llvm }
-    return createConstKotlinArray(context.ir.symbols.immutableBlob.owner, args)
-}
+internal class ModuleStaticData(override val module: LLVMModuleRef, override val targetData: LLVMTargetDataRef) : StaticDataBase()
