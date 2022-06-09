@@ -16,8 +16,11 @@
 
 package org.jetbrains.kotlin.resolve.calls.tower
 
+import org.jetbrains.kotlin.descriptors.ClassKind
 import org.jetbrains.kotlin.name.Name
+import org.jetbrains.kotlin.resolve.calls.components.candidate.ResolutionCandidate
 import org.jetbrains.kotlin.resolve.calls.tasks.ExplicitReceiverKind
+import org.jetbrains.kotlin.resolve.calls.util.FakeCallableDescriptorForObject
 import org.jetbrains.kotlin.resolve.scopes.receivers.DetailedReceiver
 import org.jetbrains.kotlin.resolve.scopes.receivers.QualifierReceiver
 import org.jetbrains.kotlin.resolve.scopes.receivers.ReceiverValueWithSmartCastInfo
@@ -41,6 +44,44 @@ class PrioritizedCompositeScopeTowerProcessor<out C>(
         processors.forEach { it.recordLookups(skippedData, name) }
     }
 
+}
+
+class VariableAndObjectScopeTowerProcessor<out C : Candidate>(
+    private val variableProcessor: ScopeTowerProcessor<C>,
+    private val objectProcessor: ScopeTowerProcessor<C>
+) : ScopeTowerProcessor<C> {
+    override fun process(data: TowerData): List<Collection<C>> {
+        val variablesResult = variableProcessor.process(data)
+        val objectResult = objectProcessor.process(data)
+        val result = mutableListOf<MutableList<C>>()
+        result.addAll(variablesResult.map { it.toMutableList() })
+        for ((index, objectLevel) in objectResult.withIndex()) {
+            val enumEntryLevel = objectLevel.filter { it.isEnumEntryCandidate() }
+            if (enumEntryLevel.isEmpty()) continue
+            if (index < result.size) {
+                result[index].addAll(enumEntryLevel)
+            } else {
+                result.add(enumEntryLevel.toMutableList())
+            }
+        }
+        for (objectLevel in objectResult) {
+            val nonEnumEntryLevel = objectLevel.filter { !it.isEnumEntryCandidate() }
+            if (nonEnumEntryLevel.isEmpty()) continue
+            result.add(nonEnumEntryLevel.toMutableList())
+        }
+        return result
+    }
+
+    private fun Candidate.isEnumEntryCandidate(): Boolean {
+        if (this !is ResolutionCandidate) return false
+        val callableDescriptor = resolvedCall.candidateDescriptor as? FakeCallableDescriptorForObject ?: return false
+        return callableDescriptor.classDescriptor.kind == ClassKind.ENUM_ENTRY
+    }
+
+    override fun recordLookups(skippedData: Collection<TowerData>, name: Name) {
+        variableProcessor.recordLookups(skippedData, name)
+        objectProcessor.recordLookups(skippedData, name)
+    }
 }
 
 // use this if all processors has same priority
@@ -244,7 +285,7 @@ fun <C : Candidate> createVariableProcessor(
 fun <C : Candidate> createVariableAndObjectProcessor(
     scopeTower: ImplicitScopeTower, name: Name,
     context: CandidateFactory<C>, explicitReceiver: DetailedReceiver?, classValueReceiver: Boolean = true
-) = PrioritizedCompositeScopeTowerProcessor(
+) = VariableAndObjectScopeTowerProcessor(
     createVariableProcessor(scopeTower, name, context, explicitReceiver),
     createSimpleProcessor(scopeTower, context, explicitReceiver, classValueReceiver) { getObjects(name, it) }
 )
