@@ -139,6 +139,10 @@ fun deserializeClassToSymbol(
             }
         )
 
+        val selfStaticObject = createEmptySelfStaticObject(classId, moduleData, scopeProvider)
+        addDeclaration(selfStaticObject)
+        selfStaticObjectSymbol = selfStaticObject.symbol
+
         addDeclarations(
             classProto.constructorList.map {
                 classDeserializer.loadConstructor(it, classProto, this)
