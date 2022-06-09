@@ -66,7 +66,9 @@ extern "C" {
 extern const int32_t KonanNeedDebugInfo = 1;
 extern const int32_t Kotlin_runtimeAssertsMode = static_cast<int32_t>(kotlin::compiler::RuntimeAssertsMode::kPanic);
 extern const char* const Kotlin_runtimeLogs = nullptr;
-int32_t Kotlin_gcSchedulerType = 0;  // kDisabled
+extern const int32_t Kotlin_gcSchedulerType = static_cast<int32_t>(kotlin::compiler::GCSchedulerType::kDisabled);
+extern const int32_t Kotlin_freezingChecksEnabled = 1;
+extern const int32_t Kotlin_freezingEnabled = 1;
 
 extern const TypeInfo* theAnyTypeInfo = theAnyTypeInfoHolder.typeInfo();
 extern const TypeInfo* theArrayTypeInfo = theArrayTypeInfoHolder.typeInfo();
