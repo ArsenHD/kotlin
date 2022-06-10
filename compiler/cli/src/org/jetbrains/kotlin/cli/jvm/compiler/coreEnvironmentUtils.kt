@@ -5,6 +5,7 @@
 
 package org.jetbrains.kotlin.cli.jvm.compiler
 
+import com.intellij.ide.highlighter.JavaFileType
 import com.intellij.openapi.diagnostic.Logger
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.vfs.StandardFileSystems
@@ -19,9 +20,11 @@ import org.jetbrains.kotlin.cli.common.messages.MessageCollector
 import org.jetbrains.kotlin.config.CompilerConfiguration
 import org.jetbrains.kotlin.config.CompilerConfigurationKey
 import org.jetbrains.kotlin.config.JVMConfigurationKeys
+import org.jetbrains.kotlin.extensions.CompilerConfigurationExtension
 import org.jetbrains.kotlin.extensions.PreprocessedFileCreator
 import org.jetbrains.kotlin.idea.KotlinFileType
 import org.jetbrains.kotlin.modules.Module
+import org.jetbrains.kotlin.parsing.KotlinParserDefinition
 import org.jetbrains.kotlin.psi.KtFile
 import org.jetbrains.kotlin.resolve.multiplatform.isCommonSource
 import java.io.File
@@ -75,6 +78,13 @@ inline fun List<KotlinSourceRoot>.forAllFiles(
     }
 }
 
+private fun VirtualFile.mayRequirePlugin(): Boolean =
+    extension?.let {
+        it == KotlinParserDefinition.STD_SCRIPT_SUFFIX ||
+                (it != KotlinFileType.EXTENSION &&
+                        it != JavaFileType.INSTANCE.defaultExtension)
+    } ?: true
+
 fun createSourceFilesFromSourceRoots(
     configuration: CompilerConfiguration,
     project: Project,
@@ -83,7 +93,14 @@ fun createSourceFilesFromSourceRoots(
 ): MutableList<KtFile> {
     val psiManager = PsiManager.getInstance(project)
     val result = mutableListOf<KtFile>()
+    var pluginsConfigured = false
     sourceRoots.forAllFiles(configuration, project, reportLocation) { virtualFile, isCommon ->
+        if (!pluginsConfigured && virtualFile.mayRequirePlugin()) {
+            for (extension in CompilerConfigurationExtension.getInstances(project)) {
+                extension.updateFileRegistry()
+            }
+            pluginsConfigured = true
+        }
         psiManager.findFile(virtualFile)?.let {
             if (it is KtFile) {
                 it.isCommonSource = isCommon

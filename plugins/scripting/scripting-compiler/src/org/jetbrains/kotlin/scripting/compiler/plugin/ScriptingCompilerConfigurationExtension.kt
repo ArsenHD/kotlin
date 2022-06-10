@@ -20,6 +20,7 @@ import org.jetbrains.kotlin.scripting.compiler.plugin.impl.reporter
 import org.jetbrains.kotlin.scripting.configuration.ScriptingConfigurationKeys
 import org.jetbrains.kotlin.scripting.definitions.*
 import java.io.File
+import java.util.concurrent.atomic.AtomicBoolean
 import kotlin.script.experimental.host.ScriptingHostConfiguration
 
 class ScriptingCompilerConfigurationExtension(
@@ -83,7 +84,16 @@ class ScriptingCompilerConfigurationExtension(
             if (scriptDefinitionProvider != null) {
                 scriptDefinitionProvider.setScriptDefinitionsSources(configuration.getList(ScriptingConfigurationKeys.SCRIPT_DEFINITIONS_SOURCES))
                 scriptDefinitionProvider.setScriptDefinitions(configuration.getList(ScriptingConfigurationKeys.SCRIPT_DEFINITIONS))
+            }
+        }
+    }
 
+    private val fileRegistryUpdated = AtomicBoolean(false)
+
+    override fun updateFileRegistry() {
+        if (fileRegistryUpdated.compareAndSet(false, true)) {
+            val scriptDefinitionProvider = ScriptDefinitionProvider.getInstance(project) as? CliScriptDefinitionProvider
+            if (scriptDefinitionProvider != null) {
                 // Register new file extensions
                 val fileTypeRegistry = FileTypeRegistry.getInstance() as CoreFileTypeRegistry
 
