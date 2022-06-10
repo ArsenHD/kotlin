@@ -6388,6 +6388,12 @@ public class FirDiagnosticTestGenerated extends AbstractFirDiagnosticTest {
             }
 
             @Test
+            @TestMetadata("StaticScopeAccessibleWithNoQualifier.kt")
+            public void testStaticScopeAccessibleWithNoQualifier() throws Exception {
+                runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/StaticScopeAccessibleWithNoQualifier.kt");
+            }
+
+            @Test
             @TestMetadata("UnqualifiedStaticFunctionCall.kt")
             public void testUnqualifiedStaticFunctionCall() throws Exception {
                 runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/UnqualifiedStaticFunctionCall.kt");
@@ -6406,6 +6412,12 @@ public class FirDiagnosticTestGenerated extends AbstractFirDiagnosticTest {
                 @TestMetadata("ComplexStaticExtension.kt")
                 public void testComplexStaticExtension() throws Exception {
                     runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/ComplexStaticExtension.kt");
+                }
+
+                @Test
+                @TestMetadata("ExtensionsAccessibleWithNoQualifierInStaticScope.kt")
+                public void testExtensionsAccessibleWithNoQualifierInStaticScope() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/ExtensionsAccessibleWithNoQualifierInStaticScope.kt");
                 }
 
                 @Test
@@ -6460,6 +6472,12 @@ public class FirDiagnosticTestGenerated extends AbstractFirDiagnosticTest {
                 @TestMetadata("StaticExtensionsFromDifferentScopes.kt")
                 public void testStaticExtensionsFromDifferentScopes() throws Exception {
                     runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/StaticExtensionsFromDifferentScopes.kt");
+                }
+
+                @Test
+                @TestMetadata("StaticScopeAccessFromStaticExtension.kt")
+                public void testStaticScopeAccessFromStaticExtension() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/StaticScopeAccessFromStaticExtension.kt");
                 }
             }
         }

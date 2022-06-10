@@ -1,0 +1,23 @@
+FILE: StaticScopeAccessFromStaticExtension.kt
+    public final class A : R|kotlin/Any| {
+        public constructor(): R|A| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
+            public final static fun foo(): R|kotlin/Unit| {
+            }
+
+            public final static val x: R|kotlin/Int| = Int(0)
+                public get(): R|kotlin/Int|
+
+        }
+
+    }
+    public final fun R|A.<SELF_STATIC_OBJECT>|.bar(): R|kotlin/Unit| {
+    }
+    public final fun R|A.<SELF_STATIC_OBJECT>|.baz(): R|kotlin/Unit| {
+        this@R|/baz|.R|/A.foo|()
+        this@R|/baz|.R|/bar|()
+        lval y: R|kotlin/Int| = this@R|/baz|.R|/A.x|
+    }
