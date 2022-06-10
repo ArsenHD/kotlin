@@ -6555,6 +6555,12 @@ public class FirDiagnosticTestGenerated extends AbstractFirDiagnosticTest {
                 }
 
                 @Test
+                @TestMetadata("KotlinStdlibStaticExtension.kt")
+                public void testKotlinStdlibStaticExtension() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/KotlinStdlibStaticExtension.kt");
+                }
+
+                @Test
                 @TestMetadata("SimpleStaticExtension.kt")
                 public void testSimpleStaticExtension() throws Exception {
                     runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/SimpleStaticExtension.kt");
