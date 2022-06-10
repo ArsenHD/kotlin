@@ -6340,6 +6340,12 @@ public class FirDiagnosticTestGenerated extends AbstractFirDiagnosticTest {
             }
 
             @Test
+            @TestMetadata("MultipleStaticBlocks.kt")
+            public void testMultipleStaticBlocks() throws Exception {
+                runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/MultipleStaticBlocks.kt");
+            }
+
+            @Test
             @TestMetadata("NonStaticInStaticScope.kt")
             public void testNonStaticInStaticScope() throws Exception {
                 runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/NonStaticInStaticScope.kt");
@@ -6349,6 +6355,12 @@ public class FirDiagnosticTestGenerated extends AbstractFirDiagnosticTest {
             @TestMetadata("ObjectInsideOfStaticBlock.kt")
             public void testObjectInsideOfStaticBlock() throws Exception {
                 runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/ObjectInsideOfStaticBlock.kt");
+            }
+
+            @Test
+            @TestMetadata("SimilarStaticAndCompanionFunctions.kt")
+            public void testSimilarStaticAndCompanionFunctions() throws Exception {
+                runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/SimilarStaticAndCompanionFunctions.kt");
             }
 
             @Test
@@ -6373,6 +6385,12 @@ public class FirDiagnosticTestGenerated extends AbstractFirDiagnosticTest {
             @TestMetadata("StaticObjectInsideOfStaticBlock.kt")
             public void testStaticObjectInsideOfStaticBlock() throws Exception {
                 runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/StaticObjectInsideOfStaticBlock.kt");
+            }
+
+            @Test
+            @TestMetadata("UnqualifiedStaticFunctionCall.kt")
+            public void testUnqualifiedStaticFunctionCall() throws Exception {
+                runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/UnqualifiedStaticFunctionCall.kt");
             }
 
             @Nested
@@ -6415,9 +6433,33 @@ public class FirDiagnosticTestGenerated extends AbstractFirDiagnosticTest {
                 }
 
                 @Test
+                @TestMetadata("PassingLambdaArgumentWithStaticReceiver.kt")
+                public void testPassingLambdaArgumentWithStaticReceiver() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/PassingLambdaArgumentWithStaticReceiver.kt");
+                }
+
+                @Test
                 @TestMetadata("SimpleStaticExtension.kt")
                 public void testSimpleStaticExtension() throws Exception {
                     runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/SimpleStaticExtension.kt");
+                }
+
+                @Test
+                @TestMetadata("StaticExtensionInsideItsOwnClass.kt")
+                public void testStaticExtensionInsideItsOwnClass() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/StaticExtensionInsideItsOwnClass.kt");
+                }
+
+                @Test
+                @TestMetadata("StaticExtensionInsideSomeClass.kt")
+                public void testStaticExtensionInsideSomeClass() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/StaticExtensionInsideSomeClass.kt");
+                }
+
+                @Test
+                @TestMetadata("StaticExtensionsFromDifferentScopes.kt")
+                public void testStaticExtensionsFromDifferentScopes() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/StaticExtensionsFromDifferentScopes.kt");
                 }
             }
         }

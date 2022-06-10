@@ -1,0 +1,20 @@
+FILE: MultipleStaticBlocks.kt
+    public final class A : R|kotlin/Any| {
+        public constructor(): R|A| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
+            public final static fun test1(): R|kotlin/Unit| {
+            }
+
+            public final static fun test2(): R|kotlin/Unit| {
+            }
+
+        }
+
+    }
+    public final fun foo(): R|kotlin/Unit| {
+        Q|A|.R|/A.test1|()
+        Q|A|.R|/A.test2|()
+    }

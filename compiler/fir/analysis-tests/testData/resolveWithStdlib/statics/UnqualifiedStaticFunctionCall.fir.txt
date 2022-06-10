@@ -1,0 +1,18 @@
+FILE: UnqualifiedStaticFunctionCall.kt
+    public final class A : R|kotlin/Any| {
+        public constructor(): R|A| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final fun test(): R|kotlin/Unit| {
+            Q|A|.R|/A.foo|()
+            R|/A.foo|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
+            public final static fun foo(): R|kotlin/Unit| {
+            }
+
+        }
+
+    }
