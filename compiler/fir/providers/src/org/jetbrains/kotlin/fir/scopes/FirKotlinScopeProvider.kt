@@ -52,12 +52,15 @@ class FirKotlinScopeProvider(
             ).mapNotNull { useSiteSuperType ->
                 useSiteSuperType.scopeForSupertype(useSiteSession, scopeSession, klass)
             }
-            FirClassUseSiteMemberScope(
-                klass,
-                useSiteSession,
-                scopes,
-                decoratedDeclaredMemberScope,
-            )
+            when (klass.classKind) {
+                ClassKind.STATIC_OBJECT -> FirStaticObjectScope(decoratedDeclaredMemberScope)
+                else -> FirClassUseSiteMemberScope(
+                    klass,
+                    useSiteSession,
+                    scopes,
+                    decoratedDeclaredMemberScope,
+                )
+            }
         }
     }
 

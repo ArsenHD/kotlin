@@ -1,0 +1,26 @@
+FILE: ExtensionsAccessibleWithNoQualifierInStaticScope.kt
+    public final class A : R|kotlin/Any| {
+        public constructor(): R|A| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
+    }
+    public final fun R|A.<SELF_STATIC_OBJECT>|.foo(): R|kotlin/Unit| {
+    }
+    public final val R|A.<SELF_STATIC_OBJECT>|.x: R|kotlin/Int|
+        public get(): R|kotlin/Int| {
+            ^ Int(0)
+        }
+    public final fun process(block: R|A.<SELF_STATIC_OBJECT>.() -> kotlin/Unit|): R|kotlin/Unit| {
+        R|<local>/block|.R|SubstitutionOverride<kotlin/Function1.invoke: R|kotlin/Unit|>|(Q|A|)
+    }
+    public final fun test(): R|kotlin/Unit| {
+        R|/process|(<L> = process@fun R|A.<SELF_STATIC_OBJECT>|.<anonymous>(): R|kotlin/Unit| <inline=NoInline>  {
+            this@R|special/anonymous|.R|/foo|()
+            lval y: R|kotlin/Int| = this@R|special/anonymous|.R|/x|
+        }
+        )
+    }
