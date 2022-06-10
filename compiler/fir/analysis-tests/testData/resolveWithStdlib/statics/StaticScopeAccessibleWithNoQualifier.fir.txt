@@ -1,0 +1,26 @@
+FILE: StaticScopeAccessibleWithNoQualifier.kt
+    public final class A : R|kotlin/Any| {
+        public constructor(): R|A| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
+            public final static fun foo(): R|kotlin/Unit| {
+            }
+
+            public final static val x: R|kotlin/Int| = Int(0)
+                public get(): R|kotlin/Int|
+
+        }
+
+    }
+    public final fun process(block: R|A.<SELF_STATIC_OBJECT>.() -> kotlin/Unit|): R|kotlin/Unit| {
+        R|<local>/block|.R|SubstitutionOverride<kotlin/Function1.invoke: R|kotlin/Unit|>|(Q|A|)
+    }
+    public final fun test(): R|kotlin/Unit| {
+        R|/process|(<L> = process@fun R|A.<SELF_STATIC_OBJECT>|.<anonymous>(): R|kotlin/Unit| <inline=NoInline>  {
+            this@R|special/anonymous|.R|/A.foo|()
+            lval y: R|kotlin/Int| = this@R|special/anonymous|.R|/A.x|
+        }
+        )
+    }

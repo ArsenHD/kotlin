@@ -38,7 +38,11 @@ class FirKotlinScopeProvider(
         scopeSession: ScopeSession
     ): FirTypeScope {
         return scopeSession.getOrBuild(klass.symbol, USE_SITE) {
-            val declaredScope = useSiteSession.declaredMemberScope(klass)
+            val declaredScope = when (klass.classKind) {
+                ClassKind.STATIC_OBJECT -> getStaticScope(klass, useSiteSession, scopeSession)!!
+                else -> useSiteSession.declaredMemberScope(klass)
+            }
+
 
             val decoratedDeclaredMemberScope =
                 declaredMemberScopeDecorator(klass, declaredScope, useSiteSession, scopeSession).let {
@@ -54,12 +58,15 @@ class FirKotlinScopeProvider(
             ).mapNotNull { useSiteSuperType ->
                 useSiteSuperType.scopeForSupertype(useSiteSession, scopeSession, klass)
             }
-            FirClassUseSiteMemberScope(
-                klass,
-                useSiteSession,
-                scopes,
-                decoratedDeclaredMemberScope,
-            )
+            when (klass.classKind) {
+                ClassKind.STATIC_OBJECT -> KotlinStaticTypeScope(decoratedDeclaredMemberScope)
+                else -> FirClassUseSiteMemberScope(
+                    klass,
+                    useSiteSession,
+                    scopes,
+                    decoratedDeclaredMemberScope,
+                )
+            }
         }
     }
 
