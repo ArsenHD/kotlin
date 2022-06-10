@@ -1,0 +1,6 @@
+FILE: KotlinStdlibStaticExtension.kt
+    public final fun R|kotlin/collections/List.<SELF_STATIC_OBJECT>|.test1(): R|kotlin/Unit| {
+    }
+    public final fun foo(): R|kotlin/Unit| {
+        Q|kotlin/collections/List|.R|/test1|()
+    }
