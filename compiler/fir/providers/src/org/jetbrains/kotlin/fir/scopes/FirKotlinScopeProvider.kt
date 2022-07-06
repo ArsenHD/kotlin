@@ -38,7 +38,11 @@ class FirKotlinScopeProvider(
         scopeSession: ScopeSession
     ): FirTypeScope {
         return scopeSession.getOrBuild(klass.symbol, USE_SITE) {
-            val declaredScope = useSiteSession.declaredMemberScope(klass)
+            val declaredScope = when (klass.classKind) {
+                ClassKind.STATIC_OBJECT -> getStaticScope(klass, useSiteSession, scopeSession)!!
+                else -> useSiteSession.declaredMemberScope(klass)
+            }
+
 
             val decoratedDeclaredMemberScope =
                 declaredMemberScopeDecorator(klass, declaredScope, useSiteSession, scopeSession).let {
@@ -54,12 +58,15 @@ class FirKotlinScopeProvider(
             ).mapNotNull { useSiteSuperType ->
                 useSiteSuperType.scopeForSupertype(useSiteSession, scopeSession, klass)
             }
-            FirClassUseSiteMemberScope(
-                klass,
-                useSiteSession,
-                scopes,
-                decoratedDeclaredMemberScope,
-            )
+            when (klass.classKind) {
+                ClassKind.STATIC_OBJECT -> KotlinStaticTypeScope(decoratedDeclaredMemberScope)
+                else -> FirClassUseSiteMemberScope(
+                    klass,
+                    useSiteSession,
+                    scopes,
+                    decoratedDeclaredMemberScope,
+                )
+            }
         }
     }
 
@@ -70,6 +77,12 @@ class FirKotlinScopeProvider(
     ): FirContainingNamesAwareScope? {
         return when (klass.classKind) {
             ClassKind.ENUM_CLASS -> FirNameAwareOnlyCallablesScope(FirStaticScope(useSiteSession.declaredMemberScope(klass)))
+            ClassKind.STATIC_OBJECT -> FirNameAwareOnlyCallablesScope(useSiteSession.declaredMemberScope(klass))
+            ClassKind.CLASS -> {
+                if (klass !is FirRegularClass) return null
+                val selfStaticObject = klass.selfStaticObjectSymbol?.fir ?: return null
+                FirNameAwareOnlyCallablesScope(useSiteSession.declaredMemberScope(selfStaticObject))
+            }
             else -> null
         }
     }

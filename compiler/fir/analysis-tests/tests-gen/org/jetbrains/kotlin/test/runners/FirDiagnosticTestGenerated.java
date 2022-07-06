@@ -6205,5 +6205,163 @@ public class FirDiagnosticTestGenerated extends AbstractFirDiagnosticTest {
                 runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/smartcasts/tryWithLambdaInside.kt");
             }
         }
+
+        @Nested
+        @TestMetadata("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics")
+        @TestDataPath("$PROJECT_ROOT")
+        public class Statics {
+            @Test
+            public void testAllFilesPresentInStatics() throws Exception {
+                KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics"), Pattern.compile("^([^.]+)\\.kt$"), null, true);
+            }
+
+            @Test
+            @TestMetadata("ClassInsideOfStaticBlock.kt")
+            public void testClassInsideOfStaticBlock() throws Exception {
+                runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/ClassInsideOfStaticBlock.kt");
+            }
+
+            @Test
+            @TestMetadata("MultipleStaticBlocks.kt")
+            public void testMultipleStaticBlocks() throws Exception {
+                runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/MultipleStaticBlocks.kt");
+            }
+
+            @Test
+            @TestMetadata("NonStaticInStaticScope.kt")
+            public void testNonStaticInStaticScope() throws Exception {
+                runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/NonStaticInStaticScope.kt");
+            }
+
+            @Test
+            @TestMetadata("ObjectInsideOfStaticBlock.kt")
+            public void testObjectInsideOfStaticBlock() throws Exception {
+                runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/ObjectInsideOfStaticBlock.kt");
+            }
+
+            @Test
+            @TestMetadata("SimilarStaticAndCompanionFunctions.kt")
+            public void testSimilarStaticAndCompanionFunctions() throws Exception {
+                runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/SimilarStaticAndCompanionFunctions.kt");
+            }
+
+            @Test
+            @TestMetadata("SimpleStaticBlock.kt")
+            public void testSimpleStaticBlock() throws Exception {
+                runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/SimpleStaticBlock.kt");
+            }
+
+            @Test
+            @TestMetadata("StaticInNonStaticScope.kt")
+            public void testStaticInNonStaticScope() throws Exception {
+                runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/StaticInNonStaticScope.kt");
+            }
+
+            @Test
+            @TestMetadata("StaticObject.kt")
+            public void testStaticObject() throws Exception {
+                runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/StaticObject.kt");
+            }
+
+            @Test
+            @TestMetadata("StaticObjectInsideOfStaticBlock.kt")
+            public void testStaticObjectInsideOfStaticBlock() throws Exception {
+                runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/StaticObjectInsideOfStaticBlock.kt");
+            }
+
+            @Test
+            @TestMetadata("StaticScopeAccessibleWithNoQualifier.kt")
+            public void testStaticScopeAccessibleWithNoQualifier() throws Exception {
+                runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/StaticScopeAccessibleWithNoQualifier.kt");
+            }
+
+            @Test
+            @TestMetadata("UnqualifiedStaticFunctionCall.kt")
+            public void testUnqualifiedStaticFunctionCall() throws Exception {
+                runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/UnqualifiedStaticFunctionCall.kt");
+            }
+
+            @Nested
+            @TestMetadata("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions")
+            @TestDataPath("$PROJECT_ROOT")
+            public class Extensions {
+                @Test
+                public void testAllFilesPresentInExtensions() throws Exception {
+                    KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions"), Pattern.compile("^([^.]+)\\.kt$"), null, true);
+                }
+
+                @Test
+                @TestMetadata("ComplexStaticExtension.kt")
+                public void testComplexStaticExtension() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/ComplexStaticExtension.kt");
+                }
+
+                @Test
+                @TestMetadata("ExtensionsAccessibleWithNoQualifierInStaticScope.kt")
+                public void testExtensionsAccessibleWithNoQualifierInStaticScope() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/ExtensionsAccessibleWithNoQualifierInStaticScope.kt");
+                }
+
+                @Test
+                @TestMetadata("FunctionalArgumentWithComplexStaticReceiver.kt")
+                public void testFunctionalArgumentWithComplexStaticReceiver() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/FunctionalArgumentWithComplexStaticReceiver.kt");
+                }
+
+                @Test
+                @TestMetadata("FunctionalArgumentWithStaticReceiver.kt")
+                public void testFunctionalArgumentWithStaticReceiver() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/FunctionalArgumentWithStaticReceiver.kt");
+                }
+
+                @Test
+                @TestMetadata("JavaClassStaticExtension.kt")
+                public void testJavaClassStaticExtension() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/JavaClassStaticExtension.kt");
+                }
+
+                @Test
+                @TestMetadata("KotlinStdlibStaticExtension.kt")
+                public void testKotlinStdlibStaticExtension() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/KotlinStdlibStaticExtension.kt");
+                }
+
+                @Test
+                @TestMetadata("PassingLambdaArgumentWithStaticReceiver.kt")
+                public void testPassingLambdaArgumentWithStaticReceiver() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/PassingLambdaArgumentWithStaticReceiver.kt");
+                }
+
+                @Test
+                @TestMetadata("SimpleStaticExtension.kt")
+                public void testSimpleStaticExtension() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/SimpleStaticExtension.kt");
+                }
+
+                @Test
+                @TestMetadata("StaticExtensionInsideItsOwnClass.kt")
+                public void testStaticExtensionInsideItsOwnClass() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/StaticExtensionInsideItsOwnClass.kt");
+                }
+
+                @Test
+                @TestMetadata("StaticExtensionInsideSomeClass.kt")
+                public void testStaticExtensionInsideSomeClass() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/StaticExtensionInsideSomeClass.kt");
+                }
+
+                @Test
+                @TestMetadata("StaticExtensionsFromDifferentScopes.kt")
+                public void testStaticExtensionsFromDifferentScopes() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/StaticExtensionsFromDifferentScopes.kt");
+                }
+
+                @Test
+                @TestMetadata("StaticScopeAccessFromStaticExtension.kt")
+                public void testStaticScopeAccessFromStaticExtension() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/StaticScopeAccessFromStaticExtension.kt");
+                }
+            }
+        }
     }
 }

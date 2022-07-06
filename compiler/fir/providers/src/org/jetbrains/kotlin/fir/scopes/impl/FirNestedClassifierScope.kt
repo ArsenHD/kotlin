@@ -42,11 +42,26 @@ abstract class FirNestedClassifierScope(val klass: FirClass, val useSiteSession:
 class FirNestedClassifierScopeImpl(klass: FirClass, useSiteSession: FirSession) : FirNestedClassifierScope(klass, useSiteSession) {
     private val classIndex: Map<Name, FirRegularClassSymbol> = run {
         val result = mutableMapOf<Name, FirRegularClassSymbol>()
+
+        val selfStaticObject = (klass as? FirRegularClass)?.selfStaticObjectSymbol?.fir
         for (declaration in klass.declarations) {
-            if (declaration is FirRegularClass) {
+            // collect all regular classes declared inside of klass directly,
+            // but ignore the self static object of klass
+            if (declaration is FirRegularClass && declaration.symbol != selfStaticObject?.symbol) {
                 result[declaration.name] = declaration.symbol
             }
         }
+
+        if (selfStaticObject != null) {
+            // collect all regular classes declared inside of self static object of klass,
+            // but ignore the self static object of self static object
+            for (declaration in selfStaticObject.declarations) {
+                if (declaration is FirRegularClass && declaration.symbol != selfStaticObject.selfStaticObjectSymbol) {
+                    result[declaration.name] = declaration.symbol
+                }
+            }
+        }
+
         result
     }
 

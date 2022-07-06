@@ -1,0 +1,3 @@
+FILE: SimpleStaticExtension.kt
+    public? final? fun A.static.test1(): R|kotlin/Unit| {
+    }

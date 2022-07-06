@@ -269,6 +269,77 @@ public class RawFirBuilderLazyBodiesTestCaseGenerated extends AbstractRawFirBuil
                 }
             }
         }
+
+        @TestMetadata("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics")
+        @TestDataPath("$PROJECT_ROOT")
+        @RunWith(JUnit3RunnerWithInners.class)
+        public static class Statics extends AbstractRawFirBuilderLazyBodiesTestCase {
+            private void runTest(String testDataFilePath) throws Exception {
+                KotlinTestUtils.runTest(this::doRawFirTest, this, testDataFilePath);
+            }
+
+            public void testAllFilesPresentInStatics() throws Exception {
+                KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics"), Pattern.compile("^(.+)\\.kt$"), null, true);
+            }
+
+            @TestMetadata("ClassInsideOfStaticBlock.kt")
+            public void testClassInsideOfStaticBlock() throws Exception {
+                runTest("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/ClassInsideOfStaticBlock.kt");
+            }
+
+            @TestMetadata("ObjectInsideOfStaticBlock.kt")
+            public void testObjectInsideOfStaticBlock() throws Exception {
+                runTest("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/ObjectInsideOfStaticBlock.kt");
+            }
+
+            @TestMetadata("SimpleStaticBlock.kt")
+            public void testSimpleStaticBlock() throws Exception {
+                runTest("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/SimpleStaticBlock.kt");
+            }
+
+            @TestMetadata("StaticObject.kt")
+            public void testStaticObject() throws Exception {
+                runTest("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/StaticObject.kt");
+            }
+
+            @TestMetadata("StaticObjectInsideOfStaticBlock.kt")
+            public void testStaticObjectInsideOfStaticBlock() throws Exception {
+                runTest("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/StaticObjectInsideOfStaticBlock.kt");
+            }
+
+            @TestMetadata("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/extensions")
+            @TestDataPath("$PROJECT_ROOT")
+            @RunWith(JUnit3RunnerWithInners.class)
+            public static class Extensions extends AbstractRawFirBuilderLazyBodiesTestCase {
+                private void runTest(String testDataFilePath) throws Exception {
+                    KotlinTestUtils.runTest(this::doRawFirTest, this, testDataFilePath);
+                }
+
+                public void testAllFilesPresentInExtensions() throws Exception {
+                    KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/extensions"), Pattern.compile("^(.+)\\.kt$"), null, true);
+                }
+
+                @TestMetadata("ComplexStaticExtension.kt")
+                public void testComplexStaticExtension() throws Exception {
+                    runTest("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/extensions/ComplexStaticExtension.kt");
+                }
+
+                @TestMetadata("FunctionalArgumentWithComplexStaticReceiver.kt")
+                public void testFunctionalArgumentWithComplexStaticReceiver() throws Exception {
+                    runTest("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/extensions/FunctionalArgumentWithComplexStaticReceiver.kt");
+                }
+
+                @TestMetadata("FunctionalArgumentWithStaticReceiver.kt")
+                public void testFunctionalArgumentWithStaticReceiver() throws Exception {
+                    runTest("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/extensions/FunctionalArgumentWithStaticReceiver.kt");
+                }
+
+                @TestMetadata("SimpleStaticExtension.kt")
+                public void testSimpleStaticExtension() throws Exception {
+                    runTest("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/declarations/statics/extensions/SimpleStaticExtension.kt");
+                }
+            }
+        }
     }
 
     @TestMetadata("compiler/fir/raw-fir/psi2fir/testData/rawBuilder/expressions")

@@ -1,0 +1,27 @@
+FILE: SimpleStaticBlock.kt
+    public final class A : R|kotlin/Any| {
+        public constructor(): R|A| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final fun foo(): R|kotlin/Unit| {
+            R|kotlin/io/println|(String(foo))
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
+            public final static fun bar(): R|kotlin/Unit| {
+                R|kotlin/io/println|(String(bar))
+            }
+
+            public final static val x: R|kotlin/Int| = Int(10)
+                public get(): R|kotlin/Int|
+
+        }
+
+    }
+    public final fun baz(): R|kotlin/Unit| {
+        lval a: R|A| = R|/A.A|()
+        R|<local>/a|.R|/A.foo|()
+        Q|A|.R|/A.bar|()
+        R|<local>/a|.<Unresolved name: bar>#()
+    }

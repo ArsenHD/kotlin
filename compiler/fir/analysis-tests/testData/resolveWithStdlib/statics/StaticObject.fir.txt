@@ -1,0 +1,21 @@
+FILE: StaticObject.kt
+    public final static object MyObject : R|kotlin/Any| {
+        private constructor(): R|MyObject| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final static fun foo(): R|kotlin/Unit| {
+            R|kotlin/io/print|(String(foo))
+        }
+
+        public final static val x: R|kotlin/Int| = Int(10)
+            public get(): R|kotlin/Int|
+
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
+    }
+    public final fun bar(): R|kotlin/Unit| {
+        Q|MyObject|.R|/MyObject.foo|()
+        lval x: R|kotlin/Int| = Q|MyObject|.R|/MyObject.x|
+    }

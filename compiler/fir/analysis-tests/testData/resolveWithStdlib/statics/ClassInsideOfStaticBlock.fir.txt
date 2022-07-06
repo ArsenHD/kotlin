@@ -1,0 +1,28 @@
+FILE: ClassInsideOfStaticBlock.kt
+    public final class A : R|kotlin/Any| {
+        public constructor(): R|A| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
+            public final class B : R|kotlin/Any| {
+                public constructor(): R|A.B| {
+                    super<R|kotlin/Any|>()
+                }
+
+                public final fun foo(): R|kotlin/Unit| {
+                    R|kotlin/io/println|(String(foo))
+                }
+
+                public final static object <SELF_STATIC_OBJECT> {
+                }
+
+            }
+
+        }
+
+    }
+    public final fun bar(): R|kotlin/Unit| {
+        lval b: R|A.B| = Q|A|.R|/A.B.B|()
+        R|<local>/b|.R|/A.B.foo|()
+    }

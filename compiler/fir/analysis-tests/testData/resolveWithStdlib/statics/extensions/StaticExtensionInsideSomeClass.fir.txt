@@ -1,0 +1,26 @@
+FILE: StaticExtensionInsideSomeClass.kt
+    public final class A : R|kotlin/Any| {
+        public constructor(): R|A| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
+    }
+    public final class B : R|kotlin/Any| {
+        public constructor(): R|B| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final fun R|A.<SELF_STATIC_OBJECT>|.foo(): R|kotlin/Unit| {
+        }
+
+        public final fun test1(): R|kotlin/Unit| {
+            (this@R|/B|, Q|A|).R|/B.foo|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
+    }

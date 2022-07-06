@@ -51,5 +51,6 @@ object FirNestedClassChecker : FirRegularClassChecker() {
             ClassKind.ENUM_ENTRY -> "Enum entry"
             ClassKind.ANNOTATION_CLASS -> "Annotation class"
             ClassKind.OBJECT -> if (this.isCompanion) "Companion object" else "Object"
+            ClassKind.STATIC_OBJECT -> "Static object"
         }
 }

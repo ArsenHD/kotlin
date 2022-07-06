@@ -1267,6 +1267,12 @@ public class KotlinParsing extends AbstractKotlinParsing {
             }
             declType = CLASS_INITIALIZER;
         }
+        else if (modifierDetector.staticDetected && at(LBRACE)) {
+            advance(); // LBRACE
+            parseMembers(); // parse declarations in static block
+            expect(RBRACE, "Missing '}'");
+            declType = STATIC_BLOCK;
+        }
         else if (at(CONSTRUCTOR_KEYWORD)) {
             parseSecondaryConstructor();
             declType = SECONDARY_CONSTRUCTOR;
@@ -2316,11 +2322,13 @@ public class KotlinParsing extends AbstractKotlinParsing {
         while (true) {
             recoverOnParenthesizedWordForPlatformTypes(0, "Mutable", true);
 
-            if (expect(IDENTIFIER, "Expecting type name",
+            if (at(STATIC_KEYWORD)) {
+                advance();
+                reference.done(STATIC_REFERENCE_EXPRESSION);
+            } else if (expect(IDENTIFIER, "Expecting type name",
                        TokenSet.orSet(KotlinExpressionParsing.EXPRESSION_FIRST, KotlinExpressionParsing.EXPRESSION_FOLLOW, DECLARATION_FIRST))) {
                 reference.done(REFERENCE_EXPRESSION);
-            }
-            else {
+            } else {
                 reference.drop();
                 break;
             }
@@ -2346,7 +2354,11 @@ public class KotlinParsing extends AbstractKotlinParsing {
             reference = mark();
         }
 
-        userType.done(USER_TYPE);
+        if (STATIC_KEYWORD.equals(myBuilder.rawLookup(-1))) {
+            userType.done(STATIC_USER_TYPE);
+        } else {
+            userType.done(USER_TYPE);
+        }
     }
 
     private boolean atParenthesizedMutableForPlatformTypes(int offset) {
@@ -2618,6 +2630,7 @@ public class KotlinParsing extends AbstractKotlinParsing {
     /*package*/ static class ModifierDetector implements Consumer<IElementType> {
         private boolean enumDetected = false;
         private boolean companionDetected = false;
+        private boolean staticDetected = false;
 
         @Override
         public void consume(IElementType item) {
@@ -2627,6 +2640,9 @@ public class KotlinParsing extends AbstractKotlinParsing {
             else if (item == KtTokens.COMPANION_KEYWORD) {
                 companionDetected = true;
             }
+            else if (item == KtTokens.STATIC_KEYWORD) {
+                staticDetected = true;
+            }
         }
 
         public boolean isEnumDetected() {
@@ -2635,6 +2651,10 @@ public class KotlinParsing extends AbstractKotlinParsing {
 
         public boolean isCompanionDetected() {
             return companionDetected;
+        }
+
+        public boolean isStaticDetected() {
+            return staticDetected;
         }
     }
 

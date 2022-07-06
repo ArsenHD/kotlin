@@ -99,6 +99,7 @@ internal class KtFirNamedClassOrObjectSymbol(
                 ClassKind.ANNOTATION_CLASS -> KtClassKind.ANNOTATION_CLASS
                 ClassKind.CLASS -> KtClassKind.CLASS
                 ClassKind.OBJECT -> if (firSymbol.isCompanion) KtClassKind.COMPANION_OBJECT else KtClassKind.OBJECT
+                ClassKind.STATIC_OBJECT -> KtClassKind.STATIC_OBJECT
             }
         }
 

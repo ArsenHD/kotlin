@@ -7,12 +7,10 @@ package org.jetbrains.kotlin.fir.resolve.providers.impl
 
 import org.jetbrains.kotlin.fir.FirSession
 import org.jetbrains.kotlin.fir.NoMutableState
+import org.jetbrains.kotlin.fir.resolve.isNotSelfStaticObject
 import org.jetbrains.kotlin.fir.resolve.providers.FirSymbolProvider
 import org.jetbrains.kotlin.fir.resolve.providers.FirSymbolProviderInternals
-import org.jetbrains.kotlin.fir.symbols.impl.FirCallableSymbol
-import org.jetbrains.kotlin.fir.symbols.impl.FirClassLikeSymbol
-import org.jetbrains.kotlin.fir.symbols.impl.FirNamedFunctionSymbol
-import org.jetbrains.kotlin.fir.symbols.impl.FirPropertySymbol
+import org.jetbrains.kotlin.fir.symbols.impl.*
 import org.jetbrains.kotlin.name.ClassId
 import org.jetbrains.kotlin.name.FqName
 import org.jetbrains.kotlin.name.Name
@@ -47,6 +45,11 @@ class FirCompositeSymbolProvider(session: FirSession, val providers: List<FirSym
     }
 
     override fun getClassLikeSymbolByClassId(classId: ClassId): FirClassLikeSymbol<*>? {
-        return providers.firstNotNullOfOrNull { it.getClassLikeSymbolByClassId(classId) }
+        if (classId.isNotSelfStaticObject) {
+            return providers.firstNotNullOfOrNull { it.getClassLikeSymbolByClassId(classId) }
+        }
+        val ownerClassId = classId.outerClassId ?: return null
+        val ownerClassSymbol = providers.firstNotNullOfOrNull { it.getClassLikeSymbolByClassId(ownerClassId) }
+        return (ownerClassSymbol as? FirRegularClassSymbol)?.fir?.selfStaticObjectSymbol
     }
 }

@@ -1,0 +1,33 @@
+FILE: StaticExtensionsFromDifferentScopes.kt
+    public final class A : R|kotlin/Any| {
+        public constructor(): R|A| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
+    }
+    public final fun R|A.<SELF_STATIC_OBJECT>|.foo(): R|kotlin/Int| {
+        ^foo Int(0)
+    }
+    public final fun test1(): R|kotlin/Unit| {
+        lval x: R|kotlin/Int| = Q|A|.R|/foo|()
+    }
+    public final class B : R|kotlin/Any| {
+        public constructor(): R|B| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final fun R|A.<SELF_STATIC_OBJECT>|.foo(): R|kotlin/String| {
+            ^foo String()
+        }
+
+        public final fun test2(): R|kotlin/Unit| {
+            lval x: R|kotlin/String| = (this@R|/B|, Q|A|).R|/B.foo|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
+    }

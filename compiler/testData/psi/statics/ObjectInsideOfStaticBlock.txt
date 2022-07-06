@@ -1,0 +1,64 @@
+KtFile: ObjectInsideOfStaticBlock.kt
+  PACKAGE_DIRECTIVE
+    <empty list>
+  IMPORT_LIST
+    <empty list>
+  CLASS
+    PsiElement(class)('class')
+    PsiWhiteSpace(' ')
+    PsiElement(IDENTIFIER)('A')
+    PsiWhiteSpace(' ')
+    CLASS_BODY
+      PsiElement(LBRACE)('{')
+      PsiWhiteSpace('\n    ')
+      STATIC_BLOCK
+        MODIFIER_LIST
+          PsiElement(static)('static')
+        PsiWhiteSpace(' ')
+        PsiElement(LBRACE)('{')
+        PsiWhiteSpace('\n        ')
+        OBJECT_DECLARATION
+          PsiElement(object)('object')
+          PsiWhiteSpace(' ')
+          PsiElement(IDENTIFIER)('B')
+          PsiWhiteSpace(' ')
+          CLASS_BODY
+            PsiElement(LBRACE)('{')
+            PsiWhiteSpace('\n            ')
+            PROPERTY
+              PsiElement(val)('val')
+              PsiWhiteSpace(' ')
+              PsiElement(IDENTIFIER)('x')
+              PsiElement(COLON)(':')
+              PsiWhiteSpace(' ')
+              TYPE_REFERENCE
+                USER_TYPE
+                  REFERENCE_EXPRESSION
+                    PsiElement(IDENTIFIER)('Int')
+              PsiWhiteSpace(' ')
+              PsiElement(EQ)('=')
+              PsiWhiteSpace(' ')
+              INTEGER_CONSTANT
+                PsiElement(INTEGER_LITERAL)('10')
+            PsiWhiteSpace('\n            ')
+            PROPERTY
+              PsiElement(val)('val')
+              PsiWhiteSpace(' ')
+              PsiElement(IDENTIFIER)('y')
+              PsiElement(COLON)(':')
+              PsiWhiteSpace(' ')
+              TYPE_REFERENCE
+                USER_TYPE
+                  REFERENCE_EXPRESSION
+                    PsiElement(IDENTIFIER)('Int')
+              PsiWhiteSpace(' ')
+              PsiElement(EQ)('=')
+              PsiWhiteSpace(' ')
+              INTEGER_CONSTANT
+                PsiElement(INTEGER_LITERAL)('20')
+            PsiWhiteSpace('\n        ')
+            PsiElement(RBRACE)('}')
+        PsiWhiteSpace('\n    ')
+        PsiElement(RBRACE)('}')
+      PsiWhiteSpace('\n')
+      PsiElement(RBRACE)('}')

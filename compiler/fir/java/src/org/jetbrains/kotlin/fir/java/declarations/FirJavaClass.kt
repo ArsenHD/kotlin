@@ -42,6 +42,7 @@ class FirJavaClass @FirImplementationDetail internal constructor(
     override val declarations: MutableList<FirDeclaration>,
     override val scopeProvider: FirScopeProvider,
     override val symbol: FirRegularClassSymbol,
+    override var selfStaticObjectSymbol: FirRegularClassSymbol?,
     override val superTypeRefs: MutableList<FirTypeRef>,
     override val typeParameters: MutableList<FirTypeParameterRef>,
     internal val javaPackage: JavaPackage?,
@@ -80,6 +81,8 @@ class FirJavaClass @FirImplementationDetail internal constructor(
         get() = null
 
     override fun replaceCompanionObjectSymbol(newCompanionObjectSymbol: FirRegularClassSymbol?) {}
+
+    override fun replaceSelfStaticObjectSymbol(newSelfStaticObjectSymbol: FirRegularClassSymbol?) {}
 
     override fun <R, D> acceptChildren(visitor: FirVisitor<R, D>, data: D) {
         declarations.forEach { it.accept(visitor, data) }
@@ -158,6 +161,7 @@ internal class FirJavaClassBuilder : FirRegularClassBuilder(), FirAnnotationCont
             declarations,
             scopeProvider,
             symbol,
+            selfStaticObjectSymbol,
             superTypeRefs,
             typeParameters,
             javaPackage,

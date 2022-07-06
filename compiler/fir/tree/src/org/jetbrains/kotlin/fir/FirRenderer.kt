@@ -356,7 +356,9 @@ open class FirRenderer(builder: StringBuilder, protected val mode: RenderMode = 
         if (memberDeclaration.isOverride) {
             print("override ")
         }
-        if (memberDeclaration.isStatic) {
+        // no need to print 'static' for static objects here,
+        // for them 'static' will be printed when their class kind is rendered
+        if (!memberDeclaration.isStaticObject && memberDeclaration.isStatic) {
             print("static ")
         }
         if (memberDeclaration.isInner) {
@@ -1149,6 +1151,10 @@ open class FirRenderer(builder: StringBuilder, protected val mode: RenderMode = 
             }
         }
         visitTypeRefWithNullability(userTypeRef)
+    }
+
+    override fun visitStaticUserTypeRef(staticUserTypeRef: FirStaticUserTypeRef) {
+        visitUserTypeRef(staticUserTypeRef)
     }
 
     override fun visitTypeProjection(typeProjection: FirTypeProjection) {

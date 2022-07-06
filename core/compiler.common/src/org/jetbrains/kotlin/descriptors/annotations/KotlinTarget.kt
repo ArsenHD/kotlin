@@ -113,6 +113,7 @@ enum class KotlinTarget(val description: String, val isDefault: Boolean = true) 
                 } else {
                     OBJECT_LIST
                 }
+            ClassKind.STATIC_OBJECT -> OBJECT_LIST
             ClassKind.INTERFACE -> INTERFACE_LIST
             ClassKind.ENUM_CLASS ->
                 if (isLocalClass) {

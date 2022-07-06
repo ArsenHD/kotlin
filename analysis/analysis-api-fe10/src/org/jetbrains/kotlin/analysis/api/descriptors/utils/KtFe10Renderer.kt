@@ -174,6 +174,7 @@ internal class KtFe10Renderer(
                     ClassKind.ENUM_ENTRY -> error("enum entries should not be rendered via renderClass")
                     ClassKind.ANNOTATION_CLASS -> "annotation class"
                     ClassKind.OBJECT -> "object"
+                    ClassKind.STATIC_OBJECT -> "static object"
                 }
                 append(classKeyword)
             }
