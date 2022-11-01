@@ -529,7 +529,7 @@ internal class ConstructorInObjectImpl(
 
 internal class ConstructorInStaticObjectImpl(
     override val firDiagnostic: KtPsiDiagnostic,
-    override val token: ValidityToken,
+    override val token: KtLifetimeToken,
 ) : KtFirDiagnostic.ConstructorInStaticObject(), KtAbstractFirDiagnostic<KtDeclaration>
 
 internal class ConstructorInInterfaceImpl(
