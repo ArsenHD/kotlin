@@ -59,6 +59,8 @@ class FirKotlinScopeProvider(
                 useSiteSuperType.scopeForSupertype(useSiteSession, scopeSession, klass)
             }
             when (klass.classKind) {
+                // TODO: check if this static scope actually contains only static declarations, maybe we can just use FirStaticScope here (?),
+                // TODO: because it actually filters out all non-static declarations from the delegate scope
                 ClassKind.STATIC_OBJECT -> KotlinStaticTypeScope(decoratedDeclaredMemberScope)
                 else -> FirClassUseSiteMemberScope(
                     klass,
@@ -100,6 +102,13 @@ class FirKotlinScopeProvider(
 data class ConeSubstitutionScopeKey(
     val lookupTag: ConeClassLikeLookupTag, val isFromExpectClass: Boolean, val substitutor: ConeSubstitutor
 ) : ScopeSessionKey<FirClass, FirClassSubstitutionScope>()
+
+fun FirClass.staticMemberScopeForCallables(
+    useSiteSession: FirSession,
+    scopeSession: ScopeSession
+): FirContainingNamesAwareScope? {
+    return scopeProvider.getStaticMemberScopeForCallables(this, useSiteSession, scopeSession)
+}
 
 fun FirClass.unsubstitutedScope(
     useSiteSession: FirSession,

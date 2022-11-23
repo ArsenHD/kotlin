@@ -30,6 +30,7 @@ import org.jetbrains.kotlin.analysis.api.symbols.markers.KtSymbolWithMembers
 import org.jetbrains.kotlin.analysis.api.types.KtType
 import org.jetbrains.kotlin.analysis.low.level.api.fir.api.LLFirResolveSession
 import org.jetbrains.kotlin.analysis.utils.printer.getElementTextInContext
+import org.jetbrains.kotlin.descriptors.ClassKind
 import org.jetbrains.kotlin.fir.declarations.FirClass
 import org.jetbrains.kotlin.fir.declarations.FirResolvePhase
 import org.jetbrains.kotlin.fir.declarations.utils.delegateFields
@@ -38,11 +39,8 @@ import org.jetbrains.kotlin.fir.expressions.FirAnonymousObjectExpression
 import org.jetbrains.kotlin.fir.resolve.calls.FirSyntheticPropertiesScope
 import org.jetbrains.kotlin.fir.resolve.scope
 import org.jetbrains.kotlin.fir.resolve.substitution.ConeSubstitutor
-import org.jetbrains.kotlin.fir.scopes.FakeOverrideTypeCalculator
-import org.jetbrains.kotlin.fir.scopes.FirContainingNamesAwareScope
-import org.jetbrains.kotlin.fir.scopes.FirScope
+import org.jetbrains.kotlin.fir.scopes.*
 import org.jetbrains.kotlin.fir.scopes.impl.*
-import org.jetbrains.kotlin.fir.scopes.unsubstitutedScope
 import org.jetbrains.kotlin.fir.symbols.lazyResolveToPhase
 import org.jetbrains.kotlin.fir.symbols.impl.*
 import org.jetbrains.kotlin.name.FqName
@@ -91,11 +89,14 @@ internal class KtFirScopeProvider(
         return memberScopeCache.getOrPut(classSymbol) {
             val firScope = classSymbol.withFirForScope { fir ->
                 val firSession = analysisSession.useSiteSession
-                fir.unsubstitutedScope(
-                    firSession,
-                    scopeSession,
-                    withForcedTypeCalculator = false
-                )
+                when (fir.classKind) {
+                    ClassKind.STATIC_OBJECT -> fir.staticMemberScopeForCallables(firSession, scopeSession)
+                    else -> fir.unsubstitutedScope(
+                        firSession,
+                        scopeSession,
+                        withForcedTypeCalculator = false
+                    )
+                }
             }?.applyIf(classSymbol is KtEnumEntrySymbol, ::EnumEntryContainingNamesAwareScope)
                 ?: return@getOrPut getEmptyScope()
             KtFirDelegatingScope(firScope, builder, token)

@@ -10,6 +10,7 @@ import org.jetbrains.kotlin.fir.scopes.*
 import org.jetbrains.kotlin.fir.symbols.impl.*
 import org.jetbrains.kotlin.name.Name
 
+// TODO: is this scope needed or can it be replaced with some existing delegating scope?
 class KotlinStaticTypeScope(val scope: FirContainingNamesAwareScope) : FirTypeScope() {
     override fun getCallableNames(): Set<Name> {
         return scope.getCallableNames()
