@@ -69,6 +69,11 @@ fun SessionHolder.collectTowerDataElementsForClass(owner: FirClass, defaultType:
     }
     allImplicitCompanionValues.addIfNotNull(companionReceiver)
 
+    val selfStaticObjectReceiver = (owner as? FirRegularClass)
+        ?.selfStaticObjectSymbol
+        ?.fir
+        ?.let { selfStaticObject -> ImplicitDispatchReceiverValue(selfStaticObject.symbol, session, scopeSession) }
+
     val superClassesStaticsAndCompanionReceivers = mutableListOf<FirTowerDataElement>()
     for (superType in lookupSuperTypes(owner, lookupInterfaces = false, deep = true, useSiteSession = session, substituteTypes = true)) {
         val expandedType = superType.fullyExpandedType(session)
@@ -102,6 +107,7 @@ fun SessionHolder.collectTowerDataElementsForClass(owner: FirClass, defaultType:
         contextReceivers,
         owner.staticScope(this),
         companionReceiver,
+        selfStaticObjectReceiver,
         companionObject?.staticScope(this),
         superClassesStaticsAndCompanionReceivers.asReversed(),
         allImplicitCompanionValues.asReversed()
@@ -113,6 +119,7 @@ class TowerElementsForClass(
     val contextReceivers: List<ContextReceiverValueForClass>,
     val staticScope: FirScope?,
     val companionReceiver: ImplicitReceiverValue<*>?,
+    val selfStaticObjectReceiver: ImplicitReceiverValue<*>?,
     val companionStaticScope: FirScope?,
     // Ordered from inner scopes to outer scopes.
     val superClassesStaticsAndCompanionReceivers: List<FirTowerDataElement>,

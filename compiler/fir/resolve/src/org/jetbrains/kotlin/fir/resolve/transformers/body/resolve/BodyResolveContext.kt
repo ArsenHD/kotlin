@@ -38,7 +38,9 @@ import org.jetbrains.kotlin.fir.symbols.impl.FirClassLikeSymbol
 import org.jetbrains.kotlin.fir.symbols.impl.FirFunctionSymbol
 import org.jetbrains.kotlin.fir.types.*
 import org.jetbrains.kotlin.name.Name
+import org.jetbrains.kotlin.name.SpecialNames
 import org.jetbrains.kotlin.name.SpecialNames.UNDERSCORE_FOR_UNUSED_VAR
+import org.jetbrains.kotlin.utils.addToStdlib.applyIf
 
 class BodyResolveContext(
     val returnTypeCalculator: ReturnTypeCalculator,
@@ -430,14 +432,19 @@ class BodyResolveContext(
         val type = owner.defaultType()
         val towerElementsForClass = holder.collectTowerDataElementsForClass(owner, type)
 
+        val selfStaticObjectReceiver = towerElementsForClass.selfStaticObjectReceiver
+
         val base = towerDataContext.addNonLocalTowerDataElements(towerElementsForClass.superClassesStaticsAndCompanionReceivers)
+
+        val companionReceiver = towerElementsForClass.companionReceiver
+
         val statics = base
             .addNonLocalScopeIfNotNull(towerElementsForClass.companionStaticScope)
             .addNonLocalScopeIfNotNull(towerElementsForClass.staticScope)
 
-        val companionReceiver = towerElementsForClass.companionReceiver
-        val staticsAndCompanion = if (companionReceiver == null) statics else base
-            .addReceiver(null, companionReceiver)
+        val staticsAndCompanion = base
+            .applyIf(companionReceiver != null) { addReceiver(null, companionReceiver!!) }
+            .applyIf(selfStaticObjectReceiver != null) { addReceiver(SpecialNames.SELF_STATIC_OBJECT, selfStaticObjectReceiver!!) }
             .addNonLocalScopeIfNotNull(towerElementsForClass.companionStaticScope)
             .addNonLocalScopeIfNotNull(towerElementsForClass.staticScope)
 
