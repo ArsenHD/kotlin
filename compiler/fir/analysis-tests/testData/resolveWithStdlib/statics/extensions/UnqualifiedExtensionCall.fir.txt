@@ -1,0 +1,16 @@
+FILE: UnqualifiedExtensionCall.kt
+    public final class A : R|kotlin/Any| {
+        public constructor(): R|A| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final fun test(): R|kotlin/Unit| {
+            this@R|/A.<SELF_STATIC_OBJECT>|.R|/foo|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
+    }
+    public final fun R|A.<SELF_STATIC_OBJECT>|.foo(): R|kotlin/Unit| {
+    }
