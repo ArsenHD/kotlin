@@ -78,6 +78,7 @@ class FirKotlinScopeProvider(
         scopeSession: ScopeSession
     ): FirContainingNamesAwareScope? {
         return when (klass.classKind) {
+            // TODO: make sure enum declarations are located in SSO
             ClassKind.ENUM_CLASS -> FirNameAwareOnlyCallablesScope(FirStaticScope(useSiteSession.declaredMemberScope(klass)))
             ClassKind.STATIC_OBJECT -> FirNameAwareOnlyCallablesScope(useSiteSession.declaredMemberScope(klass))
             ClassKind.CLASS -> {

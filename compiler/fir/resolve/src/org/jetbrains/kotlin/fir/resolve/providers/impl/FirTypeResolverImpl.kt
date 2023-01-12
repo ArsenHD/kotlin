@@ -32,6 +32,7 @@ import org.jetbrains.kotlin.fir.types.*
 import org.jetbrains.kotlin.fir.types.impl.ConeClassLikeTypeImpl
 import org.jetbrains.kotlin.fir.types.impl.ConeTypeParameterTypeImpl
 import org.jetbrains.kotlin.name.ClassId
+import org.jetbrains.kotlin.name.SpecialNames
 import org.jetbrains.kotlin.name.StandardClassIds
 import org.jetbrains.kotlin.resolve.calls.inference.model.ConstraintSystemError
 import org.jetbrains.kotlin.resolve.calls.tasks.ExplicitReceiverKind
@@ -73,8 +74,13 @@ class FirTypeResolverImpl(private val session: FirSession) : FirTypeResolver() {
                 }
             }
             is FirTypeParameterSymbol -> {
-                assert(qualifier.size == 1)
-                symbol
+                if (qualifier.size == 2 && qualifier[1].name == SpecialNames.SELF_STATIC_OBJECT) {
+                    null
+//                    TODO("support self static objects on type parameter references to allow T.static")
+                } else {
+                    assert(qualifier.size == 1)
+                    symbol
+                }
             }
             else -> error("!")
         }

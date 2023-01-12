@@ -6415,6 +6415,12 @@ public class FirDiagnosticTestGenerated extends AbstractFirDiagnosticTest {
                 }
 
                 @Test
+                @TestMetadata("EnhancementTypes.kt")
+                public void testEnhancementTypes() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/EnhancementTypes.kt");
+                }
+
+                @Test
                 @TestMetadata("ExtensionsAccessibleWithNoQualifierInStaticScope.kt")
                 public void testExtensionsAccessibleWithNoQualifierInStaticScope() throws Exception {
                     runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/ExtensionsAccessibleWithNoQualifierInStaticScope.kt");
@@ -6436,6 +6442,30 @@ public class FirDiagnosticTestGenerated extends AbstractFirDiagnosticTest {
                 @TestMetadata("JavaClassStaticExtension.kt")
                 public void testJavaClassStaticExtension() throws Exception {
                     runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/JavaClassStaticExtension.kt");
+                }
+
+                @Test
+                @TestMetadata("JavaGenerics.kt")
+                public void testJavaGenerics() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/JavaGenerics.kt");
+                }
+
+                @Test
+                @TestMetadata("JavaStaticShadowing.kt")
+                public void testJavaStaticShadowing() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/JavaStaticShadowing.kt");
+                }
+
+                @Test
+                @TestMetadata("KotlinGenerics.kt")
+                public void testKotlinGenerics() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/KotlinGenerics.kt");
+                }
+
+                @Test
+                @TestMetadata("KotlinStaticShadowing.kt")
+                public void testKotlinStaticShadowing() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/KotlinStaticShadowing.kt");
                 }
 
                 @Test
@@ -6478,6 +6508,18 @@ public class FirDiagnosticTestGenerated extends AbstractFirDiagnosticTest {
                 @TestMetadata("StaticScopeAccessFromStaticExtension.kt")
                 public void testStaticScopeAccessFromStaticExtension() throws Exception {
                     runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/StaticScopeAccessFromStaticExtension.kt");
+                }
+
+                @Test
+                @TestMetadata("TypeParamExample.kt")
+                public void testTypeParamExample() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/TypeParamExample.kt");
+                }
+
+                @Test
+                @TestMetadata("UnqualifiedExtensionCall.kt")
+                public void testUnqualifiedExtensionCall() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/UnqualifiedExtensionCall.kt");
                 }
             }
         }

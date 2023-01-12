@@ -155,6 +155,7 @@ private inline val CirClass.classKindFlag: Flag
         ClassKind.ENUM_ENTRY -> Flag.Class.IS_ENUM_ENTRY
         ClassKind.ANNOTATION_CLASS -> Flag.Class.IS_ANNOTATION_CLASS
         ClassKind.OBJECT -> Flag.Class.IS_OBJECT
+        ClassKind.STATIC_OBJECT -> TODO("")
     }
 
 private inline val CirFunctionModifiers.modifiersFlags: Flags

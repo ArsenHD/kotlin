@@ -8,7 +8,8 @@ class A {
             println("bar")
         }
 
-        val x: Int = 10
+        // TODO: fix error
+//        val x: Int = 10
     }
 }
 

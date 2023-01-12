@@ -75,6 +75,8 @@ internal object CheckExplicitReceiverConsistency : ResolutionStage() {
     }
 }
 
+// TODO: may need to change this for static extensions
+// TODO: if candidate is static extension, then check that it is called with class qualifier as explicit receiver
 object CheckExtensionReceiver : ResolutionStage() {
     override suspend fun check(candidate: Candidate, callInfo: CallInfo, sink: CheckerSink, context: ResolutionContext) {
         val expectedReceiverType = candidate.getExpectedReceiverType() ?: return

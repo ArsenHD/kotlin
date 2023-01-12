@@ -331,6 +331,7 @@ abstract class FirJavaFacade(
                 }
             }
 
+            // TODO: think about: add static java declarations to self static object to be able to access them from
             val selfStaticObject = createEmptySelfStaticObject(classId, moduleData, session.kotlinScopeProvider)
             addDeclaration(selfStaticObject)
             selfStaticObjectSymbol = selfStaticObject.symbol

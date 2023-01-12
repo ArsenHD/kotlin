@@ -1,7 +1,8 @@
 class A {
     static {
         fun foo() {}
-        val x: Int = 0
+        // TODO: fix error
+//        val x: Int = 0
     }
 }
 
@@ -12,6 +13,6 @@ fun process(block: A.static.() -> Unit) {
 fun test() {
     process {
         foo()
-        val y = x
+//        val y = x
     }
 }

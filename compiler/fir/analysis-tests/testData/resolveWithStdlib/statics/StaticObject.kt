@@ -3,6 +3,7 @@ static object MyObject {
         print("foo")
     }
 
+    // TODO: fix error
     val x: Int = 10
 }
 

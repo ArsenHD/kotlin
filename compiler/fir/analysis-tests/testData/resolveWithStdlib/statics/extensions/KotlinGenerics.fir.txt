@@ -1,0 +1,21 @@
+FILE: KotlinGenerics.kt
+    public final class A : R|kotlin/Any| {
+        public constructor(): R|A| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
+            public final static fun <T> foo(x: R|T|): R|kotlin/Unit| {
+            }
+
+        }
+
+    }
+    public final fun <T> R|A.<SELF_STATIC_OBJECT>|.bar(y: R|T|): R|kotlin/Unit| {
+    }
+    public final fun test(): R|kotlin/Unit| {
+        Q|A|.R|/A.foo|<R|kotlin/Int|>(Int(1))
+        Q|A|.R|/A.foo|<R|kotlin/String|>(String(abc))
+        Q|A|.R|/bar|<R|kotlin/Int|>(Int(1))
+        Q|A|.R|/bar|<R|kotlin/String|>(String(abc))
+    }
