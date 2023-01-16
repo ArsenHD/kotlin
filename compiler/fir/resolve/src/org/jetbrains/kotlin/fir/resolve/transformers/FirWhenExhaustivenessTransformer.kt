@@ -278,7 +278,7 @@ private object WhenOnEnumExhaustivenessChecker : WhenExhaustivenessChecker() {
         destination: MutableCollection<WhenMissingCase>
     ) {
         val enumClass = (subjectType.toSymbol(session) as FirRegularClassSymbol).fir
-        val allEntries = enumClass.declarations.mapNotNullTo(mutableSetOf()) { it as? FirEnumEntry }
+        val allEntries = enumClass.enumEntries?.toSet() ?: emptySet()
         val checkedEntries = mutableSetOf<FirEnumEntry>()
         whenExpression.accept(ConditionChecker, checkedEntries)
         val notCheckedEntries = allEntries - checkedEntries

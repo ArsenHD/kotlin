@@ -27,6 +27,7 @@ import org.jetbrains.kotlin.load.kotlin.KotlinJvmBinaryClass
 import org.jetbrains.kotlin.load.kotlin.findKotlinClass
 import org.jetbrains.kotlin.name.ClassId
 import org.jetbrains.kotlin.name.Name
+import org.jetbrains.kotlin.name.SpecialNames
 import org.jetbrains.kotlin.name.StandardClassIds
 import org.jetbrains.kotlin.resolve.constants.ClassLiteralValue
 
@@ -56,10 +57,11 @@ internal class AnnotationsLoader(private val session: FirSession, private val ko
             }
 
             private fun ClassId.toEnumEntryReferenceExpression(name: Name): FirExpression {
+                val enumSelfStaticObject = this@toEnumEntryReferenceExpression.createNestedClassId(SpecialNames.SELF_STATIC_OBJECT)
                 return buildFunctionCall {
                     val entryPropertySymbol =
                         session.symbolProvider.getClassDeclaredPropertySymbols(
-                            this@toEnumEntryReferenceExpression, name,
+                            enumSelfStaticObject, name,
                         ).firstOrNull()
 
                     calleeReference = when {

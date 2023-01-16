@@ -614,13 +614,6 @@ class DeclarationsConverter(
                         addDeclarations(convertClassBody(it, classWrapper, staticObjectBuilder))
                     }
 
-                    // Once we convert all static blocks, the static object builder
-                    // contains all declarations from them and is ready to build an object,
-                    // which is added into the list of class' declarations.
-                    addDeclaration(staticObjectBuilder.build())
-                    // We are keeping the symbol of the self static object
-                    selfStaticObjectSymbol = staticObjectBuilder.symbol
-
                     //parse data class
                     if (modifiers.isDataClass() && firPrimaryConstructor != null) {
                         val zippedParameters = properties.map { it.source!!.lighterASTNode to it }
@@ -637,24 +630,35 @@ class DeclarationsConverter(
 
                     if (modifiers.isEnum()) {
                         generateValuesFunction(
+                            staticObjectBuilder,
                             baseModuleData,
                             context.packageFqName,
                             context.className,
                             modifiers.hasExpect()
                         )
                         generateValueOfFunction(
+                            staticObjectBuilder,
                             baseModuleData,
                             context.packageFqName,
                             context.className,
                             modifiers.hasExpect()
                         )
                         generateEntriesGetter(
+                            staticObjectBuilder,
                             baseModuleData,
                             context.packageFqName,
                             context.className,
                             modifiers.hasExpect()
                         )
                     }
+
+                    // Once we convert all static blocks, enum entries and other static declarations,
+                    // the static object builder contains all the static declarations and is ready to build an object,
+                    // which is added into the list of class' declarations.
+                    addDeclaration(staticObjectBuilder.build())
+                    // We are keeping the symbol of the self static object
+                    selfStaticObjectSymbol = staticObjectBuilder.symbol
+
                     initCompanionObjectSymbolAttr()
 
                     contextReceivers.addAll(convertContextReceivers(classNode))
@@ -895,7 +899,14 @@ class DeclarationsConverter(
         var firDeclarations = classBody.forEachChildrenReturnList { node, container ->
             @Suppress("RemoveRedundantQualifierName")
             when (node.tokenType) {
-                ENUM_ENTRY -> container += convertEnumEntry(node, classWrapper)
+                ENUM_ENTRY -> {
+                    val firEnumEntry = convertEnumEntry(node, classWrapper)
+                    if (staticObjectBuilder != null) {
+                        staticObjectBuilder.declarations += firEnumEntry
+                    } else {
+                        container += firEnumEntry
+                    }
+                }
                 CLASS -> container += convertClass(node)
                 FUN -> container += convertFunctionDeclaration(node) as FirDeclaration
                 KtNodeTypes.PROPERTY -> container += convertPropertyDeclaration(node, classWrapper)

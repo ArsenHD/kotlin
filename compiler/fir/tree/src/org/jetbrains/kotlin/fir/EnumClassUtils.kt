@@ -15,6 +15,8 @@ import org.jetbrains.kotlin.descriptors.Visibilities
 import org.jetbrains.kotlin.fakeElement
 import org.jetbrains.kotlin.fir.declarations.FirDeclarationOrigin
 import org.jetbrains.kotlin.fir.declarations.FirDeclarationStatus
+import org.jetbrains.kotlin.fir.declarations.FirEnumEntry
+import org.jetbrains.kotlin.fir.declarations.FirRegularClass
 import org.jetbrains.kotlin.fir.declarations.builder.FirRegularClassBuilder
 import org.jetbrains.kotlin.fir.declarations.builder.buildProperty
 import org.jetbrains.kotlin.fir.declarations.builder.buildSimpleFunction
@@ -22,6 +24,7 @@ import org.jetbrains.kotlin.fir.declarations.builder.buildValueParameter
 import org.jetbrains.kotlin.fir.declarations.impl.FirDeclarationStatusImpl
 import org.jetbrains.kotlin.fir.declarations.impl.FirDefaultPropertyGetter
 import org.jetbrains.kotlin.fir.declarations.impl.FirResolvedDeclarationStatusImpl
+import org.jetbrains.kotlin.fir.declarations.utils.isEnumClass
 import org.jetbrains.kotlin.fir.expressions.builder.buildEmptyExpressionBlock
 import org.jetbrains.kotlin.fir.symbols.impl.ConeClassLikeLookupTagImpl
 import org.jetbrains.kotlin.fir.symbols.impl.FirNamedFunctionSymbol
@@ -33,11 +36,22 @@ import org.jetbrains.kotlin.name.CallableId
 import org.jetbrains.kotlin.name.FqName
 import org.jetbrains.kotlin.name.StandardClassIds
 
+val FirRegularClass.enumEntries: List<FirEnumEntry>?
+    get() {
+        if (!isEnumClass) return null
+        val selfStaticObject = selfStaticObjectSymbol?.fir ?: return null
+        return selfStaticObject.declarations.filterIsInstance<FirEnumEntry>()
+    }
+
 fun FirRegularClassBuilder.generateValuesFunction(
-    moduleData: FirModuleData, packageFqName: FqName, classFqName: FqName, makeExpect: Boolean = false
+    selfStaticObjectBuilder: FirRegularClassBuilder,
+    moduleData: FirModuleData,
+    packageFqName: FqName,
+    classFqName: FqName,
+    makeExpect: Boolean = false
 ) {
     val sourceElement = source?.fakeElement(KtFakeSourceElementKind.EnumGeneratedDeclaration)
-    declarations += buildSimpleFunction {
+    selfStaticObjectBuilder.declarations += buildSimpleFunction {
         source = sourceElement
         origin = FirDeclarationOrigin.Source
         this.moduleData = moduleData
@@ -67,10 +81,14 @@ fun FirRegularClassBuilder.generateValuesFunction(
 }
 
 fun FirRegularClassBuilder.generateValueOfFunction(
-    moduleData: FirModuleData, packageFqName: FqName, classFqName: FqName, makeExpect: Boolean = false
+    selfStaticObjectBuilder: FirRegularClassBuilder,
+    moduleData: FirModuleData,
+    packageFqName: FqName,
+    classFqName: FqName,
+    makeExpect: Boolean = false
 ) {
     val sourceElement = source?.fakeElement(KtFakeSourceElementKind.EnumGeneratedDeclaration)
-    declarations += buildSimpleFunction {
+    selfStaticObjectBuilder.declarations += buildSimpleFunction {
         source = sourceElement
         origin = FirDeclarationOrigin.Source
         this.moduleData = moduleData
@@ -119,10 +137,14 @@ fun FirRegularClassBuilder.generateValueOfFunction(
 }
 
 fun FirRegularClassBuilder.generateEntriesGetter(
-    moduleData: FirModuleData, packageFqName: FqName, classFqName: FqName, makeExpect: Boolean = false
+    selfStaticObjectBuilder: FirRegularClassBuilder,
+    moduleData: FirModuleData,
+    packageFqName: FqName,
+    classFqName: FqName,
+    makeExpect: Boolean = false
 ) {
     val sourceElement = source?.fakeElement(KtFakeSourceElementKind.EnumGeneratedDeclaration)
-    declarations += buildProperty {
+    selfStaticObjectBuilder.declarations += buildProperty {
         source = sourceElement
         isVar = false
         isLocal = false

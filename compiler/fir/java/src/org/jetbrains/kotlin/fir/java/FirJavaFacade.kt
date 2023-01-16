@@ -21,10 +21,7 @@ import org.jetbrains.kotlin.fir.declarations.builder.buildEnumEntry
 import org.jetbrains.kotlin.fir.declarations.builder.buildOuterClassTypeParameterRef
 import org.jetbrains.kotlin.fir.declarations.builder.buildTypeParameter
 import org.jetbrains.kotlin.fir.declarations.impl.FirResolvedDeclarationStatusImpl
-import org.jetbrains.kotlin.fir.declarations.utils.addDeclaration
-import org.jetbrains.kotlin.fir.declarations.utils.createEmptySelfStaticObject
-import org.jetbrains.kotlin.fir.declarations.utils.effectiveVisibility
-import org.jetbrains.kotlin.fir.declarations.utils.modality
+import org.jetbrains.kotlin.fir.declarations.utils.*
 import org.jetbrains.kotlin.fir.java.declarations.*
 import org.jetbrains.kotlin.fir.java.enhancement.FirSignatureEnhancement
 import org.jetbrains.kotlin.fir.resolve.constructType
@@ -249,10 +246,18 @@ abstract class FirJavaFacade(
                 isInline = false
                 isFun = classKind == ClassKind.INTERFACE
             }
+
+            val selfStaticObjectBuilder = initSelfStaticObject(classId, moduleData, session.kotlinScopeProvider)
+
             // TODO: may be we can process fields & methods later.
             // However, they should be built up to override resolve stage
             for (javaField in javaClass.fields) {
-                declarations += convertJavaFieldToFir(javaField, classId, javaTypeParameterStack, dispatchReceiver, moduleData)
+                val firJavaField = convertJavaFieldToFir(javaField, classId, javaTypeParameterStack, dispatchReceiver, moduleData)
+                if (javaField.isStatic) {
+                    selfStaticObjectBuilder.declarations += firJavaField
+                } else {
+                    declarations += firJavaField
+                }
             }
 
             for (javaMethod in javaClass.methods) {
@@ -265,7 +270,11 @@ abstract class FirJavaFacade(
                     dispatchReceiver,
                     moduleData,
                 )
-                declarations += firJavaMethod
+                if (javaMethod.isStatic) {
+                    selfStaticObjectBuilder.declarations += firJavaMethod
+                } else {
+                    declarations += firJavaMethod
+                }
 
                 if (classIsAnnotation) {
                     val parameterForAnnotationConstructor =
@@ -277,10 +286,6 @@ abstract class FirJavaFacade(
                     }
                 }
             }
-
-            val selfStaticObject = createEmptySelfStaticObject(classId, moduleData, session.kotlinScopeProvider)
-            addDeclaration(selfStaticObject)
-            selfStaticObjectSymbol = selfStaticObject.symbol
 
             val javaClassDeclaredConstructors = javaClass.constructors
             val constructorId = CallableId(classId.packageFqName, classId.relativeClassName, classId.shortClassName)
@@ -314,13 +319,9 @@ abstract class FirJavaFacade(
             }
 
             if (classKind == ClassKind.ENUM_CLASS) {
-                generateValuesFunction(
-                    moduleData,
-                    classId.packageFqName,
-                    classId.relativeClassName
-                )
-                generateValueOfFunction(moduleData, classId.packageFqName, classId.relativeClassName)
-                generateEntriesGetter(moduleData, classId.packageFqName, classId.relativeClassName)
+                generateValuesFunction(selfStaticObjectBuilder, moduleData, classId.packageFqName, classId.relativeClassName)
+                generateValueOfFunction(selfStaticObjectBuilder, moduleData, classId.packageFqName, classId.relativeClassName)
+                generateEntriesGetter(selfStaticObjectBuilder, moduleData, classId.packageFqName, classId.relativeClassName)
             }
             if (classIsAnnotation) {
                 declarations +=
@@ -343,6 +344,10 @@ abstract class FirJavaFacade(
                     declarations
                 )
             }
+
+            val selfStaticObject = selfStaticObjectBuilder.build()
+            addDeclaration(selfStaticObject)
+            selfStaticObjectSymbol = selfStaticObject.symbol
         }.apply {
             if (modality == Modality.SEALED) {
                 val inheritors = javaClass.permittedTypes.mapNotNull { classifierType ->
