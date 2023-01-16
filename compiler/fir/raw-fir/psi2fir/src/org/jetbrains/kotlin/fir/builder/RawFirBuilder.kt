@@ -48,6 +48,7 @@ import org.jetbrains.kotlin.types.Variance
 import org.jetbrains.kotlin.types.expressions.OperatorConventions
 import org.jetbrains.kotlin.util.OperatorNameConventions
 import org.jetbrains.kotlin.utils.addToStdlib.firstIsInstanceOrNull
+import org.jetbrains.kotlin.utils.addToStdlib.partitionIsInstance
 import org.jetbrains.kotlin.utils.addToStdlib.runIf
 import org.jetbrains.kotlin.utils.addToStdlib.runUnless
 
@@ -1277,18 +1278,23 @@ open class RawFirBuilder(
                             }
                         }
 
-                        for (declaration in classOrObject.declarations) {
+                        val (staticBlocks, regularDeclarations) = classOrObject.declarations.partitionIsInstance<KtDeclaration, KtStaticBlock>()
+
+                        for (block in staticBlocks) {
+                            processStaticBlock(block, staticObjectBuilder)
+                        }
+
+                        for (declaration in regularDeclarations) {
+                            val firDeclaration = declaration.toFirDeclaration(
+                                delegatedSuperType,
+                                delegatedSelfType,
+                                classOrObject,
+                                this,
+                                typeParameters
+                            )
                             when (declaration) {
-                                is KtStaticBlock -> processStaticBlock(declaration, staticObjectBuilder)
-                                else -> addDeclaration(
-                                    declaration.toFirDeclaration(
-                                        delegatedSuperType,
-                                        delegatedSelfType,
-                                        classOrObject,
-                                        this,
-                                        typeParameters
-                                    )
-                                )
+                                is KtEnumEntry -> staticObjectBuilder.addDeclaration(firDeclaration)
+                                else -> addDeclaration(firDeclaration)
                             }
                         }
 
@@ -1299,13 +1305,6 @@ open class RawFirBuilder(
                                 }
                             )
                         }
-
-                        // Once we convert all static blocks, the static object builder
-                        // contains all declarations from them and is ready to build an object,
-                        // which is added into the list of class' declarations.
-                        addDeclaration(staticObjectBuilder.build())
-                        // We are keeping the symbol of the self static object
-                        selfStaticObjectSymbol = staticObjectBuilder.symbol
 
                         if (classOrObject.hasModifier(DATA_KEYWORD) && firPrimaryConstructor != null) {
                             val zippedParameters =
@@ -1329,20 +1328,34 @@ open class RawFirBuilder(
 
                         if (classOrObject.hasModifier(ENUM_KEYWORD)) {
                             generateValuesFunction(
+                                staticObjectBuilder,
                                 baseModuleData,
                                 context.packageFqName,
                                 context.className,
                                 classIsExpect
                             )
                             generateValueOfFunction(
-                                baseModuleData, context.packageFqName, context.className,
+                                staticObjectBuilder,
+                                baseModuleData,
+                                context.packageFqName,
+                                context.className,
                                 classIsExpect
                             )
                             generateEntriesGetter(
-                                baseModuleData, context.packageFqName, context.className,
+                                staticObjectBuilder,
+                                baseModuleData,
+                                context.packageFqName,
+                                context.className,
                                 classIsExpect
                             )
                         }
+
+                        // Once we convert all static blocks, enum entries and other static declarations,
+                        // the static object builder contains all the static declarations and is ready to build an object,
+                        // which is added into the list of class' declarations.
+                        addDeclaration(staticObjectBuilder.build())
+                        // We are keeping the symbol of the self static object
+                        selfStaticObjectSymbol = staticObjectBuilder.symbol
 
                         initCompanionObjectSymbolAttr()
 

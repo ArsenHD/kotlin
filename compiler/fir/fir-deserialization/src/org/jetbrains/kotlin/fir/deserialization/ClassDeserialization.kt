@@ -127,21 +127,23 @@ fun deserializeClassToSymbol(
 
         classProto.supertypes(context.typeTable).mapTo(superTypeRefs, typeDeserializer::typeRef)
 
-        addDeclarations(
-            classProto.functionList.map {
-                classDeserializer.loadFunction(it, classProto, symbol)
-            }
-        )
+        val selfStaticObjectBuilder = initSelfStaticObject(classId, moduleData, scopeProvider)
 
-        addDeclarations(
-            classProto.propertyList.map {
-                classDeserializer.loadProperty(it, classProto, symbol)
+        classProto.functionList
+            .map { classDeserializer.loadFunction(it, classProto, symbol) }
+            .partition { it.isStatic }
+            .let { (staticFunctions, regularFunctions) ->
+                addDeclarations(regularFunctions)
+                selfStaticObjectBuilder.addDeclarations(staticFunctions)
             }
-        )
 
-        val selfStaticObject = createEmptySelfStaticObject(classId, moduleData, scopeProvider)
-        addDeclaration(selfStaticObject)
-        selfStaticObjectSymbol = selfStaticObject.symbol
+        classProto.propertyList
+            .map { classDeserializer.loadProperty(it, classProto, symbol) }
+            .partition { it.isStatic }
+            .let { (staticProperties, regularProperties) ->
+                addDeclarations(regularProperties)
+                selfStaticObjectBuilder.addDeclarations(staticProperties)
+            }
 
         addDeclarations(
             classProto.constructorList.map {
@@ -156,7 +158,7 @@ fun deserializeClassToSymbol(
             }
         )
 
-        addDeclarations(
+        selfStaticObjectBuilder.addDeclarations(
             classProto.enumEntryList.mapNotNull { enumEntryProto ->
                 val enumEntryName = nameResolver.getName(enumEntryProto.name)
 
@@ -184,13 +186,9 @@ fun deserializeClassToSymbol(
         )
 
         if (classKind == ClassKind.ENUM_CLASS) {
-            generateValuesFunction(
-                moduleData,
-                classId.packageFqName,
-                classId.relativeClassName
-            )
-            generateValueOfFunction(moduleData, classId.packageFqName, classId.relativeClassName)
-            generateEntriesGetter(moduleData, classId.packageFqName, classId.relativeClassName)
+            generateValuesFunction(selfStaticObjectBuilder, moduleData, classId.packageFqName, classId.relativeClassName)
+            generateValueOfFunction(selfStaticObjectBuilder, moduleData, classId.packageFqName, classId.relativeClassName)
+            generateEntriesGetter(selfStaticObjectBuilder, moduleData, classId.packageFqName, classId.relativeClassName)
         }
 
         addCloneForArrayIfNeeded(classId, context.dispatchReceiver)
@@ -209,6 +207,10 @@ fun deserializeClassToSymbol(
             }
         })
         companionObjectSymbol = (declarations.firstOrNull { it is FirRegularClass && it.isCompanion } as FirRegularClass?)?.symbol
+
+        val selfStaticObject = selfStaticObjectBuilder.build()
+        addDeclaration(selfStaticObject)
+        selfStaticObjectSymbol = selfStaticObject.symbol
 
         contextReceivers.addAll(classDeserializer.createContextReceiversForClass(classProto))
     }.apply {

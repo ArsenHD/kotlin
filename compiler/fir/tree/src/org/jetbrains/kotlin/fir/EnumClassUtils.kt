@@ -34,10 +34,14 @@ import org.jetbrains.kotlin.name.FqName
 import org.jetbrains.kotlin.name.StandardClassIds
 
 fun FirRegularClassBuilder.generateValuesFunction(
-    moduleData: FirModuleData, packageFqName: FqName, classFqName: FqName, makeExpect: Boolean = false
+    selfStaticObjectBuilder: FirRegularClassBuilder,
+    moduleData: FirModuleData,
+    packageFqName: FqName,
+    classFqName: FqName,
+    makeExpect: Boolean = false
 ) {
     val sourceElement = source?.fakeElement(KtFakeSourceElementKind.EnumGeneratedDeclaration)
-    declarations += buildSimpleFunction {
+    selfStaticObjectBuilder.declarations += buildSimpleFunction {
         source = sourceElement
         origin = FirDeclarationOrigin.Source
         this.moduleData = moduleData
@@ -67,10 +71,14 @@ fun FirRegularClassBuilder.generateValuesFunction(
 }
 
 fun FirRegularClassBuilder.generateValueOfFunction(
-    moduleData: FirModuleData, packageFqName: FqName, classFqName: FqName, makeExpect: Boolean = false
+    selfStaticObjectBuilder: FirRegularClassBuilder,
+    moduleData: FirModuleData,
+    packageFqName: FqName,
+    classFqName: FqName,
+    makeExpect: Boolean = false
 ) {
     val sourceElement = source?.fakeElement(KtFakeSourceElementKind.EnumGeneratedDeclaration)
-    declarations += buildSimpleFunction {
+    selfStaticObjectBuilder.declarations += buildSimpleFunction {
         source = sourceElement
         origin = FirDeclarationOrigin.Source
         this.moduleData = moduleData
@@ -119,10 +127,14 @@ fun FirRegularClassBuilder.generateValueOfFunction(
 }
 
 fun FirRegularClassBuilder.generateEntriesGetter(
-    moduleData: FirModuleData, packageFqName: FqName, classFqName: FqName, makeExpect: Boolean = false
+    selfStaticObjectBuilder: FirRegularClassBuilder,
+    moduleData: FirModuleData,
+    packageFqName: FqName,
+    classFqName: FqName,
+    makeExpect: Boolean = false
 ) {
     val sourceElement = source?.fakeElement(KtFakeSourceElementKind.EnumGeneratedDeclaration)
-    declarations += buildProperty {
+    selfStaticObjectBuilder.declarations += buildProperty {
         source = sourceElement
         isVar = false
         isLocal = false
