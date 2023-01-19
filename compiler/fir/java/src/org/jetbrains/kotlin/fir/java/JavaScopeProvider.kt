@@ -111,7 +111,7 @@ object JavaScopeProvider : FirScopeProvider() {
         scopeSession: ScopeSession
     ): FirContainingNamesAwareScope? {
         val scope = getStaticMemberScopeForCallables(klass, useSiteSession, scopeSession, hashSetOf()) ?: return null
-        return FirNameAwareOnlyCallablesScope(FirStaticScope(scope))
+        return FirNameAwareOnlyCallablesScope(scope)
     }
 
     private fun getStaticMemberScopeForCallables(
@@ -123,8 +123,10 @@ object JavaScopeProvider : FirScopeProvider() {
         if (klass !is FirJavaClass) return null
         if (!visitedClasses.add(klass)) return null
 
+        val selfStaticObject = klass.selfStaticObjectSymbol?.fir ?: return null
+
         return scopeSession.getOrBuild(klass.symbol, JAVA_ENHANCEMENT_FOR_STATIC) {
-            val declaredScope = buildDeclaredMemberScope(useSiteSession, klass)
+            val declaredScope = buildDeclaredMemberScope(useSiteSession, selfStaticObject)
 
             val superClassScope = klass.findJavaSuperClass(useSiteSession)?.let {
                 (it.scopeProvider as? JavaScopeProvider)
