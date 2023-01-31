@@ -1,0 +1,8 @@
+FILE: JavaGenerics.kt
+    public final fun <T : R|kotlin/Any|> R|java/util/Optional.<SELF_STATIC_OBJECT>|.make(value: R|T|): R|java/util/Optional<T>| {
+        ^make Q|java/util/Optional|.R|java/util/Optional.of|<R|T|>(R|<local>/value|)
+    }
+    public final fun test(): R|kotlin/Unit| {
+        lval opt1: R|java/util/Optional<kotlin/Int>| = Q|java/util/Optional|.R|/make|<R|kotlin/Int|>(Int(1))
+        lval opt2: R|java/util/Optional<kotlin/String>| = Q|java/util/Optional|.R|/make|<R|kotlin/String|>(String(abc))
+    }

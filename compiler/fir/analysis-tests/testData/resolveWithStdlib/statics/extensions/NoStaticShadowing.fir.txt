@@ -1,0 +1,41 @@
+FILE: NoStaticShadowing.kt
+    public open class A : R|kotlin/Any| {
+        public constructor(): R|A| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
+            public final static fun foo(): R|kotlin/Int| {
+                ^foo Int(10)
+            }
+
+        }
+
+    }
+    public final fun R|A.<SELF_STATIC_OBJECT>|.bar(): R|kotlin/Int| {
+        ^bar Int(20)
+    }
+    public final class B : R|A| {
+        public constructor(): R|B| {
+            super<R|A|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
+            public final static fun bar(): R|kotlin/String| {
+                ^bar String(abc)
+            }
+
+        }
+
+    }
+    public final fun R|B.<SELF_STATIC_OBJECT>|.foo(): R|kotlin/String| {
+        lval x: R|kotlin/Int| = Q|A|.R|/A.foo|()
+        lval y: R|kotlin/String| = Q|B|.R|/foo|()
+        ^foo String(abc)
+    }
+    public final fun test(): R|kotlin/Unit| {
+        lval a: R|kotlin/Int| = Q|A|.R|/A.foo|()
+        lval b: R|kotlin/String| = Q|B|.R|/foo|()
+        lval c: R|kotlin/Int| = Q|A|.R|/bar|()
+        lval d: R|kotlin/String| = Q|B|.R|/B.bar|()
+    }

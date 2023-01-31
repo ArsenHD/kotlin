@@ -1,0 +1,7 @@
+FILE: JavaStaticShadowing.kt
+    public final fun R|java/util/OptionalInt.<SELF_STATIC_OBJECT>|.of(value: R|kotlin/Int|): R|kotlin/Int| {
+        ^of R|<local>/value|
+    }
+    public final fun test(): R|kotlin/Unit| {
+        lval x: R|java/util/OptionalInt| = Q|java/util/OptionalInt|.R|java/util/OptionalInt.of|(Int(10))
+    }

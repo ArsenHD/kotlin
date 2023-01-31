@@ -1,0 +1,20 @@
+FILE: StaticExtensionShadowing.kt
+    public final class A : R|kotlin/Any| {
+        public constructor(): R|A| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
+            public final static fun foo(): R|kotlin/Int| {
+                ^foo Int(10)
+            }
+
+        }
+
+    }
+    public final fun R|A.<SELF_STATIC_OBJECT>|.foo(): R|kotlin/String| {
+        ^foo String(abc)
+    }
+    public final fun test(): R|kotlin/Unit| {
+        lval x: R|kotlin/Int| = Q|A|.R|/A.foo|()
+    }

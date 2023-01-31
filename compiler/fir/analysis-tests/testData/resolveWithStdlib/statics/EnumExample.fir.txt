@@ -1,0 +1,28 @@
+FILE: EnumExample.kt
+    public final enum class Colors : R|kotlin/Enum<Colors>| {
+        private constructor(): R|Colors| {
+            super<R|kotlin/Enum<Colors>|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
+            public final static enum entry RED: R|Colors|
+            public final static enum entry GREEN: R|Colors|
+            public final static enum entry BLUE: R|Colors|
+            public final static fun values(): R|kotlin/Array<Colors>| {
+            }
+
+            public final static fun valueOf(value: R|kotlin/String|): R|Colors| {
+            }
+
+            public final static val entries: R|kotlin/enums/EnumEntries<Colors>|
+                public get(): R|kotlin/enums/EnumEntries<Colors>|
+
+        }
+
+    }
+    public final fun test(): R|kotlin/Unit| {
+        lval a: R|Colors| = Q|Colors|.R|/Colors.RED|
+        lval b: R|Colors| = Q|Colors|.R|/Colors.GREEN|
+        lval c: R|Colors| = Q|Colors|.R|/Colors.BLUE|
+        lval values: R|kotlin/Array<Colors>| = Q|Colors|.R|/Colors.values|()
+    }

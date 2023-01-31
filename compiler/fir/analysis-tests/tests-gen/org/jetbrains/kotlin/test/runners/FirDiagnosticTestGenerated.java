@@ -6486,6 +6486,12 @@ public class FirDiagnosticTestGenerated extends AbstractFirDiagnosticTest {
             }
 
             @Test
+            @TestMetadata("EnumExample.kt")
+            public void testEnumExample() throws Exception {
+                runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/EnumExample.kt");
+            }
+
+            @Test
             @TestMetadata("MultipleStaticBlocks.kt")
             public void testMultipleStaticBlocks() throws Exception {
                 runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/MultipleStaticBlocks.kt");
@@ -6585,21 +6591,45 @@ public class FirDiagnosticTestGenerated extends AbstractFirDiagnosticTest {
                 }
 
                 @Test
+                @TestMetadata("JavaGenerics.kt")
+                public void testJavaGenerics() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/JavaGenerics.kt");
+                }
+
+                @Test
+                @TestMetadata("JavaStaticShadowing.kt")
+                public void testJavaStaticShadowing() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/JavaStaticShadowing.kt");
+                }
+
+                @Test
+                @TestMetadata("KotlinGenerics.kt")
+                public void testKotlinGenerics() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/KotlinGenerics.kt");
+                }
+
+                @Test
                 @TestMetadata("KotlinStdlibStaticExtension.kt")
                 public void testKotlinStdlibStaticExtension() throws Exception {
                     runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/KotlinStdlibStaticExtension.kt");
                 }
 
                 @Test
-                @TestMetadata("PassingLambdaArgumentWithStaticReceiver.kt")
-                public void testPassingLambdaArgumentWithStaticReceiver() throws Exception {
-                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/PassingLambdaArgumentWithStaticReceiver.kt");
+                @TestMetadata("NoStaticShadowing.kt")
+                public void testNoStaticShadowing() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/NoStaticShadowing.kt");
                 }
 
                 @Test
                 @TestMetadata("SimpleStaticExtension.kt")
                 public void testSimpleStaticExtension() throws Exception {
                     runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/SimpleStaticExtension.kt");
+                }
+
+                @Test
+                @TestMetadata("StaticExtensionCallFromNonStaticScope.kt")
+                public void testStaticExtensionCallFromNonStaticScope() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/StaticExtensionCallFromNonStaticScope.kt");
                 }
 
                 @Test
@@ -6615,6 +6645,12 @@ public class FirDiagnosticTestGenerated extends AbstractFirDiagnosticTest {
                 }
 
                 @Test
+                @TestMetadata("StaticExtensionShadowing.kt")
+                public void testStaticExtensionShadowing() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/StaticExtensionShadowing.kt");
+                }
+
+                @Test
                 @TestMetadata("StaticExtensionsFromDifferentScopes.kt")
                 public void testStaticExtensionsFromDifferentScopes() throws Exception {
                     runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/StaticExtensionsFromDifferentScopes.kt");
@@ -6624,6 +6660,12 @@ public class FirDiagnosticTestGenerated extends AbstractFirDiagnosticTest {
                 @TestMetadata("StaticScopeAccessFromStaticExtension.kt")
                 public void testStaticScopeAccessFromStaticExtension() throws Exception {
                     runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/StaticScopeAccessFromStaticExtension.kt");
+                }
+
+                @Test
+                @TestMetadata("UnqualifiedExtensionCall.kt")
+                public void testUnqualifiedExtensionCall() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/UnqualifiedExtensionCall.kt");
                 }
             }
         }

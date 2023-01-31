@@ -1,6 +1,7 @@
 class A {
     static {
         fun foo() {}
+
         val x: Int = 0
     }
 }
