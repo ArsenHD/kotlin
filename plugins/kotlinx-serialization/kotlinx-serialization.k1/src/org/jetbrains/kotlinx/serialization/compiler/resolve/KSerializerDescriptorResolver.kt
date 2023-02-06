@@ -212,7 +212,8 @@ object KSerializerDescriptorResolver {
     ): PropertyDescriptor {
         val propertyDescriptor = PropertyDescriptorImpl.create(
             thisDescriptor, Annotations.EMPTY, modality, visibility, false, name,
-            CallableMemberDescriptor.Kind.SYNTHESIZED, thisDescriptor.source, false, false, false, false, false, false
+            CallableMemberDescriptor.Kind.SYNTHESIZED, thisDescriptor.source, false, false, false,
+            /* TODO: question 3, check if this is static or not */ false, false, false, false
         )
 
         val extensionReceiverParameter: ReceiverParameterDescriptor? = null // kludge to disambiguate call
@@ -274,7 +275,8 @@ object KSerializerDescriptorResolver {
         val propertyDescriptor = PropertyDescriptorImpl.create(
             containingClassDescriptor,
             Annotations.EMPTY, Modality.FINAL, visibility, false, name,
-            CallableMemberDescriptor.Kind.SYNTHESIZED, containingClassDescriptor.source, false, false, false, false, false, false
+            CallableMemberDescriptor.Kind.SYNTHESIZED, containingClassDescriptor.source, false, false, false,
+            /* TODO: question 3 */ false, false, false, false
         )
         val extensionReceiverParameter: ReceiverParameterDescriptor? = null // kludge to disambiguate call
         propertyDescriptor.setType(

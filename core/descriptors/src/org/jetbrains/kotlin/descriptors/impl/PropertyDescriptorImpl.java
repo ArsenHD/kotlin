@@ -45,6 +45,7 @@ public class PropertyDescriptorImpl extends VariableDescriptorWithInitializerImp
     private final boolean lateInit;
     private final boolean isConst;
     private final boolean isExpect;
+    private final boolean isStatic;
     private final boolean isActual;
     private final boolean isExternal;
     private final boolean isDelegated;
@@ -72,6 +73,7 @@ public class PropertyDescriptorImpl extends VariableDescriptorWithInitializerImp
             boolean lateInit,
             boolean isConst,
             boolean isExpect,
+            boolean isStatic,
             boolean isActual,
             boolean isExternal,
             boolean isDelegated
@@ -84,6 +86,7 @@ public class PropertyDescriptorImpl extends VariableDescriptorWithInitializerImp
         this.lateInit = lateInit;
         this.isConst = isConst;
         this.isExpect = isExpect;
+        this.isStatic = isStatic;
         this.isActual = isActual;
         this.isExternal = isExternal;
         this.isDelegated = isDelegated;
@@ -102,13 +105,14 @@ public class PropertyDescriptorImpl extends VariableDescriptorWithInitializerImp
             boolean lateInit,
             boolean isConst,
             boolean isExpect,
+            boolean isStatic,
             boolean isActual,
             boolean isExternal,
             boolean isDelegated
     ) {
         return new PropertyDescriptorImpl(containingDeclaration, null, annotations,
                                           modality, visibility, isVar, name, kind, source, lateInit, isConst,
-                                          isExpect, isActual, isExternal, isDelegated);
+                                          isExpect, isStatic, isActual, isExternal, isDelegated);
     }
 
     public void setInType(@NotNull KotlinType inType) {
@@ -591,7 +595,7 @@ public class PropertyDescriptorImpl extends VariableDescriptorWithInitializerImp
     ) {
         return new PropertyDescriptorImpl(
                 newOwner, original, getAnnotations(), newModality, newVisibility, isVar(), newName, kind, source,
-                isLateInit(), isConst(), isExpect(), isActual(), isExternal(), isDelegated()
+                isLateInit(), isConst(), isExpect(), isStatic(), isActual(), isExternal(), isDelegated()
         );
     }
 
@@ -615,6 +619,11 @@ public class PropertyDescriptorImpl extends VariableDescriptorWithInitializerImp
     @Override
     public boolean isExpect() {
         return isExpect;
+    }
+
+    @Override
+    public boolean isStatic() {
+        return isStatic;
     }
 
     @Override

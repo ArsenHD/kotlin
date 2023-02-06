@@ -27,8 +27,8 @@ class ReplResultPropertyDescriptor(
     name,
     CallableMemberDescriptor.Kind.SYNTHESIZED,
     source,
-    /* lateInit = */ false, /* isConst = */ false, /* isExpect = */ false, /* isActual = */ false, /* isExternal = */ false,
-    /* isDelegated = */ false
+    /* lateInit = */ false, /* isConst = */ false, /* isExpect = */ false, /* isStatic = */ false, // TODO: question 10: what is 'repl result property' and is it always non-static?
+    /* isActual = */ false, /* isExternal = */ false, /* isDelegated = */ false
 ) {
     init {
         setType(kotlinType, emptyList(), receiver, null, emptyList())

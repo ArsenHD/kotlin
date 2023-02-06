@@ -97,6 +97,7 @@ class DynamicCallableDescriptors(private val storageManager: StorageManager, bui
             /* lateInit = */ false,
             /* isConst = */ false,
             /* isExpect = */ false,
+            /* TODO: isStatic in old frontend = */ false,
             /* isActual = */ false,
             /* isExternal = */ false,
             /* isDelegated = */ false

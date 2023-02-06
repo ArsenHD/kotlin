@@ -305,6 +305,8 @@ class LazyJavaClassMemberScope(
         property: PropertyDescriptor,
         functions: (Name) -> Collection<SimpleFunctionDescriptor>
     ): Boolean {
+        // at the moment, there is no inheritance for statics in Kotlin
+        if (property.isStatic) return false // TODO: question 8, make sure this condition is right
         if (property.isJavaField) return false
         val getter = property.findGetterOverride(functions)
         val setter = property.findSetterOverride(functions)
@@ -589,7 +591,8 @@ class LazyJavaClassMemberScope(
         val propertyDescriptor = JavaPropertyDescriptor.create(
             ownerDescriptor, annotations, modality, method.visibility.toDescriptorVisibility(),
             /* isVar = */ false, method.name, c.components.sourceElementFactory.source(method),
-            /* isStaticFinal = */ false
+            /* isStatic = */ false,
+            /* isFinal = */ method.isFinal
         )
 
         val getter = DescriptorFactory.createDefaultGetter(propertyDescriptor, Annotations.EMPTY)

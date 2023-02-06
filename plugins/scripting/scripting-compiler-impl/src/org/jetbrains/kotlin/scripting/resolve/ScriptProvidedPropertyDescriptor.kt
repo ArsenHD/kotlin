@@ -27,8 +27,9 @@ class ScriptProvidedPropertyDescriptor(
     name,
     CallableMemberDescriptor.Kind.SYNTHESIZED,
     SourceElement.NO_SOURCE,
-    /* lateInit = */ false, /* isConst = */ false, /* isExpect = */ false, /* isActual = */ false, /* isExternal = */ false,
-    /* isDelegated = */ false
+    // TODO: question 11, what is 'script provided property' and can it be non static?
+    /* lateInit = */ false, /* isConst = */ false, /* isExpect = */ false, /* isStatic = */ false,
+    /* isActual = */ false, /* isExternal = */ false, /* isDelegated = */ false
 ) {
     init {
         setType(type, emptyList(), receiver, null, emptyList())

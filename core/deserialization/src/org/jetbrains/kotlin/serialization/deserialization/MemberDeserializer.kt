@@ -38,6 +38,7 @@ class MemberDeserializer(private val c: DeserializationContext) {
             Flags.IS_EXTERNAL_PROPERTY.get(flags),
             Flags.IS_DELEGATED.get(flags),
             Flags.IS_EXPECT_PROPERTY.get(flags),
+            TODO("question 9: should we add isStatic flag to ProtoBuf of properties and functions?"),
             proto,
             c.nameResolver,
             c.typeTable,

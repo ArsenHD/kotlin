@@ -325,7 +325,7 @@ abstract class LazyJavaScope(
 
         return JavaPropertyDescriptor.create(
             ownerDescriptor, annotations, Modality.FINAL, field.visibility.toDescriptorVisibility(), isVar, field.name,
-            c.components.sourceElementFactory.source(field), /* isConst = */ field.isFinalStatic
+            c.components.sourceElementFactory.source(field), field.isStatic, field.isFinal
         )
     }
 

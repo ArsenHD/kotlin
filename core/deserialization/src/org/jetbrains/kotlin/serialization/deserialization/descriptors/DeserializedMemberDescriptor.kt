@@ -87,6 +87,7 @@ class DeserializedPropertyDescriptor(
         isExternal: Boolean,
         isDelegated: Boolean,
         isExpect: Boolean,
+        isStatic: Boolean,
         override val proto: ProtoBuf.Property,
         override val nameResolver: NameResolver,
         override val typeTable: TypeTable,
@@ -94,7 +95,7 @@ class DeserializedPropertyDescriptor(
         override val containerSource: DeserializedContainerSource?
 ) : DeserializedCallableMemberDescriptor, PropertyDescriptorImpl(
     containingDeclaration, original, annotations, modality, visibility, isVar, name, kind, SourceElement.NO_SOURCE,
-    isLateInit, isConst, isExpect, false, isExternal, isDelegated
+    isLateInit, isConst, isExpect, isStatic, false, isExternal, isDelegated
 ) {
     override fun createSubstitutedCopy(
             newOwner: DeclarationDescriptor,
@@ -107,7 +108,7 @@ class DeserializedPropertyDescriptor(
     ): PropertyDescriptorImpl {
         return DeserializedPropertyDescriptor(
             newOwner, original, annotations, newModality, newVisibility, isVar, newName, kind, isLateInit, isConst, isExternal,
-            isDelegated, isExpect, proto, nameResolver, typeTable, versionRequirementTable, containerSource
+            isDelegated, isExpect, isStatic, proto, nameResolver, typeTable, versionRequirementTable, containerSource
         )
     }
 

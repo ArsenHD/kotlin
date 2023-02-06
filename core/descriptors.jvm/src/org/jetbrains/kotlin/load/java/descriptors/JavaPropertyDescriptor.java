@@ -34,7 +34,12 @@ import org.jetbrains.kotlin.types.KotlinType;
 import java.util.List;
 
 public class JavaPropertyDescriptor extends PropertyDescriptorImpl implements JavaCallableMemberDescriptor {
-    private final boolean isStaticFinal;
+    private final boolean isFinal;
+
+    private boolean isStaticFinal() {
+        return isStatic() && isFinal;
+    }
+
     @Nullable
     private final Pair<UserDataKey<?>, ?> singleUserData;
 
@@ -50,13 +55,14 @@ public class JavaPropertyDescriptor extends PropertyDescriptorImpl implements Ja
             @NotNull SourceElement source,
             @Nullable PropertyDescriptor original,
             @NotNull Kind kind,
-            boolean isStaticFinal,
+            boolean isStatic,
+            boolean isFinal,
             @Nullable Pair<UserDataKey<?>, ?> singleUserData
     ) {
         super(containingDeclaration, original, annotations, modality, visibility, isVar, name, kind, source,
-              false, false, false, false, false, false);
+              false, false, false, isStatic,false, false, false);
 
-        this.isStaticFinal = isStaticFinal;
+        this.isFinal = isFinal;
         this.singleUserData = singleUserData;
     }
 
@@ -69,10 +75,11 @@ public class JavaPropertyDescriptor extends PropertyDescriptorImpl implements Ja
             boolean isVar,
             @NotNull Name name,
             @NotNull SourceElement source,
-            boolean isStaticFinal
+            boolean isStatic,
+            boolean isFinal
     ) {
         return new JavaPropertyDescriptor(
-                containingDeclaration, annotations, modality, visibility, isVar, name, source, null, Kind.DECLARATION, isStaticFinal,
+                containingDeclaration, annotations, modality, visibility, isVar, name, source, null, Kind.DECLARATION, isStatic, isFinal,
                 null);
     }
 
@@ -89,7 +96,7 @@ public class JavaPropertyDescriptor extends PropertyDescriptorImpl implements Ja
     ) {
         return new JavaPropertyDescriptor(
                 newOwner, getAnnotations(), newModality, newVisibility, isVar(), newName, source, original,
-                kind, isStaticFinal,
+                kind, isStatic(), isFinal,
                 singleUserData);
     }
 
@@ -117,7 +124,8 @@ public class JavaPropertyDescriptor extends PropertyDescriptorImpl implements Ja
                 getSource(),
                 enhancedOriginal,
                 getKind(),
-                isStaticFinal,
+                isStatic(),
+                isFinal,
                 additionalUserData);
 
         PropertyGetterDescriptorImpl newGetter = null;
@@ -171,7 +179,7 @@ public class JavaPropertyDescriptor extends PropertyDescriptorImpl implements Ja
     @Override
     public boolean isConst() {
         KotlinType type = getType();
-        return isStaticFinal && ConstUtil.canBeUsedForConstVal(type) &&
+        return isStaticFinal() && ConstUtil.canBeUsedForConstVal(type) &&
                (!TypeEnhancementKt.hasEnhancedNullability(type) || KotlinBuiltIns.isString(type));
     }
 

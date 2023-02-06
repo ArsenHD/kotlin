@@ -926,6 +926,7 @@ public class DescriptorResolver {
                 modifierList != null && modifierList.hasModifier(KtTokens.CONST_KEYWORD),
                 modifierList != null && PsiUtilsKt.hasExpectModifier(modifierList) && container instanceof PackageFragmentDescriptor ||
                 container instanceof ClassDescriptor && ((ClassDescriptor) container).isExpect(),
+                /* TODO: isStatic in old frontend */ false,
                 modifierList != null && PsiUtilsKt.hasActualModifier(modifierList),
                 modifierList != null && modifierList.hasModifier(KtTokens.EXTERNAL_KEYWORD),
                 propertyInfo.getHasDelegate()
@@ -1354,6 +1355,7 @@ public class DescriptorResolver {
                 false,
                 false,
                 classDescriptor.isExpect(),
+                /* isStatic in old frontend */ false,
                 modifierList != null && PsiUtilsKt.hasActualModifier(modifierList),
                 false,
                 false

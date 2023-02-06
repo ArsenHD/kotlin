@@ -184,7 +184,7 @@ public class DescriptorFactory {
                 PropertyDescriptorImpl.create(enumClass, Annotations.Companion.getEMPTY(), Modality.FINAL, DescriptorVisibilities.PUBLIC,
                                               /* isVar = */ false, ENUM_ENTRIES, CallableMemberDescriptor.Kind.SYNTHESIZED,
                                               enumClass.getSource(), /* lateinit = */ false, /* isConst = */ false, /* isExpect = */ false,
-                                              /* isActual = */ false, /* isExternal = */ false, /* isDelegated = */ false);
+                                              /* TODO: question 2 */ true, /* isActual = */ false, /* isExternal = */ false, /* isDelegated = */ false);
         PropertyGetterDescriptorImpl getter = new PropertyGetterDescriptorImpl(
                 entries, Annotations.Companion.getEMPTY(), Modality.FINAL, DescriptorVisibilities.PUBLIC, /* isDefault = */ false,
                 /* isExternal = */ false, /* isInline = */ false, CallableMemberDescriptor.Kind.SYNTHESIZED,

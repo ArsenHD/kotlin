@@ -176,6 +176,7 @@ class LocalVariableResolver(
                 /* lateInit = */ false,
                 /* isConst = */ false,
                 /* isExpect = */ false,
+                /* TODO: isStatic in old frontend */ false,
                 /* isActual = */ false,
                 /* isExternal = */ false,
                 variable is KtProperty && variable.hasDelegate()

@@ -337,8 +337,8 @@ class JavaSyntheticPropertiesScope(
         source: SourceElement
     ) : SyntheticJavaPropertyDescriptor, PropertyDescriptorImpl(
         containingDeclaration, original, annotations, modality, visibility, isVar, name, kind, source,
-        /* lateInit = */ false, /* isConst = */ false, /* isExpect = */ false, /* isActual = */ false, /* isExternal = */ false,
-        /* isDelegated = */ false
+        /* lateInit = */ false, /* isConst = */ false, /* isExpect = */ false, /* isStatic = */ TODO("isStatic in old frontend"),
+        /* isActual = */ false, /* isExternal = */ false, /* isDelegated = */ false
     ) {
 
         override var getMethod: FunctionDescriptor by Delegates.notNull()

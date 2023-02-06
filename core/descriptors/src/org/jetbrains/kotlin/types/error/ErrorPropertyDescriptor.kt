@@ -15,7 +15,7 @@ class ErrorPropertyDescriptor : PropertyDescriptor by (
             ErrorUtils.errorClass, Annotations.EMPTY, Modality.OPEN,
             DescriptorVisibilities.PUBLIC, true, Name.special(ErrorEntity.ERROR_PROPERTY.debugText),
             CallableMemberDescriptor.Kind.DECLARATION, SourceElement.NO_SOURCE,
-            false, false, false, false, false, false
+            false, false, false, false, false, false, false
         ).apply {
             setType(ErrorUtils.errorPropertyType, emptyList(), null, null, emptyList())
         }

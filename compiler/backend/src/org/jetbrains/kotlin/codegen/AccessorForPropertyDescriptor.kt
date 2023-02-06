@@ -51,6 +51,7 @@ open class AccessorForPropertyDescriptor private constructor(
     false,
     false,
     false,
+    /* TODO: question 6, is it true that property accessor is always static?  */ true,
     false,
     false,
     false

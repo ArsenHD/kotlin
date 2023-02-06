@@ -892,6 +892,8 @@ open class IrBasedPropertyDescriptor(owner: IrProperty) :
         TODO("not implemented")
     }
 
+    override fun isStatic(): Boolean = owner.isStatic
+
     override val isDelegated get() = owner.isDelegated
 
     override fun getBackingField(): FieldDescriptor? {
@@ -1068,6 +1070,8 @@ open class IrBasedFieldDescriptor(owner: IrField) : PropertyDescriptor, IrBasedD
     }
 
     override fun isExternal() = owner.isExternal
+
+    override fun isStatic(): Boolean = owner.isStatic
 
     override fun <R : Any?, D : Any?> accept(visitor: DeclarationDescriptorVisitor<R, D>?, data: D) =
         visitor!!.visitPropertyDescriptor(this, data)

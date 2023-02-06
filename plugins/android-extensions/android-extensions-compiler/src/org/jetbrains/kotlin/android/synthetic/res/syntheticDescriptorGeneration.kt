@@ -105,6 +105,7 @@ private fun genProperty(
             /* lateInit = */ false,
             /* isConst = */ false,
             /* isExpect = */ false,
+            /* TODO: question 4, can this ever be static? */ false,
             /* isActual = */ false,
             /* isExternal = */ false,
             /* isDelegated = */ false

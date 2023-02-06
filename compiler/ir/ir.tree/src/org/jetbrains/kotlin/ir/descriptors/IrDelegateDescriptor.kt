@@ -63,6 +63,7 @@ abstract class IrDelegateDescriptorBase(
         /* lateInit = */ false,
         /* isConst = */ false,
         /* isExpect = */ false,
+        /* isStatic = */ TODO("question 7: Can delegate properties be static? Need to write a few examples"),
         /* isActual = */ false,
         /* isExternal = */ false,
         /* isDelegated = */ true

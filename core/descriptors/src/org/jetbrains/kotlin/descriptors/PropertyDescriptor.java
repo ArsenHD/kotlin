@@ -33,6 +33,8 @@ public interface PropertyDescriptor extends VariableDescriptorWithAccessors, Cal
     @Nullable
     PropertySetterDescriptor getSetter();
 
+    boolean isStatic();
+
     /**
      * In the following case, the setter is projected out:
      *

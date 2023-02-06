@@ -5,10 +5,7 @@
 
 package org.jetbrains.kotlin.load.java.descriptors
 
-import org.jetbrains.kotlin.descriptors.CallableMemberDescriptor
-import org.jetbrains.kotlin.descriptors.ClassDescriptor
-import org.jetbrains.kotlin.descriptors.PropertyDescriptor
-import org.jetbrains.kotlin.descriptors.SimpleFunctionDescriptor
+import org.jetbrains.kotlin.descriptors.*
 import org.jetbrains.kotlin.descriptors.annotations.Annotations
 
 class JavaForKotlinOverridePropertyDescriptor(
@@ -27,5 +24,6 @@ class JavaForKotlinOverridePropertyDescriptor(
     null,
     CallableMemberDescriptor.Kind.DECLARATION,
     false,
+    overriddenProperty.modality == Modality.FINAL,
     null
 )
