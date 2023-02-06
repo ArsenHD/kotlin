@@ -222,6 +222,7 @@ class StandaloneDeclarationGenerator(private val context: GeneratorContext) {
             isLateinit = descriptor.isLateInit,
             isDelegated = false,
             isExternal = descriptor.isEffectivelyExternal(),
+            isStatic = descriptor.isStatic,
             isExpect = descriptor.isExpect
         )
 

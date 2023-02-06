@@ -17,6 +17,7 @@ class IrPropertyBuilder : IrDeclarationBuilder() {
     var isLateinit: Boolean = false
     var isDelegated: Boolean = false
     var isExternal: Boolean = false
+    var isStatic: Boolean = false
     var isExpect: Boolean = false
     var isFakeOverride: Boolean = false
 
@@ -31,6 +32,7 @@ class IrPropertyBuilder : IrDeclarationBuilder() {
         isLateinit = from.isLateinit
         isDelegated = from.isDelegated
         isExternal = from.isExternal
+        isStatic = from.isStatic
         isExpect = from.isExpect
         isFakeOverride = from.isFakeOverride
 

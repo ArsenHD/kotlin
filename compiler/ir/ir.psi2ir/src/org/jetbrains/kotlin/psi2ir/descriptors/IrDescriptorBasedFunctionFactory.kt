@@ -391,6 +391,7 @@ class IrDescriptorBasedFunctionFactory(
                     isLateinit = descriptor.isLateInit,
                     isDelegated = descriptor.isDelegated,
                     isExternal = descriptor.isEffectivelyExternal(),
+                    isStatic = descriptor.isStatic,
                     isExpect = descriptor.isExpect
                 ).apply {
                     parent = this@addFakeOverrides

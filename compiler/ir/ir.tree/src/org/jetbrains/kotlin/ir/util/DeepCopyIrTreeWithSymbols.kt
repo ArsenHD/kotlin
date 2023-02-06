@@ -244,6 +244,7 @@ open class DeepCopyIrTreeWithSymbols(
             isLateinit = declaration.isLateinit,
             isDelegated = declaration.isDelegated,
             isExternal = declaration.isExternal,
+            isStatic = declaration.isStatic,
             isExpect = declaration.isExpect,
             containerSource = declaration.containerSource,
         ).apply {

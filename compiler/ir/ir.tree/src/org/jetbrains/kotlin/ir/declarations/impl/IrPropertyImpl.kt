@@ -27,6 +27,7 @@ abstract class IrPropertyCommonImpl(
     override val isLateinit: Boolean,
     override val isDelegated: Boolean,
     override val isExternal: Boolean,
+    override val isStatic: Boolean,
     override val isExpect: Boolean,
     override val containerSource: DeserializedContainerSource?,
 ) : IrProperty() {
@@ -60,12 +61,13 @@ class IrPropertyImpl(
     isLateinit: Boolean,
     isDelegated: Boolean,
     isExternal: Boolean,
+    isStatic: Boolean,
     isExpect: Boolean = false,
     override val isFakeOverride: Boolean = origin == IrDeclarationOrigin.FAKE_OVERRIDE,
     containerSource: DeserializedContainerSource? = null,
     override val factory: IrFactory = IrFactoryImpl,
 ) : IrPropertyCommonImpl(
-    startOffset, endOffset, origin, name, visibility, isVar, isConst, isLateinit, isDelegated, isExternal, isExpect,
+    startOffset, endOffset, origin, name, visibility, isVar, isConst, isLateinit, isDelegated, isExternal, isStatic, isExpect,
     containerSource
 ) {
     init {
@@ -89,11 +91,12 @@ class IrPropertyWithLateBindingImpl(
     isLateinit: Boolean,
     isDelegated: Boolean,
     isExternal: Boolean,
+    isStatic: Boolean,
     isExpect: Boolean,
     override val isFakeOverride: Boolean = origin == IrDeclarationOrigin.FAKE_OVERRIDE,
     override val factory: IrFactory = IrFactoryImpl,
 ) : IrPropertyCommonImpl(
-    startOffset, endOffset, origin, name, visibility, isVar, isConst, isLateinit, isDelegated, isExternal, isExpect,
+    startOffset, endOffset, origin, name, visibility, isVar, isConst, isLateinit, isDelegated, isExternal, isStatic, isExpect,
     containerSource = null,
 ), IrPropertyWithLateBinding {
     private var _symbol: IrPropertySymbol? = null

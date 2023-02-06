@@ -267,6 +267,7 @@ class IrFactoryImplForJsIC(override val stageController: StageController) : Abst
         isLateinit: Boolean,
         isDelegated: Boolean,
         isExternal: Boolean,
+        isStatic: Boolean,
         isExpect: Boolean,
         isFakeOverride: Boolean,
         containerSource: DeserializedContainerSource?
@@ -284,6 +285,7 @@ class IrFactoryImplForJsIC(override val stageController: StageController) : Abst
             isLateinit,
             isDelegated,
             isExternal,
+            isStatic,
             isExpect,
             isFakeOverride,
             containerSource,
@@ -302,6 +304,7 @@ class IrFactoryImplForJsIC(override val stageController: StageController) : Abst
         isLateinit: Boolean,
         isDelegated: Boolean,
         isExternal: Boolean,
+        isStatic: Boolean,
         isExpect: Boolean
     ): IrProperty {
         return super.createPropertyWithLateBinding(
@@ -316,6 +319,7 @@ class IrFactoryImplForJsIC(override val stageController: StageController) : Abst
             isLateinit,
             isDelegated,
             isExternal,
+            isStatic,
             isExpect,
         ).register()
     }

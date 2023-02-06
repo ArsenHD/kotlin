@@ -880,6 +880,7 @@ class Fir2IrDeclarationStorage(
                     isLateinit = property.isLateInit,
                     isDelegated = property.delegate != null,
                     isExternal = property.isExternal,
+                    isStatic = property.isStatic,
                     isExpect = property.isExpect,
                     isFakeOverride = origin == IrDeclarationOrigin.FAKE_OVERRIDE,
                     containerSource = property.containerSource,

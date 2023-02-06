@@ -763,6 +763,7 @@ open class SymbolTable(
                 isLateinit = descriptor.isLateInit,
                 isDelegated = isDelegated,
                 isExternal = descriptor.isEffectivelyExternal(),
+                isStatic = descriptor.isStatic,
                 isExpect = descriptor.isExpect,
                 isFakeOverride = descriptor.kind == CallableMemberDescriptor.Kind.FAKE_OVERRIDE
             ).apply {

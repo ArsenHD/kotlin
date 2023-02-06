@@ -83,7 +83,7 @@ internal fun IrFactory.buildProperty(builder: IrPropertyBuilder): IrProperty = w
         startOffset, endOffset, origin,
         IrPropertySymbolImpl(),
         name, visibility, modality,
-        isVar, isConst, isLateinit, isDelegated, isExternal, isExpect, isFakeOverride,
+        isVar, isConst, isLateinit, isDelegated, isExternal, isStatic, isExpect, isFakeOverride,
         containerSource,
     )
 }

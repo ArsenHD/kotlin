@@ -149,7 +149,7 @@ abstract class DeclarationStubGenerator(
                 it, descriptor,
                 descriptor.name, descriptor.visibility, descriptor.modality,
                 descriptor.isVar, descriptor.isConst, descriptor.isLateInit,
-                descriptor.isDelegated, descriptor.isEffectivelyExternal(), descriptor.isExpect,
+                descriptor.isDelegated, descriptor.isEffectivelyExternal(), descriptor.isStatic, descriptor.isExpect,
                 isFakeOverride = (origin == IrDeclarationOrigin.FAKE_OVERRIDE)
                         || descriptor.kind == CallableMemberDescriptor.Kind.FAKE_OVERRIDE,
                 stubGenerator = this, typeTranslator,

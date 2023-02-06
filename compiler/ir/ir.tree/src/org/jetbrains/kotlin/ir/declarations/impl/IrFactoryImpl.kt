@@ -178,13 +178,14 @@ abstract class AbstractIrFactoryImpl : IrFactory {
         isLateinit: Boolean,
         isDelegated: Boolean,
         isExternal: Boolean,
+        isStatic: Boolean,
         isExpect: Boolean,
         isFakeOverride: Boolean,
         containerSource: DeserializedContainerSource?,
     ): IrProperty =
         IrPropertyImpl(
             startOffset, endOffset, origin, symbol, name, visibility, modality,
-            isVar, isConst, isLateinit, isDelegated, isExternal, isExpect, isFakeOverride,
+            isVar, isConst, isLateinit, isDelegated, isExternal, isStatic, isExpect, isFakeOverride,
             containerSource, factory = this
         )
 
@@ -200,11 +201,12 @@ abstract class AbstractIrFactoryImpl : IrFactory {
         isLateinit: Boolean,
         isDelegated: Boolean,
         isExternal: Boolean,
+        isStatic: Boolean,
         isExpect: Boolean,
     ): IrProperty =
         IrPropertyWithLateBindingImpl(
             startOffset, endOffset, origin, name, visibility, modality,
-            isVar, isConst, isLateinit, isDelegated, isExternal, isExpect,
+            isVar, isConst, isLateinit, isDelegated, isExternal, isStatic, isExpect,
             factory = this
         )
 

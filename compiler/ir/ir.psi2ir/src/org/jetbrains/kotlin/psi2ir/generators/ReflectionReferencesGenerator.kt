@@ -583,6 +583,7 @@ class ReflectionReferencesGenerator(statementGenerator: StatementGenerator) : St
                         descriptor.isLateInit,
                         descriptor.isDelegated,
                         descriptor.isExternal,
+                        descriptor.isStatic,
                         descriptor.isExpect,
                         isFakeOverride = false
                     ).also {

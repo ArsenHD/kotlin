@@ -34,6 +34,8 @@ abstract class IrProperty : IrDeclarationBase(), IrPossiblyExternalDeclaration,
 
     abstract val isDelegated: Boolean
 
+    abstract val isStatic: Boolean
+
     abstract val isExpect: Boolean
 
     abstract override val isFakeOverride: Boolean

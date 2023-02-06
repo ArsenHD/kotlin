@@ -132,6 +132,7 @@ class LazyIrFactory(
         isLateinit: Boolean,
         isDelegated: Boolean,
         isExternal: Boolean,
+        isStatic: Boolean,
         isExpect: Boolean,
         isFakeOverride: Boolean,
         containerSource: DeserializedContainerSource?
@@ -140,7 +141,7 @@ class LazyIrFactory(
     else
         delegate.createProperty(
             startOffset, endOffset, origin, symbol, name, visibility, modality,
-            isVar, isConst, isLateinit, isDelegated, isExternal, isExpect, isFakeOverride, containerSource
+            isVar, isConst, isLateinit, isDelegated, isExternal, isStatic, isExpect, isFakeOverride, containerSource
         )
 
     override fun createTypeAlias(

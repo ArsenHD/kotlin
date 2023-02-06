@@ -377,6 +377,7 @@ object IrTree : AbstractTreeBuilder() {
         +field("isConst", boolean)
         +field("isLateinit", boolean)
         +field("isDelegated", boolean)
+        +field("isStatic", boolean)
         +field("isExpect", boolean)
         +field("isFakeOverride", boolean)
         +field("backingField", field, mutable = true, nullable = true, isChild = true)

@@ -84,6 +84,7 @@ class FakeOverrideCopier(
             isLateinit = declaration.isLateinit,
             isDelegated = declaration.isDelegated,
             isExpect = declaration.isExpect,
+            isStatic = declaration.isStatic,
             isExternal = makeExternal
         ).apply {
             transformAnnotations(declaration)

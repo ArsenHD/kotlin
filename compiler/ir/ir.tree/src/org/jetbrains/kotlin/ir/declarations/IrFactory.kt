@@ -148,6 +148,7 @@ interface IrFactory {
         isLateinit: Boolean,
         isDelegated: Boolean,
         isExternal: Boolean,
+        isStatic: Boolean,
         isExpect: Boolean = false,
         isFakeOverride: Boolean = origin == IrDeclarationOrigin.FAKE_OVERRIDE,
         containerSource: DeserializedContainerSource? = null
@@ -165,6 +166,7 @@ interface IrFactory {
         isLateinit: Boolean,
         isDelegated: Boolean,
         isExternal: Boolean,
+        isStatic: Boolean,
         isExpect: Boolean,
     ): IrProperty
 
