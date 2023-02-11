@@ -57,6 +57,7 @@ abstract class IrBuiltinOperatorDescriptorBase(containingDeclaration: Declaratio
     override fun isSuspend(): Boolean = false
     override fun isTailrec(): Boolean = false
     override fun isExpect(): Boolean = false
+    override fun isStatic(): Boolean = false
     override fun isActual(): Boolean = false
     override fun hasStableParameterNames(): Boolean = true
     override fun hasSynthesizedParameterNames(): Boolean = false

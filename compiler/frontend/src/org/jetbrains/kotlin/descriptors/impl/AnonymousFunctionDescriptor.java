@@ -15,6 +15,7 @@ import org.jetbrains.kotlin.descriptors.annotations.Annotations;
 import org.jetbrains.kotlin.name.Name;
 import org.jetbrains.kotlin.name.SpecialNames;
 
+// TODO: question 19.1
 public class AnonymousFunctionDescriptor extends SimpleFunctionDescriptorImpl {
     private final boolean isSuspend;
 

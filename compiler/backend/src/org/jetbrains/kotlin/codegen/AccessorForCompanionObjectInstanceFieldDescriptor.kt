@@ -23,6 +23,8 @@ class AccessorForCompanionObjectInstanceFieldDescriptor(
     ) {
 
     init {
+        // TODO: question 6.3
+        isStatic = true
         initialize(
             null, null, emptyList(), emptyList(), emptyList(),
             companionObjectDescriptor.defaultType,

@@ -35,6 +35,7 @@ import org.jetbrains.kotlin.load.java.descriptors.JavaClassConstructorDescriptor
         setHasSynthesizedParameterNames(declaration.hasSynthesizedParameterNames());
     }
 
+    // TODO: question 17
     private SamAdapterClassConstructorDescriptor(
             @NotNull ClassDescriptor containingDeclaration,
             @Nullable JavaClassConstructorDescriptor original,

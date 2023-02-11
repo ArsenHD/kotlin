@@ -100,6 +100,10 @@ class TypeAliasConstructorDescriptorImpl private constructor(
     override fun isPrimary(): Boolean =
         underlyingConstructorDescriptor.isPrimary
 
+    override fun isStatic(): Boolean {
+        return super<TypeAliasConstructorDescriptor>.isStatic()
+    }
+
     override fun getContainingDeclaration(): TypeAliasDescriptor =
         typeAliasDescriptor
 

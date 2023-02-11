@@ -48,8 +48,11 @@ import org.jetbrains.kotlin.types.typeUtil.isNothing
 import org.jetbrains.kotlin.utils.addIfNotNull
 import kotlin.properties.Delegates
 
+// TODO: question 14.1
 interface SamAdapterExtensionFunctionDescriptor : FunctionDescriptor, FunctionInterfaceAdapterExtensionFunctionDescriptor {
     override val baseDescriptorForSynthetic: FunctionDescriptor
+
+    override fun isStatic(): Boolean = false
 }
 
 class SamAdapterFunctionsScope(
@@ -304,6 +307,10 @@ class SamAdapterFunctionsScope(
 
         private val fromSourceFunctionTypeParameters: Map<TypeParameterDescriptor, TypeParameterDescriptor> by lazy {
             baseDescriptorForSynthetic.typeParameters.zip(typeParameters).toMap()
+        }
+
+        override fun isStatic(): Boolean {
+            return super<SamAdapterExtensionFunctionDescriptor>.isStatic()
         }
 
         companion object {

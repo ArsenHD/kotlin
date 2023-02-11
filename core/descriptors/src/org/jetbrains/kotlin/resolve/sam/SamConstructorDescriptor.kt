@@ -15,6 +15,9 @@ import org.jetbrains.kotlin.resolve.scopes.DescriptorKindExclude
 
 interface SamConstructorDescriptor : SimpleFunctionDescriptor, FunctionInterfaceConstructorDescriptor {
     fun getSingleAbstractMethod(): CallableMemberDescriptor
+
+    // TODO: question 16
+    override fun isStatic(): Boolean = false
 }
 
 class SamConstructorDescriptorImpl(
@@ -33,6 +36,10 @@ class SamConstructorDescriptorImpl(
 
     override fun getSingleAbstractMethod(): CallableMemberDescriptor =
         getAbstractMembers(samInterface).single()
+
+    override fun isStatic(): Boolean {
+        return super<SamConstructorDescriptor>.isStatic()
+    }
 }
 
 object SamConstructorDescriptorKindExclude : DescriptorKindExclude() {

@@ -504,7 +504,8 @@ class LazyJavaClassMemberScope(
     private fun resolveRecordComponentToFunctionDescriptor(recordComponent: JavaRecordComponent): JavaMethodDescriptor {
         val annotations = c.resolveAnnotations(recordComponent)
         val functionDescriptorImpl = JavaMethodDescriptor.createJavaMethod(
-            ownerDescriptor, annotations, recordComponent.name, c.components.sourceElementFactory.source(recordComponent), true
+            ownerDescriptor, annotations, recordComponent.name, c.components.sourceElementFactory.source(recordComponent),
+            recordComponent.isStatic, true
         )
 
         val returnTypeAttrs = TypeUsage.COMMON.toAttributes(isForAnnotationParameter = false)

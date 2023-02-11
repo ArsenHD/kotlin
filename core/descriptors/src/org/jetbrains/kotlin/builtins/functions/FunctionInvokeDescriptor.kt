@@ -42,6 +42,7 @@ class FunctionInvokeDescriptor private constructor(
 ) {
     init {
         this.isOperator = true
+        this.isStatic = TODO("question 15")
         this.isSuspend = isSuspend
         this.setHasStableParameterNames(false)
     }

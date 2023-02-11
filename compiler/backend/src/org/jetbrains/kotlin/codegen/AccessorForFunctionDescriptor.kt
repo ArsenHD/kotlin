@@ -48,6 +48,7 @@ class AccessorForFunctionDescriptor(
         )
 
         isSuspend = calleeDescriptor.isSuspend
+        isStatic = true // TODO: question 6.1
         if (calleeDescriptor.getUserData(INITIAL_DESCRIPTOR_FOR_SUSPEND_FUNCTION) != null) {
             userDataMap = LinkedHashMap<CallableDescriptor.UserDataKey<*>, Any>()
             userDataMap[INITIAL_DESCRIPTOR_FOR_SUSPEND_FUNCTION] =

@@ -27,6 +27,10 @@ class SamTypeAliasConstructorDescriptorImpl(
     CallableMemberDescriptor.Kind.SYNTHESIZED,
     typeAliasDescriptor.source
 ), SamTypeAliasConstructorDescriptor {
+    override fun isStatic(): Boolean {
+        return super<SamTypeAliasConstructorDescriptor>.isStatic()
+    }
+
     override fun getSingleAbstractMethod(): CallableMemberDescriptor =
         expandedConstructorDescriptor.getSingleAbstractMethod()
 

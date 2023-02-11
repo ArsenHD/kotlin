@@ -66,4 +66,9 @@ public interface ConstructorDescriptor extends FunctionDescriptor {
     );
 
     boolean isPrimary();
+
+    @Override
+    default boolean isStatic() {
+        return false;
+    }
 }

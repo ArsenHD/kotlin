@@ -68,6 +68,8 @@ public interface FunctionDescriptor extends CallableMemberDescriptor {
 
     boolean isSuspend();
 
+    boolean isStatic();
+
     @NotNull
     @Override
     CopyBuilder<? extends FunctionDescriptor> newCopyBuilder();

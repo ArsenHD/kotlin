@@ -115,6 +115,7 @@ class IrBuiltInsOverDescriptors(
                 isOperator = false,
                 isInfix = false,
                 isExpect = false,
+                isStatic = false,
                 isFakeOverride = false
             )
             operator.parent = operatorsPackageFragment
@@ -213,7 +214,7 @@ class IrBuiltInsOverDescriptors(
                 DescriptorVisibilities.PUBLIC, Modality.FINAL,
                 returnIrType,
                 isInline = false, isExternal = false, isTailrec = false, isSuspend = false, isOperator = false, isInfix = false,
-                isExpect = false, isFakeOverride = false
+                isExpect = false, isStatic = false, isFakeOverride = false
             ).also { operator ->
                 operator.parent = operatorsPackageFragment
                 operatorsPackageFragment.declarations += operator

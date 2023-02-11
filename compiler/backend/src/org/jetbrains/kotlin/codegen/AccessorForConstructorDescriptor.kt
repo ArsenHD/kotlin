@@ -36,6 +36,11 @@ class AccessorForConstructorDescriptor(
 
     override fun isPrimary(): Boolean = false
 
+    override fun isStatic(): Boolean {
+        // TODO: question 6.2,
+        return super<ClassConstructorDescriptor>.isStatic()
+    }
+
     override fun getReturnType(): KotlinType = super.getReturnType()!!
 
 

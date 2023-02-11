@@ -112,6 +112,11 @@ public abstract class PropertyAccessorDescriptorImpl extends DeclarationDescript
     }
 
     @Override
+    public boolean isStatic() {
+        return correspondingProperty.isStatic();
+    }
+
+    @Override
     public boolean isActual() {
         return false;
     }

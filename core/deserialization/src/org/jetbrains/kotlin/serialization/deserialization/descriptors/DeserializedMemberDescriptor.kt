@@ -56,6 +56,11 @@ class DeserializedSimpleFunctionDescriptor(
         source ?: SourceElement.NO_SOURCE
     ) {
 
+    init {
+        // TODO: question 9
+        isStatic = TODO("proto.isStatic")
+    }
+
     override fun createSubstitutedCopy(
         newOwner: DeclarationDescriptor,
         original: FunctionDescriptor?,

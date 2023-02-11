@@ -22,6 +22,7 @@ import org.jetbrains.kotlin.descriptors.SourceElement;
 import org.jetbrains.kotlin.descriptors.annotations.Annotations;
 import org.jetbrains.kotlin.name.Name;
 
+// TODO: question 19
 public class FunctionExpressionDescriptor extends SimpleFunctionDescriptorImpl {
     public FunctionExpressionDescriptor(
             @NotNull DeclarationDescriptor containingDeclaration,

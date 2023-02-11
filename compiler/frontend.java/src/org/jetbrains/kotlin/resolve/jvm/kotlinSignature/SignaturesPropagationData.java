@@ -85,6 +85,7 @@ public class SignaturesPropagationData {
                 method.getName(),
                 //TODO: what to do?
                 SourceElement.NO_SOURCE,
+                method.isStatic(),
                 false
         );
         autoMethodDescriptor.initialize(

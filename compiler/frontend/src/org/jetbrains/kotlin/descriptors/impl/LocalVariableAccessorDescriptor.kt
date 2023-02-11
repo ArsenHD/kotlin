@@ -52,4 +52,5 @@ sealed class LocalVariableAccessorDescriptor(
         )
     }
 
+    override fun isStatic(): Boolean = false
 }

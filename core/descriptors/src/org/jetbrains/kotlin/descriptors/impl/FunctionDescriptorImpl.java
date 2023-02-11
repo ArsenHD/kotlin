@@ -36,6 +36,7 @@ public abstract class FunctionDescriptorImpl extends DeclarationDescriptorNonRoo
     private boolean isInline = false;
     private boolean isTailrec = false;
     private boolean isExpect = false;
+    private boolean isStatic = false;
     private boolean isActual = false;
     // Difference between these hidden kinds:
     // 1. isHiddenToOvercomeSignatureClash prohibit calling such functions even in super-call context
@@ -132,6 +133,10 @@ public abstract class FunctionDescriptorImpl extends DeclarationDescriptorNonRoo
 
     public void setExpect(boolean isExpect) {
         this.isExpect = isExpect;
+    }
+
+    public void setStatic(boolean isStatic) {
+        this.isStatic = isStatic;
     }
 
     public void setActual(boolean isActual) {
@@ -264,6 +269,11 @@ public abstract class FunctionDescriptorImpl extends DeclarationDescriptorNonRoo
     @Override
     public boolean isExpect() {
         return isExpect;
+    }
+
+    @Override
+    public boolean isStatic() {
+        return isStatic;
     }
 
     @Override
@@ -718,6 +728,7 @@ public abstract class FunctionDescriptorImpl extends DeclarationDescriptorNonRoo
         substitutedDescriptor.setTailrec(isTailrec);
         substitutedDescriptor.setSuspend(isSuspend);
         substitutedDescriptor.setExpect(isExpect);
+        substitutedDescriptor.setStatic(isStatic);
         substitutedDescriptor.setActual(isActual);
         substitutedDescriptor.setHasStableParameterNames(hasStableParameterNames);
         substitutedDescriptor.setHiddenToOvercomeSignatureClash(configuration.isHiddenToOvercomeSignatureClash);

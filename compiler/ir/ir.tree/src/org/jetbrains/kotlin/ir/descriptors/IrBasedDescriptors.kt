@@ -410,6 +410,7 @@ open class IrBasedSimpleFunctionDescriptor(owner: IrSimpleFunction) : SimpleFunc
     override fun isInline() = owner.isInline
 
     override fun isExpect() = owner.isExpect
+    override fun isStatic() = owner.isStatic
     override fun isActual() = false
     override fun isInfix() = false
     override fun isOperator() = false

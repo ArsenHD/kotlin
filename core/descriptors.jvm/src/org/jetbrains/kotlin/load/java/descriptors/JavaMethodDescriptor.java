@@ -71,9 +71,11 @@ public class JavaMethodDescriptor extends SimpleFunctionDescriptorImpl implement
             @NotNull Name name,
             @NotNull Kind kind,
             @NotNull SourceElement source,
+            boolean isStatic,
             boolean isForRecordComponent
     ) {
         super(containingDeclaration, original, annotations, name, kind, source);
+        this.setStatic(isStatic);
         this.isForRecordComponent = isForRecordComponent;
     }
 
@@ -83,9 +85,10 @@ public class JavaMethodDescriptor extends SimpleFunctionDescriptorImpl implement
             @NotNull Annotations annotations,
             @NotNull Name name,
             @NotNull SourceElement source,
+            boolean isStatic,
             boolean isForRecordComponent
     ) {
-        return new JavaMethodDescriptor(containingDeclaration, null, annotations, name, Kind.DECLARATION, source, isForRecordComponent);
+        return new JavaMethodDescriptor(containingDeclaration, null, annotations, name, Kind.DECLARATION, source, isStatic, isForRecordComponent);
     }
 
     @NotNull
@@ -146,6 +149,7 @@ public class JavaMethodDescriptor extends SimpleFunctionDescriptorImpl implement
                 newName != null ? newName : getName(),
                 kind,
                 source,
+                isStatic(),
                 isForRecordComponent
         );
         result.setParameterNamesStatus(hasStableParameterNames(), hasSynthesizedParameterNames());
