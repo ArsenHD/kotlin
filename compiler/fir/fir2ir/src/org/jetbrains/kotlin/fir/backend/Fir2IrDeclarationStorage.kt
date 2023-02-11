@@ -548,6 +548,7 @@ class Fir2IrDeclarationStorage(
                     isTailrec = simpleFunction?.isTailRec == true,
                     isSuspend = isSuspend,
                     isExpect = simpleFunction?.isExpect == true,
+                    isStatic = simpleFunction?.isStatic == true,
                     isFakeOverride = updatedOrigin == IrDeclarationOrigin.FAKE_OVERRIDE,
                     isOperator = simpleFunction?.isOperator == true,
                     isInfix = simpleFunction?.isInfix == true,
@@ -707,7 +708,9 @@ class Fir2IrDeclarationStorage(
                 isExternal = propertyAccessor?.isExternal == true,
                 isTailrec = false, isSuspend = false, isOperator = false,
                 isInfix = false,
-                isExpect = false, isFakeOverride = origin == IrDeclarationOrigin.FAKE_OVERRIDE,
+                isExpect = false,
+                isStatic = propertyAccessor?.isStatic == true,
+                isFakeOverride = origin == IrDeclarationOrigin.FAKE_OVERRIDE,
                 containerSource = containerSource,
             ).apply {
                 correspondingPropertySymbol = (correspondingProperty as? IrProperty)?.symbol

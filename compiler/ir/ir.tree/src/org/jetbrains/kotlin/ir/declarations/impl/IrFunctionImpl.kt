@@ -35,6 +35,7 @@ abstract class IrFunctionCommonImpl(
     override val isOperator: Boolean,
     override val isInfix: Boolean,
     override val isExpect: Boolean,
+    override val isStatic: Boolean,
     override val containerSource: DeserializedContainerSource?,
 ) : IrSimpleFunction() {
 
@@ -84,12 +85,13 @@ class IrFunctionImpl(
     isOperator: Boolean,
     isInfix: Boolean,
     isExpect: Boolean,
+    isStatic: Boolean,
     override val isFakeOverride: Boolean = origin == IrDeclarationOrigin.FAKE_OVERRIDE,
     containerSource: DeserializedContainerSource? = null,
     override val factory: IrFactory = IrFactoryImpl,
 ) : IrFunctionCommonImpl(
     startOffset, endOffset, origin, name, visibility, returnType, isInline,
-    isExternal, isTailrec, isSuspend, isOperator, isInfix, isExpect,
+    isExternal, isTailrec, isSuspend, isOperator, isInfix, isExpect, isStatic,
     containerSource,
 ) {
     @ObsoleteDescriptorBasedAPI
@@ -116,11 +118,12 @@ class IrFunctionWithLateBindingImpl(
     isOperator: Boolean,
     isInfix: Boolean,
     isExpect: Boolean,
+    isStatic: Boolean,
     override val isFakeOverride: Boolean = origin == IrDeclarationOrigin.FAKE_OVERRIDE,
     override val factory: IrFactory = IrFactoryImpl
 ) : IrFunctionCommonImpl(
     startOffset, endOffset, origin, name, visibility, returnType, isInline,
-    isExternal, isTailrec, isSuspend, isOperator, isInfix, isExpect,
+    isExternal, isTailrec, isSuspend, isOperator, isInfix, isExpect, isStatic,
     containerSource = null,
 ), IrFunctionWithLateBinding {
     private var _symbol: IrSimpleFunctionSymbol? = null

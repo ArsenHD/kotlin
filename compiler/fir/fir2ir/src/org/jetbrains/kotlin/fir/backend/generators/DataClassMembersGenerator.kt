@@ -301,7 +301,7 @@ class DataClassMembersGenerator(val components: Fir2IrComponents) : Fir2IrCompon
                 components.irFactory.createFunction(
                     UNDEFINED_OFFSET, UNDEFINED_OFFSET, origin, symbol, name, DescriptorVisibilities.PUBLIC, Modality.OPEN, returnType,
                     isInline = false, isExternal = false, isTailrec = false, isSuspend = false, isOperator = false,
-                    isInfix = false, isExpect = false, isFakeOverride = false,
+                    isInfix = false, isExpect = false, isStatic = false, isFakeOverride = false,
                 ).apply {
                     if (otherParameterNeeded) {
                         val irValueParameter = createSyntheticIrParameter(

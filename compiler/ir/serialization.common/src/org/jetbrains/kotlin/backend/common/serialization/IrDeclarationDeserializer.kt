@@ -600,6 +600,7 @@ class IrDeclarationDeserializer(
                     flags.isOperator,
                     flags.isInfix,
                     flags.isExpect,
+                    TODO("question 9, add isStatic flag for ProtoFunction?"),
                     flags.isFakeOverride
                 )
             }.apply {

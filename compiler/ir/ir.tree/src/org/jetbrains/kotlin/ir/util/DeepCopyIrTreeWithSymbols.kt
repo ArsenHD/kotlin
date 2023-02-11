@@ -186,6 +186,7 @@ open class DeepCopyIrTreeWithSymbols(
             isOperator = declaration.isOperator,
             isInfix = declaration.isInfix,
             isExpect = declaration.isExpect,
+            isStatic = declaration.isStatic,
             isFakeOverride = declaration.isFakeOverride,
             containerSource = declaration.containerSource,
         ).apply {

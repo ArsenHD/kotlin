@@ -218,6 +218,7 @@ internal class AdapterGenerator(
             isOperator = firMemberAdaptee.isOperator,
             isInfix = firMemberAdaptee.isInfix,
             isExpect = firMemberAdaptee.isExpect,
+            isStatic = firMemberAdaptee.isStatic,
             isFakeOverride = false
         ).also { irAdapterFunction ->
             irAdapterFunction.metadata = FirMetadataSource.Function(firAdaptee)
@@ -581,6 +582,7 @@ internal class AdapterGenerator(
             isOperator = false,
             isInfix = false,
             isExpect = false,
+            isStatic = false,
             isFakeOverride = false
         ).also { irAdapterFunction ->
             symbolTable.enterScope(irAdapterFunction)
@@ -704,6 +706,7 @@ internal class AdapterGenerator(
             isOperator = false,
             isInfix = false,
             isExpect = false,
+            isStatic = false,
             isFakeOverride = false
         ).also { irAdapterFunction ->
             symbolTable.enterScope(irAdapterFunction)

@@ -123,12 +123,13 @@ abstract class AbstractIrFactoryImpl : IrFactory {
         isOperator: Boolean,
         isInfix: Boolean,
         isExpect: Boolean,
+        isStatic: Boolean,
         isFakeOverride: Boolean,
         containerSource: DeserializedContainerSource?,
     ): IrSimpleFunction =
         IrFunctionImpl(
             startOffset, endOffset, origin, symbol, name, visibility, modality, returnType,
-            isInline, isExternal, isTailrec, isSuspend, isOperator, isInfix, isExpect, isFakeOverride,
+            isInline, isExternal, isTailrec, isSuspend, isOperator, isInfix, isExpect, isStatic, isFakeOverride,
             containerSource, factory = this
         )
 
@@ -147,10 +148,11 @@ abstract class AbstractIrFactoryImpl : IrFactory {
         isOperator: Boolean,
         isInfix: Boolean,
         isExpect: Boolean,
+        isStatic: Boolean,
     ): IrSimpleFunction =
         IrFunctionWithLateBindingImpl(
             startOffset, endOffset, origin, name, visibility, modality, returnType,
-            isInline, isExternal, isTailrec, isSuspend, isOperator, isInfix, isExpect,
+            isInline, isExternal, isTailrec, isSuspend, isOperator, isInfix, isExpect, isStatic,
             factory = this
         )
 

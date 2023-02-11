@@ -176,6 +176,7 @@ class IrFactoryImplForJsIC(override val stageController: StageController) : Abst
         isOperator: Boolean,
         isInfix: Boolean,
         isExpect: Boolean,
+        isStatic: Boolean,
         isFakeOverride: Boolean,
         containerSource: DeserializedContainerSource?
     ): IrSimpleFunction {
@@ -195,6 +196,7 @@ class IrFactoryImplForJsIC(override val stageController: StageController) : Abst
             isOperator,
             isInfix,
             isExpect,
+            isStatic,
             isFakeOverride,
             containerSource,
         ).register()
@@ -214,7 +216,8 @@ class IrFactoryImplForJsIC(override val stageController: StageController) : Abst
         isSuspend: Boolean,
         isOperator: Boolean,
         isInfix: Boolean,
-        isExpect: Boolean
+        isExpect: Boolean,
+        isStatic: Boolean
     ): IrSimpleFunction {
         return super.createFunctionWithLateBinding(
             startOffset,
@@ -231,6 +234,7 @@ class IrFactoryImplForJsIC(override val stageController: StageController) : Abst
             isOperator,
             isInfix,
             isExpect,
+            isStatic
         ).register()
     }
 

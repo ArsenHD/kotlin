@@ -290,6 +290,7 @@ class IrDescriptorBasedFunctionFactory(
                     isOperator = true,
                     isInfix = false,
                     isExpect = false,
+                    isStatic = false,
                     isFakeOverride = false
                 )
             }
@@ -360,7 +361,7 @@ class IrDescriptorBasedFunctionFactory(
                 descriptor.run {
                     irFactory.createFunction(
                         offset, offset, memberOrigin, it, name, visibility, modality, returnType,
-                        isInline, isEffectivelyExternal(), isTailrec, isSuspend, isOperator, isInfix, isExpect, true
+                        isInline, isEffectivelyExternal(), isTailrec, isSuspend, isOperator, isInfix, isExpect, isStatic,true
                     )
                 }
             }

@@ -158,7 +158,7 @@ internal fun IrFactory.buildFunction(builder: IrFunctionBuilder): IrSimpleFuncti
         startOffset, endOffset, origin,
         IrSimpleFunctionSymbolImpl(),
         name, visibility, modality, returnType,
-        isInline, isExternal, isTailrec, isSuspend, isOperator, isInfix, isExpect, isFakeOverride,
+        isInline, isExternal, isTailrec, isSuspend, isOperator, isInfix, isExpect, isStatic, isFakeOverride,
         containerSource,
     )
 }

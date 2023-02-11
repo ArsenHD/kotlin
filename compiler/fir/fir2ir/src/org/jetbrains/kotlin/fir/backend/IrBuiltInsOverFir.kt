@@ -895,7 +895,7 @@ class IrBuiltInsOverFir(
                 startOffset, endOffset, this.origin,
                 symbol,
                 this.name, visibility, this.modality, this.returnType,
-                isInline, isExternal, isTailrec, isSuspend, this.isOperator, this.isInfix, isExpect, isFakeOverride,
+                isInline, isExternal, isTailrec, isSuspend, this.isOperator, this.isInfix, isExpect, isStatic, isFakeOverride,
                 containerSource,
             )
         }.also { fn ->

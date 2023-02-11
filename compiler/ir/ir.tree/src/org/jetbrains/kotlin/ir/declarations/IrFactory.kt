@@ -104,6 +104,7 @@ interface IrFactory {
         isOperator: Boolean,
         isInfix: Boolean,
         isExpect: Boolean,
+        isStatic: Boolean,
         isFakeOverride: Boolean = origin == IrDeclarationOrigin.FAKE_OVERRIDE,
         containerSource: DeserializedContainerSource? = null,
     ): IrSimpleFunction
@@ -123,6 +124,7 @@ interface IrFactory {
         isOperator: Boolean,
         isInfix: Boolean,
         isExpect: Boolean,
+        isStatic: Boolean,
     ): IrSimpleFunction
 
     fun createLocalDelegatedProperty(

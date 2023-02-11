@@ -35,6 +35,7 @@ fun SymbolTable.declareSimpleFunctionWithOverrides(
                 isOperator,
                 isInfix,
                 isExpect,
+                isStatic,
                 isFakeOverride = descriptor.kind == CallableMemberDescriptor.Kind.FAKE_OVERRIDE
             ).also { declaration ->
                 declaration.metadata = DescriptorMetadataSource.Function(this)

@@ -109,6 +109,7 @@ class LazyIrFactory(
         isOperator: Boolean,
         isInfix: Boolean,
         isExpect: Boolean,
+        isStatic: Boolean,
         isFakeOverride: Boolean,
         containerSource: DeserializedContainerSource?
     ): IrSimpleFunction = if (symbol.isBound)
@@ -116,7 +117,7 @@ class LazyIrFactory(
     else
         delegate.createFunction(
             startOffset, endOffset, origin, symbol, name, visibility, modality, returnType,
-            isInline, isExternal, isTailrec, isSuspend, isOperator, isInfix, isExpect, isFakeOverride, containerSource
+            isInline, isExternal, isTailrec, isSuspend, isOperator, isInfix, isExpect, isStatic, isFakeOverride, containerSource
         )
 
     override fun createProperty(

@@ -617,7 +617,7 @@ class Fir2IrClassifierStorage(
             IrDeclarationOrigin.DEFINED, IrSimpleFunctionSymbolImpl(),
             Name.special("<stub>"), DescriptorVisibilities.PRIVATE, Modality.FINAL, irBuiltIns.unitType,
             isInline = false, isExternal = false, isTailrec = false,
-            isSuspend = false, isOperator = false, isInfix = false, isExpect = false
+            isSuspend = false, isOperator = false, isInfix = false, isExpect = false, isStatic = false
         ).apply {
             parent = IrExternalPackageFragmentImpl(IrExternalPackageFragmentSymbolImpl(), FqName.ROOT)
         }

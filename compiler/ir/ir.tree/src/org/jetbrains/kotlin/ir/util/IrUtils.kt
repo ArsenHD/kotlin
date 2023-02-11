@@ -1015,6 +1015,7 @@ object SetDeclarationsParentVisitor : IrElementVisitor<Unit, IrDeclarationParent
 }
 
 
+// TODO: question 13: what does this 'isStatic' mean? It seems like it's not the same as new static functions and properties.
 val IrFunction.isStatic: Boolean
     get() = parent is IrClass && dispatchReceiverParameter == null
 
@@ -1169,6 +1170,7 @@ fun IrFactory.createStaticFunctionWithReceivers(
         isTailrec = false,
         isSuspend = oldFunction.isSuspend,
         isExpect = oldFunction.isExpect,
+        isStatic = oldFunction is IrSimpleFunction && oldFunction.isStatic,
         isFakeOverride = isFakeOverride,
         isOperator = oldFunction is IrSimpleFunction && oldFunction.isOperator,
         isInfix = oldFunction is IrSimpleFunction && oldFunction.isInfix,

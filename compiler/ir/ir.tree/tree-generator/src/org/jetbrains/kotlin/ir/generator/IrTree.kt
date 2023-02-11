@@ -421,6 +421,7 @@ object IrTree : AbstractTreeBuilder() {
         +symbol(simpleFunctionSymbolType)
         +field("isTailrec", boolean)
         +field("isSuspend", boolean)
+        +field("isStatic", boolean)
         +field("isFakeOverride", boolean)
         +field("isOperator", boolean)
         +field("isInfix", boolean)

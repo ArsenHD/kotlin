@@ -39,6 +39,7 @@ class IrLazyFunction(
     override val isTailrec: Boolean,
     override val isSuspend: Boolean,
     override val isExpect: Boolean,
+    override val isStatic: Boolean,
     override val isFakeOverride: Boolean,
     override val isOperator: Boolean,
     override val isInfix: Boolean,

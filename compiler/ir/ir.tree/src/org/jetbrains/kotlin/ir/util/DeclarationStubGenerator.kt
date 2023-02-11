@@ -201,8 +201,8 @@ abstract class DeclarationStubGenerator(
             IrLazyFunction(
                 UNDEFINED_OFFSET, UNDEFINED_OFFSET, origin,
                 it, descriptor,
-                descriptor.name, descriptor.visibility, descriptor.modality,
-                descriptor.isInline, descriptor.isExternal, descriptor.isTailrec, descriptor.isSuspend, descriptor.isExpect,
+                descriptor.name, descriptor.visibility, descriptor.modality, descriptor.isInline, descriptor.isExternal,
+                descriptor.isTailrec, descriptor.isSuspend, descriptor.isExpect, descriptor.isStatic,
                 isFakeOverride = (origin == IrDeclarationOrigin.FAKE_OVERRIDE),
                 isOperator = descriptor.isOperator, isInfix = descriptor.isInfix,
                 stubGenerator = this, typeTranslator = typeTranslator

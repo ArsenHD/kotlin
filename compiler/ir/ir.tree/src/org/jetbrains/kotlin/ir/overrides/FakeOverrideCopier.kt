@@ -32,6 +32,7 @@ class FakeOverrideCopier(
             isTailrec = declaration.isTailrec,
             isSuspend = declaration.isSuspend,
             isExpect = declaration.isExpect,
+            isStatic = declaration.isStatic,
             isOperator = declaration.isOperator,
             isInfix = declaration.isInfix
         ).apply {
