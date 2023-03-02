@@ -366,6 +366,7 @@ internal fun IrPluginContext.addStaticGetter(property: IrProperty) {
         origin = IrDeclarationOrigin.DEFAULT_PROPERTY_ACCESSOR
         visibility = property.visibility
         returnType = field.type
+        isStatic = true
     }.apply {
         dispatchReceiverParameter = null
         body = factory.createBlockBody(

@@ -59,6 +59,7 @@ class IrPreGenerator(
             origin = SERIALIZATION_PLUGIN_ORIGIN
         }
         method.apply {
+            isStatic = true
             dispatchReceiverParameter = null // function is static
         }
 
