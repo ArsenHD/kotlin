@@ -856,7 +856,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.QualifiedNameTable.QualifiedName qualified_name = 1;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTable.QualifiedName> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTable.QualifiedName>
         getQualifiedNameList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.QualifiedNameTable.QualifiedName qualified_name = 1;</code>
@@ -869,7 +869,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.QualifiedNameTable.QualifiedName qualified_name = 1;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTable.QualifiedNameOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTable.QualifiedNameOrBuilder>
         getQualifiedNameOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.QualifiedNameTable.QualifiedName qualified_name = 1;</code>
@@ -1521,7 +1521,7 @@ public final class DebugProtoBuf {
 
         public final boolean isInitialized() {
           if (!hasShortName()) {
-            
+
             return false;
           }
           return true;
@@ -1683,7 +1683,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.QualifiedNameTable.QualifiedName qualified_name = 1;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTable.QualifiedNameOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTable.QualifiedNameOrBuilder>
         getQualifiedNameOrBuilderList() {
       return qualifiedName_;
     }
@@ -1938,7 +1938,7 @@ public final class DebugProtoBuf {
               qualifiedNameBuilder_ = null;
               qualifiedName_ = other.qualifiedName_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              qualifiedNameBuilder_ = 
+              qualifiedNameBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getQualifiedNameFieldBuilder() : null;
             } else {
@@ -1953,7 +1953,7 @@ public final class DebugProtoBuf {
       public final boolean isInitialized() {
         for (int i = 0; i < getQualifiedNameCount(); i++) {
           if (!getQualifiedName(i).isInitialized()) {
-            
+
             return false;
           }
         }
@@ -2174,7 +2174,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.QualifiedNameTable.QualifiedName qualified_name = 1;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTable.QualifiedNameOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTable.QualifiedNameOrBuilder>
            getQualifiedNameOrBuilderList() {
         if (qualifiedNameBuilder_ != null) {
           return qualifiedNameBuilder_.getMessageOrBuilderList();
@@ -2200,12 +2200,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.QualifiedNameTable.QualifiedName qualified_name = 1;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTable.QualifiedName.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTable.QualifiedName.Builder>
            getQualifiedNameBuilderList() {
         return getQualifiedNameFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTable.QualifiedName, org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTable.QualifiedName.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTable.QualifiedNameOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTable.QualifiedName, org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTable.QualifiedName.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTable.QualifiedNameOrBuilder>
           getQualifiedNameFieldBuilder() {
         if (qualifiedNameBuilder_ == null) {
           qualifiedNameBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -2246,7 +2246,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Annotation.Argument argument = 2;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument>
         getArgumentList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Annotation.Argument argument = 2;</code>
@@ -2259,7 +2259,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Annotation.Argument argument = 2;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.ArgumentOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.ArgumentOrBuilder>
         getArgumentOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Annotation.Argument argument = 2;</code>
@@ -2612,7 +2612,7 @@ public final class DebugProtoBuf {
         /**
          * <code>repeated .org.jetbrains.kotlin.metadata.Annotation.Argument.Value array_element = 9;</code>
          */
-        java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument.Value> 
+        java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument.Value>
             getArrayElementList();
         /**
          * <code>repeated .org.jetbrains.kotlin.metadata.Annotation.Argument.Value array_element = 9;</code>
@@ -2625,7 +2625,7 @@ public final class DebugProtoBuf {
         /**
          * <code>repeated .org.jetbrains.kotlin.metadata.Annotation.Argument.Value array_element = 9;</code>
          */
-        java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument.ValueOrBuilder> 
+        java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument.ValueOrBuilder>
             getArrayElementOrBuilderList();
         /**
          * <code>repeated .org.jetbrains.kotlin.metadata.Annotation.Argument.Value array_element = 9;</code>
@@ -3188,7 +3188,7 @@ public final class DebugProtoBuf {
         /**
          * <code>repeated .org.jetbrains.kotlin.metadata.Annotation.Argument.Value array_element = 9;</code>
          */
-        public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument.ValueOrBuilder> 
+        public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument.ValueOrBuilder>
             getArrayElementOrBuilderList() {
           return arrayElement_;
         }
@@ -3686,7 +3686,7 @@ public final class DebugProtoBuf {
                   arrayElementBuilder_ = null;
                   arrayElement_ = other.arrayElement_;
                   bitField0_ = (bitField0_ & ~0x00000100);
-                  arrayElementBuilder_ = 
+                  arrayElementBuilder_ =
                     org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                        getArrayElementFieldBuilder() : null;
                 } else {
@@ -3707,13 +3707,13 @@ public final class DebugProtoBuf {
           public final boolean isInitialized() {
             if (hasAnnotation()) {
               if (!getAnnotation().isInitialized()) {
-                
+
                 return false;
               }
             }
             for (int i = 0; i < getArrayElementCount(); i++) {
               if (!getArrayElement(i).isInitialized()) {
-                
+
                 return false;
               }
             }
@@ -4109,7 +4109,7 @@ public final class DebugProtoBuf {
            * <code>optional .org.jetbrains.kotlin.metadata.Annotation annotation = 8;</code>
            */
           private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-              org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation, org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.AnnotationOrBuilder> 
+              org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation, org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.AnnotationOrBuilder>
               getAnnotationFieldBuilder() {
             if (annotationBuilder_ == null) {
               annotationBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -4317,7 +4317,7 @@ public final class DebugProtoBuf {
           /**
            * <code>repeated .org.jetbrains.kotlin.metadata.Annotation.Argument.Value array_element = 9;</code>
            */
-          public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument.ValueOrBuilder> 
+          public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument.ValueOrBuilder>
                getArrayElementOrBuilderList() {
             if (arrayElementBuilder_ != null) {
               return arrayElementBuilder_.getMessageOrBuilderList();
@@ -4343,12 +4343,12 @@ public final class DebugProtoBuf {
           /**
            * <code>repeated .org.jetbrains.kotlin.metadata.Annotation.Argument.Value array_element = 9;</code>
            */
-          public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument.Value.Builder> 
+          public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument.Value.Builder>
                getArrayElementBuilderList() {
             return getArrayElementFieldBuilder().getBuilderList();
           }
           private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-              org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument.Value, org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument.Value.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument.ValueOrBuilder> 
+              org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument.Value, org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument.Value.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument.ValueOrBuilder>
               getArrayElementFieldBuilder() {
             if (arrayElementBuilder_ == null) {
               arrayElementBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -4784,15 +4784,15 @@ public final class DebugProtoBuf {
 
         public final boolean isInitialized() {
           if (!hasNameId()) {
-            
+
             return false;
           }
           if (!hasValue()) {
-            
+
             return false;
           }
           if (!getValue().isInitialized()) {
-            
+
             return false;
           }
           return true;
@@ -4952,7 +4952,7 @@ public final class DebugProtoBuf {
          * <code>required .org.jetbrains.kotlin.metadata.Annotation.Argument.Value value = 2;</code>
          */
         private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-            org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument.Value, org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument.Value.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument.ValueOrBuilder> 
+            org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument.Value, org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument.Value.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument.ValueOrBuilder>
             getValueFieldBuilder() {
           if (valueBuilder_ == null) {
             valueBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -5003,7 +5003,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Annotation.Argument argument = 2;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.ArgumentOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.ArgumentOrBuilder>
         getArgumentOrBuilderList() {
       return argument_;
     }
@@ -5281,7 +5281,7 @@ public final class DebugProtoBuf {
               argumentBuilder_ = null;
               argument_ = other.argument_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              argumentBuilder_ = 
+              argumentBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getArgumentFieldBuilder() : null;
             } else {
@@ -5295,12 +5295,12 @@ public final class DebugProtoBuf {
 
       public final boolean isInitialized() {
         if (!hasId()) {
-          
+
           return false;
         }
         for (int i = 0; i < getArgumentCount(); i++) {
           if (!getArgument(i).isInitialized()) {
-            
+
             return false;
           }
         }
@@ -5553,7 +5553,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Annotation.Argument argument = 2;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.ArgumentOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.ArgumentOrBuilder>
            getArgumentOrBuilderList() {
         if (argumentBuilder_ != null) {
           return argumentBuilder_.getMessageOrBuilderList();
@@ -5579,12 +5579,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Annotation.Argument argument = 2;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument.Builder>
            getArgumentBuilderList() {
         return getArgumentFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument, org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.ArgumentOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument, org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Argument.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.ArgumentOrBuilder>
           getArgumentFieldBuilder() {
         if (argumentBuilder_ == null) {
           argumentBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -5617,7 +5617,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type.Argument argument = 2;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Argument> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Argument>
         getArgumentList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type.Argument argument = 2;</code>
@@ -5630,7 +5630,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type.Argument argument = 2;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.ArgumentOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.ArgumentOrBuilder>
         getArgumentOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type.Argument argument = 2;</code>
@@ -6606,7 +6606,7 @@ public final class DebugProtoBuf {
         public final boolean isInitialized() {
           if (hasType()) {
             if (!getType().isInitialized()) {
-              
+
               return false;
             }
           }
@@ -6806,7 +6806,7 @@ public final class DebugProtoBuf {
          * </pre>
          */
         private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-            org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+            org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
             getTypeFieldBuilder() {
           if (typeBuilder_ == null) {
             typeBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -6874,7 +6874,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type.Argument argument = 2;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.ArgumentOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.ArgumentOrBuilder>
         getArgumentOrBuilderList() {
       return argument_;
     }
@@ -7639,7 +7639,7 @@ public final class DebugProtoBuf {
               argumentBuilder_ = null;
               argument_ = other.argument_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              argumentBuilder_ = 
+              argumentBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getArgumentFieldBuilder() : null;
             } else {
@@ -7694,30 +7694,30 @@ public final class DebugProtoBuf {
       public final boolean isInitialized() {
         for (int i = 0; i < getArgumentCount(); i++) {
           if (!getArgument(i).isInitialized()) {
-            
+
             return false;
           }
         }
         if (hasFlexibleUpperBound()) {
           if (!getFlexibleUpperBound().isInitialized()) {
-            
+
             return false;
           }
         }
         if (hasOuterType()) {
           if (!getOuterType().isInitialized()) {
-            
+
             return false;
           }
         }
         if (hasAbbreviatedType()) {
           if (!getAbbreviatedType().isInitialized()) {
-            
+
             return false;
           }
         }
         if (!extensionsAreInitialized()) {
-          
+
           return false;
         }
         return true;
@@ -7937,7 +7937,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Type.Argument argument = 2;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.ArgumentOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.ArgumentOrBuilder>
            getArgumentOrBuilderList() {
         if (argumentBuilder_ != null) {
           return argumentBuilder_.getMessageOrBuilderList();
@@ -7963,12 +7963,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Type.Argument argument = 2;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Argument.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Argument.Builder>
            getArgumentBuilderList() {
         return getArgumentFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Argument, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Argument.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.ArgumentOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Argument, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Argument.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.ArgumentOrBuilder>
           getArgumentFieldBuilder() {
         if (argumentBuilder_ == null) {
           argumentBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -8169,7 +8169,7 @@ public final class DebugProtoBuf {
        * <code>optional .org.jetbrains.kotlin.metadata.Type flexible_upper_bound = 5;</code>
        */
       private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
           getFlexibleUpperBoundFieldBuilder() {
         if (flexibleUpperBoundBuilder_ == null) {
           flexibleUpperBoundBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -8533,7 +8533,7 @@ public final class DebugProtoBuf {
        * </pre>
        */
       private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
           getOuterTypeFieldBuilder() {
         if (outerTypeBuilder_ == null) {
           outerTypeBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -8681,7 +8681,7 @@ public final class DebugProtoBuf {
        * <code>optional .org.jetbrains.kotlin.metadata.Type abbreviated_type = 13;</code>
        */
       private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
           getAbbreviatedTypeFieldBuilder() {
         if (abbreviatedTypeBuilder_ == null) {
           abbreviatedTypeBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -8833,7 +8833,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type upper_bound = 5;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type>
         getUpperBoundList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type upper_bound = 5;</code>
@@ -8846,7 +8846,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type upper_bound = 5;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
         getUpperBoundOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type upper_bound = 5;</code>
@@ -9183,7 +9183,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type upper_bound = 5;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
         getUpperBoundOrBuilderList() {
       return upperBound_;
     }
@@ -9578,7 +9578,7 @@ public final class DebugProtoBuf {
               upperBoundBuilder_ = null;
               upperBound_ = other.upperBound_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              upperBoundBuilder_ = 
+              upperBoundBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getUpperBoundFieldBuilder() : null;
             } else {
@@ -9603,21 +9603,21 @@ public final class DebugProtoBuf {
 
       public final boolean isInitialized() {
         if (!hasId()) {
-          
+
           return false;
         }
         if (!hasName()) {
-          
+
           return false;
         }
         for (int i = 0; i < getUpperBoundCount(); i++) {
           if (!getUpperBound(i).isInitialized()) {
-            
+
             return false;
           }
         }
         if (!extensionsAreInitialized()) {
-          
+
           return false;
         }
         return true;
@@ -9968,7 +9968,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Type upper_bound = 5;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
            getUpperBoundOrBuilderList() {
         if (upperBoundBuilder_ != null) {
           return upperBoundBuilder_.getMessageOrBuilderList();
@@ -9994,12 +9994,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Type upper_bound = 5;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder>
            getUpperBoundBuilderList() {
         return getUpperBoundFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
           getUpperBoundFieldBuilder() {
         if (upperBoundBuilder_ == null) {
           upperBoundBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -10151,7 +10151,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 5;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter>
         getTypeParameterList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 5;</code>
@@ -10164,7 +10164,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 5;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder>
         getTypeParameterOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 5;</code>
@@ -10175,7 +10175,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type supertype = 6;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type>
         getSupertypeList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type supertype = 6;</code>
@@ -10188,7 +10188,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type supertype = 6;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
         getSupertypeOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type supertype = 6;</code>
@@ -10225,7 +10225,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type context_receiver_type = 20;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type>
         getContextReceiverTypeList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type context_receiver_type = 20;</code>
@@ -10238,7 +10238,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type context_receiver_type = 20;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
         getContextReceiverTypeOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type context_receiver_type = 20;</code>
@@ -10262,7 +10262,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Constructor constructor = 8;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Constructor> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Constructor>
         getConstructorList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Constructor constructor = 8;</code>
@@ -10275,7 +10275,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Constructor constructor = 8;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ConstructorOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ConstructorOrBuilder>
         getConstructorOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Constructor constructor = 8;</code>
@@ -10286,7 +10286,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Function function = 9;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Function> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Function>
         getFunctionList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Function function = 9;</code>
@@ -10299,7 +10299,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Function function = 9;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.FunctionOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.FunctionOrBuilder>
         getFunctionOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Function function = 9;</code>
@@ -10310,7 +10310,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Property property = 10;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Property> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Property>
         getPropertyList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Property property = 10;</code>
@@ -10323,7 +10323,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Property property = 10;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.PropertyOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.PropertyOrBuilder>
         getPropertyOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Property property = 10;</code>
@@ -10334,7 +10334,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeAlias type_alias = 11;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAlias> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAlias>
         getTypeAliasList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeAlias type_alias = 11;</code>
@@ -10347,7 +10347,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeAlias type_alias = 11;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAliasOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAliasOrBuilder>
         getTypeAliasOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeAlias type_alias = 11;</code>
@@ -10358,7 +10358,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.EnumEntry enum_entry = 13;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.EnumEntry> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.EnumEntry>
         getEnumEntryList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.EnumEntry enum_entry = 13;</code>
@@ -10371,7 +10371,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.EnumEntry enum_entry = 13;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.EnumEntryOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.EnumEntryOrBuilder>
         getEnumEntryOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.EnumEntry enum_entry = 13;</code>
@@ -10439,7 +10439,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type multi_field_value_class_underlying_type = 23;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type>
         getMultiFieldValueClassUnderlyingTypeList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type multi_field_value_class_underlying_type = 23;</code>
@@ -10452,7 +10452,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type multi_field_value_class_underlying_type = 23;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
         getMultiFieldValueClassUnderlyingTypeOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type multi_field_value_class_underlying_type = 23;</code>
@@ -10984,6 +10984,10 @@ public final class DebugProtoBuf {
        * <code>COMPANION_OBJECT = 6;</code>
        */
       COMPANION_OBJECT(6, 6),
+      /**
+       * <code>STATIC_OBJECT = 7;</code>
+       */
+      STATIC_OBJECT(7, 7),
       ;
 
       /**
@@ -11018,6 +11022,10 @@ public final class DebugProtoBuf {
        * <code>COMPANION_OBJECT = 6;</code>
        */
       public static final int COMPANION_OBJECT_VALUE = 6;
+      /**
+       * <code>STATIC_OBJECT = 7;</code>
+       */
+      public static final int STATIC_OBJECT_VALUE = 7;
 
 
       public final int getNumber() { return value; }
@@ -11031,6 +11039,7 @@ public final class DebugProtoBuf {
           case 4: return ANNOTATION_CLASS;
           case 5: return OBJECT;
           case 6: return COMPANION_OBJECT;
+          case 7: return STATIC_OBJECT;
           default: return null;
         }
       }
@@ -11165,7 +11174,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 5;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder>
         getTypeParameterOrBuilderList() {
       return typeParameter_;
     }
@@ -11200,7 +11209,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type supertype = 6;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
         getSupertypeOrBuilderList() {
       return supertype_;
     }
@@ -11281,7 +11290,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type context_receiver_type = 20;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
         getContextReceiverTypeOrBuilderList() {
       return contextReceiverType_;
     }
@@ -11339,7 +11348,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Constructor constructor = 8;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ConstructorOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ConstructorOrBuilder>
         getConstructorOrBuilderList() {
       return constructor_;
     }
@@ -11374,7 +11383,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Function function = 9;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.FunctionOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.FunctionOrBuilder>
         getFunctionOrBuilderList() {
       return function_;
     }
@@ -11409,7 +11418,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Property property = 10;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.PropertyOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.PropertyOrBuilder>
         getPropertyOrBuilderList() {
       return property_;
     }
@@ -11444,7 +11453,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeAlias type_alias = 11;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAliasOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAliasOrBuilder>
         getTypeAliasOrBuilderList() {
       return typeAlias_;
     }
@@ -11479,7 +11488,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.EnumEntry enum_entry = 13;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.EnumEntryOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.EnumEntryOrBuilder>
         getEnumEntryOrBuilderList() {
       return enumEntry_;
     }
@@ -11611,7 +11620,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type multi_field_value_class_underlying_type = 23;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
         getMultiFieldValueClassUnderlyingTypeOrBuilderList() {
       return multiFieldValueClassUnderlyingType_;
     }
@@ -12575,7 +12584,7 @@ public final class DebugProtoBuf {
               typeParameterBuilder_ = null;
               typeParameter_ = other.typeParameter_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              typeParameterBuilder_ = 
+              typeParameterBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getTypeParameterFieldBuilder() : null;
             } else {
@@ -12601,7 +12610,7 @@ public final class DebugProtoBuf {
               supertypeBuilder_ = null;
               supertype_ = other.supertype_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              supertypeBuilder_ = 
+              supertypeBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getSupertypeFieldBuilder() : null;
             } else {
@@ -12647,7 +12656,7 @@ public final class DebugProtoBuf {
               contextReceiverTypeBuilder_ = null;
               contextReceiverType_ = other.contextReceiverType_;
               bitField0_ = (bitField0_ & ~0x00000080);
-              contextReceiverTypeBuilder_ = 
+              contextReceiverTypeBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getContextReceiverTypeFieldBuilder() : null;
             } else {
@@ -12683,7 +12692,7 @@ public final class DebugProtoBuf {
               constructorBuilder_ = null;
               constructor_ = other.constructor_;
               bitField0_ = (bitField0_ & ~0x00000200);
-              constructorBuilder_ = 
+              constructorBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getConstructorFieldBuilder() : null;
             } else {
@@ -12709,7 +12718,7 @@ public final class DebugProtoBuf {
               functionBuilder_ = null;
               function_ = other.function_;
               bitField0_ = (bitField0_ & ~0x00000400);
-              functionBuilder_ = 
+              functionBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getFunctionFieldBuilder() : null;
             } else {
@@ -12735,7 +12744,7 @@ public final class DebugProtoBuf {
               propertyBuilder_ = null;
               property_ = other.property_;
               bitField0_ = (bitField0_ & ~0x00000800);
-              propertyBuilder_ = 
+              propertyBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getPropertyFieldBuilder() : null;
             } else {
@@ -12761,7 +12770,7 @@ public final class DebugProtoBuf {
               typeAliasBuilder_ = null;
               typeAlias_ = other.typeAlias_;
               bitField0_ = (bitField0_ & ~0x00001000);
-              typeAliasBuilder_ = 
+              typeAliasBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getTypeAliasFieldBuilder() : null;
             } else {
@@ -12787,7 +12796,7 @@ public final class DebugProtoBuf {
               enumEntryBuilder_ = null;
               enumEntry_ = other.enumEntry_;
               bitField0_ = (bitField0_ & ~0x00002000);
-              enumEntryBuilder_ = 
+              enumEntryBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getEnumEntryFieldBuilder() : null;
             } else {
@@ -12842,7 +12851,7 @@ public final class DebugProtoBuf {
               multiFieldValueClassUnderlyingTypeBuilder_ = null;
               multiFieldValueClassUnderlyingType_ = other.multiFieldValueClassUnderlyingType_;
               bitField0_ = (bitField0_ & ~0x00080000);
-              multiFieldValueClassUnderlyingTypeBuilder_ = 
+              multiFieldValueClassUnderlyingTypeBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getMultiFieldValueClassUnderlyingTypeFieldBuilder() : null;
             } else {
@@ -12883,77 +12892,77 @@ public final class DebugProtoBuf {
 
       public final boolean isInitialized() {
         if (!hasFqName()) {
-          
+
           return false;
         }
         for (int i = 0; i < getTypeParameterCount(); i++) {
           if (!getTypeParameter(i).isInitialized()) {
-            
+
             return false;
           }
         }
         for (int i = 0; i < getSupertypeCount(); i++) {
           if (!getSupertype(i).isInitialized()) {
-            
+
             return false;
           }
         }
         for (int i = 0; i < getContextReceiverTypeCount(); i++) {
           if (!getContextReceiverType(i).isInitialized()) {
-            
+
             return false;
           }
         }
         for (int i = 0; i < getConstructorCount(); i++) {
           if (!getConstructor(i).isInitialized()) {
-            
+
             return false;
           }
         }
         for (int i = 0; i < getFunctionCount(); i++) {
           if (!getFunction(i).isInitialized()) {
-            
+
             return false;
           }
         }
         for (int i = 0; i < getPropertyCount(); i++) {
           if (!getProperty(i).isInitialized()) {
-            
+
             return false;
           }
         }
         for (int i = 0; i < getTypeAliasCount(); i++) {
           if (!getTypeAlias(i).isInitialized()) {
-            
+
             return false;
           }
         }
         for (int i = 0; i < getEnumEntryCount(); i++) {
           if (!getEnumEntry(i).isInitialized()) {
-            
+
             return false;
           }
         }
         if (hasInlineClassUnderlyingType()) {
           if (!getInlineClassUnderlyingType().isInitialized()) {
-            
+
             return false;
           }
         }
         for (int i = 0; i < getMultiFieldValueClassUnderlyingTypeCount(); i++) {
           if (!getMultiFieldValueClassUnderlyingType(i).isInitialized()) {
-            
+
             return false;
           }
         }
         if (hasTypeTable()) {
           if (!getTypeTable().isInitialized()) {
-            
+
             return false;
           }
         }
         if (!extensionsAreInitialized()) {
-          
+
           return false;
         }
         return true;
@@ -13321,7 +13330,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 5;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder>
            getTypeParameterOrBuilderList() {
         if (typeParameterBuilder_ != null) {
           return typeParameterBuilder_.getMessageOrBuilderList();
@@ -13347,12 +13356,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 5;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter.Builder>
            getTypeParameterBuilderList() {
         return getTypeParameterFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder>
           getTypeParameterFieldBuilder() {
         if (typeParameterBuilder_ == null) {
           typeParameterBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -13561,7 +13570,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Type supertype = 6;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
            getSupertypeOrBuilderList() {
         if (supertypeBuilder_ != null) {
           return supertypeBuilder_.getMessageOrBuilderList();
@@ -13587,12 +13596,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Type supertype = 6;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder>
            getSupertypeBuilderList() {
         return getSupertypeFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
           getSupertypeFieldBuilder() {
         if (supertypeBuilder_ == null) {
           supertypeBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -13933,7 +13942,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Type context_receiver_type = 20;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
            getContextReceiverTypeOrBuilderList() {
         if (contextReceiverTypeBuilder_ != null) {
           return contextReceiverTypeBuilder_.getMessageOrBuilderList();
@@ -13959,12 +13968,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Type context_receiver_type = 20;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder>
            getContextReceiverTypeBuilderList() {
         return getContextReceiverTypeFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
           getContextReceiverTypeFieldBuilder() {
         if (contextReceiverTypeBuilder_ == null) {
           contextReceiverTypeBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -14239,7 +14248,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Constructor constructor = 8;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ConstructorOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ConstructorOrBuilder>
            getConstructorOrBuilderList() {
         if (constructorBuilder_ != null) {
           return constructorBuilder_.getMessageOrBuilderList();
@@ -14265,12 +14274,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Constructor constructor = 8;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Constructor.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Constructor.Builder>
            getConstructorBuilderList() {
         return getConstructorFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Constructor, org.jetbrains.kotlin.metadata.DebugProtoBuf.Constructor.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.ConstructorOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Constructor, org.jetbrains.kotlin.metadata.DebugProtoBuf.Constructor.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.ConstructorOrBuilder>
           getConstructorFieldBuilder() {
         if (constructorBuilder_ == null) {
           constructorBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -14479,7 +14488,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Function function = 9;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.FunctionOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.FunctionOrBuilder>
            getFunctionOrBuilderList() {
         if (functionBuilder_ != null) {
           return functionBuilder_.getMessageOrBuilderList();
@@ -14505,12 +14514,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Function function = 9;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Function.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Function.Builder>
            getFunctionBuilderList() {
         return getFunctionFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Function, org.jetbrains.kotlin.metadata.DebugProtoBuf.Function.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.FunctionOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Function, org.jetbrains.kotlin.metadata.DebugProtoBuf.Function.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.FunctionOrBuilder>
           getFunctionFieldBuilder() {
         if (functionBuilder_ == null) {
           functionBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -14719,7 +14728,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Property property = 10;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.PropertyOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.PropertyOrBuilder>
            getPropertyOrBuilderList() {
         if (propertyBuilder_ != null) {
           return propertyBuilder_.getMessageOrBuilderList();
@@ -14745,12 +14754,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Property property = 10;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Property.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Property.Builder>
            getPropertyBuilderList() {
         return getPropertyFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Property, org.jetbrains.kotlin.metadata.DebugProtoBuf.Property.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.PropertyOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Property, org.jetbrains.kotlin.metadata.DebugProtoBuf.Property.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.PropertyOrBuilder>
           getPropertyFieldBuilder() {
         if (propertyBuilder_ == null) {
           propertyBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -14959,7 +14968,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.TypeAlias type_alias = 11;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAliasOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAliasOrBuilder>
            getTypeAliasOrBuilderList() {
         if (typeAliasBuilder_ != null) {
           return typeAliasBuilder_.getMessageOrBuilderList();
@@ -14985,12 +14994,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.TypeAlias type_alias = 11;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAlias.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAlias.Builder>
            getTypeAliasBuilderList() {
         return getTypeAliasFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAlias, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAlias.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAliasOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAlias, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAlias.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAliasOrBuilder>
           getTypeAliasFieldBuilder() {
         if (typeAliasBuilder_ == null) {
           typeAliasBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -15199,7 +15208,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.EnumEntry enum_entry = 13;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.EnumEntryOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.EnumEntryOrBuilder>
            getEnumEntryOrBuilderList() {
         if (enumEntryBuilder_ != null) {
           return enumEntryBuilder_.getMessageOrBuilderList();
@@ -15225,12 +15234,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.EnumEntry enum_entry = 13;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.EnumEntry.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.EnumEntry.Builder>
            getEnumEntryBuilderList() {
         return getEnumEntryFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.EnumEntry, org.jetbrains.kotlin.metadata.DebugProtoBuf.EnumEntry.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.EnumEntryOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.EnumEntry, org.jetbrains.kotlin.metadata.DebugProtoBuf.EnumEntry.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.EnumEntryOrBuilder>
           getEnumEntryFieldBuilder() {
         if (enumEntryBuilder_ == null) {
           enumEntryBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -15445,7 +15454,7 @@ public final class DebugProtoBuf {
        * <code>optional .org.jetbrains.kotlin.metadata.Type inline_class_underlying_type = 18;</code>
        */
       private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
           getInlineClassUnderlyingTypeFieldBuilder() {
         if (inlineClassUnderlyingTypeBuilder_ == null) {
           inlineClassUnderlyingTypeBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -15751,7 +15760,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Type multi_field_value_class_underlying_type = 23;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
            getMultiFieldValueClassUnderlyingTypeOrBuilderList() {
         if (multiFieldValueClassUnderlyingTypeBuilder_ != null) {
           return multiFieldValueClassUnderlyingTypeBuilder_.getMessageOrBuilderList();
@@ -15777,12 +15786,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Type multi_field_value_class_underlying_type = 23;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder>
            getMultiFieldValueClassUnderlyingTypeBuilderList() {
         return getMultiFieldValueClassUnderlyingTypeFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
           getMultiFieldValueClassUnderlyingTypeFieldBuilder() {
         if (multiFieldValueClassUnderlyingTypeBuilder_ == null) {
           multiFieldValueClassUnderlyingTypeBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -15965,7 +15974,7 @@ public final class DebugProtoBuf {
        * <code>optional .org.jetbrains.kotlin.metadata.TypeTable type_table = 30;</code>
        */
       private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeTable, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeTable.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeTableOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeTable, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeTable.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeTableOrBuilder>
           getTypeTableFieldBuilder() {
         if (typeTableBuilder_ == null) {
           typeTableBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -16175,7 +16184,7 @@ public final class DebugProtoBuf {
        * <code>optional .org.jetbrains.kotlin.metadata.VersionRequirementTable version_requirement_table = 32;</code>
        */
       private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirementTable, org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirementTable.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirementTableOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirementTable, org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirementTable.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirementTableOrBuilder>
           getVersionRequirementTableFieldBuilder() {
         if (versionRequirementTableBuilder_ == null) {
           versionRequirementTableBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -16207,7 +16216,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Function function = 3;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Function> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Function>
         getFunctionList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Function function = 3;</code>
@@ -16220,7 +16229,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Function function = 3;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.FunctionOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.FunctionOrBuilder>
         getFunctionOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Function function = 3;</code>
@@ -16231,7 +16240,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Property property = 4;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Property> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Property>
         getPropertyList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Property property = 4;</code>
@@ -16244,7 +16253,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Property property = 4;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.PropertyOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.PropertyOrBuilder>
         getPropertyOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Property property = 4;</code>
@@ -16255,7 +16264,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeAlias type_alias = 5;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAlias> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAlias>
         getTypeAliasList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeAlias type_alias = 5;</code>
@@ -16268,7 +16277,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeAlias type_alias = 5;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAliasOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAliasOrBuilder>
         getTypeAliasOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeAlias type_alias = 5;</code>
@@ -16465,7 +16474,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Function function = 3;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.FunctionOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.FunctionOrBuilder>
         getFunctionOrBuilderList() {
       return function_;
     }
@@ -16500,7 +16509,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Property property = 4;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.PropertyOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.PropertyOrBuilder>
         getPropertyOrBuilderList() {
       return property_;
     }
@@ -16535,7 +16544,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeAlias type_alias = 5;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAliasOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAliasOrBuilder>
         getTypeAliasOrBuilderList() {
       return typeAlias_;
     }
@@ -16956,7 +16965,7 @@ public final class DebugProtoBuf {
               functionBuilder_ = null;
               function_ = other.function_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              functionBuilder_ = 
+              functionBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getFunctionFieldBuilder() : null;
             } else {
@@ -16982,7 +16991,7 @@ public final class DebugProtoBuf {
               propertyBuilder_ = null;
               property_ = other.property_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              propertyBuilder_ = 
+              propertyBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getPropertyFieldBuilder() : null;
             } else {
@@ -17008,7 +17017,7 @@ public final class DebugProtoBuf {
               typeAliasBuilder_ = null;
               typeAlias_ = other.typeAlias_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              typeAliasBuilder_ = 
+              typeAliasBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getTypeAliasFieldBuilder() : null;
             } else {
@@ -17030,30 +17039,30 @@ public final class DebugProtoBuf {
       public final boolean isInitialized() {
         for (int i = 0; i < getFunctionCount(); i++) {
           if (!getFunction(i).isInitialized()) {
-            
+
             return false;
           }
         }
         for (int i = 0; i < getPropertyCount(); i++) {
           if (!getProperty(i).isInitialized()) {
-            
+
             return false;
           }
         }
         for (int i = 0; i < getTypeAliasCount(); i++) {
           if (!getTypeAlias(i).isInitialized()) {
-            
+
             return false;
           }
         }
         if (hasTypeTable()) {
           if (!getTypeTable().isInitialized()) {
-            
+
             return false;
           }
         }
         if (!extensionsAreInitialized()) {
-          
+
           return false;
         }
         return true;
@@ -17273,7 +17282,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Function function = 3;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.FunctionOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.FunctionOrBuilder>
            getFunctionOrBuilderList() {
         if (functionBuilder_ != null) {
           return functionBuilder_.getMessageOrBuilderList();
@@ -17299,12 +17308,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Function function = 3;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Function.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Function.Builder>
            getFunctionBuilderList() {
         return getFunctionFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Function, org.jetbrains.kotlin.metadata.DebugProtoBuf.Function.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.FunctionOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Function, org.jetbrains.kotlin.metadata.DebugProtoBuf.Function.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.FunctionOrBuilder>
           getFunctionFieldBuilder() {
         if (functionBuilder_ == null) {
           functionBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -17513,7 +17522,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Property property = 4;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.PropertyOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.PropertyOrBuilder>
            getPropertyOrBuilderList() {
         if (propertyBuilder_ != null) {
           return propertyBuilder_.getMessageOrBuilderList();
@@ -17539,12 +17548,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Property property = 4;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Property.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Property.Builder>
            getPropertyBuilderList() {
         return getPropertyFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Property, org.jetbrains.kotlin.metadata.DebugProtoBuf.Property.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.PropertyOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Property, org.jetbrains.kotlin.metadata.DebugProtoBuf.Property.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.PropertyOrBuilder>
           getPropertyFieldBuilder() {
         if (propertyBuilder_ == null) {
           propertyBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -17753,7 +17762,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.TypeAlias type_alias = 5;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAliasOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAliasOrBuilder>
            getTypeAliasOrBuilderList() {
         if (typeAliasBuilder_ != null) {
           return typeAliasBuilder_.getMessageOrBuilderList();
@@ -17779,12 +17788,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.TypeAlias type_alias = 5;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAlias.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAlias.Builder>
            getTypeAliasBuilderList() {
         return getTypeAliasFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAlias, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAlias.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAliasOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAlias, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAlias.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeAliasOrBuilder>
           getTypeAliasFieldBuilder() {
         if (typeAliasBuilder_ == null) {
           typeAliasBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -17901,7 +17910,7 @@ public final class DebugProtoBuf {
        * <code>optional .org.jetbrains.kotlin.metadata.TypeTable type_table = 30;</code>
        */
       private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeTable, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeTable.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeTableOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeTable, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeTable.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeTableOrBuilder>
           getTypeTableFieldBuilder() {
         if (typeTableBuilder_ == null) {
           typeTableBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -18017,7 +18026,7 @@ public final class DebugProtoBuf {
        * <code>optional .org.jetbrains.kotlin.metadata.VersionRequirementTable version_requirement_table = 32;</code>
        */
       private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirementTable, org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirementTable.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirementTableOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirementTable, org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirementTable.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirementTableOrBuilder>
           getVersionRequirementTableFieldBuilder() {
         if (versionRequirementTableBuilder_ == null) {
           versionRequirementTableBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -18048,7 +18057,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type type = 1;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type>
         getTypeList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type type = 1;</code>
@@ -18061,7 +18070,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type type = 1;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
         getTypeOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type type = 1;</code>
@@ -18207,7 +18216,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type type = 1;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
         getTypeOrBuilderList() {
       return type_;
     }
@@ -18503,7 +18512,7 @@ public final class DebugProtoBuf {
               typeBuilder_ = null;
               type_ = other.type_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              typeBuilder_ = 
+              typeBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getTypeFieldBuilder() : null;
             } else {
@@ -18521,7 +18530,7 @@ public final class DebugProtoBuf {
       public final boolean isInitialized() {
         for (int i = 0; i < getTypeCount(); i++) {
           if (!getType(i).isInitialized()) {
-            
+
             return false;
           }
         }
@@ -18742,7 +18751,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Type type = 1;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
            getTypeOrBuilderList() {
         if (typeBuilder_ != null) {
           return typeBuilder_.getMessageOrBuilderList();
@@ -18768,12 +18777,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Type type = 1;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder>
            getTypeBuilderList() {
         return getTypeFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
           getTypeFieldBuilder() {
         if (typeBuilder_ == null) {
           typeBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -18881,7 +18890,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.ValueParameter value_parameter = 2;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameter> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameter>
         getValueParameterList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.ValueParameter value_parameter = 2;</code>
@@ -18894,7 +18903,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.ValueParameter value_parameter = 2;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameterOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameterOrBuilder>
         getValueParameterOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.ValueParameter value_parameter = 2;</code>
@@ -19100,7 +19109,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.ValueParameter value_parameter = 2;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameterOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameterOrBuilder>
         getValueParameterOrBuilderList() {
       return valueParameter_;
     }
@@ -19438,7 +19447,7 @@ public final class DebugProtoBuf {
               valueParameterBuilder_ = null;
               valueParameter_ = other.valueParameter_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              valueParameterBuilder_ = 
+              valueParameterBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getValueParameterFieldBuilder() : null;
             } else {
@@ -19464,12 +19473,12 @@ public final class DebugProtoBuf {
       public final boolean isInitialized() {
         for (int i = 0; i < getValueParameterCount(); i++) {
           if (!getValueParameter(i).isInitialized()) {
-            
+
             return false;
           }
         }
         if (!extensionsAreInitialized()) {
-          
+
           return false;
         }
         return true;
@@ -19749,7 +19758,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.ValueParameter value_parameter = 2;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameterOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameterOrBuilder>
            getValueParameterOrBuilderList() {
         if (valueParameterBuilder_ != null) {
           return valueParameterBuilder_.getMessageOrBuilderList();
@@ -19775,12 +19784,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.ValueParameter value_parameter = 2;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameter.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameter.Builder>
            getValueParameterBuilderList() {
         return getValueParameterFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameter, org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameter.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameterOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameter, org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameter.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameterOrBuilder>
           getValueParameterFieldBuilder() {
         if (valueParameterBuilder_ == null) {
           valueParameterBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -19919,6 +19928,7 @@ public final class DebugProtoBuf {
      *isExternal
      *isSuspend
      *isExpect
+     *isStatic
      *hasNonStableParameterNames
      * </pre>
      */
@@ -19938,6 +19948,7 @@ public final class DebugProtoBuf {
      *isExternal
      *isSuspend
      *isExpect
+     *isStatic
      *hasNonStableParameterNames
      * </pre>
      */
@@ -19986,7 +19997,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 4;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter>
         getTypeParameterList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 4;</code>
@@ -19999,7 +20010,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 4;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder>
         getTypeParameterOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 4;</code>
@@ -20032,7 +20043,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type context_receiver_type = 10;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type>
         getContextReceiverTypeList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type context_receiver_type = 10;</code>
@@ -20045,7 +20056,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type context_receiver_type = 10;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
         getContextReceiverTypeOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type context_receiver_type = 10;</code>
@@ -20069,7 +20080,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.ValueParameter value_parameter = 6;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameter> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameter>
         getValueParameterList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.ValueParameter value_parameter = 6;</code>
@@ -20082,7 +20093,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.ValueParameter value_parameter = 6;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameterOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameterOrBuilder>
         getValueParameterOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.ValueParameter value_parameter = 6;</code>
@@ -20409,6 +20420,7 @@ public final class DebugProtoBuf {
      *isExternal
      *isSuspend
      *isExpect
+     *isStatic
      *hasNonStableParameterNames
      * </pre>
      */
@@ -20430,6 +20442,7 @@ public final class DebugProtoBuf {
      *isExternal
      *isSuspend
      *isExpect
+     *isStatic
      *hasNonStableParameterNames
      * </pre>
      */
@@ -20514,7 +20527,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 4;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder>
         getTypeParameterOrBuilderList() {
       return typeParameter_;
     }
@@ -20585,7 +20598,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type context_receiver_type = 10;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
         getContextReceiverTypeOrBuilderList() {
       return contextReceiverType_;
     }
@@ -20643,7 +20656,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.ValueParameter value_parameter = 6;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameterOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameterOrBuilder>
         getValueParameterOrBuilderList() {
       return valueParameter_;
     }
@@ -21300,7 +21313,7 @@ public final class DebugProtoBuf {
               typeParameterBuilder_ = null;
               typeParameter_ = other.typeParameter_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              typeParameterBuilder_ = 
+              typeParameterBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getTypeParameterFieldBuilder() : null;
             } else {
@@ -21332,7 +21345,7 @@ public final class DebugProtoBuf {
               contextReceiverTypeBuilder_ = null;
               contextReceiverType_ = other.contextReceiverType_;
               bitField0_ = (bitField0_ & ~0x00000100);
-              contextReceiverTypeBuilder_ = 
+              contextReceiverTypeBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getContextReceiverTypeFieldBuilder() : null;
             } else {
@@ -21368,7 +21381,7 @@ public final class DebugProtoBuf {
               valueParameterBuilder_ = null;
               valueParameter_ = other.valueParameter_;
               bitField0_ = (bitField0_ & ~0x00000400);
-              valueParameterBuilder_ = 
+              valueParameterBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getValueParameterFieldBuilder() : null;
             } else {
@@ -21399,53 +21412,53 @@ public final class DebugProtoBuf {
 
       public final boolean isInitialized() {
         if (!hasName()) {
-          
+
           return false;
         }
         if (hasReturnType()) {
           if (!getReturnType().isInitialized()) {
-            
+
             return false;
           }
         }
         for (int i = 0; i < getTypeParameterCount(); i++) {
           if (!getTypeParameter(i).isInitialized()) {
-            
+
             return false;
           }
         }
         if (hasReceiverType()) {
           if (!getReceiverType().isInitialized()) {
-            
+
             return false;
           }
         }
         for (int i = 0; i < getContextReceiverTypeCount(); i++) {
           if (!getContextReceiverType(i).isInitialized()) {
-            
+
             return false;
           }
         }
         for (int i = 0; i < getValueParameterCount(); i++) {
           if (!getValueParameter(i).isInitialized()) {
-            
+
             return false;
           }
         }
         if (hasTypeTable()) {
           if (!getTypeTable().isInitialized()) {
-            
+
             return false;
           }
         }
         if (hasContract()) {
           if (!getContract().isInitialized()) {
-            
+
             return false;
           }
         }
         if (!extensionsAreInitialized()) {
-          
+
           return false;
         }
         return true;
@@ -21486,6 +21499,7 @@ public final class DebugProtoBuf {
        *isExternal
        *isSuspend
        *isExpect
+       *isStatic
        *hasNonStableParameterNames
        * </pre>
        */
@@ -21507,6 +21521,7 @@ public final class DebugProtoBuf {
        *isExternal
        *isSuspend
        *isExpect
+       *isStatic
        *hasNonStableParameterNames
        * </pre>
        */
@@ -21528,6 +21543,7 @@ public final class DebugProtoBuf {
        *isExternal
        *isSuspend
        *isExpect
+       *isStatic
        *hasNonStableParameterNames
        * </pre>
        */
@@ -21552,6 +21568,7 @@ public final class DebugProtoBuf {
        *isExternal
        *isSuspend
        *isExpect
+       *isStatic
        *hasNonStableParameterNames
        * </pre>
        */
@@ -21729,7 +21746,7 @@ public final class DebugProtoBuf {
        * <code>optional .org.jetbrains.kotlin.metadata.Type return_type = 3;</code>
        */
       private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
           getReturnTypeFieldBuilder() {
         if (returnTypeBuilder_ == null) {
           returnTypeBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -21969,7 +21986,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 4;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder>
            getTypeParameterOrBuilderList() {
         if (typeParameterBuilder_ != null) {
           return typeParameterBuilder_.getMessageOrBuilderList();
@@ -21995,12 +22012,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 4;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter.Builder>
            getTypeParameterBuilderList() {
         return getTypeParameterFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder>
           getTypeParameterFieldBuilder() {
         if (typeParameterBuilder_ == null) {
           typeParameterBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -22117,7 +22134,7 @@ public final class DebugProtoBuf {
        * <code>optional .org.jetbrains.kotlin.metadata.Type receiver_type = 5;</code>
        */
       private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
           getReceiverTypeFieldBuilder() {
         if (receiverTypeBuilder_ == null) {
           receiverTypeBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -22357,7 +22374,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Type context_receiver_type = 10;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
            getContextReceiverTypeOrBuilderList() {
         if (contextReceiverTypeBuilder_ != null) {
           return contextReceiverTypeBuilder_.getMessageOrBuilderList();
@@ -22383,12 +22400,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Type context_receiver_type = 10;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder>
            getContextReceiverTypeBuilderList() {
         return getContextReceiverTypeFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
           getContextReceiverTypeFieldBuilder() {
         if (contextReceiverTypeBuilder_ == null) {
           contextReceiverTypeBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -22663,7 +22680,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.ValueParameter value_parameter = 6;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameterOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameterOrBuilder>
            getValueParameterOrBuilderList() {
         if (valueParameterBuilder_ != null) {
           return valueParameterBuilder_.getMessageOrBuilderList();
@@ -22689,12 +22706,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.ValueParameter value_parameter = 6;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameter.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameter.Builder>
            getValueParameterBuilderList() {
         return getValueParameterFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameter, org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameter.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameterOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameter, org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameter.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameterOrBuilder>
           getValueParameterFieldBuilder() {
         if (valueParameterBuilder_ == null) {
           valueParameterBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -22811,7 +22828,7 @@ public final class DebugProtoBuf {
        * <code>optional .org.jetbrains.kotlin.metadata.TypeTable type_table = 30;</code>
        */
       private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeTable, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeTable.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeTableOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeTable, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeTable.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeTableOrBuilder>
           getTypeTableFieldBuilder() {
         if (typeTableBuilder_ == null) {
           typeTableBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -23021,7 +23038,7 @@ public final class DebugProtoBuf {
        * <code>optional .org.jetbrains.kotlin.metadata.Contract contract = 32;</code>
        */
       private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Contract, org.jetbrains.kotlin.metadata.DebugProtoBuf.Contract.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.ContractOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Contract, org.jetbrains.kotlin.metadata.DebugProtoBuf.Contract.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.ContractOrBuilder>
           getContractFieldBuilder() {
         if (contractBuilder_ == null) {
           contractBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -23067,6 +23084,7 @@ public final class DebugProtoBuf {
      *isExternal
      *isDelegated
      *isExpect
+     *isStatic
      * </pre>
      */
     boolean hasFlags();
@@ -23087,6 +23105,7 @@ public final class DebugProtoBuf {
      *isExternal
      *isDelegated
      *isExpect
+     *isStatic
      * </pre>
      */
     int getFlags();
@@ -23134,7 +23153,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 4;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter>
         getTypeParameterList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 4;</code>
@@ -23147,7 +23166,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 4;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder>
         getTypeParameterOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 4;</code>
@@ -23180,7 +23199,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type context_receiver_type = 12;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type>
         getContextReceiverTypeList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type context_receiver_type = 12;</code>
@@ -23193,7 +23212,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type context_receiver_type = 12;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
         getContextReceiverTypeOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type context_receiver_type = 12;</code>
@@ -23550,6 +23569,7 @@ public final class DebugProtoBuf {
      *isExternal
      *isDelegated
      *isExpect
+     *isStatic
      * </pre>
      */
     public boolean hasFlags() {
@@ -23572,6 +23592,7 @@ public final class DebugProtoBuf {
      *isExternal
      *isDelegated
      *isExpect
+     *isStatic
      * </pre>
      */
     public int getFlags() {
@@ -23655,7 +23676,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 4;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder>
         getTypeParameterOrBuilderList() {
       return typeParameter_;
     }
@@ -23726,7 +23747,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Type context_receiver_type = 12;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
         getContextReceiverTypeOrBuilderList() {
       return contextReceiverType_;
     }
@@ -24408,7 +24429,7 @@ public final class DebugProtoBuf {
               typeParameterBuilder_ = null;
               typeParameter_ = other.typeParameter_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              typeParameterBuilder_ = 
+              typeParameterBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getTypeParameterFieldBuilder() : null;
             } else {
@@ -24440,7 +24461,7 @@ public final class DebugProtoBuf {
               contextReceiverTypeBuilder_ = null;
               contextReceiverType_ = other.contextReceiverType_;
               bitField0_ = (bitField0_ & ~0x00000100);
-              contextReceiverTypeBuilder_ = 
+              contextReceiverTypeBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getContextReceiverTypeFieldBuilder() : null;
             } else {
@@ -24484,41 +24505,41 @@ public final class DebugProtoBuf {
 
       public final boolean isInitialized() {
         if (!hasName()) {
-          
+
           return false;
         }
         if (hasReturnType()) {
           if (!getReturnType().isInitialized()) {
-            
+
             return false;
           }
         }
         for (int i = 0; i < getTypeParameterCount(); i++) {
           if (!getTypeParameter(i).isInitialized()) {
-            
+
             return false;
           }
         }
         if (hasReceiverType()) {
           if (!getReceiverType().isInitialized()) {
-            
+
             return false;
           }
         }
         for (int i = 0; i < getContextReceiverTypeCount(); i++) {
           if (!getContextReceiverType(i).isInitialized()) {
-            
+
             return false;
           }
         }
         if (hasSetterValueParameter()) {
           if (!getSetterValueParameter().isInitialized()) {
-            
+
             return false;
           }
         }
         if (!extensionsAreInitialized()) {
-          
+
           return false;
         }
         return true;
@@ -24561,6 +24582,7 @@ public final class DebugProtoBuf {
        *isExternal
        *isDelegated
        *isExpect
+       *isStatic
        * </pre>
        */
       public boolean hasFlags() {
@@ -24583,6 +24605,7 @@ public final class DebugProtoBuf {
        *isExternal
        *isDelegated
        *isExpect
+       *isStatic
        * </pre>
        */
       public int getFlags() {
@@ -24605,6 +24628,7 @@ public final class DebugProtoBuf {
        *isExternal
        *isDelegated
        *isExpect
+       *isStatic
        * </pre>
        */
       public Builder setFlags(int value) {
@@ -24630,6 +24654,7 @@ public final class DebugProtoBuf {
        *isExternal
        *isDelegated
        *isExpect
+       *isStatic
        * </pre>
        */
       public Builder clearFlags() {
@@ -24806,7 +24831,7 @@ public final class DebugProtoBuf {
        * <code>optional .org.jetbrains.kotlin.metadata.Type return_type = 3;</code>
        */
       private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
           getReturnTypeFieldBuilder() {
         if (returnTypeBuilder_ == null) {
           returnTypeBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -25046,7 +25071,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 4;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder>
            getTypeParameterOrBuilderList() {
         if (typeParameterBuilder_ != null) {
           return typeParameterBuilder_.getMessageOrBuilderList();
@@ -25072,12 +25097,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 4;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter.Builder>
            getTypeParameterBuilderList() {
         return getTypeParameterFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder>
           getTypeParameterFieldBuilder() {
         if (typeParameterBuilder_ == null) {
           typeParameterBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -25194,7 +25219,7 @@ public final class DebugProtoBuf {
        * <code>optional .org.jetbrains.kotlin.metadata.Type receiver_type = 5;</code>
        */
       private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
           getReceiverTypeFieldBuilder() {
         if (receiverTypeBuilder_ == null) {
           receiverTypeBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -25434,7 +25459,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Type context_receiver_type = 12;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
            getContextReceiverTypeOrBuilderList() {
         if (contextReceiverTypeBuilder_ != null) {
           return contextReceiverTypeBuilder_.getMessageOrBuilderList();
@@ -25460,12 +25485,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Type context_receiver_type = 12;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder>
            getContextReceiverTypeBuilderList() {
         return getContextReceiverTypeFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
           getContextReceiverTypeFieldBuilder() {
         if (contextReceiverTypeBuilder_ == null) {
           contextReceiverTypeBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -25648,7 +25673,7 @@ public final class DebugProtoBuf {
        * <code>optional .org.jetbrains.kotlin.metadata.ValueParameter setter_value_parameter = 6;</code>
        */
       private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameter, org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameter.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameterOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameter, org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameter.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.ValueParameterOrBuilder>
           getSetterValueParameterFieldBuilder() {
         if (setterValueParameterBuilder_ == null) {
           setterValueParameterBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -26552,23 +26577,23 @@ public final class DebugProtoBuf {
 
       public final boolean isInitialized() {
         if (!hasName()) {
-          
+
           return false;
         }
         if (hasType()) {
           if (!getType().isInitialized()) {
-            
+
             return false;
           }
         }
         if (hasVarargElementType()) {
           if (!getVarargElementType().isInitialized()) {
-            
+
             return false;
           }
         }
         if (!extensionsAreInitialized()) {
-          
+
           return false;
         }
         return true;
@@ -26788,7 +26813,7 @@ public final class DebugProtoBuf {
        * <code>optional .org.jetbrains.kotlin.metadata.Type type = 3;</code>
        */
       private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
           getTypeFieldBuilder() {
         if (typeBuilder_ == null) {
           typeBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -26936,7 +26961,7 @@ public final class DebugProtoBuf {
        * <code>optional .org.jetbrains.kotlin.metadata.Type vararg_element_type = 4;</code>
        */
       private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
           getVarargElementTypeFieldBuilder() {
         if (varargElementTypeBuilder_ == null) {
           varargElementTypeBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -27028,7 +27053,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 3;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter>
         getTypeParameterList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 3;</code>
@@ -27041,7 +27066,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 3;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder>
         getTypeParameterOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 3;</code>
@@ -27096,7 +27121,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Annotation annotation = 8;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation>
         getAnnotationList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Annotation annotation = 8;</code>
@@ -27109,7 +27134,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Annotation annotation = 8;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.AnnotationOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.AnnotationOrBuilder>
         getAnnotationOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Annotation annotation = 8;</code>
@@ -27378,7 +27403,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 3;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder>
         getTypeParameterOrBuilderList() {
       return typeParameter_;
     }
@@ -27485,7 +27510,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Annotation annotation = 8;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.AnnotationOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.AnnotationOrBuilder>
         getAnnotationOrBuilderList() {
       return annotation_;
     }
@@ -27960,7 +27985,7 @@ public final class DebugProtoBuf {
               typeParameterBuilder_ = null;
               typeParameter_ = other.typeParameter_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              typeParameterBuilder_ = 
+              typeParameterBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getTypeParameterFieldBuilder() : null;
             } else {
@@ -27998,7 +28023,7 @@ public final class DebugProtoBuf {
               annotationBuilder_ = null;
               annotation_ = other.annotation_;
               bitField0_ = (bitField0_ & ~0x00000080);
-              annotationBuilder_ = 
+              annotationBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getAnnotationFieldBuilder() : null;
             } else {
@@ -28023,35 +28048,35 @@ public final class DebugProtoBuf {
 
       public final boolean isInitialized() {
         if (!hasName()) {
-          
+
           return false;
         }
         for (int i = 0; i < getTypeParameterCount(); i++) {
           if (!getTypeParameter(i).isInitialized()) {
-            
+
             return false;
           }
         }
         if (hasUnderlyingType()) {
           if (!getUnderlyingType().isInitialized()) {
-            
+
             return false;
           }
         }
         if (hasExpandedType()) {
           if (!getExpandedType().isInitialized()) {
-            
+
             return false;
           }
         }
         for (int i = 0; i < getAnnotationCount(); i++) {
           if (!getAnnotation(i).isInitialized()) {
-            
+
             return false;
           }
         }
         if (!extensionsAreInitialized()) {
-          
+
           return false;
         }
         return true;
@@ -28355,7 +28380,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 3;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder>
            getTypeParameterOrBuilderList() {
         if (typeParameterBuilder_ != null) {
           return typeParameterBuilder_.getMessageOrBuilderList();
@@ -28381,12 +28406,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.TypeParameter type_parameter = 3;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter.Builder>
            getTypeParameterBuilderList() {
         return getTypeParameterFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameter.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeParameterOrBuilder>
           getTypeParameterFieldBuilder() {
         if (typeParameterBuilder_ == null) {
           typeParameterBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -28503,7 +28528,7 @@ public final class DebugProtoBuf {
        * <code>optional .org.jetbrains.kotlin.metadata.Type underlying_type = 4;</code>
        */
       private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
           getUnderlyingTypeFieldBuilder() {
         if (underlyingTypeBuilder_ == null) {
           underlyingTypeBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -28651,7 +28676,7 @@ public final class DebugProtoBuf {
        * <code>optional .org.jetbrains.kotlin.metadata.Type expanded_type = 6;</code>
        */
       private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
           getExpandedTypeFieldBuilder() {
         if (expandedTypeBuilder_ == null) {
           expandedTypeBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -28891,7 +28916,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Annotation annotation = 8;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.AnnotationOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.AnnotationOrBuilder>
            getAnnotationOrBuilderList() {
         if (annotationBuilder_ != null) {
           return annotationBuilder_.getMessageOrBuilderList();
@@ -28917,12 +28942,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Annotation annotation = 8;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Builder>
            getAnnotationBuilderList() {
         return getAnnotationFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation, org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.AnnotationOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation, org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.AnnotationOrBuilder>
           getAnnotationFieldBuilder() {
         if (annotationBuilder_ == null) {
           annotationBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -29387,7 +29412,7 @@ public final class DebugProtoBuf {
 
       public final boolean isInitialized() {
         if (!extensionsAreInitialized()) {
-          
+
           return false;
         }
         return true;
@@ -30673,7 +30698,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.VersionRequirement requirement = 1;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirement> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirement>
         getRequirementList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.VersionRequirement requirement = 1;</code>
@@ -30686,7 +30711,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.VersionRequirement requirement = 1;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirementOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirementOrBuilder>
         getRequirementOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.VersionRequirement requirement = 1;</code>
@@ -30807,7 +30832,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.VersionRequirement requirement = 1;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirementOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirementOrBuilder>
         getRequirementOrBuilderList() {
       return requirement_;
     }
@@ -31056,7 +31081,7 @@ public final class DebugProtoBuf {
               requirementBuilder_ = null;
               requirement_ = other.requirement_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              requirementBuilder_ = 
+              requirementBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getRequirementFieldBuilder() : null;
             } else {
@@ -31286,7 +31311,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.VersionRequirement requirement = 1;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirementOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirementOrBuilder>
            getRequirementOrBuilderList() {
         if (requirementBuilder_ != null) {
           return requirementBuilder_.getMessageOrBuilderList();
@@ -31312,12 +31337,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.VersionRequirement requirement = 1;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirement.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirement.Builder>
            getRequirementBuilderList() {
         return getRequirementFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirement, org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirement.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirementOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirement, org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirement.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.VersionRequirementOrBuilder>
           getRequirementFieldBuilder() {
         if (requirementBuilder_ == null) {
           requirementBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -31389,7 +31414,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Class class = 4;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Class> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Class>
         getClass_List();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Class class = 4;</code>
@@ -31402,7 +31427,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Class class = 4;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ClassOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ClassOrBuilder>
         getClass_OrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Class class = 4;</code>
@@ -31632,7 +31657,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Class class = 4;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ClassOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ClassOrBuilder>
         getClass_OrBuilderList() {
       return class__;
     }
@@ -31994,7 +32019,7 @@ public final class DebugProtoBuf {
               class_Builder_ = null;
               class__ = other.class__;
               bitField0_ = (bitField0_ & ~0x00000008);
-              class_Builder_ = 
+              class_Builder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getClass_FieldBuilder() : null;
             } else {
@@ -32010,24 +32035,24 @@ public final class DebugProtoBuf {
       public final boolean isInitialized() {
         if (hasQualifiedNames()) {
           if (!getQualifiedNames().isInitialized()) {
-            
+
             return false;
           }
         }
         if (hasPackage()) {
           if (!getPackage().isInitialized()) {
-            
+
             return false;
           }
         }
         for (int i = 0; i < getClass_Count(); i++) {
           if (!getClass_(i).isInitialized()) {
-            
+
             return false;
           }
         }
         if (!extensionsAreInitialized()) {
-          
+
           return false;
         }
         return true;
@@ -32155,7 +32180,7 @@ public final class DebugProtoBuf {
        * <code>optional .org.jetbrains.kotlin.metadata.StringTable strings = 1;</code>
        */
       private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.StringTable, org.jetbrains.kotlin.metadata.DebugProtoBuf.StringTable.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.StringTableOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.StringTable, org.jetbrains.kotlin.metadata.DebugProtoBuf.StringTable.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.StringTableOrBuilder>
           getStringsFieldBuilder() {
         if (stringsBuilder_ == null) {
           stringsBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -32271,7 +32296,7 @@ public final class DebugProtoBuf {
        * <code>optional .org.jetbrains.kotlin.metadata.QualifiedNameTable qualified_names = 2;</code>
        */
       private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTable, org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTable.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTableOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTable, org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTable.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTableOrBuilder>
           getQualifiedNamesFieldBuilder() {
         if (qualifiedNamesBuilder_ == null) {
           qualifiedNamesBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -32387,7 +32412,7 @@ public final class DebugProtoBuf {
        * <code>optional .org.jetbrains.kotlin.metadata.Package package = 3;</code>
        */
       private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Package, org.jetbrains.kotlin.metadata.DebugProtoBuf.Package.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.PackageOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Package, org.jetbrains.kotlin.metadata.DebugProtoBuf.Package.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.PackageOrBuilder>
           getPackageFieldBuilder() {
         if (packageBuilder_ == null) {
           packageBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -32595,7 +32620,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Class class = 4;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ClassOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ClassOrBuilder>
            getClass_OrBuilderList() {
         if (class_Builder_ != null) {
           return class_Builder_.getMessageOrBuilderList();
@@ -32621,12 +32646,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Class class = 4;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Class.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Class.Builder>
            getClass_BuilderList() {
         return getClass_FieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Class, org.jetbrains.kotlin.metadata.DebugProtoBuf.Class.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.ClassOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Class, org.jetbrains.kotlin.metadata.DebugProtoBuf.Class.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.ClassOrBuilder>
           getClass_FieldBuilder() {
         if (class_Builder_ == null) {
           class_Builder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -32658,7 +32683,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Effect effect = 1;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Effect> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Effect>
         getEffectList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Effect effect = 1;</code>
@@ -32671,7 +32696,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Effect effect = 1;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.EffectOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.EffectOrBuilder>
         getEffectOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Effect effect = 1;</code>
@@ -32792,7 +32817,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Effect effect = 1;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.EffectOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.EffectOrBuilder>
         getEffectOrBuilderList() {
       return effect_;
     }
@@ -33047,7 +33072,7 @@ public final class DebugProtoBuf {
               effectBuilder_ = null;
               effect_ = other.effect_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              effectBuilder_ = 
+              effectBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getEffectFieldBuilder() : null;
             } else {
@@ -33062,7 +33087,7 @@ public final class DebugProtoBuf {
       public final boolean isInitialized() {
         for (int i = 0; i < getEffectCount(); i++) {
           if (!getEffect(i).isInitialized()) {
-            
+
             return false;
           }
         }
@@ -33283,7 +33308,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Effect effect = 1;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.EffectOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.EffectOrBuilder>
            getEffectOrBuilderList() {
         if (effectBuilder_ != null) {
           return effectBuilder_.getMessageOrBuilderList();
@@ -33309,12 +33334,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Effect effect = 1;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Effect.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Effect.Builder>
            getEffectBuilderList() {
         return getEffectFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Effect, org.jetbrains.kotlin.metadata.DebugProtoBuf.Effect.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.EffectOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Effect, org.jetbrains.kotlin.metadata.DebugProtoBuf.Effect.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.EffectOrBuilder>
           getEffectFieldBuilder() {
         if (effectBuilder_ == null) {
           effectBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -33355,7 +33380,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Expression effect_constructor_argument = 2;</code>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression>
         getEffectConstructorArgumentList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Expression effect_constructor_argument = 2;</code>
@@ -33368,7 +33393,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Expression effect_constructor_argument = 2;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ExpressionOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ExpressionOrBuilder>
         getEffectConstructorArgumentOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Expression effect_constructor_argument = 2;</code>
@@ -33793,7 +33818,7 @@ public final class DebugProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Expression effect_constructor_argument = 2;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ExpressionOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ExpressionOrBuilder>
         getEffectConstructorArgumentOrBuilderList() {
       return effectConstructorArgument_;
     }
@@ -34161,7 +34186,7 @@ public final class DebugProtoBuf {
               effectConstructorArgumentBuilder_ = null;
               effectConstructorArgument_ = other.effectConstructorArgument_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              effectConstructorArgumentBuilder_ = 
+              effectConstructorArgumentBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getEffectConstructorArgumentFieldBuilder() : null;
             } else {
@@ -34182,13 +34207,13 @@ public final class DebugProtoBuf {
       public final boolean isInitialized() {
         for (int i = 0; i < getEffectConstructorArgumentCount(); i++) {
           if (!getEffectConstructorArgument(i).isInitialized()) {
-            
+
             return false;
           }
         }
         if (hasConclusionOfConditionalEffect()) {
           if (!getConclusionOfConditionalEffect().isInitialized()) {
-            
+
             return false;
           }
         }
@@ -34444,7 +34469,7 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Expression effect_constructor_argument = 2;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ExpressionOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ExpressionOrBuilder>
            getEffectConstructorArgumentOrBuilderList() {
         if (effectConstructorArgumentBuilder_ != null) {
           return effectConstructorArgumentBuilder_.getMessageOrBuilderList();
@@ -34470,12 +34495,12 @@ public final class DebugProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.metadata.Expression effect_constructor_argument = 2;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression.Builder>
            getEffectConstructorArgumentBuilderList() {
         return getEffectConstructorArgumentFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression, org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.ExpressionOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression, org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.ExpressionOrBuilder>
           getEffectConstructorArgumentFieldBuilder() {
         if (effectConstructorArgumentBuilder_ == null) {
           effectConstructorArgumentBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -34637,7 +34662,7 @@ public final class DebugProtoBuf {
        * </pre>
        */
       private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression, org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.ExpressionOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression, org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.ExpressionOrBuilder>
           getConclusionOfConditionalEffectFieldBuilder() {
         if (conclusionOfConditionalEffectBuilder_ == null) {
           conclusionOfConditionalEffectBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -34793,7 +34818,7 @@ public final class DebugProtoBuf {
      * it is optimized and embedded straight into this message
      * </pre>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression>
         getAndArgumentList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Expression and_argument = 6;</code>
@@ -34824,7 +34849,7 @@ public final class DebugProtoBuf {
      * it is optimized and embedded straight into this message
      * </pre>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ExpressionOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ExpressionOrBuilder>
         getAndArgumentOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Expression and_argument = 6;</code>
@@ -34847,7 +34872,7 @@ public final class DebugProtoBuf {
      * it is optimized and embedded straight into this message.
      * </pre>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression>
         getOrArgumentList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Expression or_argument = 7;</code>
@@ -34878,7 +34903,7 @@ public final class DebugProtoBuf {
      * it is optimized and embedded straight into this message.
      * </pre>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ExpressionOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ExpressionOrBuilder>
         getOrArgumentOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Expression or_argument = 7;</code>
@@ -35280,7 +35305,7 @@ public final class DebugProtoBuf {
      * it is optimized and embedded straight into this message
      * </pre>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ExpressionOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ExpressionOrBuilder>
         getAndArgumentOrBuilderList() {
       return andArgument_;
     }
@@ -35345,7 +35370,7 @@ public final class DebugProtoBuf {
      * it is optimized and embedded straight into this message.
      * </pre>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ExpressionOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ExpressionOrBuilder>
         getOrArgumentOrBuilderList() {
       return orArgument_;
     }
@@ -35755,7 +35780,7 @@ public final class DebugProtoBuf {
               andArgumentBuilder_ = null;
               andArgument_ = other.andArgument_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              andArgumentBuilder_ = 
+              andArgumentBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getAndArgumentFieldBuilder() : null;
             } else {
@@ -35781,7 +35806,7 @@ public final class DebugProtoBuf {
               orArgumentBuilder_ = null;
               orArgument_ = other.orArgument_;
               bitField0_ = (bitField0_ & ~0x00000040);
-              orArgumentBuilder_ = 
+              orArgumentBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getOrArgumentFieldBuilder() : null;
             } else {
@@ -35796,19 +35821,19 @@ public final class DebugProtoBuf {
       public final boolean isInitialized() {
         if (hasIsInstanceType()) {
           if (!getIsInstanceType().isInitialized()) {
-            
+
             return false;
           }
         }
         for (int i = 0; i < getAndArgumentCount(); i++) {
           if (!getAndArgument(i).isInitialized()) {
-            
+
             return false;
           }
         }
         for (int i = 0; i < getOrArgumentCount(); i++) {
           if (!getOrArgument(i).isInitialized()) {
-            
+
             return false;
           }
         }
@@ -36121,7 +36146,7 @@ public final class DebugProtoBuf {
        * </pre>
        */
       private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Type, org.jetbrains.kotlin.metadata.DebugProtoBuf.Type.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.TypeOrBuilder>
           getIsInstanceTypeFieldBuilder() {
         if (isInstanceTypeBuilder_ == null) {
           isInstanceTypeBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -36451,7 +36476,7 @@ public final class DebugProtoBuf {
        * it is optimized and embedded straight into this message
        * </pre>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ExpressionOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ExpressionOrBuilder>
            getAndArgumentOrBuilderList() {
         if (andArgumentBuilder_ != null) {
           return andArgumentBuilder_.getMessageOrBuilderList();
@@ -36495,12 +36520,12 @@ public final class DebugProtoBuf {
        * it is optimized and embedded straight into this message
        * </pre>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression.Builder>
            getAndArgumentBuilderList() {
         return getAndArgumentFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression, org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.ExpressionOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression, org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.ExpressionOrBuilder>
           getAndArgumentFieldBuilder() {
         if (andArgumentBuilder_ == null) {
           andArgumentBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -36799,7 +36824,7 @@ public final class DebugProtoBuf {
        * it is optimized and embedded straight into this message.
        * </pre>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ExpressionOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.ExpressionOrBuilder>
            getOrArgumentOrBuilderList() {
         if (orArgumentBuilder_ != null) {
           return orArgumentBuilder_.getMessageOrBuilderList();
@@ -36843,12 +36868,12 @@ public final class DebugProtoBuf {
        * it is optimized and embedded straight into this message.
        * </pre>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression.Builder>
            getOrArgumentBuilderList() {
         return getOrArgumentFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression, org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.ExpressionOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression, org.jetbrains.kotlin.metadata.DebugProtoBuf.Expression.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.ExpressionOrBuilder>
           getOrArgumentFieldBuilder() {
         if (orArgumentBuilder_ == null) {
           orArgumentBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -37060,7 +37085,7 @@ public final class DebugProtoBuf {
       "Variance:\003INV\0228\n\013upper_bound\030\005 \003(\0132#.org" +
       ".jetbrains.kotlin.metadata.Type\022\036\n\016upper" +
       "_bound_id\030\006 \003(\005B\006\020\001\240\265\030\001\"$\n\010Variance\022\006\n\002I" +
-      "N\020\000\022\007\n\003OUT\020\001\022\007\n\003INV\020\002*\005\010d\020\350\007\"\220\013\n\005Class\022\020" +
+      "N\020\000\022\007\n\003OUT\020\001\022\007\n\003INV\020\002*\005\010d\020\350\007\"\244\013\n\005Class\022\020" +
       "\n\005flags\030\001 \001(\005:\0016\022\025\n\007fq_name\030\003 \002(\005B\004\220\265\030\001\022",
       "#\n\025companion_object_name\030\004 \001(\005B\004\210\265\030\001\022D\n\016" +
       "type_parameter\030\005 \003(\0132,.org.jetbrains.kot" +
@@ -37093,123 +37118,124 @@ public final class DebugProtoBuf {
       "Table\022\033\n\023version_requirement\030\037 \003(\005\022Y\n\031ve" +
       "rsion_requirement_table\030  \001(\01326.org.jetb",
       "rains.kotlin.metadata.VersionRequirement" +
-      "Table\"x\n\004Kind\022\t\n\005CLASS\020\000\022\r\n\tINTERFACE\020\001\022" +
-      "\016\n\nENUM_CLASS\020\002\022\016\n\nENUM_ENTRY\020\003\022\024\n\020ANNOT" +
-      "ATION_CLASS\020\004\022\n\n\006OBJECT\020\005\022\024\n\020COMPANION_O" +
-      "BJECT\020\006*\006\010d\020\270\224\001\"\335\002\n\007Package\0229\n\010function\030" +
-      "\003 \003(\0132\'.org.jetbrains.kotlin.metadata.Fu" +
-      "nction\0229\n\010property\030\004 \003(\0132\'.org.jetbrains" +
-      ".kotlin.metadata.Property\022<\n\ntype_alias\030" +
-      "\005 \003(\0132(.org.jetbrains.kotlin.metadata.Ty" +
-      "peAlias\022<\n\ntype_table\030\036 \001(\0132(.org.jetbra",
-      "ins.kotlin.metadata.TypeTable\022Y\n\031version" +
-      "_requirement_table\030  \001(\01326.org.jetbrains" +
-      ".kotlin.metadata.VersionRequirementTable" +
-      "*\005\010d\020\310\001\"`\n\tTypeTable\0221\n\004type\030\001 \003(\0132#.org" +
-      ".jetbrains.kotlin.metadata.Type\022\032\n\016first" +
-      "_nullable\030\002 \001(\005:\002-1:\004\240\273\030\001\"\214\001\n\013Constructo" +
-      "r\022\020\n\005flags\030\001 \001(\005:\0016\022F\n\017value_parameter\030\002" +
-      " \003(\0132-.org.jetbrains.kotlin.metadata.Val" +
-      "ueParameter\022\033\n\023version_requirement\030\037 \003(\005" +
-      "*\006\010d\020\270\224\001\"\224\005\n\010Function\022\020\n\005flags\030\t \001(\005:\0016\022",
-      "\024\n\told_flags\030\001 \001(\005:\0016\022\022\n\004name\030\002 \002(\005B\004\210\265\030" +
-      "\001\0228\n\013return_type\030\003 \001(\0132#.org.jetbrains.k" +
-      "otlin.metadata.Type\022\034\n\016return_type_id\030\007 " +
-      "\001(\005B\004\240\265\030\001\022D\n\016type_parameter\030\004 \003(\0132,.org." +
-      "jetbrains.kotlin.metadata.TypeParameter\022" +
-      ":\n\rreceiver_type\030\005 \001(\0132#.org.jetbrains.k" +
-      "otlin.metadata.Type\022\036\n\020receiver_type_id\030" +
-      "\010 \001(\005B\004\240\265\030\001\022B\n\025context_receiver_type\030\n \003" +
+      "Table\"\213\001\n\004Kind\022\t\n\005CLASS\020\000\022\r\n\tINTERFACE\020\001" +
+      "\022\016\n\nENUM_CLASS\020\002\022\016\n\nENUM_ENTRY\020\003\022\024\n\020ANNO" +
+      "TATION_CLASS\020\004\022\n\n\006OBJECT\020\005\022\024\n\020COMPANION_" +
+      "OBJECT\020\006\022\021\n\rSTATIC_OBJECT\020\007*\006\010d\020\270\224\001\"\335\002\n\007" +
+      "Package\0229\n\010function\030\003 \003(\0132\'.org.jetbrain" +
+      "s.kotlin.metadata.Function\0229\n\010property\030\004" +
+      " \003(\0132\'.org.jetbrains.kotlin.metadata.Pro" +
+      "perty\022<\n\ntype_alias\030\005 \003(\0132(.org.jetbrain" +
+      "s.kotlin.metadata.TypeAlias\022<\n\ntype_tabl",
+      "e\030\036 \001(\0132(.org.jetbrains.kotlin.metadata." +
+      "TypeTable\022Y\n\031version_requirement_table\030 " +
+      " \001(\01326.org.jetbrains.kotlin.metadata.Ver" +
+      "sionRequirementTable*\005\010d\020\310\001\"`\n\tTypeTable" +
+      "\0221\n\004type\030\001 \003(\0132#.org.jetbrains.kotlin.me" +
+      "tadata.Type\022\032\n\016first_nullable\030\002 \001(\005:\002-1:" +
+      "\004\240\273\030\001\"\214\001\n\013Constructor\022\020\n\005flags\030\001 \001(\005:\0016\022" +
+      "F\n\017value_parameter\030\002 \003(\0132-.org.jetbrains" +
+      ".kotlin.metadata.ValueParameter\022\033\n\023versi" +
+      "on_requirement\030\037 \003(\005*\006\010d\020\270\224\001\"\224\005\n\010Functio",
+      "n\022\020\n\005flags\030\t \001(\005:\0016\022\024\n\told_flags\030\001 \001(\005:\001" +
+      "6\022\022\n\004name\030\002 \002(\005B\004\210\265\030\001\0228\n\013return_type\030\003 \001" +
       "(\0132#.org.jetbrains.kotlin.metadata.Type\022" +
-      "(\n\030context_receiver_type_id\030\013 \003(\005B\006\020\001\240\265\030",
-      "\001\022F\n\017value_parameter\030\006 \003(\0132-.org.jetbrai" +
-      "ns.kotlin.metadata.ValueParameter\022<\n\ntyp" +
-      "e_table\030\036 \001(\0132(.org.jetbrains.kotlin.met" +
-      "adata.TypeTable\022\033\n\023version_requirement\030\037" +
-      " \003(\005\0229\n\010contract\030  \001(\0132\'.org.jetbrains.k" +
-      "otlin.metadata.Contract*\006\010d\020\270\224\001\"\323\004\n\010Prop" +
-      "erty\022\022\n\005flags\030\013 \001(\005:\003518\022\027\n\told_flags\030\001 " +
-      "\001(\005:\0042054\022\022\n\004name\030\002 \002(\005B\004\210\265\030\001\0228\n\013return_" +
-      "type\030\003 \001(\0132#.org.jetbrains.kotlin.metada" +
-      "ta.Type\022\034\n\016return_type_id\030\t \001(\005B\004\240\265\030\001\022D\n",
-      "\016type_parameter\030\004 \003(\0132,.org.jetbrains.ko" +
-      "tlin.metadata.TypeParameter\022:\n\rreceiver_" +
-      "type\030\005 \001(\0132#.org.jetbrains.kotlin.metada" +
-      "ta.Type\022\036\n\020receiver_type_id\030\n \001(\005B\004\240\265\030\001\022" +
-      "B\n\025context_receiver_type\030\014 \003(\0132#.org.jet" +
-      "brains.kotlin.metadata.Type\022(\n\030context_r" +
-      "eceiver_type_id\030\r \003(\005B\006\020\001\240\265\030\001\022M\n\026setter_" +
-      "value_parameter\030\006 \001(\0132-.org.jetbrains.ko" +
-      "tlin.metadata.ValueParameter\022\024\n\014getter_f" +
-      "lags\030\007 \001(\005\022\024\n\014setter_flags\030\010 \001(\005\022\033\n\023vers",
-      "ion_requirement\030\037 \003(\005*\006\010d\020\270\224\001\"\357\001\n\016ValueP" +
-      "arameter\022\020\n\005flags\030\001 \001(\005:\0010\022\022\n\004name\030\002 \002(\005" +
-      "B\004\210\265\030\001\0221\n\004type\030\003 \001(\0132#.org.jetbrains.kot" +
-      "lin.metadata.Type\022\025\n\007type_id\030\005 \001(\005B\004\240\265\030\001" +
-      "\022@\n\023vararg_element_type\030\004 \001(\0132#.org.jetb" +
-      "rains.kotlin.metadata.Type\022$\n\026vararg_ele" +
-      "ment_type_id\030\006 \001(\005B\004\240\265\030\001*\005\010d\020\310\001\"\226\003\n\tType" +
-      "Alias\022\020\n\005flags\030\001 \001(\005:\0016\022\022\n\004name\030\002 \002(\005B\004\210" +
-      "\265\030\001\022D\n\016type_parameter\030\003 \003(\0132,.org.jetbra" +
-      "ins.kotlin.metadata.TypeParameter\022<\n\017und",
-      "erlying_type\030\004 \001(\0132#.org.jetbrains.kotli" +
-      "n.metadata.Type\022 \n\022underlying_type_id\030\005 " +
-      "\001(\005B\004\240\265\030\001\022:\n\rexpanded_type\030\006 \001(\0132#.org.j" +
-      "etbrains.kotlin.metadata.Type\022\036\n\020expande" +
-      "d_type_id\030\007 \001(\005B\004\240\265\030\001\022=\n\nannotation\030\010 \003(" +
-      "\0132).org.jetbrains.kotlin.metadata.Annota" +
-      "tion\022\033\n\023version_requirement\030\037 \003(\005*\005\010d\020\310\001" +
-      "\"&\n\tEnumEntry\022\022\n\004name\030\001 \001(\005B\004\210\265\030\001*\005\010d\020\310\001" +
-      "\"\225\003\n\022VersionRequirement\022\017\n\007version\030\001 \001(\005" +
-      "\022\024\n\014version_full\030\002 \001(\005\022M\n\005level\030\003 \001(\01627.",
-      "org.jetbrains.kotlin.metadata.VersionReq" +
-      "uirement.Level:\005ERROR\022\022\n\nerror_code\030\004 \001(" +
-      "\005\022\025\n\007message\030\005 \001(\005B\004\230\265\030\001\022e\n\014version_kind" +
-      "\030\006 \001(\0162=.org.jetbrains.kotlin.metadata.V" +
-      "ersionRequirement.VersionKind:\020LANGUAGE_" +
-      "VERSION\"+\n\005Level\022\013\n\007WARNING\020\000\022\t\n\005ERROR\020\001" +
-      "\022\n\n\006HIDDEN\020\002\"J\n\013VersionKind\022\024\n\020LANGUAGE_" +
-      "VERSION\020\000\022\024\n\020COMPILER_VERSION\020\001\022\017\n\013API_V" +
-      "ERSION\020\002\"a\n\027VersionRequirementTable\022F\n\013r" +
-      "equirement\030\001 \003(\01321.org.jetbrains.kotlin.",
-      "metadata.VersionRequirement\"\217\002\n\017PackageF" +
-      "ragment\022;\n\007strings\030\001 \001(\0132*.org.jetbrains" +
-      ".kotlin.metadata.StringTable\022J\n\017qualifie" +
-      "d_names\030\002 \001(\01321.org.jetbrains.kotlin.met" +
-      "adata.QualifiedNameTable\0227\n\007package\030\003 \001(" +
-      "\0132&.org.jetbrains.kotlin.metadata.Packag" +
-      "e\0223\n\005class\030\004 \003(\0132$.org.jetbrains.kotlin." +
-      "metadata.Class*\005\010d\020\310\001\"A\n\010Contract\0225\n\006eff" +
-      "ect\030\001 \003(\0132%.org.jetbrains.kotlin.metadat" +
-      "a.Effect\"\306\003\n\006Effect\022E\n\013effect_type\030\001 \001(\016",
-      "20.org.jetbrains.kotlin.metadata.Effect." +
-      "EffectType\022N\n\033effect_constructor_argumen" +
-      "t\030\002 \003(\0132).org.jetbrains.kotlin.metadata." +
-      "Expression\022S\n conclusion_of_conditional_" +
-      "effect\030\003 \001(\0132).org.jetbrains.kotlin.meta" +
-      "data.Expression\022B\n\004kind\030\004 \001(\01624.org.jetb" +
-      "rains.kotlin.metadata.Effect.InvocationK" +
-      "ind\"C\n\nEffectType\022\024\n\020RETURNS_CONSTANT\020\000\022" +
-      "\t\n\005CALLS\020\001\022\024\n\020RETURNS_NOT_NULL\020\002\"G\n\016Invo" +
-      "cationKind\022\020\n\014AT_MOST_ONCE\020\000\022\020\n\014EXACTLY_",
-      "ONCE\020\001\022\021\n\rAT_LEAST_ONCE\020\002\"\245\003\n\nExpression" +
-      "\022\020\n\005flags\030\001 \001(\005:\0010\022!\n\031value_parameter_re" +
-      "ference\030\002 \001(\005\022O\n\016constant_value\030\003 \001(\01627." +
-      "org.jetbrains.kotlin.metadata.Expression" +
-      ".ConstantValue\022=\n\020is_instance_type\030\004 \001(\013" +
-      "2#.org.jetbrains.kotlin.metadata.Type\022!\n" +
-      "\023is_instance_type_id\030\005 \001(\005B\004\240\265\030\001\022?\n\014and_" +
-      "argument\030\006 \003(\0132).org.jetbrains.kotlin.me" +
-      "tadata.Expression\022>\n\013or_argument\030\007 \003(\0132)" +
-      ".org.jetbrains.kotlin.metadata.Expressio",
-      "n\".\n\rConstantValue\022\010\n\004TRUE\020\000\022\t\n\005FALSE\020\001\022" +
-      "\010\n\004NULL\020\002*9\n\010Modality\022\t\n\005FINAL\020\000\022\010\n\004OPEN" +
-      "\020\001\022\014\n\010ABSTRACT\020\002\022\n\n\006SEALED\020\003*b\n\nVisibili" +
-      "ty\022\014\n\010INTERNAL\020\000\022\013\n\007PRIVATE\020\001\022\r\n\tPROTECT" +
-      "ED\020\002\022\n\n\006PUBLIC\020\003\022\023\n\017PRIVATE_TO_THIS\020\004\022\t\n" +
-      "\005LOCAL\020\005*Q\n\nMemberKind\022\017\n\013DECLARATION\020\000\022" +
-      "\021\n\rFAKE_OVERRIDE\020\001\022\016\n\nDELEGATION\020\002\022\017\n\013SY" +
-      "NTHESIZED\020\003B\017B\rDebugProtoBuf"
+      "\034\n\016return_type_id\030\007 \001(\005B\004\240\265\030\001\022D\n\016type_pa" +
+      "rameter\030\004 \003(\0132,.org.jetbrains.kotlin.met" +
+      "adata.TypeParameter\022:\n\rreceiver_type\030\005 \001" +
+      "(\0132#.org.jetbrains.kotlin.metadata.Type\022" +
+      "\036\n\020receiver_type_id\030\010 \001(\005B\004\240\265\030\001\022B\n\025conte" +
+      "xt_receiver_type\030\n \003(\0132#.org.jetbrains.k" +
+      "otlin.metadata.Type\022(\n\030context_receiver_",
+      "type_id\030\013 \003(\005B\006\020\001\240\265\030\001\022F\n\017value_parameter" +
+      "\030\006 \003(\0132-.org.jetbrains.kotlin.metadata.V" +
+      "alueParameter\022<\n\ntype_table\030\036 \001(\0132(.org." +
+      "jetbrains.kotlin.metadata.TypeTable\022\033\n\023v" +
+      "ersion_requirement\030\037 \003(\005\0229\n\010contract\030  \001" +
+      "(\0132\'.org.jetbrains.kotlin.metadata.Contr" +
+      "act*\006\010d\020\270\224\001\"\323\004\n\010Property\022\022\n\005flags\030\013 \001(\005:" +
+      "\003518\022\027\n\told_flags\030\001 \001(\005:\0042054\022\022\n\004name\030\002 " +
+      "\002(\005B\004\210\265\030\001\0228\n\013return_type\030\003 \001(\0132#.org.jet" +
+      "brains.kotlin.metadata.Type\022\034\n\016return_ty",
+      "pe_id\030\t \001(\005B\004\240\265\030\001\022D\n\016type_parameter\030\004 \003(" +
+      "\0132,.org.jetbrains.kotlin.metadata.TypePa" +
+      "rameter\022:\n\rreceiver_type\030\005 \001(\0132#.org.jet" +
+      "brains.kotlin.metadata.Type\022\036\n\020receiver_" +
+      "type_id\030\n \001(\005B\004\240\265\030\001\022B\n\025context_receiver_" +
+      "type\030\014 \003(\0132#.org.jetbrains.kotlin.metada" +
+      "ta.Type\022(\n\030context_receiver_type_id\030\r \003(" +
+      "\005B\006\020\001\240\265\030\001\022M\n\026setter_value_parameter\030\006 \001(" +
+      "\0132-.org.jetbrains.kotlin.metadata.ValueP" +
+      "arameter\022\024\n\014getter_flags\030\007 \001(\005\022\024\n\014setter",
+      "_flags\030\010 \001(\005\022\033\n\023version_requirement\030\037 \003(" +
+      "\005*\006\010d\020\270\224\001\"\357\001\n\016ValueParameter\022\020\n\005flags\030\001 " +
+      "\001(\005:\0010\022\022\n\004name\030\002 \002(\005B\004\210\265\030\001\0221\n\004type\030\003 \001(\013" +
+      "2#.org.jetbrains.kotlin.metadata.Type\022\025\n" +
+      "\007type_id\030\005 \001(\005B\004\240\265\030\001\022@\n\023vararg_element_t" +
+      "ype\030\004 \001(\0132#.org.jetbrains.kotlin.metadat" +
+      "a.Type\022$\n\026vararg_element_type_id\030\006 \001(\005B\004" +
+      "\240\265\030\001*\005\010d\020\310\001\"\226\003\n\tTypeAlias\022\020\n\005flags\030\001 \001(\005" +
+      ":\0016\022\022\n\004name\030\002 \002(\005B\004\210\265\030\001\022D\n\016type_paramete" +
+      "r\030\003 \003(\0132,.org.jetbrains.kotlin.metadata.",
+      "TypeParameter\022<\n\017underlying_type\030\004 \001(\0132#" +
+      ".org.jetbrains.kotlin.metadata.Type\022 \n\022u" +
+      "nderlying_type_id\030\005 \001(\005B\004\240\265\030\001\022:\n\rexpande" +
+      "d_type\030\006 \001(\0132#.org.jetbrains.kotlin.meta" +
+      "data.Type\022\036\n\020expanded_type_id\030\007 \001(\005B\004\240\265\030" +
+      "\001\022=\n\nannotation\030\010 \003(\0132).org.jetbrains.ko" +
+      "tlin.metadata.Annotation\022\033\n\023version_requ" +
+      "irement\030\037 \003(\005*\005\010d\020\310\001\"&\n\tEnumEntry\022\022\n\004nam" +
+      "e\030\001 \001(\005B\004\210\265\030\001*\005\010d\020\310\001\"\225\003\n\022VersionRequirem" +
+      "ent\022\017\n\007version\030\001 \001(\005\022\024\n\014version_full\030\002 \001",
+      "(\005\022M\n\005level\030\003 \001(\01627.org.jetbrains.kotlin" +
+      ".metadata.VersionRequirement.Level:\005ERRO" +
+      "R\022\022\n\nerror_code\030\004 \001(\005\022\025\n\007message\030\005 \001(\005B\004" +
+      "\230\265\030\001\022e\n\014version_kind\030\006 \001(\0162=.org.jetbrai" +
+      "ns.kotlin.metadata.VersionRequirement.Ve" +
+      "rsionKind:\020LANGUAGE_VERSION\"+\n\005Level\022\013\n\007" +
+      "WARNING\020\000\022\t\n\005ERROR\020\001\022\n\n\006HIDDEN\020\002\"J\n\013Vers" +
+      "ionKind\022\024\n\020LANGUAGE_VERSION\020\000\022\024\n\020COMPILE" +
+      "R_VERSION\020\001\022\017\n\013API_VERSION\020\002\"a\n\027VersionR" +
+      "equirementTable\022F\n\013requirement\030\001 \003(\01321.o",
+      "rg.jetbrains.kotlin.metadata.VersionRequ" +
+      "irement\"\217\002\n\017PackageFragment\022;\n\007strings\030\001" +
+      " \001(\0132*.org.jetbrains.kotlin.metadata.Str" +
+      "ingTable\022J\n\017qualified_names\030\002 \001(\01321.org." +
+      "jetbrains.kotlin.metadata.QualifiedNameT" +
+      "able\0227\n\007package\030\003 \001(\0132&.org.jetbrains.ko" +
+      "tlin.metadata.Package\0223\n\005class\030\004 \003(\0132$.o" +
+      "rg.jetbrains.kotlin.metadata.Class*\005\010d\020\310" +
+      "\001\"A\n\010Contract\0225\n\006effect\030\001 \003(\0132%.org.jetb" +
+      "rains.kotlin.metadata.Effect\"\306\003\n\006Effect\022",
+      "E\n\013effect_type\030\001 \001(\01620.org.jetbrains.kot" +
+      "lin.metadata.Effect.EffectType\022N\n\033effect" +
+      "_constructor_argument\030\002 \003(\0132).org.jetbra" +
+      "ins.kotlin.metadata.Expression\022S\n conclu" +
+      "sion_of_conditional_effect\030\003 \001(\0132).org.j" +
+      "etbrains.kotlin.metadata.Expression\022B\n\004k" +
+      "ind\030\004 \001(\01624.org.jetbrains.kotlin.metadat" +
+      "a.Effect.InvocationKind\"C\n\nEffectType\022\024\n" +
+      "\020RETURNS_CONSTANT\020\000\022\t\n\005CALLS\020\001\022\024\n\020RETURN" +
+      "S_NOT_NULL\020\002\"G\n\016InvocationKind\022\020\n\014AT_MOS",
+      "T_ONCE\020\000\022\020\n\014EXACTLY_ONCE\020\001\022\021\n\rAT_LEAST_O" +
+      "NCE\020\002\"\245\003\n\nExpression\022\020\n\005flags\030\001 \001(\005:\0010\022!" +
+      "\n\031value_parameter_reference\030\002 \001(\005\022O\n\016con" +
+      "stant_value\030\003 \001(\01627.org.jetbrains.kotlin" +
+      ".metadata.Expression.ConstantValue\022=\n\020is" +
+      "_instance_type\030\004 \001(\0132#.org.jetbrains.kot" +
+      "lin.metadata.Type\022!\n\023is_instance_type_id" +
+      "\030\005 \001(\005B\004\240\265\030\001\022?\n\014and_argument\030\006 \003(\0132).org" +
+      ".jetbrains.kotlin.metadata.Expression\022>\n" +
+      "\013or_argument\030\007 \003(\0132).org.jetbrains.kotli",
+      "n.metadata.Expression\".\n\rConstantValue\022\010" +
+      "\n\004TRUE\020\000\022\t\n\005FALSE\020\001\022\010\n\004NULL\020\002*9\n\010Modalit" +
+      "y\022\t\n\005FINAL\020\000\022\010\n\004OPEN\020\001\022\014\n\010ABSTRACT\020\002\022\n\n\006" +
+      "SEALED\020\003*b\n\nVisibility\022\014\n\010INTERNAL\020\000\022\013\n\007" +
+      "PRIVATE\020\001\022\r\n\tPROTECTED\020\002\022\n\n\006PUBLIC\020\003\022\023\n\017" +
+      "PRIVATE_TO_THIS\020\004\022\t\n\005LOCAL\020\005*Q\n\nMemberKi" +
+      "nd\022\017\n\013DECLARATION\020\000\022\021\n\rFAKE_OVERRIDE\020\001\022\016" +
+      "\n\nDELEGATION\020\002\022\017\n\013SYNTHESIZED\020\003B\017B\rDebug" +
+      "ProtoBuf"
     };
     org.jetbrains.kotlin.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new org.jetbrains.kotlin.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

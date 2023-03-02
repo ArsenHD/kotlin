@@ -198,6 +198,7 @@ message Class {
     ANNOTATION_CLASS = 4;
     OBJECT = 5;
     COMPANION_OBJECT = 6;
+    STATIC_OBJECT = 7;
   }
 
   /*
@@ -308,6 +309,7 @@ message Function {
     isExternal
     isSuspend
     isExpect
+    isStatic
     hasNonStableParameterNames
   */
   optional int32 flags = 9 [default = 6 /* public final function, no annotations */];
@@ -353,6 +355,7 @@ message Property {
     isExternal
     isDelegated
     isExpect
+    isStatic
   */
   optional int32 flags = 11 [default = 518 /* public (6) final property with getter (512) */];
   optional int32 old_flags = 1 [default = 2054];

@@ -51,7 +51,8 @@ public class Flags {
     public static final BooleanFlagField IS_EXTERNAL_FUNCTION = FlagField.booleanAfter(IS_TAILREC);
     public static final BooleanFlagField IS_SUSPEND = FlagField.booleanAfter(IS_EXTERNAL_FUNCTION);
     public static final BooleanFlagField IS_EXPECT_FUNCTION = FlagField.booleanAfter(IS_SUSPEND);
-    public static final BooleanFlagField IS_FUNCTION_WITH_NON_STABLE_PARAMETER_NAMES = FlagField.booleanAfter(IS_EXPECT_FUNCTION);
+    public static final BooleanFlagField IS_STATIC_FUNCTION = FlagField.booleanAfter(IS_EXPECT_FUNCTION);
+    public static final BooleanFlagField IS_FUNCTION_WITH_NON_STABLE_PARAMETER_NAMES = FlagField.booleanAfter(IS_STATIC_FUNCTION);
 
     // Properties
 
@@ -64,6 +65,7 @@ public class Flags {
     public static final BooleanFlagField IS_EXTERNAL_PROPERTY = FlagField.booleanAfter(HAS_CONSTANT);
     public static final BooleanFlagField IS_DELEGATED = FlagField.booleanAfter(IS_EXTERNAL_PROPERTY);
     public static final BooleanFlagField IS_EXPECT_PROPERTY = FlagField.booleanAfter(IS_DELEGATED);
+    public static final BooleanFlagField IS_STATIC_PROPERTY = FlagField.booleanAfter(IS_EXPECT_PROPERTY);
 
     // Parameters
 

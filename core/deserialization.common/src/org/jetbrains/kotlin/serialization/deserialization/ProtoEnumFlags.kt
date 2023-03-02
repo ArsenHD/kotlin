@@ -66,7 +66,7 @@ object ProtoEnumFlags {
             ClassKind.ENUM_ENTRY -> ProtoBuf.Class.Kind.ENUM_ENTRY
             ClassKind.ANNOTATION_CLASS -> ProtoBuf.Class.Kind.ANNOTATION_CLASS
             ClassKind.OBJECT -> ProtoBuf.Class.Kind.OBJECT
-            ClassKind.STATIC_OBJECT -> TODO("static object is not yet present in protobuf")
+            ClassKind.STATIC_OBJECT -> ProtoBuf.Class.Kind.STATIC_OBJECT
         }
     }
 

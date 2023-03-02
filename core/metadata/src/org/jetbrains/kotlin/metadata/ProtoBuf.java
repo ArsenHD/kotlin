@@ -9047,6 +9047,10 @@ public final class ProtoBuf {
        * <code>COMPANION_OBJECT = 6;</code>
        */
       COMPANION_OBJECT(6, 6),
+      /**
+       * <code>STATIC_OBJECT = 7;</code>
+       */
+      STATIC_OBJECT(7, 7),
       ;
 
       /**
@@ -9081,6 +9085,10 @@ public final class ProtoBuf {
        * <code>COMPANION_OBJECT = 6;</code>
        */
       public static final int COMPANION_OBJECT_VALUE = 6;
+      /**
+       * <code>STATIC_OBJECT = 7;</code>
+       */
+      public static final int STATIC_OBJECT_VALUE = 7;
 
 
       public final int getNumber() { return value; }
@@ -9094,6 +9102,7 @@ public final class ProtoBuf {
           case 4: return ANNOTATION_CLASS;
           case 5: return OBJECT;
           case 6: return COMPANION_OBJECT;
+          case 7: return STATIC_OBJECT;
           default: return null;
         }
       }
@@ -15405,6 +15414,7 @@ public final class ProtoBuf {
      *isExternal
      *isSuspend
      *isExpect
+     *isStatic
      *hasNonStableParameterNames
      * </pre>
      */
@@ -15424,6 +15434,7 @@ public final class ProtoBuf {
      *isExternal
      *isSuspend
      *isExpect
+     *isStatic
      *hasNonStableParameterNames
      * </pre>
      */
@@ -15841,6 +15852,7 @@ public final class ProtoBuf {
      *isExternal
      *isSuspend
      *isExpect
+     *isStatic
      *hasNonStableParameterNames
      * </pre>
      */
@@ -15862,6 +15874,7 @@ public final class ProtoBuf {
      *isExternal
      *isSuspend
      *isExpect
+     *isStatic
      *hasNonStableParameterNames
      * </pre>
      */
@@ -16744,6 +16757,7 @@ public final class ProtoBuf {
        *isExternal
        *isSuspend
        *isExpect
+       *isStatic
        *hasNonStableParameterNames
        * </pre>
        */
@@ -16765,6 +16779,7 @@ public final class ProtoBuf {
        *isExternal
        *isSuspend
        *isExpect
+       *isStatic
        *hasNonStableParameterNames
        * </pre>
        */
@@ -16786,6 +16801,7 @@ public final class ProtoBuf {
        *isExternal
        *isSuspend
        *isExpect
+       *isStatic
        *hasNonStableParameterNames
        * </pre>
        */
@@ -16810,6 +16826,7 @@ public final class ProtoBuf {
        *isExternal
        *isSuspend
        *isExpect
+       *isStatic
        *hasNonStableParameterNames
        * </pre>
        */
@@ -17756,6 +17773,7 @@ public final class ProtoBuf {
      *isExternal
      *isDelegated
      *isExpect
+     *isStatic
      * </pre>
      */
     boolean hasFlags();
@@ -17776,6 +17794,7 @@ public final class ProtoBuf {
      *isExternal
      *isDelegated
      *isExpect
+     *isStatic
      * </pre>
      */
     int getFlags();
@@ -18199,6 +18218,7 @@ public final class ProtoBuf {
      *isExternal
      *isDelegated
      *isExpect
+     *isStatic
      * </pre>
      */
     public boolean hasFlags() {
@@ -18221,6 +18241,7 @@ public final class ProtoBuf {
      *isExternal
      *isDelegated
      *isExpect
+     *isStatic
      * </pre>
      */
     public int getFlags() {
@@ -19076,6 +19097,7 @@ public final class ProtoBuf {
        *isExternal
        *isDelegated
        *isExpect
+       *isStatic
        * </pre>
        */
       public boolean hasFlags() {
@@ -19098,6 +19120,7 @@ public final class ProtoBuf {
        *isExternal
        *isDelegated
        *isExpect
+       *isStatic
        * </pre>
        */
       public int getFlags() {
@@ -19120,6 +19143,7 @@ public final class ProtoBuf {
        *isExternal
        *isDelegated
        *isExpect
+       *isStatic
        * </pre>
        */
       public Builder setFlags(int value) {
@@ -19145,6 +19169,7 @@ public final class ProtoBuf {
        *isExternal
        *isDelegated
        *isExpect
+       *isStatic
        * </pre>
        */
       public Builder clearFlags() {

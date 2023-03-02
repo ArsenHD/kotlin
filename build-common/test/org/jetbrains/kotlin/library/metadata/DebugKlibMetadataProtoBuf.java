@@ -65,7 +65,7 @@ public final class DebugKlibMetadataProtoBuf {
      * <code>optional int32 flags = 2;</code>
      *
      * <pre>
-     *0x1 = preRelease
+     *Possible values are listed in KlibMetadataHeaderFlags class.
      * </pre>
      */
     boolean hasFlags();
@@ -73,7 +73,7 @@ public final class DebugKlibMetadataProtoBuf {
      * <code>optional int32 flags = 2;</code>
      *
      * <pre>
-     *0x1 = preRelease
+     *Possible values are listed in KlibMetadataHeaderFlags class.
      * </pre>
      */
     int getFlags();
@@ -111,7 +111,7 @@ public final class DebugKlibMetadataProtoBuf {
      * Annotations on the whole module
      * </pre>
      */
-    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation> 
+    java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation>
         getAnnotationList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Annotation annotation = 6;</code>
@@ -136,7 +136,7 @@ public final class DebugKlibMetadataProtoBuf {
      * Annotations on the whole module
      * </pre>
      */
-    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.AnnotationOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.AnnotationOrBuilder>
         getAnnotationOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.metadata.Annotation annotation = 6;</code>
@@ -189,7 +189,7 @@ public final class DebugKlibMetadataProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.library.metadata.File file = 9;</code>
      */
-    java.util.List<org.jetbrains.kotlin.library.metadata.DebugKlibMetadataProtoBuf.File> 
+    java.util.List<org.jetbrains.kotlin.library.metadata.DebugKlibMetadataProtoBuf.File>
         getFileList();
     /**
      * <code>repeated .org.jetbrains.kotlin.library.metadata.File file = 9;</code>
@@ -202,7 +202,7 @@ public final class DebugKlibMetadataProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.library.metadata.File file = 9;</code>
      */
-    java.util.List<? extends org.jetbrains.kotlin.library.metadata.DebugKlibMetadataProtoBuf.FileOrBuilder> 
+    java.util.List<? extends org.jetbrains.kotlin.library.metadata.DebugKlibMetadataProtoBuf.FileOrBuilder>
         getFileOrBuilderList();
     /**
      * <code>repeated .org.jetbrains.kotlin.library.metadata.File file = 9;</code>
@@ -401,7 +401,7 @@ public final class DebugKlibMetadataProtoBuf {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        org.jetbrains.kotlin.protobuf.ByteString bs = 
+        org.jetbrains.kotlin.protobuf.ByteString bs =
             (org.jetbrains.kotlin.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
@@ -417,7 +417,7 @@ public final class DebugKlibMetadataProtoBuf {
         getModuleNameBytes() {
       java.lang.Object ref = moduleName_;
       if (ref instanceof java.lang.String) {
-        org.jetbrains.kotlin.protobuf.ByteString b = 
+        org.jetbrains.kotlin.protobuf.ByteString b =
             org.jetbrains.kotlin.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         moduleName_ = b;
@@ -433,7 +433,7 @@ public final class DebugKlibMetadataProtoBuf {
      * <code>optional int32 flags = 2;</code>
      *
      * <pre>
-     *0x1 = preRelease
+     *Possible values are listed in KlibMetadataHeaderFlags class.
      * </pre>
      */
     public boolean hasFlags() {
@@ -443,7 +443,7 @@ public final class DebugKlibMetadataProtoBuf {
      * <code>optional int32 flags = 2;</code>
      *
      * <pre>
-     *0x1 = preRelease
+     *Possible values are listed in KlibMetadataHeaderFlags class.
      * </pre>
      */
     public int getFlags() {
@@ -511,7 +511,7 @@ public final class DebugKlibMetadataProtoBuf {
      * Annotations on the whole module
      * </pre>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.AnnotationOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.AnnotationOrBuilder>
         getAnnotationOrBuilderList() {
       return annotation_;
     }
@@ -616,7 +616,7 @@ public final class DebugKlibMetadataProtoBuf {
     /**
      * <code>repeated .org.jetbrains.kotlin.library.metadata.File file = 9;</code>
      */
-    public java.util.List<? extends org.jetbrains.kotlin.library.metadata.DebugKlibMetadataProtoBuf.FileOrBuilder> 
+    public java.util.List<? extends org.jetbrains.kotlin.library.metadata.DebugKlibMetadataProtoBuf.FileOrBuilder>
         getFileOrBuilderList() {
       return file_;
     }
@@ -1041,7 +1041,7 @@ public final class DebugKlibMetadataProtoBuf {
               annotationBuilder_ = null;
               annotation_ = other.annotation_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              annotationBuilder_ = 
+              annotationBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getAnnotationFieldBuilder() : null;
             } else {
@@ -1087,7 +1087,7 @@ public final class DebugKlibMetadataProtoBuf {
               fileBuilder_ = null;
               file_ = other.file_;
               bitField0_ = (bitField0_ & ~0x00000080);
-              fileBuilder_ = 
+              fileBuilder_ =
                 org.jetbrains.kotlin.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getFileFieldBuilder() : null;
             } else {
@@ -1101,24 +1101,24 @@ public final class DebugKlibMetadataProtoBuf {
 
       public final boolean isInitialized() {
         if (!hasModuleName()) {
-          
+
           return false;
         }
         if (hasQualifiedNames()) {
           if (!getQualifiedNames().isInitialized()) {
-            
+
             return false;
           }
         }
         for (int i = 0; i < getAnnotationCount(); i++) {
           if (!getAnnotation(i).isInitialized()) {
-            
+
             return false;
           }
         }
         for (int i = 0; i < getFileCount(); i++) {
           if (!getFile(i).isInitialized()) {
-            
+
             return false;
           }
         }
@@ -1175,7 +1175,7 @@ public final class DebugKlibMetadataProtoBuf {
           getModuleNameBytes() {
         java.lang.Object ref = moduleName_;
         if (ref instanceof String) {
-          org.jetbrains.kotlin.protobuf.ByteString b = 
+          org.jetbrains.kotlin.protobuf.ByteString b =
               org.jetbrains.kotlin.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           moduleName_ = b;
@@ -1225,7 +1225,7 @@ public final class DebugKlibMetadataProtoBuf {
        * <code>optional int32 flags = 2;</code>
        *
        * <pre>
-       *0x1 = preRelease
+       *Possible values are listed in KlibMetadataHeaderFlags class.
        * </pre>
        */
       public boolean hasFlags() {
@@ -1235,7 +1235,7 @@ public final class DebugKlibMetadataProtoBuf {
        * <code>optional int32 flags = 2;</code>
        *
        * <pre>
-       *0x1 = preRelease
+       *Possible values are listed in KlibMetadataHeaderFlags class.
        * </pre>
        */
       public int getFlags() {
@@ -1245,7 +1245,7 @@ public final class DebugKlibMetadataProtoBuf {
        * <code>optional int32 flags = 2;</code>
        *
        * <pre>
-       *0x1 = preRelease
+       *Possible values are listed in KlibMetadataHeaderFlags class.
        * </pre>
        */
       public Builder setFlags(int value) {
@@ -1258,7 +1258,7 @@ public final class DebugKlibMetadataProtoBuf {
        * <code>optional int32 flags = 2;</code>
        *
        * <pre>
-       *0x1 = preRelease
+       *Possible values are listed in KlibMetadataHeaderFlags class.
        * </pre>
        */
       public Builder clearFlags() {
@@ -1371,7 +1371,7 @@ public final class DebugKlibMetadataProtoBuf {
        * <code>optional .org.jetbrains.kotlin.metadata.StringTable strings = 4;</code>
        */
       private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.StringTable, org.jetbrains.kotlin.metadata.DebugProtoBuf.StringTable.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.StringTableOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.StringTable, org.jetbrains.kotlin.metadata.DebugProtoBuf.StringTable.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.StringTableOrBuilder>
           getStringsFieldBuilder() {
         if (stringsBuilder_ == null) {
           stringsBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -1487,7 +1487,7 @@ public final class DebugKlibMetadataProtoBuf {
        * <code>optional .org.jetbrains.kotlin.metadata.QualifiedNameTable qualified_names = 5;</code>
        */
       private org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTable, org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTable.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTableOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTable, org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTable.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.QualifiedNameTableOrBuilder>
           getQualifiedNamesFieldBuilder() {
         if (qualifiedNamesBuilder_ == null) {
           qualifiedNamesBuilder_ = new org.jetbrains.kotlin.protobuf.SingleFieldBuilder<
@@ -1755,7 +1755,7 @@ public final class DebugKlibMetadataProtoBuf {
        * Annotations on the whole module
        * </pre>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.AnnotationOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.metadata.DebugProtoBuf.AnnotationOrBuilder>
            getAnnotationOrBuilderList() {
         if (annotationBuilder_ != null) {
           return annotationBuilder_.getMessageOrBuilderList();
@@ -1793,12 +1793,12 @@ public final class DebugKlibMetadataProtoBuf {
        * Annotations on the whole module
        * </pre>
        */
-      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Builder> 
+      public java.util.List<org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Builder>
            getAnnotationBuilderList() {
         return getAnnotationFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation, org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.AnnotationOrBuilder> 
+          org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation, org.jetbrains.kotlin.metadata.DebugProtoBuf.Annotation.Builder, org.jetbrains.kotlin.metadata.DebugProtoBuf.AnnotationOrBuilder>
           getAnnotationFieldBuilder() {
         if (annotationBuilder_ == null) {
           annotationBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -2193,7 +2193,7 @@ public final class DebugKlibMetadataProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.library.metadata.File file = 9;</code>
        */
-      public java.util.List<? extends org.jetbrains.kotlin.library.metadata.DebugKlibMetadataProtoBuf.FileOrBuilder> 
+      public java.util.List<? extends org.jetbrains.kotlin.library.metadata.DebugKlibMetadataProtoBuf.FileOrBuilder>
            getFileOrBuilderList() {
         if (fileBuilder_ != null) {
           return fileBuilder_.getMessageOrBuilderList();
@@ -2219,12 +2219,12 @@ public final class DebugKlibMetadataProtoBuf {
       /**
        * <code>repeated .org.jetbrains.kotlin.library.metadata.File file = 9;</code>
        */
-      public java.util.List<org.jetbrains.kotlin.library.metadata.DebugKlibMetadataProtoBuf.File.Builder> 
+      public java.util.List<org.jetbrains.kotlin.library.metadata.DebugKlibMetadataProtoBuf.File.Builder>
            getFileBuilderList() {
         return getFileFieldBuilder().getBuilderList();
       }
       private org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
-          org.jetbrains.kotlin.library.metadata.DebugKlibMetadataProtoBuf.File, org.jetbrains.kotlin.library.metadata.DebugKlibMetadataProtoBuf.File.Builder, org.jetbrains.kotlin.library.metadata.DebugKlibMetadataProtoBuf.FileOrBuilder> 
+          org.jetbrains.kotlin.library.metadata.DebugKlibMetadataProtoBuf.File, org.jetbrains.kotlin.library.metadata.DebugKlibMetadataProtoBuf.File.Builder, org.jetbrains.kotlin.library.metadata.DebugKlibMetadataProtoBuf.FileOrBuilder>
           getFileFieldBuilder() {
         if (fileBuilder_ == null) {
           fileBuilder_ = new org.jetbrains.kotlin.protobuf.RepeatedFieldBuilder<
@@ -2381,7 +2381,7 @@ public final class DebugKlibMetadataProtoBuf {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        org.jetbrains.kotlin.protobuf.ByteString bs = 
+        org.jetbrains.kotlin.protobuf.ByteString bs =
             (org.jetbrains.kotlin.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
@@ -2397,7 +2397,7 @@ public final class DebugKlibMetadataProtoBuf {
         getNameBytes() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
-        org.jetbrains.kotlin.protobuf.ByteString b = 
+        org.jetbrains.kotlin.protobuf.ByteString b =
             org.jetbrains.kotlin.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         name_ = b;
@@ -2621,7 +2621,7 @@ public final class DebugKlibMetadataProtoBuf {
 
       public final boolean isInitialized() {
         if (!hasName()) {
-          
+
           return false;
         }
         return true;
@@ -2677,7 +2677,7 @@ public final class DebugKlibMetadataProtoBuf {
           getNameBytes() {
         java.lang.Object ref = name_;
         if (ref instanceof String) {
-          org.jetbrains.kotlin.protobuf.ByteString b = 
+          org.jetbrains.kotlin.protobuf.ByteString b =
               org.jetbrains.kotlin.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           name_ = b;
@@ -3070,7 +3070,7 @@ public final class DebugKlibMetadataProtoBuf {
 
       public final boolean isInitialized() {
         if (!hasIndex()) {
-          
+
           return false;
         }
         return true;

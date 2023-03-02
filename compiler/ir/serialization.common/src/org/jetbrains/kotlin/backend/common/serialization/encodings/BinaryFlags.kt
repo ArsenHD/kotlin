@@ -65,6 +65,7 @@ value class FunctionFlags(val flags: Long) {
     val isExternal: Boolean get() = IrFlags.IS_EXTERNAL_FUNCTION.get(flags.toInt())
     val isSuspend: Boolean get() = IrFlags.IS_SUSPEND.get(flags.toInt())
     val isExpect: Boolean get() = IrFlags.IS_EXPECT_FUNCTION.get(flags.toInt())
+    val isStatic: Boolean get() = IrFlags.IS_STATIC_FUNCTION.get(flags.toInt())
     val isFakeOverride: Boolean get() = kind() == CallableMemberDescriptor.Kind.FAKE_OVERRIDE
 
     val isPrimary: Boolean get() = IrFlags.IS_PRIMARY.get(flags.toInt())
@@ -115,6 +116,7 @@ value class PropertyFlags(val flags: Long) {
     val isExternal: Boolean get() = IrFlags.IS_EXTERNAL_PROPERTY.get(flags.toInt())
     val isDelegated: Boolean get() = IrFlags.IS_DELEGATED.get(flags.toInt())
     val isExpect: Boolean get() = IrFlags.IS_EXPECT_PROPERTY.get(flags.toInt())
+    val isStatic: Boolean get() = IrFlags.IS_STATIC_PROPERTY.get(flags.toInt())
     val isFakeOverride: Boolean get() = kind() == CallableMemberDescriptor.Kind.FAKE_OVERRIDE
 
     private fun kind(): CallableMemberDescriptor.Kind = ProtoEnumFlags.memberKind(IrFlags.MEMBER_KIND.get(flags.toInt()))
