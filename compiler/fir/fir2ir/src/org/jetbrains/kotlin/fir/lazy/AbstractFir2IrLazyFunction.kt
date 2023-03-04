@@ -70,9 +70,6 @@ abstract class AbstractFir2IrLazyFunction<F : FirCallableDeclaration>(
     override val isExpect: Boolean
         get() = fir.isExpect
 
-    override val isStatic: Boolean
-        get() = fir.isStatic
-
     override var body: IrBody? by lazyVar(lock) {
         if (tryLoadIr()) body else null
     }

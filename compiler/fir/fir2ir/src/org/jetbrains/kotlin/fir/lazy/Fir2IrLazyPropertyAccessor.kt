@@ -12,6 +12,7 @@ import org.jetbrains.kotlin.fir.declarations.FirPropertyAccessor
 import org.jetbrains.kotlin.fir.declarations.FirRegularClass
 import org.jetbrains.kotlin.fir.declarations.synthetic.FirSyntheticPropertyAccessor
 import org.jetbrains.kotlin.fir.declarations.utils.isInline
+import org.jetbrains.kotlin.fir.declarations.utils.isStatic
 import org.jetbrains.kotlin.ir.declarations.IrClass
 import org.jetbrains.kotlin.ir.declarations.IrDeclarationOrigin
 import org.jetbrains.kotlin.ir.declarations.IrFunction
@@ -42,6 +43,8 @@ class Fir2IrLazyPropertyAccessor(
 
     override val fir: FirCallableDeclaration
         get() = firAccessor ?: firParentProperty
+
+    override var isStatic: Boolean = fir.isStatic
 
     // TODO: investigate why some deserialized properties are inline
     override val isInline: Boolean

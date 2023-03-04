@@ -33,7 +33,7 @@ class IrLazyProperty(
     override val isLateinit: Boolean,
     override val isDelegated: Boolean,
     override val isExternal: Boolean,
-    override val isStatic: Boolean,
+    override var isStatic: Boolean,
     override val isExpect: Boolean,
     override val isFakeOverride: Boolean,
     override val stubGenerator: DeclarationStubGenerator,

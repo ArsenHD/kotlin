@@ -75,8 +75,7 @@ class Fir2IrLazyProperty(
     override val isExpect: Boolean
         get() = fir.isExpect
 
-    override val isStatic: Boolean
-        get() = fir.isStatic
+    override var isStatic: Boolean = fir.isStatic
 
     override var name: Name
         get() = fir.name

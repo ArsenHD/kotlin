@@ -24,8 +24,6 @@ abstract class IrSimpleFunction : IrFunction(),
 
     abstract val isSuspend: Boolean
 
-    abstract val isStatic: Boolean
-
     abstract override val isFakeOverride: Boolean
 
     abstract val isOperator: Boolean

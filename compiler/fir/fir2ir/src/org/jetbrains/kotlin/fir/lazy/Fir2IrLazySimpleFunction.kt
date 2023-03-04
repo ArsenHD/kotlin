@@ -12,6 +12,7 @@ import org.jetbrains.kotlin.fir.backend.toIrType
 import org.jetbrains.kotlin.fir.declarations.FirFunction
 import org.jetbrains.kotlin.fir.declarations.FirRegularClass
 import org.jetbrains.kotlin.fir.declarations.FirSimpleFunction
+import org.jetbrains.kotlin.fir.declarations.utils.isStatic
 import org.jetbrains.kotlin.fir.initialSignatureAttr
 import org.jetbrains.kotlin.ir.declarations.IrClass
 import org.jetbrains.kotlin.ir.declarations.IrDeclarationOrigin
@@ -38,6 +39,8 @@ class Fir2IrLazySimpleFunction(
         symbol.bind(this)
         classifierStorage.preCacheTypeParameters(fir, symbol)
     }
+
+    override var isStatic: Boolean = fir.isStatic
 
     override var annotations: List<IrConstructorCall> by createLazyAnnotations()
 

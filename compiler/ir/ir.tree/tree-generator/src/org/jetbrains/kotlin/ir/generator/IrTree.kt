@@ -236,6 +236,7 @@ object IrTree : AbstractTreeBuilder() {
         // NB: there's an inline constructor for Array and each primitive array class.
         +field("isInline", boolean)
         +field("isExpect", boolean)
+        +field("isStatic", boolean, mutable = true)
         +field("returnType", irTypeType, mutable = true)
         +field("dispatchReceiverParameter", valueParameter, mutable = true, nullable = true, isChild = true)
         +field("extensionReceiverParameter", valueParameter, mutable = true, nullable = true, isChild = true)
@@ -252,6 +253,7 @@ object IrTree : AbstractTreeBuilder() {
         +descriptor("ClassConstructorDescriptor")
         +symbol(constructorSymbolType)
         +field("isPrimary", boolean)
+        +field("isStatic", boolean, mutable = true) { baseDefaultValue = code("false") }
     }
     val enumEntry: ElementConfig by element(Declaration) {
         visitorParent = declarationBase
@@ -377,7 +379,7 @@ object IrTree : AbstractTreeBuilder() {
         +field("isConst", boolean)
         +field("isLateinit", boolean)
         +field("isDelegated", boolean)
-        +field("isStatic", boolean)
+        +field("isStatic", boolean, mutable = true)
         +field("isExpect", boolean)
         +field("isFakeOverride", boolean)
         +field("backingField", field, mutable = true, nullable = true, isChild = true)
@@ -421,7 +423,6 @@ object IrTree : AbstractTreeBuilder() {
         +symbol(simpleFunctionSymbolType)
         +field("isTailrec", boolean)
         +field("isSuspend", boolean)
-        +field("isStatic", boolean)
         +field("isFakeOverride", boolean)
         +field("isOperator", boolean)
         +field("isInfix", boolean)

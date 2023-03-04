@@ -35,7 +35,7 @@ abstract class IrFunctionCommonImpl(
     override val isOperator: Boolean,
     override val isInfix: Boolean,
     override val isExpect: Boolean,
-    override val isStatic: Boolean,
+    override var isStatic: Boolean,
     override val containerSource: DeserializedContainerSource?,
 ) : IrSimpleFunction() {
 

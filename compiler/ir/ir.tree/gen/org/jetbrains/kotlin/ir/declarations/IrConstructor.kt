@@ -25,6 +25,8 @@ abstract class IrConstructor : IrFunction() {
 
     abstract val isPrimary: Boolean
 
+    override var isStatic: Boolean = false
+
     override fun <R, D> accept(visitor: IrElementVisitor<R, D>, data: D): R =
         visitor.visitConstructor(this, data)
 }

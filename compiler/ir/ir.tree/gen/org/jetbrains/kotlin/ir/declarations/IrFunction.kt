@@ -33,6 +33,8 @@ abstract class IrFunction : IrDeclarationBase(), IrPossiblyExternalDeclaration,
 
     abstract val isExpect: Boolean
 
+    abstract var isStatic: Boolean
+
     abstract var returnType: IrType
 
     abstract var dispatchReceiverParameter: IrValueParameter?
