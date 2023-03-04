@@ -6,9 +6,18 @@
 package org.jetbrains.kotlin.fir.resolve
 
 import org.jetbrains.kotlin.fir.declarations.FirClass
+import org.jetbrains.kotlin.fir.declarations.FirDeclaration
+import org.jetbrains.kotlin.fir.declarations.FirRegularClass
 import org.jetbrains.kotlin.fir.declarations.utils.classId
 import org.jetbrains.kotlin.name.ClassId
 import org.jetbrains.kotlin.name.SpecialNames
+
+val FirDeclaration.isSelfStaticObject: Boolean
+    get() = this is FirRegularClass && isSelfStaticObject
+
+@Suppress("unused")
+val FirDeclaration.isNotSelfStaticObject: Boolean
+    get() = !isSelfStaticObject
 
 val FirClass.isSelfStaticObject: Boolean
     get() = classId.isSelfStaticObject

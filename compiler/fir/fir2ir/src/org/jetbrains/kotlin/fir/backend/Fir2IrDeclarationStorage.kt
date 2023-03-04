@@ -358,7 +358,7 @@ class Fir2IrDeclarationStorage(
             val receiver: FirReceiverParameter? =
                 if (function !is FirPropertyAccessor && function != null) function.receiverParameter
                 else parentPropertyReceiver
-            if (receiver != null) {
+            if (receiver != null && receiver.isNotSelfStaticObject) {
                 extensionReceiverParameter = receiver.convertWithOffsets { startOffset, endOffset ->
                     val name = (function as? FirAnonymousFunction)?.label?.name?.let {
                         val suffix = it.takeIf(Name::isValidIdentifier) ?: "\$receiver"
@@ -381,6 +381,9 @@ class Fir2IrDeclarationStorage(
                     thisType = containingClass.thisReceiver?.type ?: error("No this receiver"),
                     thisOrigin = thisOrigin
                 )
+            }
+            if (dispatchReceiverParameter == null) {
+                this.isStatic = true
             }
         } else {
             // Set dispatch receiver parameter for inner class's constructor.
@@ -558,7 +561,7 @@ class Fir2IrDeclarationStorage(
                     enterScope(this)
                     bindAndDeclareParameters(
                         function, irParent,
-                        thisReceiverOwner, isStatic = simpleFunction?.isStatic == true
+                        thisReceiverOwner, isStatic = isStatic
                     )
                     convertAnnotationsForNonDeclaredMembers(function, origin)
                     leaveScope(this)

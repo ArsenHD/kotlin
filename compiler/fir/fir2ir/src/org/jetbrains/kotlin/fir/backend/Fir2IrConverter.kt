@@ -30,6 +30,7 @@ import org.jetbrains.kotlin.fir.extensions.extensionService
 import org.jetbrains.kotlin.fir.extensions.generatedMembers
 import org.jetbrains.kotlin.fir.extensions.generatedNestedClassifiers
 import org.jetbrains.kotlin.fir.resolve.ScopeSession
+import org.jetbrains.kotlin.fir.resolve.isNotSelfStaticObject
 import org.jetbrains.kotlin.fir.signaturer.FirBasedSignatureComposer
 import org.jetbrains.kotlin.fir.signaturer.FirMangler
 import org.jetbrains.kotlin.ir.PsiIrFileEntry
@@ -221,7 +222,8 @@ class Fir2IrConverter(
         irClass: IrClass = classifierStorage.getCachedIrClass(regularClass)!!
     ): IrClass {
         val allDeclarations = mutableListOf<FirDeclaration>().apply {
-            addAll(regularClass.declarations.toMutableList())
+            addAll(regularClass.nonStaticDeclarations)
+            addAll(regularClass.staticDeclarations)
             if (generatorExtensions.isNotEmpty()) {
                 addAll(regularClass.generatedMembers(session))
                 addAll(regularClass.generatedNestedClassifiers(session))
@@ -311,7 +313,10 @@ class Fir2IrConverter(
 
     private fun registerNestedClasses(klass: FirClass, irClass: IrClass) {
         klass.declarations.forEach {
-            if (it is FirRegularClass) {
+            // Self static objects are not needed in IR.
+            // They are only used by frontend to store static declarations
+            // and are also convenient for their resolution.
+            if (it is FirRegularClass && it.isNotSelfStaticObject) {
                 registerClassAndNestedClasses(it, irClass)
             }
         }
@@ -331,7 +336,10 @@ class Fir2IrConverter(
 
     private fun processNestedClassHeaders(klass: FirClass) {
         klass.declarations.forEach {
-            if (it is FirRegularClass) {
+            // Self static objects are not needed in IR.
+            // They are only used by frontend to store static declarations
+            // and are also convenient for their resolution.
+            if (it is FirRegularClass && it.isNotSelfStaticObject) {
                 processClassAndNestedClassHeaders(it)
             }
         }

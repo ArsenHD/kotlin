@@ -765,3 +765,39 @@ fun FirCallableDeclaration.contextReceiversForFunctionOrContainingProperty(): Li
         this.propertySymbol.fir.contextReceivers
     else
         this.contextReceivers
+
+internal val FirClass.nonStaticDeclarations: List<FirDeclaration>
+    get() = declarations.filterNot { it.isSelfStaticObject }
+
+internal val FirClass.staticDeclarations: List<FirDeclaration>
+    get() = declarations
+        .singleOrNull { it.isSelfStaticObject }
+        ?.let { it as? FirClass }
+        ?.declarations
+        ?: emptyList()
+
+/**
+ * Returns a list of static and non-static declarations of a given class.
+ * Static declarations are obtained from the `self static object` of a class.
+ * The `self static object` itself is discarded as it is only useful for frontend purposes.
+ */
+@Suppress("unused")
+internal val FirClass.declarationsExceptSelfStaticObject: List<FirDeclaration>
+    get() = nonStaticDeclarations + staticDeclarations
+
+context(Fir2IrComponents)
+internal val FirReceiverParameter.isSelfStaticObject: Boolean
+    get() = typeRef.isSelfStaticObject
+
+context(Fir2IrComponents)
+internal val FirReceiverParameter.isNotSelfStaticObject: Boolean
+    get() = !isSelfStaticObject
+
+context(Fir2IrComponents)
+internal val FirTypeRef.isSelfStaticObject: Boolean
+    get() = firClassLike(session)?.isSelfStaticObject == true
+
+context(Fir2IrComponents)
+@Suppress("unused")
+internal val FirTypeRef.isNotSelfStaticObject: Boolean
+    get() = !isSelfStaticObject
