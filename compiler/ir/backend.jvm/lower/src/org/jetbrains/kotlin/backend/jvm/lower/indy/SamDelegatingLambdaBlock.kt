@@ -160,6 +160,7 @@ internal class SamDelegatingLambdaBuilder(private val jvmContext: JvmBackendCont
             origin = IrDeclarationOrigin.LOCAL_FUNCTION_FOR_LAMBDA
             isSuspend = superMethod.isSuspend
         }.also { lambda ->
+            lambda.isStatic = true
             lambda.dispatchReceiverParameter = null
             lambda.extensionReceiverParameter = null
             lambda.valueParameters = createLambdaValueParameters(superMethod, lambda, typeSubstitutor)

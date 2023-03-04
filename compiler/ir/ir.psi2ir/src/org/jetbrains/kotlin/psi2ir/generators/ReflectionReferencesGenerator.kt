@@ -175,7 +175,7 @@ class ReflectionReferencesGenerator(statementGenerator: StatementGenerator) : St
             modality = Modality.FINAL,
             returnType = irSamType,
             isInline = false, isExternal = false, isTailrec = false, isSuspend = false, isOperator = false, isInfix = false,
-            isExpect = false, isFakeOverride = false
+            isExpect = false, isStatic = true, isFakeOverride = false
         ).also { irAdapterFun ->
             context.symbolTable.withScope(irAdapterFun) {
                 irAdapterFun.metadata = null
@@ -453,6 +453,7 @@ class ReflectionReferencesGenerator(statementGenerator: StatementGenerator) : St
             isOperator = adapteeDescriptor.isOperator, // TODO ?
             isInfix = adapteeDescriptor.isInfix,
             isExpect = false,
+            isStatic = true,
             isFakeOverride = false
         ).also { irAdapterFun ->
             context.symbolTable.withScope(irAdapterFun) {

@@ -155,9 +155,15 @@ class ScriptRemoveReceiverLowering(val context: CommonBackendContext) : FileLowe
 
         script.statements.forEach {
             when (it) {
-                is IrSimpleFunction -> it.dispatchReceiverParameter = null
+                is IrSimpleFunction -> {
+                    it.isStatic = true
+                    it.dispatchReceiverParameter = null
+                }
                 is IrProperty -> {
+                    it.getter?.isStatic = true
                     it.getter?.dispatchReceiverParameter = null
+
+                    it.setter?.isStatic = true
                     it.setter?.dispatchReceiverParameter = null
                 }
             }

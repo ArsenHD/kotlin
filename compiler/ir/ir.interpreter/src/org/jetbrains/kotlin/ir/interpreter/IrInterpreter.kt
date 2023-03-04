@@ -463,7 +463,10 @@ class IrInterpreter(internal val environment: IrInterpreterEnvironment, internal
 
                         // receiver will be stored as up value
                         val dispatchReceiver = invokeFunction.dispatchReceiverParameter!!.symbol to state
-                        val newInvoke = invokeFunction.deepCopyWithSymbols(samClass).apply { dispatchReceiverParameter = null }
+                        val newInvoke = invokeFunction.deepCopyWithSymbols(samClass).apply {
+                            isStatic = true
+                            dispatchReceiverParameter = null
+                        }
                         KFunctionState(newInvoke, functionClass, environment, mutableMapOf(dispatchReceiver)).apply {
                             this.funInterface = typeOperand
                         }

@@ -51,6 +51,7 @@ private class MakePropertyDelegateMethodsStaticLowering(val context: JvmBackendC
         return declaration.apply {
             valueParameters =
                 listOf(newParameter) + valueParameters.map { it.copyTo(this, index = it.index + 1) }
+            isStatic = true
             dispatchReceiverParameter = null
             body = body?.transform(VariableRemapper(mapOf(oldParameter to newParameter)), null)
         }

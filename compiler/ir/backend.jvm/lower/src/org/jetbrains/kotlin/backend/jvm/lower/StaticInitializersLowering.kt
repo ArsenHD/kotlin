@@ -46,6 +46,7 @@ class StaticInitializersLowering(override val context: JvmBackendContext) : Init
                 origin = JvmLoweredDeclarationOrigin.CLASS_STATIC_INITIALIZER
                 returnType = context.irBuiltIns.unitType
                 visibility = JavaDescriptorVisibilities.PACKAGE_VISIBILITY
+                isStatic = true
             }.apply {
                 body = IrBlockBodyImpl(irClass.startOffset, irClass.endOffset, staticInitializerStatements).patchDeclarationParents(this)
             }

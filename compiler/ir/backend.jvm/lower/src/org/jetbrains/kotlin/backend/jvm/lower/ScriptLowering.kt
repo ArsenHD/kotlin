@@ -888,6 +888,7 @@ private class ScriptFixLambdasTransformer(val irScriptClass: IrClass) : IrElemen
                 val dataForChildren =
                     if (dispatchReceiverParameter?.type == irScriptClass.defaultType) {
                         val oldDispatchReceiver = dispatchReceiverParameter
+                        isStatic = true
                         dispatchReceiverParameter = null
                         data.copy(valueParameterToReplaceWithScript = oldDispatchReceiver)
                     } else data

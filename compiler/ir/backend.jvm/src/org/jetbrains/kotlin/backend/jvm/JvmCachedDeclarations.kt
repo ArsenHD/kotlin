@@ -122,6 +122,7 @@ class JvmCachedDeclarations(
                     copyAnnotationsFrom(jvmStaticFunction)
                     copyCorrespondingPropertyFrom(jvmStaticFunction)
                     copyParameterDeclarationsFrom(jvmStaticFunction)
+                    isStatic = true
                     dispatchReceiverParameter = null
                     metadata = jvmStaticFunction.metadata
                 }
