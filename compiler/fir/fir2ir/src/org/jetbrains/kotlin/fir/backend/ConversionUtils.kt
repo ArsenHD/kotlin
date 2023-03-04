@@ -223,11 +223,24 @@ private fun FirCallableSymbol<*>.toSymbolForCall(
     isReference: Boolean = false
 ): IrSymbol? {
     val fakeOverrideOwnerLookupTag = when {
-        // Static fake overrides
         isStatic -> {
-            fir.importedFromObjectOrStaticData?.let {
-                ConeClassLikeLookupTagImpl(it.objectClassId)
-            } ?: (explicitReceiver as? FirResolvedQualifier)?.toLookupTag()
+            if (resolvedReceiverTypeRef?.isSelfStaticObject == true) {
+                // this is the case when a static extension is itself a static declaration, e.g.:
+                // class A {
+                //   static {
+                //     fun B.static.foo() { ... } <-- static extension 'foo' is itself a static function
+                //   }
+                // }
+                //
+                // Now, if we make a call `B.foo()` from inside of class `A`,
+                // it has nothing to do with fake overrides, this is just a static extension mechanism.
+                null
+            } else {
+                // Static fake overrides
+                fir.importedFromObjectOrStaticData?.let {
+                    ConeClassLikeLookupTagImpl(it.objectClassId)
+                } ?: (explicitReceiver as? FirResolvedQualifier)?.toLookupTag()
+            }
         }
         // Member fake override or bound callable reference
         dispatchReceiver !is FirNoReceiverExpression -> {
