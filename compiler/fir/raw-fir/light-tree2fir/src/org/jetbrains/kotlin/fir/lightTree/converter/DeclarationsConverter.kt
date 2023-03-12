@@ -1311,6 +1311,7 @@ class DeclarationsConverter(
                         FirDeclarationStatusImpl(propertyVisibility, null).apply {
                             isInline = modifiers.hasInline()
                             isExternal = modifiers.hasExternal()
+                            isStatic = context.containerIsStatic
                         }
 
                     val convertedAccessors = accessors.map {
