@@ -6528,6 +6528,12 @@ public class FirDiagnosticsWithLightTreeTestGenerated extends AbstractFirDiagnos
             }
 
             @Test
+            @TestMetadata("StaticMemberReference.kt")
+            public void testStaticMemberReference() throws Exception {
+                runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/StaticMemberReference.kt");
+            }
+
+            @Test
             @TestMetadata("StaticObject.kt")
             public void testStaticObject() throws Exception {
                 runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/StaticObject.kt");
@@ -6642,6 +6648,12 @@ public class FirDiagnosticsWithLightTreeTestGenerated extends AbstractFirDiagnos
                 @TestMetadata("StaticExtensionInsideSomeClass.kt")
                 public void testStaticExtensionInsideSomeClass() throws Exception {
                     runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/StaticExtensionInsideSomeClass.kt");
+                }
+
+                @Test
+                @TestMetadata("StaticExtensionReference.kt")
+                public void testStaticExtensionReference() throws Exception {
+                    runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/extensions/StaticExtensionReference.kt");
                 }
 
                 @Test
