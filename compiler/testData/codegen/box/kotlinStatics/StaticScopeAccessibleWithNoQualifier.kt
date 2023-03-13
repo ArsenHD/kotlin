@@ -6,9 +6,7 @@ class A {
     }
 }
 
-fun process(block: A.static.() -> Unit) {
-    A.block()
-}
+fun <T> process(block: A.static.() -> T): T = A.block()
 
 fun box(): String {
     return process {
