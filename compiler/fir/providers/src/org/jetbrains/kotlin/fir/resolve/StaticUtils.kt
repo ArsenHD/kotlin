@@ -9,6 +9,8 @@ import org.jetbrains.kotlin.fir.declarations.FirClass
 import org.jetbrains.kotlin.fir.declarations.FirDeclaration
 import org.jetbrains.kotlin.fir.declarations.FirRegularClass
 import org.jetbrains.kotlin.fir.declarations.utils.classId
+import org.jetbrains.kotlin.fir.types.ConeKotlinType
+import org.jetbrains.kotlin.fir.types.classId
 import org.jetbrains.kotlin.name.ClassId
 import org.jetbrains.kotlin.name.SpecialNames
 
@@ -23,6 +25,12 @@ val FirClass.isSelfStaticObject: Boolean
     get() = classId.isSelfStaticObject
 
 val FirClass.isNotSelfStaticObject: Boolean
+    get() = !isSelfStaticObject
+
+val ConeKotlinType.isSelfStaticObject: Boolean
+    get() = classId?.isSelfStaticObject == true
+
+val ConeKotlinType.isNotSelfStaticObject: Boolean
     get() = !isSelfStaticObject
 
 val ClassId.isSelfStaticObject: Boolean

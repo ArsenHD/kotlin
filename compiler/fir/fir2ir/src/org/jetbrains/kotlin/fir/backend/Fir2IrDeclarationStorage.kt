@@ -358,7 +358,7 @@ class Fir2IrDeclarationStorage(
             val receiver: FirReceiverParameter? =
                 if (function !is FirPropertyAccessor && function != null) function.receiverParameter
                 else parentPropertyReceiver
-            if (receiver != null && receiver.isNotSelfStaticObject) {
+            if (receiver != null) {
                 extensionReceiverParameter = receiver.convertWithOffsets { startOffset, endOffset ->
                     val name = (function as? FirAnonymousFunction)?.label?.name?.let {
                         val suffix = it.takeIf(Name::isValidIdentifier) ?: "\$receiver"

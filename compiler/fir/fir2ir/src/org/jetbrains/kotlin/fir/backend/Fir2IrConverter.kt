@@ -547,9 +547,12 @@ class Fir2IrConverter(
 
             val irModuleFragment = IrModuleFragmentImpl(moduleDescriptor, irBuiltIns)
 
+            val staticsTransformer = FirStaticsTransformer(components)
             val allFirFiles = buildList {
                 addAll(firFiles)
                 addAll(session.createFilesWithGeneratedDeclarations())
+            }.map {
+                it.transform<FirFile, Nothing?>(staticsTransformer, null)
             }
 
             converter.runSourcesConversion(
