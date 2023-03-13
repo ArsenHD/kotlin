@@ -56,9 +56,6 @@ class IrFrameMap : FrameMapBase<IrSymbol>() {
         ?: error("No mapping for symbol: ${symbol.owner.render()}")
 }
 
-internal val IrFunction.isStatic
-    get() = (this.dispatchReceiverParameter == null && this !is IrConstructor)
-
 fun IrFrameMap.enter(irDeclaration: IrSymbolOwner, type: Type): Int {
     return enter(irDeclaration.symbol, type)
 }
