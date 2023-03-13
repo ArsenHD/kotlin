@@ -31,7 +31,7 @@ class FunctionInvokeDescriptor private constructor(
     container: DeclarationDescriptor,
     original: FunctionInvokeDescriptor?,
     callableKind: CallableMemberDescriptor.Kind,
-    isSuspend: Boolean
+    @Suppress("UNUSED_PARAMETER") isSuspend: Boolean
 ) : SimpleFunctionDescriptorImpl(
     container,
     original,

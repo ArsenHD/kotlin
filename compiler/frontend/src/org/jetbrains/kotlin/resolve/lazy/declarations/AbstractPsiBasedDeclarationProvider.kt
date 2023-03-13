@@ -65,6 +65,12 @@ abstract class AbstractPsiBasedDeclarationProvider(storageManager: StorageManage
                 is KtParameter -> {
                     // Do nothing, just put it into allDeclarations is enough
                 }
+                is KtStaticBlock -> {
+                    for (staticDeclaration in declaration.declarations) {
+                        putToIndex(staticDeclaration)
+                        // TODO: check if this works correctly
+                    }
+                }
                 else -> throw IllegalArgumentException("Unknown declaration: " + declaration)
             }
 

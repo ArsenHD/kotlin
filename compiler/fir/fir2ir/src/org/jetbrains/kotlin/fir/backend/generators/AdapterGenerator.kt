@@ -218,7 +218,7 @@ internal class AdapterGenerator(
             isOperator = firMemberAdaptee.isOperator,
             isInfix = firMemberAdaptee.isInfix,
             isExpect = firMemberAdaptee.isExpect,
-            isStatic = firMemberAdaptee.isStatic,
+            isStatic = true, // TODO: question 0, are all adapter functions static?
             isFakeOverride = false
         ).also { irAdapterFunction ->
             irAdapterFunction.metadata = FirMetadataSource.Function(firAdaptee)
@@ -635,6 +635,7 @@ internal class AdapterGenerator(
         return irCall
     }
 
+    // TODO: question 21
     fun generateFunInterfaceConstructorReference(
         callableReference: FirCallableReferenceAccess,
         callableSymbol: FirFunctionSymbol<*>,
@@ -706,7 +707,7 @@ internal class AdapterGenerator(
             isOperator = false,
             isInfix = false,
             isExpect = false,
-            isStatic = false,
+            isStatic = true, // TODO: question 0
             isFakeOverride = false
         ).also { irAdapterFunction ->
             symbolTable.enterScope(irAdapterFunction)

@@ -47,7 +47,7 @@ interface IrImplementingDelegateDescriptor : IrDelegateDescriptor {
 abstract class IrDelegateDescriptorBase(
     containingDeclaration: DeclarationDescriptor,
     name: Name,
-    delegateType: KotlinType,
+    @Suppress("UNUSED_PARAMETER") delegateType: KotlinType,
     annotations: Annotations = Annotations.EMPTY
 ) :
     PropertyDescriptorImpl(

@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+@file:Suppress("UNREACHABLE_CODE", "UNUSED_VARIABLE")
+
 package org.jetbrains.kotlin.psi2ir.generators
 
 import org.jetbrains.kotlin.builtins.isBuiltinFunctionalType
@@ -443,7 +445,7 @@ private fun StatementGenerator.createFunctionForSuspendConversion(
         irSuspendFunReturnType,
         isInline = false, isExternal = false, isTailrec = false,
         isSuspend = true,
-        isOperator = false, isInfix = false, isExpect = false, isFakeOverride = false
+        isOperator = false, isInfix = false, isExpect = false, isStatic = true /* TODO("question 20") */, isFakeOverride = false
     )
 
     context.symbolTable.enterScope(irAdapterFun)
