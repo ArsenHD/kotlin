@@ -57,8 +57,7 @@ class DeserializedSimpleFunctionDescriptor(
     ) {
 
     init {
-        // TODO: question 9
-        isStatic = TODO("proto.isStatic")
+        isStatic = Flags.IS_STATIC_FUNCTION.get(proto.flags)
     }
 
     override fun createSubstitutedCopy(
