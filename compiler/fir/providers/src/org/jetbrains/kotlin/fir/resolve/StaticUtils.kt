@@ -24,6 +24,7 @@ val FirDeclaration.isNotSelfStaticObject: Boolean
 val FirClass.isSelfStaticObject: Boolean
     get() = classId.isSelfStaticObject
 
+@Suppress("unused")
 val FirClass.isNotSelfStaticObject: Boolean
     get() = !isSelfStaticObject
 

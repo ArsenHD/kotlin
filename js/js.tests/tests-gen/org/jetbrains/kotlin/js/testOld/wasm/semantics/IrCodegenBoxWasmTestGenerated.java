@@ -19408,6 +19408,167 @@ public class IrCodegenBoxWasmTestGenerated extends AbstractIrCodegenBoxWasmTest 
         }
     }
 
+    @TestMetadata("compiler/testData/codegen/box/kotlinStatics")
+    @TestDataPath("$PROJECT_ROOT")
+    @RunWith(JUnit3RunnerWithInners.class)
+    public static class KotlinStatics extends AbstractIrCodegenBoxWasmTest {
+        private void runTest(String testDataFilePath) throws Exception {
+            KotlinTestUtils.runTest0(this::doTest, TargetBackend.WASM, testDataFilePath);
+        }
+
+        public void testAllFilesPresentInKotlinStatics() throws Exception {
+            KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/kotlinStatics"), Pattern.compile("^([^_](.+))\\.kt$"), null, TargetBackend.WASM, true);
+        }
+
+        @TestMetadata("ClassInsideOfStaticBlock.kt")
+        public void testClassInsideOfStaticBlock() throws Exception {
+            runTest("compiler/testData/codegen/box/kotlinStatics/ClassInsideOfStaticBlock.kt");
+        }
+
+        @TestMetadata("MultipleStaticBlocks.kt")
+        public void testMultipleStaticBlocks() throws Exception {
+            runTest("compiler/testData/codegen/box/kotlinStatics/MultipleStaticBlocks.kt");
+        }
+
+        @TestMetadata("ObjectInsideOfStaticBlock.kt")
+        public void testObjectInsideOfStaticBlock() throws Exception {
+            runTest("compiler/testData/codegen/box/kotlinStatics/ObjectInsideOfStaticBlock.kt");
+        }
+
+        @TestMetadata("SimilarStaticAndCompanionFunctions.kt")
+        public void testSimilarStaticAndCompanionFunctions() throws Exception {
+            runTest("compiler/testData/codegen/box/kotlinStatics/SimilarStaticAndCompanionFunctions.kt");
+        }
+
+        @TestMetadata("SimpleStaticBlock.kt")
+        public void testSimpleStaticBlock() throws Exception {
+            runTest("compiler/testData/codegen/box/kotlinStatics/SimpleStaticBlock.kt");
+        }
+
+        @TestMetadata("StaticExtensionReference.kt")
+        public void testStaticExtensionReference() throws Exception {
+            runTest("compiler/testData/codegen/box/kotlinStatics/StaticExtensionReference.kt");
+        }
+
+        @TestMetadata("StaticInNonStaticScope.kt")
+        public void testStaticInNonStaticScope() throws Exception {
+            runTest("compiler/testData/codegen/box/kotlinStatics/StaticInNonStaticScope.kt");
+        }
+
+        @TestMetadata("StaticMemberReference.kt")
+        public void testStaticMemberReference() throws Exception {
+            runTest("compiler/testData/codegen/box/kotlinStatics/StaticMemberReference.kt");
+        }
+
+        @TestMetadata("StaticObject.kt")
+        public void testStaticObject() throws Exception {
+            runTest("compiler/testData/codegen/box/kotlinStatics/StaticObject.kt");
+        }
+
+        @TestMetadata("StaticObjectInsideOfStaticBlock.kt")
+        public void testStaticObjectInsideOfStaticBlock() throws Exception {
+            runTest("compiler/testData/codegen/box/kotlinStatics/StaticObjectInsideOfStaticBlock.kt");
+        }
+
+        @TestMetadata("StaticScopeAccessibleWithNoQualifier.kt")
+        public void testStaticScopeAccessibleWithNoQualifier() throws Exception {
+            runTest("compiler/testData/codegen/box/kotlinStatics/StaticScopeAccessibleWithNoQualifier.kt");
+        }
+
+        @TestMetadata("compiler/testData/codegen/box/kotlinStatics/extensions")
+        @TestDataPath("$PROJECT_ROOT")
+        @RunWith(JUnit3RunnerWithInners.class)
+        public static class Extensions extends AbstractIrCodegenBoxWasmTest {
+            private void runTest(String testDataFilePath) throws Exception {
+                KotlinTestUtils.runTest0(this::doTest, TargetBackend.WASM, testDataFilePath);
+            }
+
+            public void testAllFilesPresentInExtensions() throws Exception {
+                KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/kotlinStatics/extensions"), Pattern.compile("^([^_](.+))\\.kt$"), null, TargetBackend.WASM, true);
+            }
+
+            @TestMetadata("ComplexStaticExtension.kt")
+            public void testComplexStaticExtension() throws Exception {
+                runTest("compiler/testData/codegen/box/kotlinStatics/extensions/ComplexStaticExtension.kt");
+            }
+
+            @TestMetadata("ExtensionsAccessibleWithNoQualifierInStaticScope.kt")
+            public void testExtensionsAccessibleWithNoQualifierInStaticScope() throws Exception {
+                runTest("compiler/testData/codegen/box/kotlinStatics/extensions/ExtensionsAccessibleWithNoQualifierInStaticScope.kt");
+            }
+
+            @TestMetadata("FunctionalArgumentWithComplexStaticReceiver.kt")
+            public void testFunctionalArgumentWithComplexStaticReceiver() throws Exception {
+                runTest("compiler/testData/codegen/box/kotlinStatics/extensions/FunctionalArgumentWithComplexStaticReceiver.kt");
+            }
+
+            @TestMetadata("FunctionalArgumentWithStaticReceiver.kt")
+            public void testFunctionalArgumentWithStaticReceiver() throws Exception {
+                runTest("compiler/testData/codegen/box/kotlinStatics/extensions/FunctionalArgumentWithStaticReceiver.kt");
+            }
+
+            @TestMetadata("JavaClassStaticExtension.kt")
+            public void testJavaClassStaticExtension() throws Exception {
+                runTest("compiler/testData/codegen/box/kotlinStatics/extensions/JavaClassStaticExtension.kt");
+            }
+
+            @TestMetadata("JavaGenerics.kt")
+            public void testJavaGenerics() throws Exception {
+                runTest("compiler/testData/codegen/box/kotlinStatics/extensions/JavaGenerics.kt");
+            }
+
+            @TestMetadata("KotlinGenerics.kt")
+            public void testKotlinGenerics() throws Exception {
+                runTest("compiler/testData/codegen/box/kotlinStatics/extensions/KotlinGenerics.kt");
+            }
+
+            @TestMetadata("KotlinStdlibStaticExtension.kt")
+            public void testKotlinStdlibStaticExtension() throws Exception {
+                runTest("compiler/testData/codegen/box/kotlinStatics/extensions/KotlinStdlibStaticExtension.kt");
+            }
+
+            @TestMetadata("NoStaticShadowing.kt")
+            public void testNoStaticShadowing() throws Exception {
+                runTest("compiler/testData/codegen/box/kotlinStatics/extensions/NoStaticShadowing.kt");
+            }
+
+            @TestMetadata("SimpleStaticExtension.kt")
+            public void testSimpleStaticExtension() throws Exception {
+                runTest("compiler/testData/codegen/box/kotlinStatics/extensions/SimpleStaticExtension.kt");
+            }
+
+            @TestMetadata("SimpleStatics.kt")
+            public void testSimpleStatics() throws Exception {
+                runTest("compiler/testData/codegen/box/kotlinStatics/extensions/SimpleStatics.kt");
+            }
+
+            @TestMetadata("StaticExtensionInsideItsOwnClass.kt")
+            public void testStaticExtensionInsideItsOwnClass() throws Exception {
+                runTest("compiler/testData/codegen/box/kotlinStatics/extensions/StaticExtensionInsideItsOwnClass.kt");
+            }
+
+            @TestMetadata("StaticExtensionInsideSomeClass.kt")
+            public void testStaticExtensionInsideSomeClass() throws Exception {
+                runTest("compiler/testData/codegen/box/kotlinStatics/extensions/StaticExtensionInsideSomeClass.kt");
+            }
+
+            @TestMetadata("StaticExtensionsFromDifferentScopes.kt")
+            public void testStaticExtensionsFromDifferentScopes() throws Exception {
+                runTest("compiler/testData/codegen/box/kotlinStatics/extensions/StaticExtensionsFromDifferentScopes.kt");
+            }
+
+            @TestMetadata("StaticScopeAccessFromStaticExtension.kt")
+            public void testStaticScopeAccessFromStaticExtension() throws Exception {
+                runTest("compiler/testData/codegen/box/kotlinStatics/extensions/StaticScopeAccessFromStaticExtension.kt");
+            }
+
+            @TestMetadata("UnqualifiedExtensionCall.kt")
+            public void testUnqualifiedExtensionCall() throws Exception {
+                runTest("compiler/testData/codegen/box/kotlinStatics/extensions/UnqualifiedExtensionCall.kt");
+            }
+        }
+    }
+
     @TestMetadata("compiler/testData/codegen/box/labels")
     @TestDataPath("$PROJECT_ROOT")
     @RunWith(JUnit3RunnerWithInners.class)

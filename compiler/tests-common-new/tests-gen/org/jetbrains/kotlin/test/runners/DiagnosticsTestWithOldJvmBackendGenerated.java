@@ -457,6 +457,22 @@ public class DiagnosticsTestWithOldJvmBackendGenerated extends AbstractDiagnosti
         }
 
         @Nested
+        @TestMetadata("compiler/testData/diagnostics/testsWithJvmBackend/duplicateJvmSignature/kotlinStatics")
+        @TestDataPath("$PROJECT_ROOT")
+        public class KotlinStatics {
+            @Test
+            public void testAllFilesPresentInKotlinStatics() throws Exception {
+                KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/diagnostics/testsWithJvmBackend/duplicateJvmSignature/kotlinStatics"), Pattern.compile("^(.+)\\.kt$"), Pattern.compile("^(.+)\\.fir\\.kts?$"), TargetBackend.JVM_OLD, true);
+            }
+
+            @Test
+            @TestMetadata("SimpleStaticBlock.kt")
+            public void testSimpleStaticBlock() throws Exception {
+                runTest("compiler/testData/diagnostics/testsWithJvmBackend/duplicateJvmSignature/kotlinStatics/SimpleStaticBlock.kt");
+            }
+        }
+
+        @Nested
         @TestMetadata("compiler/testData/diagnostics/testsWithJvmBackend/duplicateJvmSignature/specialNames")
         @TestDataPath("$PROJECT_ROOT")
         public class SpecialNames {
