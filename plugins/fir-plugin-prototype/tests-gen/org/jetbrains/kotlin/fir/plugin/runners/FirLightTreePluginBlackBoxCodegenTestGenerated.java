@@ -26,6 +26,12 @@ public class FirLightTreePluginBlackBoxCodegenTestGenerated extends AbstractFirL
     }
 
     @Test
+    @TestMetadata("builderGenerationWithCollections.kt")
+    public void testBuilderGenerationWithCollections() throws Exception {
+        runTest("plugins/fir-plugin-prototype/testData/box/builderGenerationWithCollections.kt");
+    }
+
+    @Test
     @TestMetadata("classWithAllPropertiesConstructor.kt")
     public void testClassWithAllPropertiesConstructor() throws Exception {
         runTest("plugins/fir-plugin-prototype/testData/box/classWithAllPropertiesConstructor.kt");
@@ -71,6 +77,12 @@ public class FirLightTreePluginBlackBoxCodegenTestGenerated extends AbstractFirL
     @TestMetadata("serializer.kt")
     public void testSerializer() throws Exception {
         runTest("plugins/fir-plugin-prototype/testData/box/serializer.kt");
+    }
+
+    @Test
+    @TestMetadata("simpleBuilderGeneration.kt")
+    public void testSimpleBuilderGeneration() throws Exception {
+        runTest("plugins/fir-plugin-prototype/testData/box/simpleBuilderGeneration.kt");
     }
 
     @Test
