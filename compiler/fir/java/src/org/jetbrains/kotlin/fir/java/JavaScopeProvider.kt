@@ -37,6 +37,9 @@ object JavaScopeProvider : FirScopeProvider() {
         if (klass.classKind == ClassKind.ANNOTATION_CLASS) {
             return buildSyntheticScopeForAnnotations(useSiteSession, symbol, scopeSession, enhancementScope)
         }
+        if (klass.classKind == ClassKind.STATIC_OBJECT) {
+            return FirStaticObjectScope(enhancementScope)
+        }
         return enhancementScope
     }
 

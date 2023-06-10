@@ -247,7 +247,7 @@ abstract class FirJavaFacade(
                 isFun = classKind == ClassKind.INTERFACE
             }
 
-            val selfStaticObjectBuilder = initSelfStaticObject(classId, moduleData, session.kotlinScopeProvider)
+            val selfStaticObjectBuilder = initJavaSelfStaticObject(classId, javaPackage, moduleData, JavaScopeProvider, session)
 
             // TODO: may be we can process fields & methods later.
             // However, they should be built up to override resolve stage
