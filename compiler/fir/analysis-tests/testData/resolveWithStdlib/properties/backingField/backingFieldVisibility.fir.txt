@@ -28,6 +28,9 @@ FILE: A.kt
             lval dI: <ERROR TYPE REF: Unresolved name: plus> = R|/A.A|().R|/A.d|.<Unresolved name: plus>#(Int(40))
         }
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public final fun test(): R|kotlin/Unit| {
         lval aA: <ERROR TYPE REF: Unresolved name: plus> = R|/A.A|().R|/A.a|.<Unresolved name: plus>#(Int(10))

@@ -4,6 +4,9 @@ FILE: test.kt
             super<R|kotlin/Exception|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public final fun test(e: R|MyException|, stream: R|java/io/PrintStream|): R|kotlin/Unit| {
         R|<local>/e|.R|kotlin/Throwable.printStackTrace|()

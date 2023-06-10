@@ -15,6 +15,9 @@ FILE: overriddenPropertiesWithExplicitBackingFields.kt
             <Ambiguity: println, [kotlin/io/println, kotlin/io/println, kotlin/io/println, kotlin/io/println, kotlin/io/println, kotlin/io/println, kotlin/io/println, kotlin/io/println, kotlin/io/println, kotlin/io/println]>#(this@R|/A|.R|/A.it|.<Unresolved name: plus>#(Int(1)))
         }
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public open class B : R|A| {
         public constructor(): R|B| {
@@ -27,5 +30,8 @@ FILE: overriddenPropertiesWithExplicitBackingFields.kt
             }
             public set(value: R|kotlin/Number|): R|kotlin/Unit| {
             }
+
+        public final static object <SELF_STATIC_OBJECT> {
+        }
 
     }

@@ -2,10 +2,16 @@ FILE: WithValidityAssertion.kt
     public abstract interface KtLifetimeToken : R|kotlin/Any| {
         public abstract fun assertIsValid(): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public abstract interface KtLifetimeTokenOwner : R|kotlin/Any| {
         public abstract val token: R|KtLifetimeToken|
             public get(): R|KtLifetimeToken|
+
+        public final static object <SELF_STATIC_OBJECT> {
+        }
 
     }
     public final inline fun R|KtLifetimeTokenOwner|.assertIsValid(): R|kotlin/Unit| {
@@ -29,6 +35,9 @@ FILE: WithValidityAssertion.kt
         @R|kotlin/Suppress|(names = vararg(String(UNCHECKED_CAST))) public open override operator fun getValue(thisRef: R|kotlin/Any|, property: R|kotlin/reflect/KProperty<*>|): R|T| {
             this@R|/ValidityAwareCachedValue|.R|/ValidityAwareCachedValue.token|.R|/KtLifetimeToken.assertIsValid|()
             ^getValue this@R|/ValidityAwareCachedValue|.R|/ValidityAwareCachedValue.lazyValue|.R|SubstitutionOverride<kotlin/Lazy.value: R|T|>|
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
         }
 
     }
@@ -73,12 +82,24 @@ FILE: WithValidityAssertion.kt
 
         public abstract fun getCallableNames(): R|kotlin/collections/Set<kotlin/String>|
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public abstract interface FirScope : R|kotlin/Any| {
         public abstract fun getCallableSymbols(callableNames: R|kotlin/collections/Collection<kotlin/String>|, builder: R|KtSymbolByFirBuilder|): R|kotlin/sequences/Sequence<KtCallableSymbol>|
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public abstract interface KtCallableSymbol : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public abstract interface KtSymbolByFirBuilder : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }

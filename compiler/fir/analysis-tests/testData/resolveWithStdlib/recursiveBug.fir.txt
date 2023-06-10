@@ -13,6 +13,9 @@ FILE: recursiveBug.kt
         public final val name: R|kotlin/Int| = this@R|/Foo|.R|/Foo.result|.R|kotlin/String.length|
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public final fun bar(name: R|() -> kotlin/String|): R|kotlin/Unit| {
         lval result: R|kotlin/String| = R|kotlin/run|<R|kotlin/String|>(<L> = run@fun <anonymous>(): R|kotlin/String| <inline=Inline, kind=EXACTLY_ONCE>  {

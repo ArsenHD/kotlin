@@ -12,6 +12,9 @@ FILE: implicitReceiverOrder.kt
             ^bar Int(3)
         }
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public final class B : R|kotlin/Any| {
         public constructor(): R|B| {
@@ -24,6 +27,9 @@ FILE: implicitReceiverOrder.kt
 
         public final fun R|A|.bar(): R|kotlin/Int| {
             ^bar Int(4)
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
         }
 
     }

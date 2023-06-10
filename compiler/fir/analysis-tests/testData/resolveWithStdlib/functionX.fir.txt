@@ -17,4 +17,7 @@ FILE: functionX.kt
         public open override operator fun invoke(p1: R|kotlin/Int|, p2: R|kotlin/String|): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }

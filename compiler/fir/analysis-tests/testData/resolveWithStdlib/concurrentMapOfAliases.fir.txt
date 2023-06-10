@@ -15,4 +15,7 @@ FILE: concurrentMapOfAliases.kt
         private final fun R|MyAlias|.baz(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }

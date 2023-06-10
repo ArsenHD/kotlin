@@ -3,6 +3,9 @@ FILE: arrayFirstOrNull.kt
         public abstract val a: R|kotlin/Array<out G>|
             public get(): R|kotlin/Array<out G>|
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public final fun goo(g: R|G|): R|kotlin/Unit| {
         lval x: R|G?| = R|<local>/g|.R|/G.a|.R|/firstOrNullX|<R|G|>()

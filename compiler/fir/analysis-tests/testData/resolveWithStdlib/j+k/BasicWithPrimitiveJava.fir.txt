@@ -10,4 +10,7 @@ FILE: jvm.kt
             lval res3: R|ft<kotlin/Array<kotlin/String!>, kotlin/Array<out kotlin/String!>?>| = this@R|/A|.R|/Some.bar|(R|kotlin/intArrayOf|(vararg(Int(0), Int(2), Int(-2))))
         }
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }

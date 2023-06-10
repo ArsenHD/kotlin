@@ -20,6 +20,9 @@ FILE: k.kt
             Q|j/JavaPackageLocal|.R|j/JavaPackageLocal.javaMPackage<HIDDEN: j/JavaPackageLocal.javaMPackage is invisible>#|()
         }
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public final class B : R|j/JavaProtected| {
         public constructor(): R|k/B| {
@@ -38,6 +41,9 @@ FILE: k.kt
         public final fun test(): R|kotlin/Unit| {
             Q|j/JavaProtected|.R|j/JavaProtected.javaMProtectedStatic|()
             Q|j/JavaPackageLocal|.R|j/JavaPackageLocal.javaMPackage<HIDDEN: j/JavaPackageLocal.javaMPackage is invisible>#|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
         }
 
     }
@@ -62,6 +68,9 @@ FILE: j.kt
             Q|j/JavaProtected|.R|j/JavaProtected.javaMProtectedStatic|()
             Q|j/JavaProtected|.R|j/JavaProtected.javaMProtectedStatic|()
             Q|j/JavaPackageLocal|.R|j/JavaPackageLocal.javaMPackage|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
         }
 
     }

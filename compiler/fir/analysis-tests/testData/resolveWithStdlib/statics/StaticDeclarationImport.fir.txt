@@ -1,0 +1,17 @@
+FILE: A.kt
+    public final class A : R|kotlin/Any| {
+        public constructor(): R|A| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            public final static fun foo(): R|kotlin/Unit| {
+            }
+
+        }
+
+    }
+FILE: B.kt
+    public final fun test(): R|kotlin/Unit| {
+        R|/A.foo|()
+    }

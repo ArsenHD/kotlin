@@ -8,6 +8,9 @@ FILE: unaryOperators.kt
             ^contains Boolean(false)
         }
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public final fun foo(u: R|U|): R|kotlin/Unit| {
         lval b: R|kotlin/Boolean| = Boolean(false)

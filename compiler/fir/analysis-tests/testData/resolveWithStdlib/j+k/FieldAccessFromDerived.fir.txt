@@ -12,4 +12,7 @@ FILE: Derived.kt
             ^foo this@R|/Derived|.R|/Base.value|
         }
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }

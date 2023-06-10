@@ -19,6 +19,9 @@ FILE: invokePriority.kt
             )
         }
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public final class B : R|kotlin/Any| {
         public constructor(): R|B| {
@@ -42,6 +45,9 @@ FILE: invokePriority.kt
             )
         }
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public final class E : R|kotlin/Any| {
         public constructor(): R|E| {
@@ -57,6 +63,9 @@ FILE: invokePriority.kt
                 ^invoke Q|kotlin/Unit|
             }
 
+            public final static object <SELF_STATIC_OBJECT> {
+            }
+
         }
 
         public final companion object Companion : R|kotlin/Any| {
@@ -70,6 +79,12 @@ FILE: invokePriority.kt
 
                 public get(): R|() -> kotlin/Unit|
 
+            public final static object <SELF_STATIC_OBJECT> {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
         }
 
     }

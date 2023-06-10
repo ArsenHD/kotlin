@@ -1,7 +1,13 @@
 FILE: complexPostponedCfg.kt
     public abstract interface FirBase : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public abstract interface FirFunctionCall : R|FirBase| {
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public final fun foo(statements: R|kotlin/collections/List<FirBase>|, arguments: R|kotlin/collections/List<FirBase>|, explicitReceiver: R|FirBase|): R|kotlin/collections/List<FirFunctionCall>| {
         lval firstCalls: R|kotlin/collections/List<FirFunctionCall>| = R|kotlin/with|<R|FirFunctionCall|, R|kotlin/collections/List<FirFunctionCall>|>((R|<local>/statements|.R|kotlin/collections/last|<R|FirBase|>() as R|FirFunctionCall|), <L> = setCall@fun R|FirFunctionCall|.<anonymous>(): R|kotlin/collections/List<FirFunctionCall>| <inline=Inline, kind=EXACTLY_ONCE>  {

@@ -1,0 +1,34 @@
+FILE: StaticMemberReference.kt
+    public final class A : R|kotlin/Any| {
+        public constructor(): R|A| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
+            public final static val value: R|kotlin/Int| = Int(123)
+                public get(): R|kotlin/Int|
+
+            public final static fun foo(): R|kotlin/Int| {
+                ^foo Int(42)
+            }
+
+            public final static fun bar(x: R|kotlin/Int|, y: R|kotlin/Int|): R|kotlin/Int| {
+                ^bar R|<local>/x|.R|kotlin/Int.plus|(R|<local>/y|)
+            }
+
+        }
+
+    }
+    public final fun test1(property: R|kotlin/reflect/KProperty0<kotlin/Int>|): R|kotlin/Unit| {
+    }
+    public final fun test2(block: R|() -> kotlin/Int|): R|kotlin/Int| {
+        ^test2 R|<local>/block|.R|SubstitutionOverride<kotlin/Function0.invoke: R|kotlin/Int|>|()
+    }
+    public final fun test3(block: R|(kotlin/Int, kotlin/Int) -> kotlin/Int|): R|kotlin/Int| {
+        ^test3 R|<local>/block|.R|SubstitutionOverride<kotlin/Function2.invoke: R|kotlin/Int|>|(Int(2), Int(3))
+    }
+    public final fun test4(): R|kotlin/Unit| {
+        R|/test1|(Q|A|::R|/A.value|)
+        lval x: R|kotlin/Int| = R|/test2|(Q|A|::R|/A.foo|)
+        lval y: R|kotlin/Int| = R|/test3|(Q|A|::R|/A.bar|)
+    }

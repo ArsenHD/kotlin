@@ -1,9 +1,15 @@
 FILE: factoryFunctionOverloads.kt
     public abstract interface B : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public abstract interface C : R|kotlin/Any| {
         public abstract val b: R|B|
             public get(): R|B|
+
+        public final static object <SELF_STATIC_OBJECT> {
+        }
 
     }
     public final fun A(b: R|B?|, flag: R|kotlin/Boolean| = Boolean(true)): R|A| {
@@ -22,6 +28,9 @@ FILE: factoryFunctionOverloads.kt
 
         public final val flag: R|kotlin/Boolean| = R|<local>/flag|
             public get(): R|kotlin/Boolean|
+
+        public final static object <SELF_STATIC_OBJECT> {
+        }
 
     }
     public final fun foo(c: R|C|, b: R|B|, bn: R|B?|): R|kotlin/Unit| {

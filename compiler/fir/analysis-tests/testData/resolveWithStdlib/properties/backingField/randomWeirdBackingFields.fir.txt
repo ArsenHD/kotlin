@@ -8,4 +8,7 @@ FILE: randomWeirdBackingFields.kt
             internal <explicit backing field>: R|kotlin/collections/MutableList<kotlin/Int>| = R|kotlin/collections/mutableListOf|<R|kotlin/Int|>()
             public get(): R|kotlin/collections/List<kotlin/Int>|
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }

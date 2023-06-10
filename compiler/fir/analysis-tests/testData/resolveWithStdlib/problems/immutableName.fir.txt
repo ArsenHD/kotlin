@@ -8,6 +8,9 @@ FILE: Impl.kt
             ^foo this@R|/Impl|
         }
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
 FILE: test.kt
     public abstract class ImplDerived : R|Impl|, R|Derived| {
@@ -17,6 +20,9 @@ FILE: test.kt
 
         public abstract override fun foo(name: R|kotlin/String?|): R|Derived|
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public abstract class DerivedImpl : R|Derived|, R|Impl| {
         public constructor(): R|DerivedImpl| {
@@ -24,5 +30,8 @@ FILE: test.kt
         }
 
         public abstract override fun foo(name: R|kotlin/String?|): R|Derived|
+
+        public final static object <SELF_STATIC_OBJECT> {
+        }
 
     }

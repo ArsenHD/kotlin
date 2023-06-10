@@ -4,6 +4,9 @@ FILE: test.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public final data class KotlinResult : R|kotlin/Any| {
         @R|KotlinMessage|() public constructor(@R|KotlinMessage|() message: R|kotlin/String| = String()): R|KotlinResult| {
@@ -16,6 +19,9 @@ FILE: test.kt
         public final operator fun component1(): R|kotlin/String|
 
         public final fun copy(message: R|kotlin/String| = this@R|/KotlinResult|.R|/KotlinResult.message|): R|KotlinResult|
+
+        public final static object <SELF_STATIC_OBJECT> {
+        }
 
     }
     public open class Some : R|kotlin/Any| {
@@ -33,6 +39,12 @@ FILE: test.kt
                     ^ String(Omega)
                 }
 
+            public final static object <SELF_STATIC_OBJECT> {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
         }
 
     }

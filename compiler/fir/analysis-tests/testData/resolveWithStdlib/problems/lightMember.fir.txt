@@ -1,7 +1,13 @@
 FILE: lightMember.kt
     public abstract interface PsiMember : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public abstract interface PsiField : R|PsiMember| {
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public abstract class LightMemberImpl<out D : R|PsiMember|> : R|kotlin/Any| {
         public constructor<out D : R|PsiMember|>(computeRealDelegate: R|() -> D|): R|LightMemberImpl<D>| {
@@ -13,6 +19,9 @@ FILE: lightMember.kt
                 ^ this@R|/LightMemberImpl|.D|/LightMemberImpl.delegate|.R|kotlin/getValue|<R|D|>(this@R|/LightMemberImpl|, ::R|/LightMemberImpl.delegate|)
             }
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public abstract class LightFieldImpl<D : R|PsiField|> : R|LightMemberImpl<PsiField>| {
         public constructor<D : R|PsiField|>(computeRealDelegate: R|() -> D|): R|LightFieldImpl<D>| {
@@ -23,5 +32,8 @@ FILE: lightMember.kt
             public get(): R|D| {
                 ^ this@R|/LightFieldImpl|.super<R|LightMemberImpl<PsiField>|>.R|SubstitutionOverride</LightMemberImpl.delegate: R|PsiField|>|
             }
+
+        public final static object <SELF_STATIC_OBJECT> {
+        }
 
     }

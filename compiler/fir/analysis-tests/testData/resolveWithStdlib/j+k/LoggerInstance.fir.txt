@@ -13,4 +13,7 @@ FILE: test.kt
         private final val logger: R|Logger!| = Q|Logger|.R|/Logger.getInstance|(this@R|/MyTest|.R|/MyTest.klass|)
             private get(): R|Logger!|
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }

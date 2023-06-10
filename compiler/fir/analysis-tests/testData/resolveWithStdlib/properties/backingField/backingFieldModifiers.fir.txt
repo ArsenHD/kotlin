@@ -32,4 +32,7 @@ FILE: backingFieldModifiers.kt
             private <explicit backing field>: R|kotlin/Int| = Int(1)
             public get(): R|kotlin/Number|
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }

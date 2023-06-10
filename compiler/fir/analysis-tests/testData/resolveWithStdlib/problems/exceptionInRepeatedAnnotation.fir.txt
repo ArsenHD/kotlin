@@ -14,6 +14,12 @@ FILE: exceptionInRepeatedAnnotation.kt
                 ^invoke R|kotlin/TODO|()
             }
 
+            public final static object <SELF_STATIC_OBJECT> {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
         }
 
     }
@@ -26,6 +32,9 @@ FILE: exceptionInRepeatedAnnotation.kt
     public abstract class Event : R|kotlin/Any| {
         public constructor(): R|Event| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
         }
 
     }

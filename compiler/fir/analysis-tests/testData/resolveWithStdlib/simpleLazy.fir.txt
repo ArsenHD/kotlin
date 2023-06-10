@@ -31,4 +31,7 @@ FILE: simpleLazy.kt
             this@R|/Some|.R|/Some.z|.R|kotlin/String.length|
         }
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }

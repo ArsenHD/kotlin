@@ -16,6 +16,9 @@ FILE: receiverResolutionInLambda.kt
             )
         }
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public final fun case2(): R|kotlin/Unit| {
         lval x: R|kotlin/sequences/Sequence<kotlin/String>| = R|kotlin/sequences/sequence|<R|kotlin/String|>(<L> = sequence@fun R|kotlin/sequences/SequenceScope<kotlin/String>|.<anonymous>(): R|kotlin/Unit| <inline=NoInline>  {

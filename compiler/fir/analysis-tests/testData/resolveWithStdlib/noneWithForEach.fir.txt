@@ -3,6 +3,9 @@ FILE: noneWithForEach.kt
         public abstract val name: R|kotlin/String|
             public get(): R|kotlin/String|
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public final fun foo(conflicting: R|kotlin/collections/List<Diagnostic>|): R|kotlin/Unit| {
         lval filtered: R|kotlin/collections/ArrayList<Diagnostic>| = R|kotlin/collections/arrayListOf|<R|Diagnostic|>()

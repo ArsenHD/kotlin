@@ -5,10 +5,16 @@ FILE: common.kt
 
         public open expect fun foo(arg: R|T|): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public open class B : R|A<kotlin/String>| {
         public constructor(): R|B| {
             super<R|A<kotlin/String>|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
         }
 
     }
@@ -23,6 +29,9 @@ FILE: common.kt
 
         public open fun baz(arg: R|kotlin/CharSequence|): R|kotlin/String| {
             ^baz R|<local>/arg|.R|kotlin/Any.toString|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
         }
 
     }
@@ -44,6 +53,9 @@ FILE: jvm.kt
             ^baz R|<local>/arg|
         }
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public final class D : R|C| {
         public constructor(): R|D| {
@@ -54,6 +66,9 @@ FILE: jvm.kt
             this@R|/D|.R|SubstitutionOverride</B.foo: R|kotlin/Unit|>|(String())
             this@R|/D|.R|/C.bar|(String())
             this@R|/D|.R|SubstitutionOverride</B.baz: R|kotlin/String|>|(String())
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
         }
 
     }

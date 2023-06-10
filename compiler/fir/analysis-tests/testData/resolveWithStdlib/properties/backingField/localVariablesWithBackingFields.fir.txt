@@ -25,6 +25,9 @@ FILE: localVariablesWithBackingFields.kt
                 ^ this@R|/A|.D|/A.c|.R|kotlin/getValue|<R|kotlin/Int|>(this@R|/A|, ::R|/A.c|)
             }
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public final val R|A|.cc: R|kotlin/Number|
         private <explicit backing field>: R|kotlin/Int| = Int(10)

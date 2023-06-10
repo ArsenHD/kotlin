@@ -1,9 +1,15 @@
 FILE: typeAliasWithForEach.kt
     public abstract interface ArgsInfo : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public final class ArgsInfoImpl : R|ArgsInfo| {
         public constructor(info: R|ArgsInfo|): R|ArgsInfoImpl| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
         }
 
     }

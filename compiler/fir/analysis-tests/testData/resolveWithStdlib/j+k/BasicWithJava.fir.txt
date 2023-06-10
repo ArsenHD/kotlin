@@ -4,4 +4,7 @@ FILE: jvm.kt
             super<R|Some|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }

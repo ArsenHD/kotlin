@@ -7,6 +7,9 @@ FILE: qualifierPriority.kt
         public final val a: R|kotlin/Int| = R|<local>/a|
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public final class F : R|kotlin/Any| {
         public constructor(): R|F| {
@@ -21,6 +24,9 @@ FILE: qualifierPriority.kt
             public final val a: R|kotlin/Int| = Int(42)
                 public get(): R|kotlin/Int|
 
+            public final static object <SELF_STATIC_OBJECT> {
+            }
+
         }
 
         public final companion object Companion : R|kotlin/Any| {
@@ -31,6 +37,12 @@ FILE: qualifierPriority.kt
             public final val foo: R|AHolder| = R|/AHolder.AHolder|(Int(52))
                 public get(): R|AHolder|
 
+            public final static object <SELF_STATIC_OBJECT> {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
         }
 
     }
@@ -44,6 +56,9 @@ FILE: qualifierPriority.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> {
+            }
+
         }
 
         public final companion object Companion : R|kotlin/Any| {
@@ -54,6 +69,12 @@ FILE: qualifierPriority.kt
             public final val foo: R|AHolder| = R|/AHolder.AHolder|(Int(52))
                 public get(): R|AHolder|
 
+            public final static object <SELF_STATIC_OBJECT> {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
         }
 
     }

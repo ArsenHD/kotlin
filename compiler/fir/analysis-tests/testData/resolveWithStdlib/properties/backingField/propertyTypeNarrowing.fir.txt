@@ -17,6 +17,9 @@ FILE: propertyTypeNarrowing.kt
                 ^ this@R|/A|.F|/A.p|
             }
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public final fun test(): R|kotlin/Unit| {
         lval c: <ERROR TYPE REF: Unresolved name: plus> = R|/A.A|().R|/A.it|.<Unresolved name: plus>#(Int(1))

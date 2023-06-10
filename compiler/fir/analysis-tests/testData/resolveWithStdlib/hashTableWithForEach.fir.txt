@@ -41,6 +41,12 @@ FILE: hashTableWithForEach.kt
                 ^setValue throw R|java/lang/UnsupportedOperationException.UnsupportedOperationException|()
             }
 
+            public final static object <SELF_STATIC_OBJECT> {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
         }
 
     }

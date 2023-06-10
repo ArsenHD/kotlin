@@ -1,5 +1,8 @@
 FILE: DeepCopyIrTree.kt
     public abstract interface IrType : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public abstract interface TypeRemapper : R|kotlin/Any| {
         public abstract fun enterScope(irTypeParametersContainer: R|IrTypeParametersContainer|): R|kotlin/Unit|
@@ -8,21 +11,36 @@ FILE: DeepCopyIrTree.kt
 
         public abstract fun leaveScope(): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public abstract interface IrTypeParametersContainer : R|IrDeclaration|, R|IrDeclarationParent| {
         public abstract var typeParameters: R|kotlin/collections/List<IrTypeParameter>|
             public get(): R|kotlin/collections/List<IrTypeParameter>|
             public set(value: R|kotlin/collections/List<IrTypeParameter>|): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public abstract interface IrDeclaration : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public abstract interface IrTypeParameter : R|IrDeclaration| {
         public abstract val superTypes: R|kotlin/collections/MutableList<IrType>|
             public get(): R|kotlin/collections/MutableList<IrType>|
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public abstract interface IrDeclarationParent : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public final class DeepCopyIrTreeWithSymbols : R|kotlin/Any| {
         public constructor(typeRemapper: R|TypeRemapper|): R|DeepCopyIrTreeWithSymbols| {
@@ -58,6 +76,9 @@ FILE: DeepCopyIrTree.kt
 
             }
             )
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
         }
 
     }

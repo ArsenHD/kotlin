@@ -1,3 +1,5 @@
+import kotlin.reflect.KProperty0
+
 class A {
     static {
         val value = 123
@@ -6,11 +8,11 @@ class A {
     }
 }
 
-fun test1(property: KProperty<Int>) {}
+fun test1(property: KProperty0<Int>) {}
 fun test2(block: () -> Int) = block()
 fun test3(block: (Int, Int) -> Int) = block(2, 3)
 
-fun test3() {
+fun test4() {
     test1(A::value)
     val x: Int = test2(A::foo)
     val y: Int = test3(A::bar)

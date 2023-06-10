@@ -3,10 +3,16 @@ FILE: plusAssignNullable.kt
         public abstract val list: R|kotlin/collections/List<kotlin/String>|
             public get(): R|kotlin/collections/List<kotlin/String>|
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public abstract interface B : R|kotlin/Any| {
         public abstract val list: R|kotlin/collections/MutableList<kotlin/String>|
             public get(): R|kotlin/collections/MutableList<kotlin/String>|
+
+        public final static object <SELF_STATIC_OBJECT> {
+        }
 
     }
     public final fun R|B|.foo(a: R|A?|): R|kotlin/Unit| {

@@ -7,6 +7,9 @@ FILE: withInInitializer.kt
         public final val member: R|kotlin/Int| = R|<local>/member|
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public final class Second : R|kotlin/Any| {
         public constructor(): R|Second| {
@@ -27,5 +30,8 @@ FILE: withInInitializer.kt
         }
         )
             public get(): R|kotlin/collections/List<kotlin/Int>|
+
+        public final static object <SELF_STATIC_OBJECT> {
+        }
 
     }

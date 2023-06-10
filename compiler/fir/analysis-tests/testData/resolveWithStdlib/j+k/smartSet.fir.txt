@@ -23,6 +23,9 @@ FILE: smartSet.kt
             ^contains Boolean(false)
         }
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public final fun foo(x: R|kotlin/Any|): R|kotlin/Unit| {
         lval s: R|SmartSet<kotlin/Any>| = R|/SmartSet.SmartSet|<R|kotlin/Any|>()

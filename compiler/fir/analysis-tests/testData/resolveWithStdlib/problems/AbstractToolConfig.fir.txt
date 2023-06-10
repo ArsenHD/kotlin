@@ -21,6 +21,9 @@ FILE: AbstractToolConfig.kt
 
         public abstract fun platformManager(): R|PlatformManager|
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
 FILE: Platform.kt
     public final class Platform : R|Configurables| {
@@ -32,6 +35,9 @@ FILE: Platform.kt
 
         public final val configurables: R|Configurables| = R|<local>/configurables|
             public get(): R|Configurables|
+
+        public final static object <SELF_STATIC_OBJECT> {
+        }
 
     }
     public abstract class PlatformManager : R|HostManager| {
@@ -59,6 +65,9 @@ FILE: Platform.kt
 
         public abstract fun loadConfigurables(target: R|KonanTarget|): R|Configurables|
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
 FILE: HostManager.kt
     public open class HostManager : R|kotlin/Any| {
@@ -70,6 +79,9 @@ FILE: HostManager.kt
             public get(): R|kotlin/collections/List<KonanTarget>| {
                 ^ R|kotlin/collections/emptyList|<R|KonanTarget|>()
             }
+
+        public final static object <SELF_STATIC_OBJECT> {
+        }
 
     }
 FILE: Configurables.kt
@@ -88,6 +100,9 @@ FILE: Configurables.kt
 
         public abstract fun hostString(key: R|kotlin/String|): R|kotlin/String?|
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
 FILE: KonanTarget.kt
     public sealed class KonanTarget : R|kotlin/Any| {
@@ -100,6 +115,9 @@ FILE: KonanTarget.kt
                 super<R|KonanTarget|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> {
+            }
+
         }
 
         public final object IOS : R|KonanTarget| {
@@ -107,6 +125,12 @@ FILE: KonanTarget.kt
                 super<R|KonanTarget|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
         }
 
     }
@@ -114,5 +138,8 @@ FILE: TargetManager.kt
     public abstract interface TargetManager : R|kotlin/Any| {
         public abstract val target: R|KonanTarget|
             public get(): R|KonanTarget|
+
+        public final static object <SELF_STATIC_OBJECT> {
+        }
 
     }

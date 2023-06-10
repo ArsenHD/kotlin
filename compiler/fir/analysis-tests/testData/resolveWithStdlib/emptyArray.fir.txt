@@ -6,6 +6,9 @@ FILE: emptyArray.kt
             ^ R|kotlin/emptyArray|<R|kotlin/String|>()
         }
     public abstract interface My : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public final val z: R|kotlin/Array<out My>|
         public get(): R|kotlin/Array<out My>| {

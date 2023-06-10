@@ -2,6 +2,9 @@ FILE: KtFirCompositeScope.kt
     public abstract interface KtScope : R|kotlin/Any| {
         public abstract fun getAllNames(): R|kotlin/collections/Set<kotlin/String>|
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public final inline fun <E> buildSet(@R|kotlin/BuilderInference|() builderAction: R|kotlin/collections/MutableSet<E>.() -> kotlin/Unit|): R|kotlin/collections/Set<E>| {
         ^buildSet Null(null)!!
@@ -28,6 +31,9 @@ FILE: KtFirCompositeScope.kt
                 )
             }
             )
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
         }
 
     }

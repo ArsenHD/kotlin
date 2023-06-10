@@ -5,14 +5,24 @@ class A {
         val x: Int = 0
     }
 }
+class B {
+    static {
+        fun bar() {}
+        fun baz() {}
+    }
+}
 
-fun process(block: A.static.() -> Unit) {
-    A.block()
+fun <T> process(block: T.static.() -> Unit) {
+    T.block()
 }
 
 fun test() {
-    process {
+    process<A> {
         foo()
         val y = x
+    }
+    process<B> {
+        bar()
+        baz()
     }
 }

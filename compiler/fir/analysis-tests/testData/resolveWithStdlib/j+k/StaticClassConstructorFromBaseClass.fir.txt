@@ -8,6 +8,9 @@ FILE: User.kt
             lval sc: R|AbstractClass.StaticClass| = R|/AbstractClass.StaticClass.StaticClass|()
         }
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public final fun test(): R|kotlin/Unit| {
         Q|AbstractClass|.R|/AbstractClass.StaticClass.StaticClass|()

@@ -1,18 +1,33 @@
 FILE: capturedTypeInEquality.kt
     public abstract interface FirTargetElement : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public abstract interface FirFunction<F : R|FirFunction<F>|> : R|FirTargetElement| {
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public abstract interface FirPropertyAccessor : R|FirFunction<FirPropertyAccessor>| {
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public abstract interface FirProperty : R|kotlin/Any| {
         public abstract val getter: R|FirPropertyAccessor|
             public get(): R|FirPropertyAccessor|
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public abstract interface FirTarget<E : R|FirTargetElement|> : R|kotlin/Any| {
         public abstract val labeledElement: R|E|
             public get(): R|E|
+
+        public final static object <SELF_STATIC_OBJECT> {
+        }
 
     }
     public final fun foo(target: R|FirTarget<FirFunction<*>>|, property: R|FirProperty|): R|kotlin/Unit| {

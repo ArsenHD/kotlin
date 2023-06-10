@@ -4,10 +4,16 @@ FILE: multipleImplicitReceivers.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public final object B : R|kotlin/Any| {
         private constructor(): R|B| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
         }
 
     }
@@ -17,10 +23,16 @@ FILE: multipleImplicitReceivers.kt
                 ^ Q|B|
             }
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
     public abstract interface IInvoke : R|kotlin/Any| {
         public open operator fun R|B|.invoke(): R|kotlin/Int| {
             ^invoke Int(42)
+        }
+
+        public final static object <SELF_STATIC_OBJECT> {
         }
 
     }

@@ -29,4 +29,7 @@ FILE: constructorVarWrite.kt
             this@R|/Some|.R|/Some.foo| = Int(2)
         }
 
+        public final static object <SELF_STATIC_OBJECT> {
+        }
+
     }
