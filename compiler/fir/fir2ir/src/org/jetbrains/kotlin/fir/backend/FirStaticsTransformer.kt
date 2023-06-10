@@ -11,18 +11,21 @@ import org.jetbrains.kotlin.fir.declarations.*
 import org.jetbrains.kotlin.fir.expressions.*
 import org.jetbrains.kotlin.fir.expressions.builder.buildArgumentList
 import org.jetbrains.kotlin.fir.expressions.impl.FirNoReceiverExpression
-import org.jetbrains.kotlin.fir.references.FirNamedReference
+import org.jetbrains.kotlin.fir.references.*
 import org.jetbrains.kotlin.fir.references.builder.buildResolvedNamedReference
-import org.jetbrains.kotlin.fir.references.toResolvedFunctionSymbol
+import org.jetbrains.kotlin.fir.resolve.constructType
 import org.jetbrains.kotlin.fir.resolve.isInvoke
 import org.jetbrains.kotlin.fir.resolve.isNotSelfStaticObject
 import org.jetbrains.kotlin.fir.resolve.isSelfStaticObject
 import org.jetbrains.kotlin.fir.resolve.providers.getClassDeclaredFunctionSymbols
 import org.jetbrains.kotlin.fir.resolve.providers.symbolProvider
+import org.jetbrains.kotlin.fir.resolvedTypeFromPrototype
 import org.jetbrains.kotlin.fir.symbols.impl.FirNamedFunctionSymbol
 import org.jetbrains.kotlin.fir.types.*
 import org.jetbrains.kotlin.fir.visitors.FirDefaultTransformer
 import org.jetbrains.kotlin.name.StandardClassIds
+import org.jetbrains.kotlin.types.checker.SimpleClassicTypeSystemContext.isCompanion
+import org.jetbrains.kotlin.types.checker.SimpleClassicTypeSystemContext.isCompanionAndSSOIntersection
 import org.jetbrains.kotlin.util.OperatorNameConventions
 
 class FirStaticsTransformer(components: Fir2IrComponents) : FirDefaultTransformer<Nothing?>(), Fir2IrComponents by components {
@@ -51,9 +54,7 @@ class FirStaticsTransformer(components: Fir2IrComponents) : FirDefaultTransforme
 
     override fun transformFunctionCall(functionCall: FirFunctionCall, data: Nothing?): FirStatement {
         functionCall.apply {
-            if (explicitReceiver?.typeRef?.isSelfStaticObject == true) {
-                replaceExplicitReceiver(null)
-            }
+            updateExplicitReceiverTypeIfNeeded(this)
             if (extensionReceiver.typeRef.isSelfStaticObject) {
                 replaceExtensionReceiver(FirNoReceiverExpression)
             }
@@ -70,9 +71,7 @@ class FirStaticsTransformer(components: Fir2IrComponents) : FirDefaultTransforme
     }
 
     override fun transformPropertyAccessExpression(propertyAccessExpression: FirPropertyAccessExpression, data: Nothing?): FirStatement {
-        if (propertyAccessExpression.explicitReceiver?.typeRef?.isSelfStaticObject == true) {
-            propertyAccessExpression.replaceExplicitReceiver(null)
-        }
+        updateExplicitReceiverTypeIfNeeded(propertyAccessExpression)
         if (propertyAccessExpression.extensionReceiver.typeRef.isSelfStaticObject) {
             propertyAccessExpression.replaceExtensionReceiver(FirNoReceiverExpression)
         }
@@ -83,9 +82,7 @@ class FirStaticsTransformer(components: Fir2IrComponents) : FirDefaultTransforme
     }
 
     override fun transformCallableReferenceAccess(callableReferenceAccess: FirCallableReferenceAccess, data: Nothing?): FirStatement {
-        if (callableReferenceAccess.explicitReceiver?.typeRef?.isSelfStaticObject == true) {
-            callableReferenceAccess.replaceExplicitReceiver(null)
-        }
+        updateExplicitReceiverTypeIfNeeded(callableReferenceAccess)
         if (callableReferenceAccess.extensionReceiver.typeRef.isSelfStaticObject) {
             callableReferenceAccess.replaceExtensionReceiver(FirNoReceiverExpression)
         }
@@ -194,5 +191,40 @@ class FirStaticsTransformer(components: Fir2IrComponents) : FirDefaultTransforme
         )
 
         return type.withReplacedConeType(updatedFunctionConeType)
+    }
+
+    private val FirTypeRef.isCompanionAndSSOIntersection: Boolean
+        get() = coneTypeSafe<ConeKotlinType>()?.isCompanionAndSSOIntersection() == true
+
+    private val FirTypeRef.isCompanion: Boolean
+        get() = (this as? FirResolvedTypeRef)?.type?.isCompanion() == true
+
+    private fun updateExplicitReceiverTypeIfNeeded(qualifiedAccess: FirQualifiedAccess) {
+        val explicitReceiver = qualifiedAccess.explicitReceiver as? FirResolvedQualifier ?: return
+        val symbol = qualifiedAccess.calleeReference.toResolvedCallableSymbol() ?: return
+
+        when {
+            explicitReceiver.typeRef.isSelfStaticObject -> {
+                qualifiedAccess.replaceExplicitReceiver(null)
+            }
+            explicitReceiver.typeRef.isCompanionAndSSOIntersection -> {
+                val symbolOwnerClassId = symbol.callableId.classId ?: return
+
+                val actualReceiverType = session.symbolProvider
+                    .getClassLikeSymbolByClassId(symbolOwnerClassId)
+                    ?.constructType(emptyArray(), false)
+                    ?.let { coneType -> explicitReceiver.typeRef.resolvedTypeFromPrototype(coneType) }
+                    ?: return
+
+                when {
+                    actualReceiverType.isSelfStaticObject -> {
+                        qualifiedAccess.replaceExplicitReceiver(null)
+                    }
+                    actualReceiverType.isCompanion -> {
+                        explicitReceiver.replaceTypeRef(actualReceiverType)
+                    }
+                }
+            }
+        }
     }
 }

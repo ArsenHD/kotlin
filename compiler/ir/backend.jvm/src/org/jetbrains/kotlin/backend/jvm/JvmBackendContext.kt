@@ -144,6 +144,7 @@ class JvmBackendContext(
     override val internalPackageFqn = FqName("kotlin.jvm")
 
     val suspendLambdaToOriginalFunctionMap = ConcurrentHashMap<IrFunctionReference, IrFunction>()
+    // TODO: see
     val suspendFunctionOriginalToView = ConcurrentHashMap<IrSimpleFunction, IrSimpleFunction>()
 
     val staticDefaultStubs = ConcurrentHashMap<IrSimpleFunctionSymbol, IrSimpleFunction>()

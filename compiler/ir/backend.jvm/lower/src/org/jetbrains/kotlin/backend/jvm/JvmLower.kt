@@ -272,6 +272,7 @@ private val kotlinNothingValueExceptionPhase = makeIrFilePhase<CommonBackendCont
 )
 
 private val jvmFilePhases = listOf(
+    // TODO: my lowerings
     typeAliasAnnotationMethodsPhase,
     provisionalFunctionExpressionPhase,
 
