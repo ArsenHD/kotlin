@@ -512,7 +512,8 @@ class DeclarationsConverter(
                 val staticObjectBuilder = initSelfStaticObject(
                     context.currentClassId,
                     baseModuleData,
-                    baseScopeProvider
+                    baseScopeProvider,
+                    baseSession
                 )
                 buildRegularClass {
                     source = classNode.toFirSourceElement()

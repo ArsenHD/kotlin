@@ -1232,7 +1232,8 @@ open class RawFirBuilder(
                     val staticObjectBuilder = initSelfStaticObject(
                         context.currentClassId,
                         baseModuleData,
-                        baseScopeProvider
+                        baseScopeProvider,
+                        baseSession
                     )
                     buildRegularClass {
                         source = classOrObject.toFirSourceElement()

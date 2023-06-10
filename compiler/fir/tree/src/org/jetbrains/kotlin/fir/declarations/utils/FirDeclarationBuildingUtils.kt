@@ -10,6 +10,7 @@ import org.jetbrains.kotlin.descriptors.EffectiveVisibility
 import org.jetbrains.kotlin.descriptors.Modality
 import org.jetbrains.kotlin.descriptors.Visibilities
 import org.jetbrains.kotlin.fir.FirModuleData
+import org.jetbrains.kotlin.fir.FirSession
 import org.jetbrains.kotlin.fir.declarations.FirDeclaration
 import org.jetbrains.kotlin.fir.declarations.FirDeclarationOrigin
 import org.jetbrains.kotlin.fir.declarations.FirRegularClass
@@ -35,18 +36,11 @@ fun FirRegularClassBuilder.addDeclarations(declarations: Collection<FirDeclarati
     declarations.forEach(this::addDeclaration)
 }
 
-fun createEmptySelfStaticObject(
-    ownerClassId: ClassId,
-    moduleData: FirModuleData,
-    scopeProvider: FirScopeProvider
-): FirRegularClass {
-    return initSelfStaticObject(ownerClassId, moduleData, scopeProvider).build()
-}
-
 fun initSelfStaticObject(
     ownerClassId: ClassId,
     moduleData: FirModuleData,
-    scopeProvider: FirScopeProvider
+    scopeProvider: FirScopeProvider,
+    session: FirSession
 ): FirRegularClassBuilder {
     return FirRegularClassBuilder().apply {
         this.moduleData = moduleData
@@ -62,8 +56,9 @@ fun initSelfStaticObject(
         classKind = ClassKind.STATIC_OBJECT
         this.scopeProvider = scopeProvider
         symbol = FirRegularClassSymbol(ownerClassId.selfStaticObjectId)
+        superTypeRefs += session.builtinTypes.anyType
     }
 }
 
-private val ClassId.selfStaticObjectId: ClassId
+val ClassId.selfStaticObjectId: ClassId
     get() = createNestedClassId(SpecialNames.SELF_STATIC_OBJECT)

@@ -127,7 +127,7 @@ fun deserializeClassToSymbol(
 
         classProto.supertypes(context.typeTable).mapTo(superTypeRefs, typeDeserializer::typeRef)
 
-        val selfStaticObjectBuilder = initSelfStaticObject(classId, moduleData, scopeProvider)
+        val selfStaticObjectBuilder = initSelfStaticObject(classId, moduleData, scopeProvider, session)
 
         classProto.functionList
             .map { classDeserializer.loadFunction(it, classProto, symbol) }
