@@ -132,6 +132,16 @@ interface IrTypeSystemContext : TypeSystemContext, TypeSystemCommonSuperTypesCon
 
     override fun CapturedTypeMarker.lowerType(): KotlinTypeMarker? = (this as IrCapturedType).lowerType
 
+    override fun KotlinTypeMarker.isCompanion(): Boolean {
+        // TODO
+        return false
+    }
+
+    override fun KotlinTypeMarker.isSelfStaticObject(): Boolean {
+        // TODO
+        return false
+    }
+
     override fun TypeArgumentMarker.isStarProjection() = this is IrStarProjection
 
     override fun TypeArgumentMarker.getVariance(): TypeVariance =

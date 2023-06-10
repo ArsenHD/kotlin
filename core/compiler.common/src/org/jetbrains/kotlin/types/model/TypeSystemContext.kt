@@ -398,6 +398,20 @@ interface TypeSystemContext : TypeSystemOptimizationContext {
 
     fun CapturedTypeMarker.lowerType(): KotlinTypeMarker?
 
+    fun KotlinTypeMarker.isCompanion(): Boolean
+    fun KotlinTypeMarker.isSelfStaticObject(): Boolean
+
+    fun KotlinTypeMarker.isCompanionAndSSOIntersection(): Boolean {
+        val typeConstructor = typeConstructor()
+        if (!typeConstructor.isIntersection()) return false
+        val types = typeConstructor.supertypes().toList()
+        if (types.size != 2) return false
+        val type1 = types[0]
+        val type2 = types[1]
+        return type1.isCompanion() && type2.isSelfStaticObject() ||
+                type1.isSelfStaticObject() && type2.isCompanion()
+    }
+
     fun TypeArgumentMarker.isStarProjection(): Boolean
     fun TypeArgumentMarker.getVariance(): TypeVariance
     fun TypeArgumentMarker.getType(): KotlinTypeMarker

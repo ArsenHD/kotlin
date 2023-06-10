@@ -126,6 +126,16 @@ interface ClassicTypeSystemContext : TypeSystemInferenceExtensionContext, TypeSy
         return this.lowerType
     }
 
+    override fun KotlinTypeMarker.isCompanion(): Boolean {
+        // TODO
+        return false
+    }
+
+    override fun KotlinTypeMarker.isSelfStaticObject(): Boolean {
+        // TODO
+        return false
+    }
+
     override fun TypeConstructorMarker.isIntersection(): Boolean {
         require(this is TypeConstructor, this::errorMessage)
         return this is IntersectionTypeConstructor

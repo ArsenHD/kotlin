@@ -17,6 +17,8 @@ import org.jetbrains.kotlin.fir.declarations.utils.*
 import org.jetbrains.kotlin.fir.expressions.*
 import org.jetbrains.kotlin.fir.resolve.directExpansionType
 import org.jetbrains.kotlin.fir.resolve.fullyExpandedType
+import org.jetbrains.kotlin.fir.resolve.isSelfStaticObject
+import org.jetbrains.kotlin.fir.resolve.providers.symbolProvider
 import org.jetbrains.kotlin.fir.resolve.substitution.ConeSubstitutor
 import org.jetbrains.kotlin.fir.resolve.substitution.substitutorByMap
 import org.jetbrains.kotlin.fir.resolve.toSymbol
@@ -199,6 +201,14 @@ interface ConeTypeContext : TypeSystemContext, TypeSystemOptimizationContext, Ty
         require(this is ConeCapturedType)
         if (!this.isMarkedNullable) return this.lowerType
         return this.lowerType?.makeNullable()
+    }
+
+    override fun KotlinTypeMarker.isCompanion(): Boolean {
+        return (this as? ConeKotlinType)?.isCompanion == true
+    }
+
+    override fun KotlinTypeMarker.isSelfStaticObject(): Boolean {
+        return (this as? ConeKotlinType)?.isSelfStaticObject == true
     }
 
     override fun TypeArgumentMarker.isStarProjection(): Boolean {
@@ -662,4 +672,13 @@ interface ConeTypeContext : TypeSystemContext, TypeSystemOptimizationContext, Ty
     override fun KotlinTypeMarker.isTypeVariableType(): Boolean {
         return this is ConeTypeVariableType
     }
+
+    private val ConeKotlinType.isCompanion: Boolean
+        get() {
+            if (this !is ConeClassLikeType) return false
+            val parentClassId = classId?.parentClassId ?: return false
+            val parent = session.symbolProvider.getClassLikeSymbolByClassId(parentClassId)?.fir ?: return false
+            val companionOfParent = (parent as? FirRegularClass)?.companionObjectSymbol ?: return false
+            return lookupTag == companionOfParent.toLookupTag()
+        }
 }

@@ -326,10 +326,48 @@ class FirCallResolver(
                 replaceExtensionReceiver(candidate.chosenExtensionReceiverExpression())
                 replaceContextReceiverArguments(candidate.contextReceiverArguments())
             }
+//            updateExplicitReceiverTypeIfNeeded(qualifiedAccess, candidate.symbol)
         }
         if (qualifiedAccess is FirExpression) transformer.storeTypeFromCallee(qualifiedAccess)
         return qualifiedAccess
     }
+
+//    private val FirResolvedQualifier.isCompanionAndSSOIntersection: Boolean
+//        get() {
+//            val coneType = (typeRef as? FirResolvedTypeRef)?.type ?: return false
+//            if (coneType !is ConeIntersectionType) return false
+//            val types = coneType.intersectedTypes.toList()
+//                .takeIf { types -> types.size == 2 }
+//                ?: return false
+//            val type1 = types[0] as? ConeClassLikeType ?: return false
+//            val type2 = types[1] as? ConeClassLikeType ?: return false
+//
+//            return (type1.isCompanion && type2.isSelfStaticObject)
+//                    || (type1.isSelfStaticObject && type2.isCompanion)
+//        }
+//
+//    private val ConeClassLikeType.isCompanion: Boolean
+//        get() {
+//            val parentClassId = classId?.parentClassId ?: return false
+//            val parent = session.symbolProvider.getClassLikeSymbolByClassId(parentClassId)?.fir ?: return false
+//            val companionOfParent = (parent as? FirRegularClass)?.companionObjectSymbol ?: return false
+//            return lookupTag == companionOfParent.toLookupTag()
+//        }
+//
+//    private fun updateExplicitReceiverTypeIfNeeded(qualifiedAccess: FirQualifiedAccess, symbol: FirBasedSymbol<*>) {
+//        val explicitReceiver = qualifiedAccess.explicitReceiver as? FirResolvedQualifier ?: return
+//        if (!explicitReceiver.isCompanionAndSSOIntersection) return
+//
+//        val symbolOwnerClassId = (symbol as? FirCallableSymbol<*>)?.callableId?.classId ?: return
+//
+//        val actualReceiverType = session.symbolProvider
+//            .getClassLikeSymbolByClassId(symbolOwnerClassId)
+//            ?.constructType(emptyArray(), false)
+//            ?.let { coneType -> explicitReceiver.typeRef.resolvedTypeFromPrototype(coneType) }
+//            ?: return
+//
+//        explicitReceiver.replaceTypeRef(actualReceiverType)
+//    }
 
     fun resolveCallableReference(
         constraintSystemBuilder: ConstraintSystemBuilder,

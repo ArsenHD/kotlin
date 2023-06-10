@@ -206,6 +206,11 @@ abstract class AbstractTypeApproximator(
             "Supertypes for intersection type should not be empty: $type"
         }
 
+        // TODO: process SSO and companion case
+        if (type.isCompanionAndSSOIntersection() && conf.approximateCompanionAndSSO) {
+            return typeConstructor.supertypes().singleOrNull { it.isCompanion() }
+        }
+
         var thereIsApproximation = false
         val newTypes = typeConstructor.supertypes().map {
             val newType = if (toSuper) approximateToSuperType(it, conf, depth) else approximateToSubType(it, conf, depth)
