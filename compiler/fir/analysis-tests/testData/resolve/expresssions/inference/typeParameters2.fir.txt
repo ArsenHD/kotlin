@@ -1,15 +1,24 @@
 FILE: typeParameters2.kt
     public abstract interface Foo : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class FooImpl : R|Foo| {
         public constructor(): R|FooImpl| {
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class FooBarImpl : R|Foo| {
         public constructor(): R|FooBarImpl| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

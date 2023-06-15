@@ -11,6 +11,9 @@ FILE: lambdaArgInScopeFunction.kt
             ^compareTo this@R|/KotlinClass|.R|/KotlinClass.name|.R|kotlin/String.compareTo|(R|<local>/that|.R|/KotlinClass.name|)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun case1(kotlinClass: R|KotlinClass?|): R|kotlin/Unit| {
         lval value: R|KotlinClass?| = R|<local>/kotlinClass|?.{ $subj$.R|kotlin/let|<R|KotlinClass|, R|KotlinClass|>(<L> = let@fun <anonymous>(it: R|KotlinClass|): R|KotlinClass| <inline=Inline, kind=EXACTLY_ONCE>  {

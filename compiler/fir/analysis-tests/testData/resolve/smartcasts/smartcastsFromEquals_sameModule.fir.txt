@@ -4,16 +4,25 @@ FILE: smartcastsFromEquals_sameModule.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class Base<T> : R|kotlin/Any| {
         public constructor<T>(): R|Base<T>| {
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Derived<T> : R|Base<T>| {
         public constructor<T>(): R|Derived<T>| {
             super<R|Base<T>|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -24,6 +33,9 @@ FILE: smartcastsFromEquals_sameModule.kt
 
         public open override operator fun equals(other: R|kotlin/Any?|): R|kotlin/Boolean| {
             ^equals ===(this@R|/FinalWithOverride|, R|<local>/other|)
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

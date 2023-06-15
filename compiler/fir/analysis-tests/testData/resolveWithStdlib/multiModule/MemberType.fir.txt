@@ -3,7 +3,7 @@ FILE: common.kt
     public final expect class MyList : R|kotlin/Any| {
         public final expect fun get(i: R|kotlin/Int|): R|kotlin/Int|
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -15,7 +15,7 @@ FILE: common.kt
         public final val list: R|MyList| = R|<local>/list|
             public get(): R|MyList|
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -33,7 +33,7 @@ FILE: jvm.kt
         public final fun set(i: R|kotlin/Int|, v: R|kotlin/Int|): R|kotlin/Unit| {
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -47,7 +47,7 @@ FILE: jvm.kt
             this@R|/DerivedList|.R|/MyList.set|(Int(2), Int(3))
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -65,7 +65,7 @@ FILE: jvm.kt
             this@R|/DerivedWrapper|.R|/Wrapper.list|.R|/MyList.set|(Int(2), Int(3))
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

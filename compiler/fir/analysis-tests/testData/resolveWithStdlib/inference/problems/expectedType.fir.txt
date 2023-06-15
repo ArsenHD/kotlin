@@ -7,10 +7,16 @@ FILE: expectedType.kt
         public abstract val returnTypeRef: R|FirTypeRef|
             public get(): R|FirTypeRef|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class FirTypeRef : R|kotlin/Any| {
         public constructor(): R|FirTypeRef| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -22,10 +28,16 @@ FILE: expectedType.kt
         public abstract val type: R|ConeKotlinType|
             public get(): R|ConeKotlinType|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class ConeKotlinType : R|kotlin/Any| {
         public constructor(): R|ConeKotlinType| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -52,6 +64,9 @@ FILE: expectedType.kt
                 ^ (this@R|/MyLazy|.R|/MyLazy._value| as R|M|)
             }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Session : R|kotlin/Any| {
         public constructor(property: R|FirProperty|): R|Session| {
@@ -68,5 +83,8 @@ FILE: expectedType.kt
             public get(): R|ConeKotlinType?| {
                 ^ this@R|/Session|.D|/Session.expectedType|.R|/getValue|<R|ConeKotlinType?|>(this@R|/Session|, ::R|/Session.expectedType|)
             }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

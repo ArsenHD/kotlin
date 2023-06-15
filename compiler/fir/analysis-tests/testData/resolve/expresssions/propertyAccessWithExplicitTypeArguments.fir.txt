@@ -22,16 +22,25 @@ FILE: propertyAccessWithExplicitTypeArguments.kt
         R|/property2|<R|kotlin/String|>
     }
     public abstract interface Context<A> : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class ContextImpl<A> : R|Context<A>| {
         public constructor<A>(): R|ContextImpl<A>| {
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Receiver<A> : R|kotlin/Any| {
         public constructor<A>(): R|Receiver<A>| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

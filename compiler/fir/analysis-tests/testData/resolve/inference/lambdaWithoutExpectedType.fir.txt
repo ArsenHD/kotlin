@@ -1,9 +1,18 @@
 FILE: lambdaWithoutExpectedType.kt
     public abstract interface XdEntity : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface XdEntityType<out T : R|XdEntity|> : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface XdNaturalEntityType<T : R|XdEntity|> : R|XdEntityType<T>| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class XdProject : R|XdEntity| {
         public constructor(name: R|kotlin/String|): R|XdProject| {
@@ -19,12 +28,24 @@ FILE: lambdaWithoutExpectedType.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
     public abstract interface XdSearchingNode : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface XdQuery<out T : R|XdEntity|> : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun <T : R|XdEntity|> R|XdQuery<T>|.firstOrNull(): R|T?| {
         ^firstOrNull Null(null)
@@ -38,13 +59,22 @@ FILE: lambdaWithoutExpectedType.kt
             ^eq Null(null)!!
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun <T : R|XdEntity|> R|XdEntityType<T>|.filter(clause: R|FilteringContext.(T) -> XdSearchingNode|): R|XdQuery<T>| {
         ^filter Null(null)!!
     }
     public abstract interface XdIssue : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface XdIssueFolder : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test(): R|kotlin/Unit| {
         lval array: R|kotlin/Array<kotlin/Any>| = R|kotlin/arrayOf|<R|kotlin/Any|>(vararg(String(Project), arrayOf@fun <anonymous>(): R|XdProject?| <inline=Unknown>  {

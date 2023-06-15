@@ -11,10 +11,19 @@ FILE: leakedImplicitType.kt
             ^f <Unresolved name: Unresolved>#()::<Unresolved reference: bar>#
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface IA : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface IB : R|IA| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun R|IA|.extFun(x: R|IB|): R|kotlin/Unit| {
     }

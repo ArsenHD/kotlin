@@ -10,6 +10,9 @@ FILE: test.kt
         public abstract val resultingDescriptor: R|D|
             public get(): R|D|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun <D : R|Descriptor|> test(call: R|Call<D>|, resolvedCall: R|ResolvedCall<D>|): R|kotlin/Unit| {
         R|<local>/call|.R|SubstitutionOverride</Call.resultingDescriptor: R|D|>|.R|/name|

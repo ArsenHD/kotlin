@@ -27,6 +27,9 @@ FILE: smartcastToNothing.kt
         public final val b: R|kotlin/Boolean| = Boolean(true)
             public get(): R|kotlin/Boolean|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test_0(results: R|kotlin/collections/List<kotlin/Nothing>|): R|kotlin/Unit| {
         lvar s: R|A?| = Null(null)

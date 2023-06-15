@@ -1,5 +1,8 @@
 FILE: main.kt
     public abstract interface MyBase : R|Base| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class Implementation : R|Derived|, R|MyBase| {
         public constructor(): R|Implementation| {
@@ -10,5 +13,8 @@ FILE: main.kt
             public get(): R|kotlin/String?| {
                 ^ this@R|/Implementation|.super<R|Derived|>.R|/Derived.parent|
             }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

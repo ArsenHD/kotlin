@@ -19,6 +19,9 @@ FILE: InnerClassOfThrowableOnObject.kt
 
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final class Nested : R|kotlin/Any| {
@@ -34,6 +37,9 @@ FILE: InnerClassOfThrowableOnObject.kt
 
                 }
 
+            }
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }
@@ -53,6 +59,12 @@ FILE: InnerClassOfThrowableOnObject.kt
 
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

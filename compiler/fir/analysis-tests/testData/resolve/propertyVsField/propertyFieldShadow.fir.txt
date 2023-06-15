@@ -14,6 +14,9 @@ FILE: test.kt
             ^check this@R|/Test2|.R|/Test2.text|
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun check(): R|kotlin/String!| {
         ^check R|/Test2.Test2|().R|/Test.publicPrivateText|

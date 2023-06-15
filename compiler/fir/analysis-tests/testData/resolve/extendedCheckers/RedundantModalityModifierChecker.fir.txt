@@ -7,6 +7,9 @@ FILE: RedundantModalityModifierChecker.kt
         public final fun foo(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface Interface : R|kotlin/Any| {
         public open val gav: R|kotlin/Int|
@@ -26,6 +29,9 @@ FILE: RedundantModalityModifierChecker.kt
         public abstract fun too(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface B : R|kotlin/Any| {
         public abstract var bar: R|kotlin/Unit|
@@ -34,8 +40,14 @@ FILE: RedundantModalityModifierChecker.kt
 
         public abstract fun foo(): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface Foo : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract expect class AbstractClass : R|Foo| {
         public abstract expect override fun foo(): R|kotlin/Unit|
@@ -44,6 +56,9 @@ FILE: RedundantModalityModifierChecker.kt
 
         public abstract expect val baz: R|kotlin/Int|
             public get(): R|kotlin/Int|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public abstract class Base : R|kotlin/Any| {
@@ -59,6 +74,9 @@ FILE: RedundantModalityModifierChecker.kt
         public open val gav: R|kotlin/Int| = Int(42)
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class FinalDerived : R|Base| {
         public constructor(): R|FinalDerived| {
@@ -70,6 +88,9 @@ FILE: RedundantModalityModifierChecker.kt
 
         public open override val gav: R|kotlin/Int| = Int(13)
             public get(): R|kotlin/Int|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public open class OpenDerived : R|Base| {
@@ -83,10 +104,16 @@ FILE: RedundantModalityModifierChecker.kt
         public open override val gav: R|kotlin/Int| = Int(13)
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Final : R|kotlin/Any| {
         public constructor(): R|Final| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -99,6 +126,12 @@ FILE: RedundantModalityModifierChecker.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -113,6 +146,9 @@ FILE: RedundantModalityModifierChecker.kt
         public open override fun foo(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class AbstractDerived2 : R|Interface| {
         public constructor(): R|AbstractDerived2| {
@@ -125,14 +161,26 @@ FILE: RedundantModalityModifierChecker.kt
         public open override val gav: R|kotlin/Int| = Int(13)
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface AbstractInterface : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final object FinalObject : R|kotlin/Any| {
         private constructor(): R|FinalObject| {
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open interface OpenInterface : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

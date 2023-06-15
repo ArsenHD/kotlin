@@ -11,6 +11,9 @@ FILE: simpleDelegateProvider.kt
             ^getValue this@R|/Delegate|.R|/Delegate.value|
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class DelegateProvider : R|kotlin/Any| {
         public constructor(value: R|kotlin/String|): R|DelegateProvider| {
@@ -22,6 +25,9 @@ FILE: simpleDelegateProvider.kt
 
         public final operator fun provideDelegate(thisRef: R|kotlin/Any?|, property: R|kotlin/Any?|): R|Delegate| {
             ^provideDelegate R|/Delegate.Delegate|(this@R|/DelegateProvider|.R|/DelegateProvider.value|)
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

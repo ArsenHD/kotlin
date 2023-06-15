@@ -13,6 +13,9 @@ FILE: extension.kt
             this@R|/My|.R|/foo|()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun R|My|.foo(): R|kotlin/Unit| {
     }

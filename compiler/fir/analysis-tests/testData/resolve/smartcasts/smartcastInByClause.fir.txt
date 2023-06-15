@@ -10,8 +10,14 @@ FILE: smartcastInByClause.kt
         public final val index: R|kotlin/Int| = R|<local>/index|
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface Base : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Derived : R|Base| {
         public constructor(index: R|kotlin/Int|): R|Derived| {
@@ -20,6 +26,9 @@ FILE: smartcastInByClause.kt
 
         public final val index: R|kotlin/Int| = R|<local>/index|
             public get(): R|kotlin/Int|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final fun test(a: R|A?|): R|Base?| {

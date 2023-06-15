@@ -11,6 +11,9 @@ FILE: genericUsedInFunction.kt
             ^foo this@R|/Generic|.R|/Generic.value|
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test(arg: R|Generic<kotlin/String>|): R|kotlin/Unit| {
         lval value: R|kotlin/String| = R|<local>/arg|.R|SubstitutionOverride</Generic.value: R|kotlin/String|>|

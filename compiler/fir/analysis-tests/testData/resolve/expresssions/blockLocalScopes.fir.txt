@@ -7,6 +7,9 @@ FILE: blockLocalScopes.kt
         public final fun append(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class A : R|kotlin/Any| {
         public constructor(): R|A| {
@@ -27,6 +30,9 @@ FILE: blockLocalScopes.kt
                 }
             }
 
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

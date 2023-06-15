@@ -4,21 +4,30 @@ FILE: classInSupertypeForEnum.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface C : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final enum class B : R|C|, R|A|, R|kotlin/Any|, R|kotlin/Enum<B>| {
         private constructor(): R|B| {
             super<R|kotlin/Enum<B>|>()
         }
 
-        public final static fun values(): R|kotlin/Array<B>| {
-        }
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            public final static fun values(): R|kotlin/Array<B>| {
+            }
 
-        public final static fun valueOf(value: R|kotlin/String|): R|B| {
-        }
+            public final static fun valueOf(value: R|kotlin/String|): R|B| {
+            }
 
-        public final static val entries: R|kotlin/enums/EnumEntries<B>|
-            public get(): R|kotlin/enums/EnumEntries<B>|
+            public final static val entries: R|kotlin/enums/EnumEntries<B>|
+                public get(): R|kotlin/enums/EnumEntries<B>|
+
+        }
 
     }

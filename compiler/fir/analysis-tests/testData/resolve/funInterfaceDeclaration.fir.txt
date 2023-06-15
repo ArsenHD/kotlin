@@ -4,8 +4,14 @@ FILE: funInterfaceDeclaration.kt
 
         public abstract fun boo(): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract fun interface Test2 : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract fun interface Test3 : R|kotlin/Any| {
         public abstract val a: R|kotlin/Int|
@@ -13,25 +19,43 @@ FILE: funInterfaceDeclaration.kt
 
         public abstract fun foo(): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract fun interface Test4 : R|kotlin/Any| {
         public abstract fun <T> foo(a: R|T|): R|kotlin/Unit|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public abstract fun interface Test5 : R|kotlin/Any| {
         public abstract fun foo(a: R|kotlin/Int| = Int(5)): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract fun interface Test6 : R|kotlin/Any| {
         public abstract suspend fun foo(): R|kotlin/Unit|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public abstract fun interface Test7 : R|kotlin/Any| {
         public abstract fun foo(): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract fun interface Test8 : R|Test7| {
         public abstract fun boo(): R|kotlin/Unit|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public abstract interface Test9 : R|kotlin/Any| {
@@ -39,23 +63,41 @@ FILE: funInterfaceDeclaration.kt
             ^num R|<local>/m|.R|kotlin/Int.times|(R|<local>/m|)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract fun interface Test10 : R|Test9| {
         public abstract fun test(): R|kotlin/Unit|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public abstract interface Test11 : R|kotlin/Any| {
         public abstract val a: R|kotlin/Int|
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract fun interface Test12 : R|Test11| {
         public abstract fun test(): R|kotlin/Unit|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public abstract interface Test14 : R|kotlin/Any| {
         public abstract suspend fun test(): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract fun interface Test15 : R|Test14| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

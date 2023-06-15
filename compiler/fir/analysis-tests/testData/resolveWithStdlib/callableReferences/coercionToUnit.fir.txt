@@ -11,6 +11,9 @@ FILE: coercionToUnit.kt
             ^add Boolean(true)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun main(b: R|B|): R|kotlin/Unit| {
         String().R|/myAlso|<R|kotlin/String|>(R|<local>/b|::R|/B.add|)

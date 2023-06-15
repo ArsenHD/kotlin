@@ -1,5 +1,8 @@
 FILE: genericFunctions.kt
     public abstract interface Any : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final inline fun <reified T : R|Any|> R|Any|.safeAs(): R|T?| {
         ^safeAs (this@R|/safeAs| as? R|T|)
@@ -10,5 +13,8 @@ FILE: genericFunctions.kt
         }
 
         public abstract fun <T> plus(first: R|T|, second: R|T|): R|T|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

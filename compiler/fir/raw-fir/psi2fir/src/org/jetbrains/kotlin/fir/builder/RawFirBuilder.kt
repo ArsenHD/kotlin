@@ -1229,14 +1229,16 @@ open class RawFirBuilder(
 
                 withCapturedTypeParameters(status.isInner || isLocal, classOrObject.toFirSourceElement(), listOf()) {
                     var delegatedFieldsMap: Map<Int, FirFieldSymbol>?
+                    val classFirSource = classOrObject.toFirSourceElement()
                     val staticObjectBuilder = initSelfStaticObject(
                         context.currentClassId,
                         baseModuleData,
                         baseScopeProvider,
-                        baseSession
+                        baseSession,
+                        classFirSource,
                     )
                     buildRegularClass {
-                        source = classOrObject.toFirSourceElement()
+                        source = classFirSource
                         moduleData = baseModuleData
                         origin = FirDeclarationOrigin.Source
                         name = classOrObject.nameAsSafeName

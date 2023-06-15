@@ -7,6 +7,9 @@ FILE: O.kt
         public final val b: R|kotlin/Boolean| = R|<local>/b|
             public get(): R|kotlin/Boolean|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final object O : R|kotlin/Any| {
         private constructor(): R|O| {
@@ -56,6 +59,9 @@ FILE: O.kt
 
                 }
 
+                public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+                }
+
             }
 
             public final fun test(): R|kotlin/Unit| {
@@ -73,6 +79,12 @@ FILE: O.kt
 
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -97,6 +109,9 @@ FILE: O.kt
 
             }
 
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

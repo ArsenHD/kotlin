@@ -1,9 +1,18 @@
 FILE: UastPatterns.kt
     public abstract interface UElement : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface UExpression : R|UElement| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface UReferenceExpression : R|UExpression| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun injectionHostOrReferenceExpression(): R|UExpressionPattern.Capture<UExpression>| {
         ^injectionHostOrReferenceExpression R|/uExpression|().R|SubstitutionOverride</UExpressionPattern.Capture.filter: R|UExpressionPattern.Capture<UExpression>|>|(<L> = filter@fun <anonymous>(it: R|UExpression|): R|kotlin/Boolean| <inline=NoInline>  {
@@ -26,6 +35,9 @@ FILE: UastPatterns.kt
             ^filter (this@R|/UElementPattern| as R|Self|)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class UExpressionPattern<T : R|UExpression|, Self : R|UExpressionPattern<T, Self>|> : R|UElementPattern<T, Self>| {
         public constructor<T : R|UExpression|, Self : R|UExpressionPattern<T, Self>|>(clazz: R|java/lang/Class<T>|): R|UExpressionPattern<T, Self>| {
@@ -37,6 +49,12 @@ FILE: UastPatterns.kt
                 super<R|UExpressionPattern<T, UExpressionPattern.Capture<T>>|>(R|<local>/clazz|)
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

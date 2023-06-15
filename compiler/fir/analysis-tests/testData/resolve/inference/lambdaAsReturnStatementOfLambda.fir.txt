@@ -4,6 +4,9 @@ FILE: lambdaAsReturnStatementOfLambda.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test(a: R|A|): R|kotlin/Unit| {
         lval lambda: R|() -> A| = R|<local>/a|.R|kotlin/let|<R|A|, R|() -> A|>(<L> = let@fun <anonymous>(it: R|A|): R|() -> A| <inline=Inline, kind=EXACTLY_ONCE>  {

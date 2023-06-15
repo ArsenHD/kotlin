@@ -9,6 +9,12 @@ FILE: companionUsesNested.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -20,6 +26,9 @@ FILE: companionUsesNested.kt
         public final class DerivedNested : R|kotlin/Any| {
             public constructor(): R|Derived.DerivedNested| {
                 super<R|kotlin/Any|>()
+            }
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }
@@ -40,6 +49,12 @@ FILE: companionUsesNested.kt
                 lval dd: R|Derived.DerivedNested| = R|/Derived.DerivedNested.DerivedNested|()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

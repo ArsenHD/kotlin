@@ -8,6 +8,9 @@ FILE: main.kt
             ^foo Null(null)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test(b: R|B|): R|kotlin/Unit| {
         R|<local>/b|.R|/B.foo<HIDDEN: /B.foo is invisible>#|(String())

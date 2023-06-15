@@ -4,10 +4,16 @@ FILE: incompatibleModifiers.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     protected final class C : R|kotlin/Any| {
         public constructor(): R|C| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -16,10 +22,16 @@ FILE: incompatibleModifiers.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class E : R|kotlin/Any| {
         public constructor(): R|E| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -28,10 +40,16 @@ FILE: incompatibleModifiers.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public sealed class G : R|kotlin/Any| {
         protected constructor(): R|G| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -49,6 +67,9 @@ FILE: incompatibleModifiers.kt
 
         public final fun copy(i: R|kotlin/Int| = this@R|/H|.R|/H.i|): R|H|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public sealed data class I : R|kotlin/Any| {
         protected constructor(i: R|kotlin/Int|): R|I| {
@@ -61,6 +82,9 @@ FILE: incompatibleModifiers.kt
         public final operator fun component1(): R|kotlin/Int|
 
         public final fun copy(i: R|kotlin/Int| = this@R|/I|.R|/I.i|): R|I|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final data inline class J : R|kotlin/Any| {
@@ -75,6 +99,9 @@ FILE: incompatibleModifiers.kt
 
         public final fun copy(i: R|kotlin/Int| = this@R|/J|.R|/J.i|): R|J|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class K : R|kotlin/Any| {
         public constructor(): R|K| {
@@ -87,16 +114,25 @@ FILE: incompatibleModifiers.kt
         private abstract val i2: R|kotlin/Int|
             private get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     private open class L : R|K| {
         public constructor(): R|L| {
             super<R|K|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     private abstract class M : R|K| {
         public constructor(): R|M| {
             super<R|K|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -117,6 +153,9 @@ FILE: incompatibleModifiers.kt
 
             public final fun copy(i: R|kotlin/Int| = this@R|/X.Y|.R|/X.Y.i|): R|X.Y|
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public sealed inner class Z : R|kotlin/Any| {
@@ -124,6 +163,12 @@ FILE: incompatibleModifiers.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

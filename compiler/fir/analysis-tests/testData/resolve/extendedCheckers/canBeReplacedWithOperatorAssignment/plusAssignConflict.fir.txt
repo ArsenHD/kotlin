@@ -4,6 +4,9 @@ FILE: plusAssignConflict.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final operator fun R|A|.plus(a: R|A|): R|A| {
         ^plus R|/A.A|()

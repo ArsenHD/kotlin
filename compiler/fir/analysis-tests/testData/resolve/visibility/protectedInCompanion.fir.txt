@@ -12,6 +12,12 @@ FILE: protectedInCompanion.kt
             protected final val PROTECTED_CONST: R|kotlin/String| = String()
                 protected get(): R|kotlin/String|
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -22,5 +28,8 @@ FILE: protectedInCompanion.kt
 
         public final val y: R|kotlin/String| = this@R|/A.Companion|.R|/A.Companion.PROTECTED_CONST|
             public get(): R|kotlin/String|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

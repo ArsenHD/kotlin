@@ -36,4 +36,7 @@ FILE: reassignOfNonMemberProperty_lateInitialization.kt
             this@R|/Some|.R|/z| = String(error)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

@@ -11,6 +11,9 @@ FILE: exponentialArraySetWithPlusAssign.kt
         public final operator fun plusAssign(v: R|() -> kotlin/Unit|): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test_1(x: R|A|): R|kotlin/Unit| {
         R|<local>/x|.R|/A.get|(Int(1)).R|/A.plusAssign|(fun <anonymous>(): R|kotlin/Unit| <inline=NoInline>  {
@@ -92,6 +95,9 @@ FILE: exponentialArraySetWithPlusAssign.kt
 
         public final operator fun plus(v: R|() -> kotlin/Unit|): R|D| {
             ^plus this@R|/D|
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

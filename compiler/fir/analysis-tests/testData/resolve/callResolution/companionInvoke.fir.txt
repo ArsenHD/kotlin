@@ -19,6 +19,12 @@ FILE: companionInvoke.kt
                 ^invoke R|kotlin/TODO|()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

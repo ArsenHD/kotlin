@@ -1,8 +1,14 @@
 FILE: smartCastInInit.kt
     public abstract interface I : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface S : R|I| {
         public abstract fun foo(): R|kotlin/Unit|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final fun s(): R|S| {
@@ -19,6 +25,9 @@ FILE: smartCastInInit.kt
         init {
             this@R|/Main|.R|/Main.x| = R|/s|()
             this@R|/Main|.R|/Main.x|.R|/S.foo|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

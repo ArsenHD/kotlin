@@ -4,6 +4,9 @@ FILE: sealedClassConstructorCall.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final val b: R|A| = R|/A.A<HIDDEN: /A.A is invisible>#|()
         public get(): R|A|

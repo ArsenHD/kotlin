@@ -34,6 +34,12 @@ FILE: simple.kt
                 this@R|/Owner.Nested|.<Unresolved name: foo>#()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

@@ -4,6 +4,9 @@ FILE: postponedLambdaInConstructor.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B : R|A| {
         public constructor(s: R|kotlin/String|): R|B| {
@@ -21,6 +24,9 @@ FILE: postponedLambdaInConstructor.kt
 
         public final fun foo(): R|kotlin/Unit| {
             this@R|/B|.R|/B.foo|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

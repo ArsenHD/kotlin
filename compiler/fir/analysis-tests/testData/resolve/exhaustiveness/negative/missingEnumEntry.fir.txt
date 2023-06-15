@@ -4,16 +4,19 @@ FILE: missingEnumEntry.kt
             super<R|kotlin/Enum<SomeEnum>|>()
         }
 
-        public final static enum entry A: R|SomeEnum|
-        public final static enum entry B: R|SomeEnum|
-        public final static fun values(): R|kotlin/Array<SomeEnum>| {
-        }
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            public final static enum entry A: R|SomeEnum|
+            public final static enum entry B: R|SomeEnum|
+            public final static fun values(): R|kotlin/Array<SomeEnum>| {
+            }
 
-        public final static fun valueOf(value: R|kotlin/String|): R|SomeEnum| {
-        }
+            public final static fun valueOf(value: R|kotlin/String|): R|SomeEnum| {
+            }
 
-        public final static val entries: R|kotlin/enums/EnumEntries<SomeEnum>|
-            public get(): R|kotlin/enums/EnumEntries<SomeEnum>|
+            public final static val entries: R|kotlin/enums/EnumEntries<SomeEnum>|
+                public get(): R|kotlin/enums/EnumEntries<SomeEnum>|
+
+        }
 
     }
     public final fun test_1(enum: R|SomeEnum|): R|kotlin/Unit| {

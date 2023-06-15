@@ -3,6 +3,9 @@ FILE: nestedLambdas.kt
         ^myRun R|kotlin/TODO|()
     }
     public abstract interface Inv<W> : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface MyMap<K, V> : R|kotlin/Any| {
         public abstract val k: R|K|
@@ -10,6 +13,9 @@ FILE: nestedLambdas.kt
 
         public abstract val v: R|V|
             public get(): R|V|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final val w: R|Inv<kotlin/String>| = R|kotlin/TODO|()

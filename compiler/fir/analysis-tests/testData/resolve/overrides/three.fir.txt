@@ -7,9 +7,15 @@ FILE: three.kt
         public final fun foo(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface Y : R|kotlin/Any| {
         public open fun baz(): R|kotlin/Unit| {
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -23,6 +29,9 @@ FILE: three.kt
             this@R|/B|.R|/Y.baz|()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class C : R|B| {
         public constructor(): R|C| {
@@ -33,6 +42,9 @@ FILE: three.kt
             this@R|/C|.R|/A.foo|()
             this@R|/C|.R|/B.bar|()
             this@R|/C|.R|/Y.baz|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

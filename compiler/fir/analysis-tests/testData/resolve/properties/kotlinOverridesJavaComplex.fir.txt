@@ -16,6 +16,9 @@ FILE: Test.kt
             ^getName String(Light)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class LightClassWrapper : R|Light|, R|Klass| {
         public constructor(): R|LightClassWrapper| {
@@ -24,6 +27,9 @@ FILE: Test.kt
 
         public final fun test(): R|kotlin/String| {
             ^test this@R|/LightClassWrapper|.R|/Light.typeParameters|.R|/single|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -36,8 +42,14 @@ FILE: Test.kt
             ^getTypeParameters R|/listOf|()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface Field : R|Named| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class LightField<D> : R|LightMember<kotlin/Any>|, R|Field| {
         public constructor<D>(): R|LightField<D>| {
@@ -51,6 +63,9 @@ FILE: Test.kt
                 }
             }
 
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

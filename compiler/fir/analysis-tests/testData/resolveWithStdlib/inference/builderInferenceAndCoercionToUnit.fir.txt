@@ -7,6 +7,9 @@ FILE: builderInferenceAndCoercionToUnit.kt
         public final val initialValues: R|kotlin/collections/List<T>| = R|<local>/initialValues|
             public get(): R|kotlin/collections/List<T>|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test(strings: R|kotlin/collections/List<kotlin/String>|): R|kotlin/Unit| {
         lval dropDown: R|DropDownComponent<kotlin/Any>| = R|/DropDownComponent.DropDownComponent|<R|kotlin/Any|>(initialValues = R|kotlin/collections/buildList|<R|kotlin/Any|>(<L> = buildList@fun R|kotlin/collections/MutableList<kotlin/Any>|.<anonymous>(): R|kotlin/Unit| <inline=Inline, kind=EXACTLY_ONCE>  {

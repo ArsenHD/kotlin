@@ -15,6 +15,9 @@ FILE: recursiveCallOnWhenWithSealedClass.kt
             public final val reasonForUI: R|kotlin/String| = R|<local>/reasonForUI|
                 public get(): R|kotlin/String|
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final class Yeah<T> : R|Maybe<T>| {
@@ -24,6 +27,9 @@ FILE: recursiveCallOnWhenWithSealedClass.kt
 
             public final val meat: R|T| = R|<local>/meat|
                 public get(): R|T|
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
 
         }
 
@@ -37,6 +43,9 @@ FILE: recursiveCallOnWhenWithSealedClass.kt
                 }
             }
 
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

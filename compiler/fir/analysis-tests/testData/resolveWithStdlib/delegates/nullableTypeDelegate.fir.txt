@@ -4,10 +4,19 @@ FILE: nullableTypeDelegate.kt
 
         public abstract operator fun setValue(thisRef: R|R|, prop: R|kotlin/Any|, value: R|T|): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface Delegate<R, T> : R|ReadWriteProperty<R, T>| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface DatabaseEntity : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun <Self : R|DatabaseEntity|, Target : R|DatabaseEntity|> R|Self|.directed(clazz: R|java/lang/Class<Target>|): R|Delegate<Self, Target?>| {
         ^directed Null(null)!!
@@ -27,6 +36,9 @@ FILE: nullableTypeDelegate.kt
 
         public final fun set(link: R|MyClassSome?|): R|kotlin/Unit| {
             this@R|/MyClassSome|.R|/MyClassSome.other| = R|<local>/link|
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

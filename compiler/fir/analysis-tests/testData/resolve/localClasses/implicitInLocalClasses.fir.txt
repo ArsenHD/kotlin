@@ -25,6 +25,9 @@ FILE: implicitInLocalClasses.kt
                     ^ ==(this@R|/A|.R|kotlin/Any.hashCode|(), Int(0))
                 }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         lval a: R|A| = R|/A.A|()
@@ -63,6 +66,12 @@ FILE: implicitInLocalClasses.kt
                         ^ this@R|/B|.R|<local>/bar|(Int(1))
                     }
 
+                public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+                }
+
+            }
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }

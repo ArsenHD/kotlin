@@ -7,10 +7,16 @@ FILE: superclassNotAccessibleFromInterface.kt
         public open fun foo(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface ATrait : R|A| {
         public open override fun foo(): R|kotlin/Unit| {
             this@R|/ATrait|.super<R|A|>.R|/A.foo|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

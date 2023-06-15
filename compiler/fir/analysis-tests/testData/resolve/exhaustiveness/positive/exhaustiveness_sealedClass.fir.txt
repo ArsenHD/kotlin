@@ -14,14 +14,26 @@ FILE: exhaustiveness_sealedClass.kt
                     super<R|Base|>()
                 }
 
+                public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+                }
+
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
     public final class C : R|Base| {
         public constructor(): R|C| {
             super<R|Base|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

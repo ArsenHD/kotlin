@@ -10,6 +10,9 @@ FILE: nestedClassNameClash.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Foo : R|kotlin/Any| {
         public constructor(): R|Foo| {
@@ -59,6 +62,12 @@ FILE: nestedClassNameClash.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

@@ -8,6 +8,9 @@ FILE: simple.kt
             ^invoke String(invoke)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test(s: R|Simple|): R|kotlin/Unit| {
         lval result: R|kotlin/String| = R|<local>/s|.R|/Simple.invoke|()

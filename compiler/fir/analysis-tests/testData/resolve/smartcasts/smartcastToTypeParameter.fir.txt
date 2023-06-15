@@ -1,25 +1,49 @@
 FILE: smartcastToTypeParameter.kt
     public abstract interface FirTypeScope : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface AbstractFirBasedSymbol<E : R|FirSymbolOwner<E>|, R|FirDeclaration|> : R|kotlin/Any| {
         public abstract val fir: R|E|
             public get(): R|E|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface FirCallableSymbol<D : R|FirCallableDeclaration<D>|> : R|AbstractFirBasedSymbol<D>| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface FirElement : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface FirSymbolOwner<E : R|FirSymbolOwner<E>|, R|FirDeclaration|> : R|FirElement| {
         public abstract val symbol: R|AbstractFirBasedSymbol<E>|
             public get(): R|AbstractFirBasedSymbol<E>|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface FirDeclaration : R|FirElement| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface FirCallableDeclaration<F : R|FirCallableDeclaration<F>|> : R|FirDeclaration|, R|FirSymbolOwner<F>| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface FirCallableMemberDeclaration<F : R|FirCallableMemberDeclaration<F>|> : R|FirCallableDeclaration<F>| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     private final inline fun <reified S : R|FirCallableSymbol<*>|> computeBaseSymbols(symbol: R|S|, basedSymbol: R|S|, directOverridden: R|FirTypeScope.(S) -> kotlin/collections/List<S>|): R|kotlin/Unit| {
     }

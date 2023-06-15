@@ -8,6 +8,9 @@ FILE: a.kt
             protected open override val message: R|kotlin/String| = String(expression expected)
                 protected get(): R|kotlin/String|
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
     }
@@ -19,5 +22,8 @@ FILE: b.kt
 
         protected abstract val message: R|kotlin/String|
             protected get(): R|kotlin/String|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

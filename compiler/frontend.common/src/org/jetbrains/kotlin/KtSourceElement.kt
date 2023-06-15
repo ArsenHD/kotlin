@@ -33,6 +33,12 @@ sealed class KtFakeSourceElementKind : KtSourceElementKind() {
     // and have a fake source referencing it
     object ErrorTypeRef : KtFakeSourceElementKind()
 
+    // 'Self static object' is a static nested object that contains
+    // static declarations of an outer class.
+    // This object is needed for the convenience of resolution on frontend
+    // and is removed later on during backend lowerings.
+    object SelfStaticObject : KtFakeSourceElementKind()
+
     // for properties without accessors default getter & setter are generated
     // they have a fake source which refers to property
     object DefaultAccessor : KtFakeSourceElementKind()

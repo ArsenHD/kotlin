@@ -22,6 +22,12 @@ FILE: outerObject.kt
                 (this@R|/Outer|, this@R|/Outer.Nested|).R|/Outer.foo|()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

@@ -9,6 +9,9 @@ FILE: K1.kt
                 super<<ERROR TYPE REF: Symbol not found for Nested>>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final fun bar(): R|kotlin/Unit| {
@@ -16,6 +19,9 @@ FILE: K1.kt
             <Unresolved name: baz>#()
             <Unresolved name: superClass>#()
             <Unresolved name: superI>#()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -28,6 +34,9 @@ FILE: K2.kt
         public final fun foo(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
 FILE: K3.kt
     public abstract class SuperClass : R|kotlin/Any| {
@@ -38,9 +47,15 @@ FILE: K3.kt
         public final fun superClass(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface SuperI : R|kotlin/Any| {
         public open fun superI(): R|kotlin/Unit| {
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

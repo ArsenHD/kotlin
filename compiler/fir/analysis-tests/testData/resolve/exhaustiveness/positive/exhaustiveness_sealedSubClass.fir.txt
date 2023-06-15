@@ -4,10 +4,16 @@ FILE: exhaustiveness_sealedSubClass.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public sealed class B : R|A| {
         protected constructor(): R|B| {
             super<R|A|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -16,16 +22,25 @@ FILE: exhaustiveness_sealedSubClass.kt
             super<R|A|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public sealed class D : R|B| {
         protected constructor(): R|D| {
             super<R|B|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public sealed class E : R|B| {
         protected constructor(): R|E| {
             super<R|B|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

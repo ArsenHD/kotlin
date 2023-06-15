@@ -7,6 +7,9 @@ FILE: K1.kt
         public final fun foo(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
 FILE: K2.kt
     public final class K2 : R|J1| {
@@ -17,6 +20,9 @@ FILE: K2.kt
         public final fun bar(): R|kotlin/Unit| {
             this@R|/K2|.R|/KFirst.foo|()
             this@R|/K2|.R|/J1.baz|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

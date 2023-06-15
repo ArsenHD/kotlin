@@ -11,6 +11,9 @@ FILE: arraySet.kt
         public final operator fun set(index: R|kotlin/Int|, value: R|T|): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B : R|kotlin/Any| {
         public constructor(): R|B| {
@@ -18,6 +21,9 @@ FILE: arraySet.kt
         }
 
         public final operator fun plusAssign(other: R|B|): R|kotlin/Unit| {
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -28,6 +34,9 @@ FILE: arraySet.kt
 
         public final operator fun plus(other: R|C|): R|C| {
             ^plus this@R|/C|
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -41,6 +50,9 @@ FILE: arraySet.kt
 
         public final operator fun plus(other: R|D|): R|D| {
             ^plus this@R|/D|
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

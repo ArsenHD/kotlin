@@ -9,6 +9,9 @@ FILE: Base.kt
                 ^ String(Base)
             }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class Derived : R|Base| {
         public constructor(): R|Derived| {
@@ -19,6 +22,9 @@ FILE: Base.kt
             public get(): R|kotlin/String| {
                 ^ String(Derived)
             }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
 FILE: Test.kt

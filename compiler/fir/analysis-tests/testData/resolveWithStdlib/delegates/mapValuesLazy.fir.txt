@@ -1,5 +1,8 @@
 FILE: mapValuesLazy.kt
     public abstract interface TDat : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun resolve(str: R|kotlin/String|): R|TDat| {
         ^resolve Null(null)!!

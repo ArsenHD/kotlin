@@ -7,6 +7,9 @@ FILE: properties.kt
         public final val bar: R|kotlin/Int| = Int(1)
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final val bar: R|kotlin/Int| = Int(1)
         public get(): R|kotlin/Int|

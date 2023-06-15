@@ -13,7 +13,7 @@ FILE: recursiveBug.kt
         public final val name: R|kotlin/Int| = this@R|/Foo|.R|/Foo.result|.R|kotlin/String.length|
             public get(): R|kotlin/Int|
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

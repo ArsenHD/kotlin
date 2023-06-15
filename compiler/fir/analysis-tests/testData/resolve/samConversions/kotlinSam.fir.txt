@@ -2,22 +2,37 @@ FILE: kotlinSam.kt
     public abstract fun interface MyRunnable : R|kotlin/Any| {
         public abstract fun foo(x: R|kotlin/Int|): R|kotlin/Boolean|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract fun interface WithProperty : R|kotlin/Any| {
         public abstract val x: R|kotlin/Int|
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract fun interface TwoAbstract : R|MyRunnable| {
         public abstract fun bar(): R|kotlin/Unit|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public abstract fun interface Super : R|kotlin/Any| {
         public abstract fun foo(x: R|kotlin/Int|): R|kotlin/Any|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract fun interface Derived : R|Super| {
         public abstract override fun foo(x: R|kotlin/Int|): R|kotlin/Boolean|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final fun foo1(m: R|MyRunnable|): R|kotlin/Unit| {

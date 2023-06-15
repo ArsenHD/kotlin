@@ -18,4 +18,7 @@ FILE: User.kt
             lval ui: R|kotlin/String!| = this@R|test/User|.R|/BaseClass.ui|
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

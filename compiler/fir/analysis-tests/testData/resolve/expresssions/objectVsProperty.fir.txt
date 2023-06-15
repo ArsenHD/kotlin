@@ -4,6 +4,9 @@ FILE: objectVsProperty.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final val A: R|kotlin/Int| = Int(10)
         public get(): R|kotlin/Int|

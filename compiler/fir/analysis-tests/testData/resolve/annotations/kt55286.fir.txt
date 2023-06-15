@@ -4,6 +4,9 @@ FILE: kt55286.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class Base : R|kotlin/Any| {
         public constructor(@R|Deprecated<Base.Nested>|() a: R|kotlin/String|): R|Base| {
@@ -18,6 +21,12 @@ FILE: kt55286.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -28,5 +37,8 @@ FILE: kt55286.kt
 
         @R|Deprecated<Base.Nested>|() public final val b: R|kotlin/String| = R|<local>/b|
             public get(): R|kotlin/String|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

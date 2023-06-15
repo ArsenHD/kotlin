@@ -4,7 +4,7 @@ FILE: test.kt
             super<R|kotlin/Any|>()
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -20,7 +20,7 @@ FILE: test.kt
 
         public final fun copy(message: R|kotlin/String| = this@R|/KotlinResult|.R|/KotlinResult.message|): R|KotlinResult|
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -39,12 +39,12 @@ FILE: test.kt
                     ^ String(Omega)
                 }
 
-            public final static object <SELF_STATIC_OBJECT> {
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

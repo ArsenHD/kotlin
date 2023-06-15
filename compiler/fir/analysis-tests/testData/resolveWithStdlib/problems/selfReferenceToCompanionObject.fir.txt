@@ -7,6 +7,9 @@ FILE: selfReferenceToCompanionObject.kt
         public final val fn: R|() -> kotlin/String| = R|<local>/fn|
             public get(): R|() -> kotlin/String|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Host : R|kotlin/Any| {
         public constructor(): R|Host| {
@@ -15,7 +18,7 @@ FILE: selfReferenceToCompanionObject.kt
 
         public final companion object Companion : R|Base| {
             private constructor(): R|Host.Companion| {
-                super<R|Base|>(R|kotlin/run|<R|() -> kotlin/String|>(<L> = run@fun <anonymous>(): R|() -> kotlin/String| <inline=Inline, kind=EXACTLY_ONCE>  {
+                super<R|Base|>(this@R|/Host.Companion.<SELF_STATIC_OBJECT>|.R|kotlin/run|<R|Host.Companion.<SELF_STATIC_OBJECT>|, R|() -> kotlin/String|>(<L> = run@fun R|Host.Companion.<SELF_STATIC_OBJECT>|.<anonymous>(): R|() -> kotlin/String| <inline=Inline, kind=EXACTLY_ONCE>  {
                     ^ run@fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
                         ^ Q|Host|.R|/Host.Companion.ok|()
                     }
@@ -28,6 +31,12 @@ FILE: selfReferenceToCompanionObject.kt
                 ^ok String(OK)
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -42,45 +51,48 @@ FILE: selfReferenceToCompanionObject.kt
         public final val closure1: R|() -> kotlin/String| = R|<local>/closure1|
             public get(): R|() -> kotlin/String|
 
-        public final static enum entry FOO: R|Test| = object : R|Test| {
-            private constructor(): R|<anonymous>| {
-                super<R|Test|>(String(O), this@R|kotlin/Enum.Companion|.R|kotlin/run|<R|kotlin/Enum.Companion|, R|() -> kotlin/String|>(<L> = run@fun R|kotlin/Enum.Companion|.<anonymous>(): R|() -> kotlin/String| <inline=Inline, kind=EXACTLY_ONCE>  {
-                    ^ run@fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
-                        ^ R|/Test.FOO|.R|/Test.x|
-                    }
-
-                }
-                ))
-            }
-
-            public open override val y: R|kotlin/String| = String(K)
-                public get(): R|kotlin/String|
-
-            public final val closure2: R|() -> kotlin/String| = fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
-                ^ this@R|/<anonymous>|.R|/<anonymous>.y|
-            }
-
-                public get(): R|() -> kotlin/String|
-
-            public open override val z: R|kotlin/String| = this@R|/<anonymous>|.R|/<anonymous>.closure2|.R|SubstitutionOverride<kotlin/Function0.invoke: R|kotlin/String|>|()
-                public get(): R|kotlin/String|
-
-        }
-
         public abstract val y: R|kotlin/String|
             public get(): R|kotlin/String|
 
         public abstract val z: R|kotlin/String|
             public get(): R|kotlin/String|
 
-        public final static fun values(): R|kotlin/Array<Test>| {
-        }
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            public final static enum entry FOO: R|Test| = object : R|Test| {
+                private constructor(): R|<anonymous>| {
+                    super<R|Test|>(String(O), this@R|/Test.<SELF_STATIC_OBJECT>|.R|kotlin/run|<R|Test.<SELF_STATIC_OBJECT>|, R|() -> kotlin/String|>(<L> = run@fun R|Test.<SELF_STATIC_OBJECT>|.<anonymous>(): R|() -> kotlin/String| <inline=Inline, kind=EXACTLY_ONCE>  {
+                        ^ run@fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
+                            ^ this@R|special/anonymous|.R|/Test.FOO|.R|/Test.x|
+                        }
 
-        public final static fun valueOf(value: R|kotlin/String|): R|Test| {
-        }
+                    }
+                    ))
+                }
 
-        public final static val entries: R|kotlin/enums/EnumEntries<Test>|
-            public get(): R|kotlin/enums/EnumEntries<Test>|
+                public open override val y: R|kotlin/String| = String(K)
+                    public get(): R|kotlin/String|
+
+                public final val closure2: R|() -> kotlin/String| = fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
+                    ^ this@R|/<anonymous>|.R|/<anonymous>.y|
+                }
+
+                    public get(): R|() -> kotlin/String|
+
+                public open override val z: R|kotlin/String| = this@R|/<anonymous>|.R|/<anonymous>.closure2|.R|SubstitutionOverride<kotlin/Function0.invoke: R|kotlin/String|>|()
+                    public get(): R|kotlin/String|
+
+            }
+
+            public final static fun values(): R|kotlin/Array<Test>| {
+            }
+
+            public final static fun valueOf(value: R|kotlin/String|): R|Test| {
+            }
+
+            public final static val entries: R|kotlin/enums/EnumEntries<Test>|
+                public get(): R|kotlin/enums/EnumEntries<Test>|
+
+        }
 
     }
     public final fun box(): R|kotlin/String| {

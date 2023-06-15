@@ -1,6 +1,6 @@
 FILE: test.kt
     public abstract interface StringSet : R|kotlin/collections/MutableSet<kotlin/String>| {
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

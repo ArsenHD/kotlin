@@ -4,6 +4,9 @@ FILE: safeCalls.kt
 
         public abstract fun bar(x: R|kotlin/String|): R|A|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface B : R|kotlin/Any| {
         public abstract val foo: R|B|
@@ -11,6 +14,9 @@ FILE: safeCalls.kt
 
         public abstract val bar: R|B|
             public get(): R|B|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final fun test_1(x: R|A?|): R|kotlin/Unit| {

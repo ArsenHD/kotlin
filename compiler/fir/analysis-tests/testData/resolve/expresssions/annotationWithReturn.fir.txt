@@ -10,4 +10,7 @@ FILE: annotationWithReturn.kt
         public final val value: R|kotlin/Int| = R|<local>/value|
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

@@ -9,6 +9,9 @@ FILE: A.kt
         public final fun foo(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
 FILE: main.kt
     public final fun test_1(): R|kotlin/Unit| {

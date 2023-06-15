@@ -12,4 +12,7 @@ FILE: noPrimaryConstructor.kt
             this<R|NoPrimary|>(String())
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

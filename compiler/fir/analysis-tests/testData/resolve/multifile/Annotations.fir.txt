@@ -6,6 +6,9 @@ FILE: annotations.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final annotation class WithInt : R|kotlin/Annotation| {
         public constructor(value: R|kotlin/Int|): R|annotations/WithInt| {
@@ -15,6 +18,9 @@ FILE: annotations.kt
         public final val value: R|kotlin/Int| = R|<local>/value|
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final annotation class WithString : R|kotlin/Annotation| {
         public constructor(s: R|kotlin/String|): R|annotations/WithString| {
@@ -23,6 +29,9 @@ FILE: annotations.kt
 
         public final val s: R|kotlin/String| = R|<local>/s|
             public get(): R|kotlin/String|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final annotation class Complex : R|kotlin/Annotation| {
@@ -35,6 +44,9 @@ FILE: annotations.kt
 
         public final val ws: R|annotations/WithString| = R|<local>/ws|
             public get(): R|annotations/WithString|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final annotation class VeryComplex : R|kotlin/Annotation| {
@@ -57,6 +69,9 @@ FILE: annotations.kt
         public final val n: R|kotlin/Int?| = R|<local>/n|
             public get(): R|kotlin/Int?|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
 FILE: main.kt
     @FILE:R|annotations/Simple|()
@@ -71,6 +86,9 @@ FILE: main.kt
 
         @R|annotations/Complex|(wi = R|annotations/WithInt.WithInt|(Int(7)), ws = R|annotations/WithString.WithString|(String())) public abstract val v: R|kotlin/String|
             public get(): R|kotlin/String|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     @R|annotations/WithString|(s = String(xyz)) public final class Second : R|@R|annotations/WithInt|(value = Int(0))  test/First| {
@@ -91,6 +109,9 @@ FILE: main.kt
 
         @R|annotations/WithString|(s = String(constructor)) public constructor(): R|test/Second| {
             this<R|test/Second|>(Char(10))
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

@@ -36,4 +36,7 @@ FILE: RedundantSingleExpressionStringTemplateChecker.kt
 
         public final fun copy(short_name: R|kotlin/String| = this@R|/ProductGroup|.R|/ProductGroup.short_name|, parent: R|ProductGroup?| = this@R|/ProductGroup|.R|/ProductGroup.parent|): R|ProductGroup|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

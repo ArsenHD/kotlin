@@ -4,17 +4,20 @@ FILE: main.kt
             super<R|kotlin/Enum<E>|>()
         }
 
-        public final static enum entry A: R|E|
-        public final static enum entry B: R|E|
-        public final static enum entry C: R|E|
-        public final static fun values(): R|kotlin/Array<E>| {
-        }
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            public final static enum entry A: R|E|
+            public final static enum entry B: R|E|
+            public final static enum entry C: R|E|
+            public final static fun values(): R|kotlin/Array<E>| {
+            }
 
-        public final static fun valueOf(value: R|kotlin/String|): R|E| {
-        }
+            public final static fun valueOf(value: R|kotlin/String|): R|E| {
+            }
 
-        public final static val entries: R|kotlin/enums/EnumEntries<E>|
-            public get(): R|kotlin/enums/EnumEntries<E>|
+            public final static val entries: R|kotlin/enums/EnumEntries<E>|
+                public get(): R|kotlin/enums/EnumEntries<E>|
+
+        }
 
     }
     public final fun test_1(): R|kotlin/Unit| {

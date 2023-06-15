@@ -5,6 +5,9 @@ FILE: simpleClass.kt
         public abstract val bar: R|kotlin/Boolean|
             public get(): R|kotlin/Boolean|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class SomeClass : R|SomeInterface| {
         public constructor(): R|SomeClass| {
@@ -28,5 +31,8 @@ FILE: simpleClass.kt
         public final var fau: R|kotlin/Double|
             public get(): R|kotlin/Double|
             public set(value: R|kotlin/Double|): R|kotlin/Unit|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

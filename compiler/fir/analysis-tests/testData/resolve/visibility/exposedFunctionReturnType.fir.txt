@@ -9,6 +9,12 @@ FILE: exposedFunctionReturnType.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -19,32 +25,38 @@ FILE: exposedFunctionReturnType.kt
 
         public final fun foo(str: R|kotlin/String|): <ERROR TYPE REF: HIDDEN: A.InnerA is invisible>
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     private final enum class Some : R|kotlin/Enum<Some>| {
         private constructor(): R|Some| {
             super<R|kotlin/Enum<Some>|>()
         }
 
-        public final static enum entry FIRST: R|Some| = object : R|Some| {
-            private constructor(): R|<anonymous>| {
-                super<R|Some|>()
-            }
-
-            public open override fun foo(): R|Some| {
-                ^foo R|/Some.FIRST|
-            }
-
-        }
-
         public abstract fun foo(): R|Some|
 
-        public final static fun values(): R|kotlin/Array<Some>| {
-        }
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            public final static enum entry FIRST: R|Some| = object : R|Some| {
+                private constructor(): R|<anonymous>| {
+                    super<R|Some|>()
+                }
 
-        public final static fun valueOf(value: R|kotlin/String|): R|Some| {
-        }
+                public open override fun foo(): R|Some| {
+                    ^foo R|/Some.FIRST|
+                }
 
-        public final static val entries: R|kotlin/enums/EnumEntries<Some>|
-            public get(): R|kotlin/enums/EnumEntries<Some>|
+            }
+
+            public final static fun values(): R|kotlin/Array<Some>| {
+            }
+
+            public final static fun valueOf(value: R|kotlin/String|): R|Some| {
+            }
+
+            public final static val entries: R|kotlin/enums/EnumEntries<Some>|
+                public get(): R|kotlin/enums/EnumEntries<Some>|
+
+        }
 
     }

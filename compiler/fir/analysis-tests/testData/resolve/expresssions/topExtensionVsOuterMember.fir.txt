@@ -19,6 +19,12 @@ FILE: topExtensionVsOuterMember.kt
             public final val x: R|kotlin/Int| = this@R|/Outer.Inner|.R|/foo|()
                 public get(): R|kotlin/Int|
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

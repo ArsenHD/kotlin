@@ -6,6 +6,9 @@ FILE: qualifiedSupertypeExtendedByOtherSupertype.kt
         public open fun bar(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final typealias AliasedIBase1 = R|IBase<kotlin/String>|
     public final typealias AliasedIBase = R|AliasedIBase1|
@@ -14,6 +17,9 @@ FILE: qualifiedSupertypeExtendedByOtherSupertype.kt
         }
 
         public open fun qux(): R|kotlin/Unit| {
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -30,6 +36,9 @@ FILE: qualifiedSupertypeExtendedByOtherSupertype.kt
             this@R|/Test|.super<R|IDerived<kotlin/String>|>.R|SubstitutionOverride</IDerived.qux: R|kotlin/Unit|>|()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Test2 : R|IDerived<kotlin/String>|, R|AliasedIBase| {
         public constructor(): R|Test2| {
@@ -44,6 +53,9 @@ FILE: qualifiedSupertypeExtendedByOtherSupertype.kt
             this@R|/Test2|.super<R|IDerived<kotlin/String>|>.R|SubstitutionOverride</IDerived.foo: R|kotlin/Unit|>|()
             this@R|/Test2|.super<R|IDerived<kotlin/String>|>.R|SubstitutionOverride</IDerived.bar: R|kotlin/Unit|>|()
             this@R|/Test2|.super<R|IDerived<kotlin/String>|>.R|SubstitutionOverride</IDerived.qux: R|kotlin/Unit|>|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

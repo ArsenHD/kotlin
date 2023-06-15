@@ -4,10 +4,16 @@ FILE: projectionsOnNonClassTypeArguments.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B : R|kotlin/Any| {
         public constructor(): R|B| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

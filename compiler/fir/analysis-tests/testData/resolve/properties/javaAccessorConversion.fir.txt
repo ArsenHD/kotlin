@@ -20,6 +20,9 @@ FILE: main.kt
             ^getX Int(1)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test_4(foo: R|Foo|): R|kotlin/Unit| {
         R|<local>/foo|.<Unresolved name: x>#

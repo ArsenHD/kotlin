@@ -30,6 +30,9 @@ FILE: basic.kt
         public final fun bar(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final infix fun R|() -> kotlin/Unit|.foo(x: R|A.() -> kotlin/Unit|): R|kotlin/Unit| {
     }

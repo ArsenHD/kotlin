@@ -8,6 +8,9 @@ FILE: explicitReceiver2.kt
             ^invoke this@R|/Bar|
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun x(): R|kotlin/Unit| {
     }
@@ -25,6 +28,9 @@ FILE: explicitReceiver2.kt
 
         public final fun bar(): R|Foo| {
             ^bar this@R|/Foo|.R|/Foo.x|.R|/Bar.invoke|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

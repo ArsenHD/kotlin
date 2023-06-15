@@ -1,9 +1,18 @@
 FILE: commonSupertypeFromReturnTypesOfCallableReference.kt
     public abstract interface Parent : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface Child1 : R|Parent| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface Child2 : R|Parent| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun foo(): R|Child1| {
         ^foo R|kotlin/TODO|()

@@ -2,6 +2,9 @@ FILE: lambdaWithReceiver.kt
     public abstract interface A : R|kotlin/Any| {
         public abstract fun foo(): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun <T> myWith(receiver: R|T|, block: R|T.() -> kotlin/Unit|): R|kotlin/Unit| {
         R|<local>/block|.R|SubstitutionOverride<kotlin/Function1.invoke: R|kotlin/Unit|>|(R|<local>/receiver|)

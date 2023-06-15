@@ -7,6 +7,9 @@ FILE: safeCallInvoke.kt
         public final operator fun invoke(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B : R|kotlin/Any| {
         public constructor(): R|B| {
@@ -21,6 +24,9 @@ FILE: safeCallInvoke.kt
 
         public final val foo: R|A| = R|/A.A|()
             public get(): R|A|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final fun main(b: R|B?|): R|kotlin/Unit| {

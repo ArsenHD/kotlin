@@ -10,10 +10,16 @@ FILE: delegatingConstructorCall.kt
         public final val x: R|kotlin/String| = R|<local>/x|
             public get(): R|kotlin/String|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B1 : R|A1| {
         public constructor(): R|B1| {
             super<R|A1|>(R|/materialize|<R|kotlin/String|>())
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -25,10 +31,16 @@ FILE: delegatingConstructorCall.kt
         public final val x: R|kotlin/Int| = R|<local>/x|
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B2 : R|A2| {
         public constructor(): R|B2| {
             super<R|A2|>(Int(1).R|kotlin/Int.plus|(Int(1)))
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -41,10 +53,16 @@ FILE: delegatingConstructorCall.kt
             this<R|A3|>(R|<local>/x|, R|<local>/x|)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B3_1 : R|A3| {
         public constructor(): R|B3_1| {
             super<R|A3|>(String())
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -53,16 +71,25 @@ FILE: delegatingConstructorCall.kt
             super<R|A3|>(String(), String(asas))
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B3_3 : R|A3| {
         public constructor(): R|B3_3| {
             super<R|A3|>(String(), Boolean(true))
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B3_4 : R|A3| {
         public constructor(): R|B3_4| {
             super<R|A3|>(String(), Q|kotlin/Unit|)
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -74,10 +101,16 @@ FILE: delegatingConstructorCall.kt
         public final val x: R|kotlin/Byte| = R|<local>/x|
             public get(): R|kotlin/Byte|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B4 : R|A4| {
         public constructor(): R|B4| {
             super<R|A4|>(Int(1).R|kotlin/Int.plus|(Int(1)))
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -90,16 +123,25 @@ FILE: delegatingConstructorCall.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B5_1 : R|A5| {
         public constructor(): R|B5_1| {
             super<R|A5|>(Int(1).R|kotlin/Int.plus|(Int(1)))
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B5_2 : R|A5| {
         public constructor(): R|B5_2| {
             super<R|A5|>(Int(100).R|kotlin/Int.times|(Int(2)))
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

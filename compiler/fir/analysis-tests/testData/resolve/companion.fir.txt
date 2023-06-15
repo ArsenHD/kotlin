@@ -16,12 +16,21 @@ FILE: companion.kt
                     super<R|kotlin/Any|>()
                 }
 
+                public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+                }
+
+            }
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }
 
         public abstract val x: R|test/Some.Companion.InCompanion|
             public get(): R|test/Some.Companion.InCompanion|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public abstract class Another : R|kotlin/Any| {
@@ -39,11 +48,20 @@ FILE: companion.kt
                     super<R|kotlin/Any|>()
                 }
 
+                public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+                }
+
+            }
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }
 
         public abstract val x: R|test/Another.NamedCompanion.InCompanion|
             public get(): R|test/Another.NamedCompanion.InCompanion|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

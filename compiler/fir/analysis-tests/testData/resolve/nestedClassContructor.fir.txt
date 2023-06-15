@@ -13,6 +13,9 @@ FILE: nestedClassContructor.kt
                 ^copy R|/A.B.B|()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public open class C : R|kotlin/Any| {
@@ -24,6 +27,12 @@ FILE: nestedClassContructor.kt
                 ^copy R|/A.C.C|()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -38,6 +47,9 @@ FILE: nestedClassContructor.kt
             lval c: <ERROR TYPE REF: Unresolved name: C> = <Unresolved name: C>#()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class E : R|A| {
         public constructor(): R|E| {
@@ -47,6 +59,9 @@ FILE: nestedClassContructor.kt
         public final fun foo(): R|kotlin/Unit| {
             lval a: R|A| = R|/A.A|()
             lval c: R|A.C| = R|/A.C.C|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

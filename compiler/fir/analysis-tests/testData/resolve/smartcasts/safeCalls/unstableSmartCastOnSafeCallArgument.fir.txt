@@ -7,6 +7,9 @@ FILE: unstableSmartCastOnSafeCallArgument.kt
         public abstract val bar: R|Bar?|
             public get(): R|Bar?|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class Bar : R|kotlin/Any| {
         public constructor(): R|Bar| {
@@ -16,10 +19,16 @@ FILE: unstableSmartCastOnSafeCallArgument.kt
         public abstract val buz: R|Buz?|
             public get(): R|Buz?|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Buz : R|kotlin/Any| {
         public constructor(): R|Buz| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

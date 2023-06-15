@@ -12,6 +12,9 @@ FILE: infixFunctions.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final typealias B = R|A|
     public final val x: R|kotlin/Int| = Int(1)
@@ -34,6 +37,9 @@ FILE: infixFunctions.kt
         }
 
         public final infix fun baz(x: R|kotlin/Int|, y: R|kotlin/Int|): R|kotlin/Unit| {
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

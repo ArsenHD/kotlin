@@ -16,6 +16,9 @@ FILE: provideDelegate.kt
             this@R|/Delegate|.R|/Delegate.value| = R|<local>/newValue|
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class DelegateProvider<T> : R|kotlin/Any| {
         public constructor<T>(value: R|T|): R|DelegateProvider<T>| {
@@ -27,6 +30,9 @@ FILE: provideDelegate.kt
 
         public final operator fun provideDelegate(thisRef: R|kotlin/Any?|, property: R|kotlin/reflect/KProperty<*>|): R|Delegate<T>| {
             ^provideDelegate R|/Delegate.Delegate|<R|T|>(this@R|/DelegateProvider|.R|/DelegateProvider.value|)
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -42,5 +48,8 @@ FILE: provideDelegate.kt
             public get(): R|kotlin/Int| {
                 ^ this@R|/A|.D|/A.x|.R|SubstitutionOverride</Delegate.getValue: R|Stub (chain inference): TypeVariable(_T)|>|(this@R|/A|, ::R|/A.x|)
             }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

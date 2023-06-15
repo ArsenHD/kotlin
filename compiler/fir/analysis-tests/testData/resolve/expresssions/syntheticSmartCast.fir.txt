@@ -14,6 +14,9 @@ FILE: test.kt
             ^baz Boolean(true)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test1(x: R|AnotherClass?|): R|kotlin/Unit| {
         lval bar: R|kotlin/CharSequence| = R|<local>/x|?.{ $subj$.R|/AnotherClass.bar| } ?: ^test1 Unit

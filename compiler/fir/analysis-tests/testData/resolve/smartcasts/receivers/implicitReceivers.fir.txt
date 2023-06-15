@@ -7,6 +7,9 @@ FILE: implicitReceivers.kt
         public final fun foo(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B : R|kotlin/Any| {
         public constructor(): R|B| {
@@ -14,6 +17,9 @@ FILE: implicitReceivers.kt
         }
 
         public final fun bar(): R|kotlin/Unit| {
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

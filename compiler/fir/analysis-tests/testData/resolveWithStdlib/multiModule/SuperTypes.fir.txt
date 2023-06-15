@@ -5,7 +5,7 @@ FILE: common.kt
 
         public final expect fun foo(): R|kotlin/Unit|
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -14,7 +14,7 @@ FILE: common.kt
             super<R|A|>()
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -28,7 +28,7 @@ FILE: jvm.kt
         public final fun bar(): R|kotlin/Unit| {
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -36,7 +36,7 @@ FILE: jvm.kt
         public open fun baz(): R|kotlin/Unit| {
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -48,7 +48,7 @@ FILE: jvm.kt
         public final actual fun foo(): R|kotlin/Unit| {
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -63,7 +63,7 @@ FILE: jvm.kt
             this@R|/C|.R|/Y.baz|()
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -78,7 +78,7 @@ FILE: jvm.kt
             this@R|/D|.R|/Y.baz|()
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

@@ -17,4 +17,7 @@ FILE: extension.kt
             ^foo (this@R|/Foo|, this@R|/Foo|.R|/Foo.x|).R|/Foo.invoke|()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

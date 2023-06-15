@@ -4,10 +4,16 @@ FILE: main.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class CommandExecutor : R|Executor| {
         public constructor(): R|CommandExecutor| {
             super<R|Executor|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -21,6 +27,9 @@ FILE: main.kt
 
         public final fun test(): R|kotlin/Unit| {
             lval e: R|CommandExecutor| = this@R|/B|.R|/B.executor|
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

@@ -7,4 +7,7 @@ FILE: multipleWarnings.kt
         @R|kotlin/Suppress|(names = vararg(String(REDUNDANT_MODALITY_MODIFIER))) public final fun foo(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

@@ -5,6 +5,9 @@ FILE: intersectionOverrideOfTwoMembers.kt
         public abstract val x: R|kotlin/Any|
             public get(): R|kotlin/Any|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface B : R|kotlin/Any| {
         public abstract fun foo(): R|kotlin/Any|
@@ -12,13 +15,22 @@ FILE: intersectionOverrideOfTwoMembers.kt
         public abstract val x: R|kotlin/Any|
             public get(): R|kotlin/Any|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface C : R|A|, R|B| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface D : R|C| {
         public abstract override fun foo(): R|kotlin/Any|
 
         public abstract override val x: R|kotlin/Any|
             public get(): R|kotlin/Any|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

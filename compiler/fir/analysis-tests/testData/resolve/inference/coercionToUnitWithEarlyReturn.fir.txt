@@ -7,6 +7,9 @@ FILE: coercionToUnitWithEarlyReturn.kt
         public final fun unit(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun foo(x: R|() -> kotlin/Unit|): R|kotlin/Unit| {
     }

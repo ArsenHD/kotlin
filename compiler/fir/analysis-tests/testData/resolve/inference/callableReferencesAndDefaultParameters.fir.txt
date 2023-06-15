@@ -7,6 +7,9 @@ FILE: callableReferencesAndDefaultParameters.kt
         public final fun foo(s: R|kotlin/String|, flag: R|kotlin/Boolean| = Boolean(true)): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final inline fun <T> R|T|.myLet(block: R|(T) -> kotlin/Unit|): R|kotlin/Unit| {
     }

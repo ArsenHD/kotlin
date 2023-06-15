@@ -15,10 +15,16 @@ FILE: companion.kt
             public final val D: R|kotlin/String| = String()
                 public get(): R|kotlin/String|
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final fun bar(): R|kotlin/Unit| {
             this@R|/A.Companion|.R|/A.Companion.foo|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -38,6 +44,12 @@ FILE: companion.kt
             public final val C: R|kotlin/String| = String()
                 public get(): R|kotlin/String|
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

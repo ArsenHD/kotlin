@@ -21,4 +21,7 @@ FILE: superNotAvailable.kt
             <Unresolved name: println>#(String(Fest))
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

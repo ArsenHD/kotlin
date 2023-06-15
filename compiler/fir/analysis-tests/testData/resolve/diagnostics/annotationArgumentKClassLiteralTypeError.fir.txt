@@ -7,6 +7,9 @@ FILE: annotationArgumentKClassLiteralTypeError.kt
         public final val a: R|kotlin/Array<kotlin/reflect/KClass<*>>| = R|<local>/a|
             public get(): R|kotlin/Array<kotlin/reflect/KClass<*>>|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final val <reified T> R|T|.test: R|kotlin/Any|
         public inline get(): R|kotlin/Any| {

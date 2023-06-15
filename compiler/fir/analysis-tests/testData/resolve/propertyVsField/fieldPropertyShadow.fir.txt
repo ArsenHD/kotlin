@@ -7,6 +7,9 @@ FILE: KotlinBase.kt
         public final val abcd: R|kotlin/String| = String(abcd)
             public get(): R|kotlin/String|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
 FILE: KotlinProxy.kt
     public abstract interface KotlinProxy : R|kotlin/Any| {
@@ -14,6 +17,9 @@ FILE: KotlinProxy.kt
             public get(): R|kotlin/String| {
                 ^ String(zyxw)
             }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
 FILE: test.kt
@@ -25,6 +31,9 @@ FILE: test.kt
         public final fun test(): R|kotlin/Unit| {
             this@R|/Derived|.R|/Test.abcd|
             this@R|/Derived|.R|/Test.zyxw|
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

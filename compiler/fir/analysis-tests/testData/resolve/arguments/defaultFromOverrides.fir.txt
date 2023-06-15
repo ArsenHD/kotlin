@@ -2,9 +2,15 @@ FILE: defaultFromOverrides.kt
     public abstract interface I1 : R|kotlin/Any| {
         public abstract fun foo(x: R|kotlin/Int| = Int(1)): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface I2 : R|kotlin/Any| {
         public abstract fun bar(x: R|kotlin/String| = String(), y: R|kotlin/Int|): R|kotlin/Unit|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final class A : R|I1|, R|I2| {
@@ -16,6 +22,9 @@ FILE: defaultFromOverrides.kt
         }
 
         public open override fun bar(x: R|kotlin/String|, y: R|kotlin/Int|): R|kotlin/Unit| {
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

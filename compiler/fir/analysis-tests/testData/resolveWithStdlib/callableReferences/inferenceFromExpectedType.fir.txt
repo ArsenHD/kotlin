@@ -12,6 +12,9 @@ FILE: inferenceFromExpectedType.kt
             ^baz Null(null)!!
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun <T, E> bar(x: R|T|): R|E| {
         ^bar Null(null)!!

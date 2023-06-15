@@ -4,10 +4,16 @@ FILE: annotationUsedAsAnnotationArgument.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     @R|kotlin/annotation/Target|(allowedTargets = vararg(Q|kotlin/annotation/AnnotationTarget|.R|kotlin/annotation/AnnotationTarget.EXPRESSION|)) @R|kotlin/annotation/Retention|(value = Q|kotlin/annotation/AnnotationRetention|.R|kotlin/annotation/AnnotationRetention.SOURCE|) public final annotation class Ann2 : R|kotlin/Annotation| {
         public constructor(): R|Ann2| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -21,6 +27,9 @@ FILE: annotationUsedAsAnnotationArgument.kt
 
         public final val s: R|kotlin/String| = R|<local>/s|
             public get(): R|kotlin/String|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     @R|Ann3|(arg = @R|Ann3|(arg = @R|Ann|() Int(5), s = String()) @R|Ann2|() Int(1), s = String()) public final val a: R|kotlin/Int| = Int(0)

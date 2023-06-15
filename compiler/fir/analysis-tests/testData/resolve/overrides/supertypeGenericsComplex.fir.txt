@@ -4,8 +4,14 @@ FILE: supertypeGenericsComplex.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface X : R|Out<kotlin/String>| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class Base<E> : R|kotlin/Any| {
         public constructor<E>(): R|Base<E>| {
@@ -15,10 +21,16 @@ FILE: supertypeGenericsComplex.kt
         public final fun <D : R|Out<E>|> f(t: R|kotlin/collections/MutableList<D>|, e: R|kotlin/collections/MutableList<E>|): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class C : R|Base<kotlin/CharSequence>| {
         public constructor(): R|C| {
             super<R|Base<kotlin/CharSequence>|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

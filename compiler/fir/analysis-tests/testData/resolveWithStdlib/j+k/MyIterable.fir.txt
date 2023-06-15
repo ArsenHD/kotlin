@@ -5,6 +5,9 @@ FILE: test.kt
             lval split: R|java/util/Spliterator<@EnhancedNullability kotlin/String!>| = this@R|/UseIterable|.R|SubstitutionOverride</UseIterable.spliterator: R|@EnhancedNullability java/util/Spliterator<@EnhancedNullability kotlin/String!>|>|()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test(some: R|kotlin/collections/Iterable<kotlin/String>|): R|kotlin/Unit| {
         lval it: R|kotlin/collections/Iterator<kotlin/String>| = R|<local>/some|.R|SubstitutionOverride<kotlin/collections/Iterable.iterator: R|kotlin/collections/Iterator<kotlin/String>|>|()

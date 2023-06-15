@@ -4,16 +4,19 @@ FILE: annotationOnDeclarationWithDifferentArguments.kt
             super<R|kotlin/Enum<SomeEnum>|>()
         }
 
-        public final static enum entry A: R|SomeEnum|
-        public final static enum entry B: R|SomeEnum|
-        public final static fun values(): R|kotlin/Array<SomeEnum>| {
-        }
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            public final static enum entry A: R|SomeEnum|
+            public final static enum entry B: R|SomeEnum|
+            public final static fun values(): R|kotlin/Array<SomeEnum>| {
+            }
 
-        public final static fun valueOf(value: R|kotlin/String|): R|SomeEnum| {
-        }
+            public final static fun valueOf(value: R|kotlin/String|): R|SomeEnum| {
+            }
 
-        public final static val entries: R|kotlin/enums/EnumEntries<SomeEnum>|
-            public get(): R|kotlin/enums/EnumEntries<SomeEnum>|
+            public final static val entries: R|kotlin/enums/EnumEntries<SomeEnum>|
+                public get(): R|kotlin/enums/EnumEntries<SomeEnum>|
+
+        }
 
     }
     public final annotation class MyAnnotation : R|kotlin/Annotation| {
@@ -36,6 +39,9 @@ FILE: annotationOnDeclarationWithDifferentArguments.kt
         public final val annotation: R|MyOtherAnnotation| = R|<local>/annotation|
             public get(): R|MyOtherAnnotation|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final annotation class MyOtherAnnotation : R|kotlin/Annotation| {
         public constructor(intValue: R|kotlin/Int|, stringValue: R|kotlin/String|): R|MyOtherAnnotation| {
@@ -47,6 +53,9 @@ FILE: annotationOnDeclarationWithDifferentArguments.kt
 
         public final val stringValue: R|kotlin/String| = R|<local>/stringValue|
             public get(): R|kotlin/String|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final const val constInt: R|kotlin/Int| = Int(10)

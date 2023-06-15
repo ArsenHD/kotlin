@@ -10,6 +10,9 @@ FILE: propertyWithExtensionType.kt
         public final val y: R|kotlin/String.() -> kotlin/Int| = R|<local>/y|
             public get(): R|kotlin/String.() -> kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test(a: R|A|): R|kotlin/Unit| {
         when () {

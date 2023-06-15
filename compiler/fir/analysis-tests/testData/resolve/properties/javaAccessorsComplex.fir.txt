@@ -4,21 +4,36 @@ FILE: main.kt
 
         public abstract override fun getBar(): R|F|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface D1 : R|JA<kotlin/String>|, R|KB<kotlin/String>| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface E1 : R|D1| {
         public abstract override fun getFoo(): R|kotlin/String|
 
         public abstract override fun getBar(): R|kotlin/String|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface D2 : R|KB<kotlin/String>|, R|JA<kotlin/String>| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface E2 : R|D2| {
         public abstract override fun getFoo(): R|kotlin/String|
 
         public abstract override fun getBar(): R|kotlin/String|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final fun main(d1: R|D1|, e1: R|E1|, d2: R|D2|, e2: R|E2|): R|kotlin/Unit| {

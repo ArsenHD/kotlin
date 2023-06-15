@@ -9,6 +9,12 @@ FILE: innerTypes.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -19,6 +25,9 @@ FILE: innerTypes.kt
 
         public final fun substitute(): R|Outer.Inner<kotlin/Int, Q>| {
             ^substitute R|/Outer.Outer|<R|Q|>().R|SubstitutionOverride</Outer.Inner.Inner>|<R|kotlin/Int|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

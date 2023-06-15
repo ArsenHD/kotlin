@@ -4,6 +4,9 @@ FILE: extensionOnObject.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Y : R|kotlin/Any| {
         public constructor(): R|Y| {
@@ -14,6 +17,9 @@ FILE: extensionOnObject.kt
             R|<local>/op|.R|SubstitutionOverride<kotlin/Function1.invoke: R|kotlin/Unit|>|(Q|X|)
             lval x: R|X| = Q|X|
             R|<local>/op|.R|SubstitutionOverride<kotlin/Function1.invoke: R|kotlin/Unit|>|(R|<local>/x|)
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

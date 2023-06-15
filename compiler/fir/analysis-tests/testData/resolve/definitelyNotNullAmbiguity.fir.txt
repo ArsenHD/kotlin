@@ -2,6 +2,9 @@ FILE: B.kt
     public abstract interface B : R|A| {
         public abstract override fun <R, D> accept(visitor: R|KtVisitor<R, D>|, data: R|D|): R|R|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
 FILE: main.kt
     public final fun test(visitor: R|KtVisitor<kotlin/String, kotlin/Unit>|, element: R|B|): R|kotlin/Unit| {

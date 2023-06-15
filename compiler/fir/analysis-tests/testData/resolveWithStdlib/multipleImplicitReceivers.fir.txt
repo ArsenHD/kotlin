@@ -4,7 +4,7 @@ FILE: multipleImplicitReceivers.kt
             super<R|kotlin/Any|>()
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -13,7 +13,7 @@ FILE: multipleImplicitReceivers.kt
             super<R|kotlin/Any|>()
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -23,7 +23,7 @@ FILE: multipleImplicitReceivers.kt
                 ^ Q|B|
             }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -32,7 +32,7 @@ FILE: multipleImplicitReceivers.kt
             ^invoke Int(42)
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

@@ -20,6 +20,9 @@ FILE: objectInnerClass.kt
                 (this@R|/<anonymous>|, this@R|/<anonymous>.Child|).R|/<anonymous>.hoo|()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final fun R|<anonymous>.Child|.voo(): R|kotlin/Unit| {
@@ -39,6 +42,9 @@ FILE: objectInnerClass.kt
                 public get(): R|B|
 
             public final fun baseFun(): R|kotlin/Unit| {
+            }
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }
@@ -102,6 +108,9 @@ FILE: objectInnerClass.kt
             public final fun baseFun(): R|kotlin/Unit| {
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final fun caseForBase(): R|kotlin/Unit| {
@@ -116,6 +125,9 @@ FILE: objectInnerClass.kt
             R|<local>/child|.R|/Case2.Base.baseFun|()
             R|<local>/child|.R|/Case2.Base.property|
             (this@R|/Case2|, R|<local>/child|).R|/Case2.hoo|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -145,6 +157,9 @@ FILE: objectInnerClass.kt
                     (this@R|/<anonymous>|, this@R|/Case3.<anonymous>.Child|).R|/<anonymous>.hoo|()
                 }
 
+                public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+                }
+
             }
 
             public final fun R|Case3.<anonymous>.Child|.voo(): R|kotlin/Unit| {
@@ -164,6 +179,9 @@ FILE: objectInnerClass.kt
                     public get(): R|B|
 
                 public final fun baseFun(): R|kotlin/Unit| {
+                }
+
+                public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
                 }
 
             }
@@ -188,12 +206,21 @@ FILE: objectInnerClass.kt
 
             public get(): R|A|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface A : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B : R|kotlin/Any| {
         public constructor(): R|B| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

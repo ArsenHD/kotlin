@@ -4,7 +4,7 @@ FILE: StaticExtensionsFromDifferentScopes.kt
             super<R|kotlin/Any|>()
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -27,7 +27,7 @@ FILE: StaticExtensionsFromDifferentScopes.kt
             lval x: R|kotlin/String| = (this@R|/B|, Q|A|).R|/B.foo|()
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

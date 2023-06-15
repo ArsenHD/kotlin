@@ -14,6 +14,12 @@ FILE: qualifierPriority.kt
                     super<R|kotlin/Any|>()
                 }
 
+                public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+                }
+
+            }
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }
@@ -26,6 +32,12 @@ FILE: qualifierPriority.kt
             public final val B: R|kotlin/String| = String()
                 public get(): R|kotlin/String|
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -48,8 +60,17 @@ FILE: qualifierPriority.kt
                     super<R|kotlin/Any|>()
                 }
 
+                public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+                }
+
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -66,7 +87,6 @@ FILE: qualifierPriority.kt
             super<R|kotlin/Enum<G>|>()
         }
 
-        public final static enum entry H: R|G|
         public final fun foo(): R|kotlin/Unit| {
             R|/G.values|()
         }
@@ -83,16 +103,23 @@ FILE: qualifierPriority.kt
                 ^values Int(42)
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
-        public final static fun values(): R|kotlin/Array<G>| {
-        }
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            public final static enum entry H: R|G|
+            public final static fun values(): R|kotlin/Array<G>| {
+            }
 
-        public final static fun valueOf(value: R|kotlin/String|): R|G| {
-        }
+            public final static fun valueOf(value: R|kotlin/String|): R|G| {
+            }
 
-        public final static val entries: R|kotlin/enums/EnumEntries<G>|
-            public get(): R|kotlin/enums/EnumEntries<G>|
+            public final static val entries: R|kotlin/enums/EnumEntries<G>|
+                public get(): R|kotlin/enums/EnumEntries<G>|
+
+        }
 
     }
     public final val gh: R|G| = Q|G|.R|/G.H|

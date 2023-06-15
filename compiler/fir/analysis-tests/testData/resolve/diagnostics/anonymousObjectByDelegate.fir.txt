@@ -4,8 +4,14 @@ FILE: anonymousObjectByDelegate.kt
             public get(): R|B|
             public set(value: R|B|): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface B : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun R|A|.test_1(): R|kotlin/Unit| {
         object : R|B| {
@@ -39,5 +45,8 @@ FILE: anonymousObjectByDelegate.kt
 
         public final val y: R|kotlin/String| = R|<local>/y|
             public get(): R|kotlin/String|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

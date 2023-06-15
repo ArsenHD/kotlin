@@ -8,6 +8,9 @@ FILE: extensionPropertyInLambda.kt
             public get(): R|T|
             public set(value: R|T|): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final var <T> R|C<T>|.y: R|T|
         public get(): R|T| {

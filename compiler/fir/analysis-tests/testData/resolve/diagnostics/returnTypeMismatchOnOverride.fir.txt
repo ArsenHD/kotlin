@@ -8,6 +8,9 @@ FILE: returnTypeMismatchOnOverride.kt
             ^test Int(10)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class B : R|A| {
         public constructor(): R|B| {
@@ -22,6 +25,9 @@ FILE: returnTypeMismatchOnOverride.kt
             ^test R|<local>/x|
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class C : R|A| {
         public constructor(): R|C| {
@@ -32,6 +38,9 @@ FILE: returnTypeMismatchOnOverride.kt
             ^test String(Test)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class D : R|B| {
         public constructor(): R|D| {
@@ -40,6 +49,9 @@ FILE: returnTypeMismatchOnOverride.kt
 
         public open override fun test(): R|kotlin/Char| {
             ^test Char(10)
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -55,6 +67,9 @@ FILE: returnTypeMismatchOnOverride.kt
             ^test this@R|/E|.R|/E.value|
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class F<T : R|kotlin/Number|> : R|kotlin/Any| {
         public constructor<T : R|kotlin/Number|>(value: R|T|): R|F<T>| {
@@ -66,6 +81,9 @@ FILE: returnTypeMismatchOnOverride.kt
 
         public open fun rest(): R|T| {
             ^rest this@R|/F|.R|/F.value|
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -81,6 +99,9 @@ FILE: returnTypeMismatchOnOverride.kt
             ^rest this@R|/G|.R|/G.balue|
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class H<E : R|kotlin/String|> : R|F<E>| {
         public constructor<E : R|kotlin/String|>(balue: R|E|): R|H<E>| {
@@ -92,6 +113,9 @@ FILE: returnTypeMismatchOnOverride.kt
 
         public open override fun rest(): R|E| {
             ^rest this@R|/H|.R|/H.balue|
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -107,10 +131,16 @@ FILE: returnTypeMismatchOnOverride.kt
             ^rest this@R|/M|.R|/M.balue|
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class X : R|kotlin/Any| {
         public constructor(): R|X| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -119,16 +149,25 @@ FILE: returnTypeMismatchOnOverride.kt
             super<R|X|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class Z : R|Y| {
         public constructor(): R|Z| {
             super<R|Y|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class W : R|Z| {
         public constructor(): R|W| {
             super<R|Z|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -141,16 +180,25 @@ FILE: returnTypeMismatchOnOverride.kt
             ^hello R|/X.X|()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class L : R|V| {
         public constructor(): R|L| {
             super<R|V|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class Q : R|L| {
         public constructor(): R|Q| {
             super<R|L|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -163,6 +211,9 @@ FILE: returnTypeMismatchOnOverride.kt
             ^hello R|/W.W|()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class J : R|S| {
         public constructor(): R|J| {
@@ -171,6 +222,9 @@ FILE: returnTypeMismatchOnOverride.kt
 
         public open override fun hello(): R|Z| {
             ^hello R|/Z.Z|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -183,6 +237,9 @@ FILE: returnTypeMismatchOnOverride.kt
             ^kek R|/Z.Z<CS errors: /Z.Z>#|()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class GoodDerrived : R|Base<Y, W>| {
         public constructor(): R|GoodDerrived| {
@@ -193,6 +250,9 @@ FILE: returnTypeMismatchOnOverride.kt
             ^kek R|/W.W|()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class BadDerrived : R|Base<Y, W>| {
         public constructor(): R|BadDerrived| {
@@ -201,6 +261,9 @@ FILE: returnTypeMismatchOnOverride.kt
 
         public open override fun kek(): R|kotlin/String| {
             ^kek String(test)
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

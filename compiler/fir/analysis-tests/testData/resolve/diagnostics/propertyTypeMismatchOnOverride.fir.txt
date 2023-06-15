@@ -8,6 +8,9 @@ FILE: propertyTypeMismatchOnOverride.kt
             public get(): R|kotlin/Number|
             public set(value: R|kotlin/Number|): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class B : R|A| {
         public constructor(): R|B| {
@@ -17,6 +20,9 @@ FILE: propertyTypeMismatchOnOverride.kt
         public open override var test: R|kotlin/Double| = Double(20.0)
             public get(): R|kotlin/Double|
             public set(value: R|kotlin/Double|): R|kotlin/Unit|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final class C : R|A| {
@@ -28,6 +34,9 @@ FILE: propertyTypeMismatchOnOverride.kt
             public get(): R|kotlin/String|
             public set(value: R|kotlin/String|): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class D : R|B| {
         public constructor(): R|D| {
@@ -37,6 +46,9 @@ FILE: propertyTypeMismatchOnOverride.kt
         public open override var test: R|kotlin/Char| = Char(10)
             public get(): R|kotlin/Char|
             public set(value: R|kotlin/Char|): R|kotlin/Unit|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final class E<T : R|kotlin/Double|> : R|B| {
@@ -51,6 +63,9 @@ FILE: propertyTypeMismatchOnOverride.kt
             public get(): R|T|
             public set(value: R|T|): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class F<T : R|kotlin/Number|> : R|kotlin/Any| {
         public constructor<T : R|kotlin/Number|>(value: R|T|): R|F<T>| {
@@ -63,6 +78,9 @@ FILE: propertyTypeMismatchOnOverride.kt
         public open var rest: R|T| = this@R|/F|.R|/F.value|
             public get(): R|T|
             public set(value: R|T|): R|kotlin/Unit|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final class G<E : R|kotlin/Double|> : R|F<E>| {
@@ -77,6 +95,9 @@ FILE: propertyTypeMismatchOnOverride.kt
             public get(): R|E|
             public set(value: R|E|): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class H<E : R|kotlin/String|> : R|F<E>| {
         public constructor<E : R|kotlin/String|>(balue: R|E|): R|H<E>| {
@@ -90,6 +111,9 @@ FILE: propertyTypeMismatchOnOverride.kt
             public get(): R|E|
             public set(value: R|E|): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class M<E : R|kotlin/String|> : R|F<kotlin/Double>| {
         public constructor<E : R|kotlin/String|>(balue: R|E|): R|M<E>| {
@@ -102,5 +126,8 @@ FILE: propertyTypeMismatchOnOverride.kt
         public open override var rest: R|E| = this@R|/M|.R|/M.balue|
             public get(): R|E|
             public set(value: R|E|): R|kotlin/Unit|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

@@ -11,6 +11,9 @@ FILE: delegateWithArgInference.kt
             ^getValue this@R|/Delegate|.R|/Delegate.data|
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun makeIntDelegate(t: R|kotlin/Int|): R|Delegate<kotlin/Int>| {
         ^makeIntDelegate R|/Delegate.Delegate|<R|kotlin/Int|>(R|<local>/t|)

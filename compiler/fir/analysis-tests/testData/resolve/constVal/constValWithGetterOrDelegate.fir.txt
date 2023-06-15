@@ -18,6 +18,9 @@ FILE: constValWithGetterOrDelegate.kt
             ^getValue Int(123)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final const val delegated: R|kotlin/Int|by R|/Test.Test|()
         public get(): R|kotlin/Int| {

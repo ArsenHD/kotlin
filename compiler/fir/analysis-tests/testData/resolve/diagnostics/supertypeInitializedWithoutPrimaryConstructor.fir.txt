@@ -4,10 +4,16 @@ FILE: supertypeInitializedWithoutPrimaryConstructor.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B : R|A| {
         public constructor(): R|B| {
             super<R|A|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -16,10 +22,16 @@ FILE: supertypeInitializedWithoutPrimaryConstructor.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class D : R|C| {
         public constructor(): R|D| {
             super<R|C|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -28,16 +40,25 @@ FILE: supertypeInitializedWithoutPrimaryConstructor.kt
             super<R|C|>(Int(10))
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class F : R|C| {
         public constructor(): R|F| {
             super<R|C|>(Int(10))
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class G : R|C| {
         public constructor(): R|G| {
             super<R|C|>(Int(1))
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

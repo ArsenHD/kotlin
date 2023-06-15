@@ -1,16 +1,28 @@
 FILE: castToBareType.kt
     public abstract interface FirDeclaration : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface FirSymbolOwner<E : R|FirSymbolOwner<E>|> : R|kotlin/Any| {
         public abstract val symbol: R|AbstractFirBasedSymbol<E>|
             public get(): R|AbstractFirBasedSymbol<E>|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface FirFunction<F : R|FirFunction<F>|> : R|FirSymbolOwner<F>|, R|FirDeclaration| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface AbstractFirBasedSymbol<E : R|FirSymbolOwner<E>|, R|FirDeclaration|> : R|kotlin/Any| {
         public abstract val fir: R|E|
             public get(): R|E|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final fun foo(firAdaptee: R|FirFunction<*>|): R|kotlin/Unit| {

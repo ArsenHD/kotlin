@@ -9,6 +9,12 @@ FILE: typeParametersInObject.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -22,6 +28,12 @@ FILE: typeParametersInObject.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -29,6 +41,9 @@ FILE: typeParametersInObject.kt
         local final object M<H> : R|kotlin/Any| {
             private constructor<H>(): R|M<H>| {
                 super<R|kotlin/Any|>()
+            }
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }

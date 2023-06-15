@@ -2,6 +2,9 @@ FILE: dispatchReceiver.kt
     public abstract interface Base : R|kotlin/Any| {
         public abstract fun check(): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class My : R|kotlin/Any| {
         public constructor(): R|My| {
@@ -14,6 +17,9 @@ FILE: dispatchReceiver.kt
 
         public final fun check(): R|kotlin/Unit| {
             ^check this@R|/My|.R|/My.delegate|.R|/Base.check|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

@@ -7,6 +7,9 @@ FILE: localObjects.kt
         public final val x: R|kotlin/Int| = Int(0)
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class Foo : R|kotlin/Any| {
         public constructor(): R|Foo| {
@@ -15,6 +18,9 @@ FILE: localObjects.kt
 
         public final fun foo(): R|kotlin/Int| {
             ^foo Int(1)
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -34,6 +40,9 @@ FILE: localObjects.kt
             }
 
             public final fun foo(): R|kotlin/Unit| {
+            }
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }

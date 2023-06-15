@@ -4,6 +4,9 @@ FILE: functionCallBound.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Sub : R|Base| {
         public constructor(data: R|Base|): R|Sub| {
@@ -12,6 +15,9 @@ FILE: functionCallBound.kt
 
         public final val data: R|Base| = R|<local>/data|
             public get(): R|Base|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final fun R|Sub|.isOk(): R|kotlin/Boolean| {

@@ -10,10 +10,16 @@ FILE: multipleBounds.kt
             ^foo Int(1)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface B : R|kotlin/Any| {
         public open fun bar(): R|kotlin/Double| {
             ^bar Double(1.0)
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -27,10 +33,16 @@ FILE: multipleBounds.kt
         public abstract val <Y : R|Jet87/B|> bas: R|kotlin/Double|
             public get(): R|kotlin/Double|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class C : R|Jet87/A|, R|Jet87/B| {
         public constructor(): R|Jet87/C| {
             super<R|Jet87/A|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -44,6 +56,12 @@ FILE: multipleBounds.kt
                 super<R|Jet87/A|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -59,6 +77,9 @@ FILE: multipleBounds.kt
             R|<local>/t|.R|Jet87/B.bar|()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test(): R|kotlin/Unit| {
         R|Jet87/Test1.Test1<Inapplicable(INAPPLICABLE): Jet87/Test1.Test1>#|<R|Jet87/B|>()
@@ -70,10 +91,16 @@ FILE: multipleBounds.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Bar<T : R|Jet87/Foo|> : R|kotlin/Any| {
         public constructor<T : R|Jet87/Foo|>(): R|Jet87/Bar<T>| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -82,16 +109,25 @@ FILE: multipleBounds.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class X<T : R|Jet87/Foo|> : R|kotlin/Any| {
         public constructor<T : R|Jet87/Foo|>(): R|Jet87/X<T>| {
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Y<T : R|Jet87/Foo|, R|Jet87/Bar<Jet87/Foo>|> : R|kotlin/Any| {
         public constructor<T : R|Jet87/Foo|, R|Jet87/Bar<Jet87/Foo>|>(): R|Jet87/Y<T>| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

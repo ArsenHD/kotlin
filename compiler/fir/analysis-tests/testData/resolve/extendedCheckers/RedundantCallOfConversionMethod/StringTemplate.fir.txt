@@ -4,4 +4,7 @@ FILE: StringTemplate.kt
             ^toString <strcat>(String(IC), R|<local>/x|)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

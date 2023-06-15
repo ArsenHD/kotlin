@@ -10,4 +10,7 @@ FILE: main.kt
         public open fun bar(y: R|kotlin/String?| = Null(null)): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

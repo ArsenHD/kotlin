@@ -4,6 +4,9 @@ FILE: delegateWithAnonymousObject.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun <Type : R|Base|, Base : R|DelegateProvider<Base>|, Target : R|kotlin/Any|> R|Type|.delegate(factory: R|() -> kotlin/properties/ReadWriteProperty<Type, Target>|): R|kotlin/properties/ReadWriteProperty<Type, Target>| {
         ^delegate Null(null)!!
@@ -14,6 +17,9 @@ FILE: delegateWithAnonymousObject.kt
         }
 
         public final fun updateFrom(any: R|kotlin/Any|): R|kotlin/Unit| {
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -46,5 +52,8 @@ FILE: delegateWithAnonymousObject.kt
             public set(<set-?>: R|IssueListView|): R|kotlin/Unit| {
                 this@R|/IssuesListUserProfile|.D|/IssuesListUserProfile.issueListView|.R|SubstitutionOverride<kotlin/properties/ReadWriteProperty.setValue: R|kotlin/Unit|>|(this@R|/IssuesListUserProfile|, ::R|/IssuesListUserProfile.issueListView|, R|<local>/issueListView|)
             }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

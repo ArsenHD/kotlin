@@ -14,11 +14,17 @@ FILE: localClassAccessesContainingClass.kt
                     lval x: R|kotlin/String| = this@R|/Outer|.R|/Outer.y|
                 }
 
+                public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+                }
+
             }
 
         }
 
         public final val y: R|kotlin/String| = String()
             public get(): R|kotlin/String|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

@@ -34,6 +34,9 @@ FILE: reassignOfNonLocalProperty_initializedProperties.kt
             R|/z| = String(error)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun R|Some|.test_2(): R|kotlin/Unit| {
         this@R|/test_2|.R|/Some.x| = String(error)

@@ -4,6 +4,9 @@ FILE: lambdaInWhenBranch.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     private final data class SubClass1 : R|Sealed| {
         public constructor(t: R|kotlin/String|): R|SubClass1| {
@@ -17,6 +20,9 @@ FILE: lambdaInWhenBranch.kt
 
         public final fun copy(t: R|kotlin/String| = this@R|/SubClass1|.R|/SubClass1.t|): R|SubClass1|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     private final data class SubClass2 : R|Sealed| {
         public constructor(): R|SubClass2| {
@@ -24,6 +30,9 @@ FILE: lambdaInWhenBranch.kt
         }
 
         public final fun copy(): R|SubClass2|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     private final fun foo(p: R|Sealed|): R|kotlin/Unit| {

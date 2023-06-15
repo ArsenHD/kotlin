@@ -12,14 +12,23 @@ FILE: withSuppression.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun foo(): R|@R|kotlin/Suppress|(names = vararg(String(REPEATED_ANNOTATION)))  @R|Ann|()  @R|Ann|()  kotlin/Int| {
         ^foo Int(42)
     }
     public final typealias Alias<T> = R|@R|kotlin/Suppress|(names = vararg(String(TYPEALIAS_SHOULD_EXPAND_TO_CLASS)))  T|
     public abstract interface A : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface B : R|@R|kotlin/Suppress|(names = vararg(String(SUPERTYPE_INITIALIZED_IN_INTERFACE)))  A| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final data class D : R|kotlin/Any| {
         @R|kotlin/Suppress|(names = vararg(String(DATA_CLASS_VARARG_PARAMETER))) public constructor(vararg x: R|kotlin/Array<out kotlin/String>|): R|D| {
@@ -32,5 +41,8 @@ FILE: withSuppression.kt
         public final operator fun component1(): R|kotlin/String|
 
         public final fun copy(x: R|kotlin/String| = this@R|/D|.R|/D.x|): R|D|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

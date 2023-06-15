@@ -12,6 +12,9 @@ FILE: plusAssign.kt
         public final operator fun plusAssign(x: R|kotlin/String|): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test_1(): R|kotlin/Unit| {
         lval f: R|Foo| = R|/Foo.Foo|()

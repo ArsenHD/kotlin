@@ -15,6 +15,9 @@ FILE: access.kt
             ^cba this@R|/Foo|.R|/Foo.abc|()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Bar : R|kotlin/Any| {
         public constructor(): R|Bar| {
@@ -42,6 +45,9 @@ FILE: access.kt
 
         public final fun R|Foo|.check2(): R|kotlin/String| {
             ^check2 String().R|kotlin/String.plus|(this@R|/Bar|.R|/Bar.bar|())
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

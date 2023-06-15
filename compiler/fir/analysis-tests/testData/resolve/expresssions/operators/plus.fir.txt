@@ -8,6 +8,9 @@ FILE: plus.kt
             ^plus this@R|/Foo|
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test_1(): R|kotlin/Unit| {
         lval f1: R|Foo| = R|/Foo.Foo|()

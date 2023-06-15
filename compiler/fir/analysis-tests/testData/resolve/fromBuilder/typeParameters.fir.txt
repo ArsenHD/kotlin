@@ -4,12 +4,18 @@ FILE: typeParameters.kt
 
         public abstract infix fun concat(other: R|List<T>|): R|List<T>|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final typealias StringList = R|List<out kotlin/String>|
     public final typealias AnyList = R|List<*>|
     public abstract class AbstractList<out T : R|kotlin/Any|> : R|List<T>| {
         public constructor<out T : R|kotlin/Any|>(): R|AbstractList<T>| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -24,6 +30,9 @@ FILE: typeParameters.kt
 
         public open override infix fun concat(other: R|List<kotlin/Int>|): R|List<kotlin/Int>| {
             ^concat this@R|/SomeList|
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

@@ -8,10 +8,22 @@ FILE: functionTypes.kt
         ^simpleWith R|<local>/f|.R|SubstitutionOverride<kotlin/Function1.invoke: R|kotlin/Unit|>|(R|<local>/t|)
     }
     public abstract interface KMutableProperty1<T, R> : R|KProperty1<T, R>|, R|KMutableProperty<R>| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface KProperty1<T, out R> : R|KProperty<R>|, R|(T) -> R| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface KProperty<out R> : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface KMutableProperty<R> : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

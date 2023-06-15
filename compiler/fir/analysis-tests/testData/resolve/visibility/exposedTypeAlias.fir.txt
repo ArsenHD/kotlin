@@ -9,6 +9,12 @@ FILE: exposedTypeAlias.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -24,6 +30,12 @@ FILE: exposedTypeAlias.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -33,6 +45,9 @@ FILE: exposedTypeAlias.kt
         }
 
         public final typealias BInner = R|B.Inner|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final typealias AInner0 = <ERROR TYPE REF: HIDDEN: A.Inner is invisible>

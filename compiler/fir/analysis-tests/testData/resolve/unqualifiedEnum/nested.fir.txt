@@ -4,16 +4,19 @@ FILE: nested.kt
             super<R|kotlin/Enum<Outer>|>()
         }
 
-        public final static enum entry FIRST: R|Outer|
-        public final static enum entry SECOND: R|Outer|
-        public final static fun values(): R|kotlin/Array<Outer>| {
-        }
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            public final static enum entry FIRST: R|Outer|
+            public final static enum entry SECOND: R|Outer|
+            public final static fun values(): R|kotlin/Array<Outer>| {
+            }
 
-        public final static fun valueOf(value: R|kotlin/String|): R|Outer| {
-        }
+            public final static fun valueOf(value: R|kotlin/String|): R|Outer| {
+            }
 
-        public final static val entries: R|kotlin/enums/EnumEntries<Outer>|
-            public get(): R|kotlin/enums/EnumEntries<Outer>|
+            public final static val entries: R|kotlin/enums/EnumEntries<Outer>|
+                public get(): R|kotlin/enums/EnumEntries<Outer>|
+
+        }
 
     }
     public final enum class Inner : R|kotlin/Enum<Inner>| {
@@ -21,16 +24,19 @@ FILE: nested.kt
             super<R|kotlin/Enum<Inner>|>()
         }
 
-        public final static enum entry SECOND: R|Inner|
-        public final static enum entry THIRD: R|Inner|
-        public final static fun values(): R|kotlin/Array<Inner>| {
-        }
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            public final static enum entry SECOND: R|Inner|
+            public final static enum entry THIRD: R|Inner|
+            public final static fun values(): R|kotlin/Array<Inner>| {
+            }
 
-        public final static fun valueOf(value: R|kotlin/String|): R|Inner| {
-        }
+            public final static fun valueOf(value: R|kotlin/String|): R|Inner| {
+            }
 
-        public final static val entries: R|kotlin/enums/EnumEntries<Inner>|
-            public get(): R|kotlin/enums/EnumEntries<Inner>|
+            public final static val entries: R|kotlin/enums/EnumEntries<Inner>|
+                public get(): R|kotlin/enums/EnumEntries<Inner>|
+
+        }
 
     }
     public final fun foo(o: R|Outer|, i: R|Inner|): R|kotlin/Int| {

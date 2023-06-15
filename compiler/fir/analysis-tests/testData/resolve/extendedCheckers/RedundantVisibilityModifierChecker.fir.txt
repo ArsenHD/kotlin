@@ -10,6 +10,9 @@ FILE: RedundantVisibilityModifierChecker.kt
                 internal get(): R|kotlin/Int|
                 internal set(value: R|kotlin/Int|): R|kotlin/Unit|
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         R|/LocalClass.LocalClass|().R|<local>/foo| = Int(1)
@@ -35,6 +38,9 @@ FILE: RedundantVisibilityModifierChecker.kt
 
             internal get(): R|kotlin/Any|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Foo2<T1, T2 : R|T1|> : R|kotlin/Any| {
         public constructor<T1, T2 : R|T1|>(): R|Foo2<T1, T2>| {
@@ -49,6 +55,12 @@ FILE: RedundantVisibilityModifierChecker.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -63,6 +75,9 @@ FILE: RedundantVisibilityModifierChecker.kt
         public final fun bar(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class D : R|kotlin/Any| {
         public constructor(): R|D| {
@@ -73,6 +88,9 @@ FILE: RedundantVisibilityModifierChecker.kt
         }
 
         protected open fun willBecomePublic(): R|kotlin/Unit| {
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -87,6 +105,9 @@ FILE: RedundantVisibilityModifierChecker.kt
         public open override fun willBecomePublic(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final enum class F : R|kotlin/Enum<F>| {
         private constructor(x: R|kotlin/Int|): R|F| {
@@ -96,21 +117,24 @@ FILE: RedundantVisibilityModifierChecker.kt
         public final val x: R|kotlin/Int| = R|<local>/x|
             public get(): R|kotlin/Int|
 
-        public final static enum entry FIRST: R|F| = object : R|F| {
-            private constructor(): R|<anonymous>| {
-                super<R|F|>(Int(42))
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            public final static enum entry FIRST: R|F| = object : R|F| {
+                private constructor(): R|<anonymous>| {
+                    super<R|F|>(Int(42))
+                }
+
             }
 
-        }
+            public final static fun values(): R|kotlin/Array<F>| {
+            }
 
-        public final static fun values(): R|kotlin/Array<F>| {
-        }
+            public final static fun valueOf(value: R|kotlin/String|): R|F| {
+            }
 
-        public final static fun valueOf(value: R|kotlin/String|): R|F| {
-        }
+            public final static val entries: R|kotlin/enums/EnumEntries<F>|
+                public get(): R|kotlin/enums/EnumEntries<F>|
 
-        public final static val entries: R|kotlin/enums/EnumEntries<F>|
-            public get(): R|kotlin/enums/EnumEntries<F>|
+        }
 
     }
     public sealed class G : R|kotlin/Any| {
@@ -130,11 +154,20 @@ FILE: RedundantVisibilityModifierChecker.kt
                 super<R|G|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
     public abstract interface I : R|kotlin/Any| {
         public abstract fun bar(): R|kotlin/Unit|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final var baz: R|kotlin/Int| = Int(0)
@@ -173,6 +206,9 @@ FILE: RedundantVisibilityModifierChecker.kt
             public set(value: R|kotlin/Int|): R|kotlin/Unit| {
             }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     private final class Foo : R|kotlin/Any| {
         public constructor(): R|Foo| {
@@ -180,6 +216,9 @@ FILE: RedundantVisibilityModifierChecker.kt
         }
 
         internal final fun barBarian(): R|kotlin/Unit| {
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

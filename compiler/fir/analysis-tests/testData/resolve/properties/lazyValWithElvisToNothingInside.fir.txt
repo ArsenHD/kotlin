@@ -3,6 +3,9 @@ FILE: lazyValWithElvisToNothingInside.kt
         public abstract val list: R|kotlin/collections/List<kotlin/String>|
             public get(): R|kotlin/collections/List<kotlin/String>|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun getA(): R|A?| {
         ^getA Null(null)

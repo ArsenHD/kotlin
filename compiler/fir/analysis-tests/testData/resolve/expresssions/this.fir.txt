@@ -4,6 +4,9 @@ FILE: this.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Foo : R|kotlin/Any| {
         public constructor(): R|Foo| {
@@ -24,6 +27,9 @@ FILE: this.kt
 
         public final fun R|Bar|.foobar(): R|Bar| {
             ^foobar this@R|/Foo.foobar|
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

@@ -4,6 +4,9 @@ FILE: simpleFakeOverride.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B : R|A<Some>| {
         public constructor(): R|B| {
@@ -12,6 +15,9 @@ FILE: simpleFakeOverride.kt
 
         public final fun test(): R|kotlin/Unit| {
             this@R|/B|.R|SubstitutionOverride</B.foo: R|Some!|>|(R|/Some.Some|())
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

@@ -1,8 +1,14 @@
 FILE: protobufExt.kt
     public abstract interface Ext<M : R|Message<M>|, T> : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface Message<M : R|Message<M>|> : R|kotlin/Any| {
         public abstract fun <T> ext(e: R|Ext<M, T>|): R|T|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final class MyMessage : R|Message<MyMessage>| {
@@ -10,10 +16,16 @@ FILE: protobufExt.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class MyExt : R|Ext<MyMessage, kotlin/String>| {
         public constructor(): R|MyExt| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

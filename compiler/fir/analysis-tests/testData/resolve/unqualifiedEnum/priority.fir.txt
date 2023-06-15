@@ -6,16 +6,19 @@ FILE: first.kt
             super<R|kotlin/Enum<first/First>|>()
         }
 
-        public final static enum entry ONE: R|first/First|
-        public final static enum entry TWO: R|first/First|
-        public final static fun values(): R|kotlin/Array<first/First>| {
-        }
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            public final static enum entry ONE: R|first/First|
+            public final static enum entry TWO: R|first/First|
+            public final static fun values(): R|kotlin/Array<first/First>| {
+            }
 
-        public final static fun valueOf(value: R|kotlin/String|): R|first/First| {
-        }
+            public final static fun valueOf(value: R|kotlin/String|): R|first/First| {
+            }
 
-        public final static val entries: R|kotlin/enums/EnumEntries<first/First>|
-            public get(): R|kotlin/enums/EnumEntries<first/First>|
+            public final static val entries: R|kotlin/enums/EnumEntries<first/First>|
+                public get(): R|kotlin/enums/EnumEntries<first/First>|
+
+        }
 
     }
     public final val THREE: R|first/First| = Q|first/First|.R|first/First.ONE|
@@ -28,16 +31,19 @@ FILE: second.kt
             super<R|kotlin/Enum<second/Second>|>()
         }
 
-        public final static enum entry THREE: R|second/Second|
-        public final static enum entry FOUR: R|second/Second|
-        public final static fun values(): R|kotlin/Array<second/Second>| {
-        }
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            public final static enum entry THREE: R|second/Second|
+            public final static enum entry FOUR: R|second/Second|
+            public final static fun values(): R|kotlin/Array<second/Second>| {
+            }
 
-        public final static fun valueOf(value: R|kotlin/String|): R|second/Second| {
-        }
+            public final static fun valueOf(value: R|kotlin/String|): R|second/Second| {
+            }
 
-        public final static val entries: R|kotlin/enums/EnumEntries<second/Second>|
-            public get(): R|kotlin/enums/EnumEntries<second/Second>|
+            public final static val entries: R|kotlin/enums/EnumEntries<second/Second>|
+                public get(): R|kotlin/enums/EnumEntries<second/Second>|
+
+        }
 
     }
     public final val ONE: R|second/Second| = Q|second/Second|.R|second/Second.THREE|

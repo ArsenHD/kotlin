@@ -512,14 +512,16 @@ class DeclarationsConverter(
 
             withCapturedTypeParameters(status.isInner || isLocal, classNode.toFirSourceElement(), firTypeParameters) {
                 var delegatedFieldsMap: Map<Int, FirFieldSymbol>? = null
+                val classFirSource = classNode.toFirSourceElement()
                 val staticObjectBuilder = initSelfStaticObject(
                     context.currentClassId,
                     baseModuleData,
                     baseScopeProvider,
-                    baseSession
+                    baseSession,
+                    classFirSource
                 )
                 buildRegularClass {
-                    source = classNode.toFirSourceElement()
+                    source = classFirSource
                     moduleData = baseModuleData
                     origin = FirDeclarationOrigin.Source
                     name = className

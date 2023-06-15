@@ -3,7 +3,7 @@ FILE: plusAssignNullable.kt
         public abstract val list: R|kotlin/collections/List<kotlin/String>|
             public get(): R|kotlin/collections/List<kotlin/String>|
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -11,7 +11,7 @@ FILE: plusAssignNullable.kt
         public abstract val list: R|kotlin/collections/MutableList<kotlin/String>|
             public get(): R|kotlin/collections/MutableList<kotlin/String>|
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

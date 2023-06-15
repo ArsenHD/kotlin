@@ -4,20 +4,35 @@ FILE: sealedSupertype.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B : R|A| {
         public constructor(): R|B| {
             super<R|A|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface C : R|A| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface D : R|C|, R|A| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class E : R|B|, R|A| {
         public constructor(): R|E| {
             super<R|A|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -31,11 +46,17 @@ FILE: sealedSupertype.kt
                 super<R|P|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final class J : R|P| {
             public constructor(): R|P.J| {
                 super<R|P|>()
+            }
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }
@@ -50,6 +71,9 @@ FILE: sealedSupertype.kt
                     super<R|P|>()
                 }
 
+                public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+                }
+
             }
 
             public final class M : R|P| {
@@ -57,6 +81,12 @@ FILE: sealedSupertype.kt
                     super<R|P|>()
                 }
 
+                public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+                }
+
+            }
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }
@@ -79,10 +109,16 @@ FILE: sealedSupertype.kt
 
             public get(): R|P|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class K : R|P| {
         public constructor(): R|K| {
             super<R|P|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -96,6 +132,12 @@ FILE: sealedSupertype.kt
                 super<R|P|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -103,6 +145,9 @@ FILE: sealedSupertype.kt
         local final class L : R|P| {
             public constructor(): R|L| {
                 super<R|P|>()
+            }
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }

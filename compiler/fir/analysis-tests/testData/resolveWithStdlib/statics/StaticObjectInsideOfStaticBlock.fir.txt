@@ -4,7 +4,7 @@ FILE: StaticObjectInsideOfStaticBlock.kt
             super<R|kotlin/Any|>()
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             public final static object B : R|kotlin/Any| {
                 private constructor(): R|A.B| {
                     super<R|kotlin/Any|>()
@@ -14,7 +14,7 @@ FILE: StaticObjectInsideOfStaticBlock.kt
                     R|kotlin/io/println|(String(foo))
                 }
 
-                public final static object <SELF_STATIC_OBJECT> {
+                public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
                 }
 
             }

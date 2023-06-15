@@ -4,8 +4,14 @@ FILE: receiverWithCapturedType.kt
             public get(): R|D|
             public set(value: R|D|): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface CallableDescriptor : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun <D : R|CallableDescriptor|> R|ResolvedCall<D>|.getParameterForArgument(): R|kotlin/String| {
         ^getParameterForArgument String()

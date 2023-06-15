@@ -7,6 +7,9 @@ FILE: boundSmartcastsInBranches.kt
         public final val s: R|kotlin/String| = String()
             public get(): R|kotlin/String|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test_0(list: R|kotlin/collections/List<A>|): R|kotlin/Unit| {
         lvar goodA: R|A?| = Null(null)

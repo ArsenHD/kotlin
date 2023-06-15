@@ -9,6 +9,9 @@ FILE: elvisAndUnit.kt
         public final fun bar(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun main(a: R|A?|, y: R|kotlin/String|): R|kotlin/Unit| {
         R|/foo|(<L> = foo@fun <anonymous>(it: R|kotlin/Int|): R|kotlin/Unit| <inline=NoInline>  {

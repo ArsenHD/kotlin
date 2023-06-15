@@ -8,13 +8,22 @@ FILE: bareTypes2.kt
         public abstract val field: R|kotlin/Any|
             public get(): R|kotlin/Any|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface B<F : R|B<F>|> : R|A<F>| {
         public abstract override fun foo(): R|kotlin/CharSequence|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface C : R|B<C>| {
         public abstract override fun foo(): R|kotlin/String|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final fun test(x: R|A<*>|): R|kotlin/Unit| {

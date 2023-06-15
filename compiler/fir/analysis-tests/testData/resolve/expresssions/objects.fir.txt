@@ -8,6 +8,9 @@ FILE: objects.kt
             ^foo this@R|/A|
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun use(): R|A| {
         ^use Q|A|

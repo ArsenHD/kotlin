@@ -5,9 +5,18 @@ FILE: exposedSupertype.kt
         }
 
         protected abstract interface AProtectedI : R|kotlin/Any| {
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public abstract interface APublicI : R|kotlin/Any| {
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -21,6 +30,9 @@ FILE: exposedSupertype.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final inner class BInner : R|kotlin/Any| {
@@ -28,6 +40,12 @@ FILE: exposedSupertype.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -41,9 +59,18 @@ FILE: exposedSupertype.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public abstract interface CPublicI : R|kotlin/Any| {
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -57,14 +84,26 @@ FILE: exposedSupertype.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
     public abstract interface E : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Test2 : R|A.APublicI|, R|B.BInner| {
         public constructor(): R|Test2| {
             super<R|B.BInner|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -73,10 +112,16 @@ FILE: exposedSupertype.kt
             super<R|C|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Test4 : R|E|, <ERROR TYPE REF: HIDDEN: A.AProtectedI is invisible> {
         public constructor(): R|Test4| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -85,16 +130,25 @@ FILE: exposedSupertype.kt
             super<R|B.BInner|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Test6 : R|E|, R|C.CPublic| {
         public constructor(): R|Test6| {
             super<R|C.CPublic|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Test7 : <ERROR TYPE REF: Symbol not found for D.PublicButProtected> {
         public constructor(): R|Test7| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

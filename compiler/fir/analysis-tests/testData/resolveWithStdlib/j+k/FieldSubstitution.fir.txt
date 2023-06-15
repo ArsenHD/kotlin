@@ -8,4 +8,7 @@ FILE: Derived.kt
             this@R|/Derived|.R|SubstitutionOverride</Derived.myHost>|.R|kotlin/String.length|
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

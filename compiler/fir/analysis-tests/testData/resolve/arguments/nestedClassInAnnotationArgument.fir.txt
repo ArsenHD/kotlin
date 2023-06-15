@@ -7,6 +7,9 @@ FILE: nestedClassInAnnotationArgument.kt
         public final val kClass: R|kotlin/reflect/KClass<*>| = R|<local>/kClass|
             public get(): R|kotlin/reflect/KClass<*>|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class A : R|kotlin/Any| {
         public constructor(): R|A| {
@@ -21,6 +24,12 @@ FILE: nestedClassInAnnotationArgument.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

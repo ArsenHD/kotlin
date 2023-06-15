@@ -11,10 +11,16 @@ FILE: kt41982.kt
         public final operator fun setValue(thisRef: R|R|, property: R|kotlin/reflect/KProperty<*>|, value: R|T|): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class DelegateProvider<in Type> : R|kotlin/Any| {
         public constructor<in Type>(): R|DelegateProvider<Type>| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -36,5 +42,8 @@ FILE: kt41982.kt
             public set(<set-?>: R|kotlin/Long|): R|kotlin/Unit| {
                 this@R|/Test|.D|/Test.start|.R|SubstitutionOverride</Delegate.setValue: R|kotlin/Unit|>|(this@R|/Test|, ::R|/Test.start|, R|<local>/start|)
             }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

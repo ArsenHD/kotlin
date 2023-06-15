@@ -22,6 +22,9 @@ FILE: problems.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         R|/Local.Local|()
@@ -46,10 +49,16 @@ FILE: problems.kt
         public final val x: R|T| = R|<local>/x|
             public get(): R|T|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Derived : R|Base<kotlin/Int>| {
         public constructor(): R|Derived| {
             super<R|Base<kotlin/Int>|>(Int(10))
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

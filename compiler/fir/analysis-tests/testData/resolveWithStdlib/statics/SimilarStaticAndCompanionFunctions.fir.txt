@@ -13,12 +13,12 @@ FILE: SimilarStaticAndCompanionFunctions.kt
                 ^foo String()
             }
 
-            public final static object <SELF_STATIC_OBJECT> {
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             public final static fun foo(a: R|kotlin/Int|): R|kotlin/Int| {
                 ^foo Int(0)
             }

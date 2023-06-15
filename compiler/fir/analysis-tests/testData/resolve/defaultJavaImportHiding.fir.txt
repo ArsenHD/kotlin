@@ -6,6 +6,9 @@ FILE: LinkedList.kt
             super<R|java/util/LinkedList<T>|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
 FILE: HashSet.kt
     package util
@@ -15,6 +18,9 @@ FILE: HashSet.kt
             super<R|java/util/HashSet<T>|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
 FILE: main.kt
     package foo
@@ -22,6 +28,9 @@ FILE: main.kt
     public final class LinkedHashMap<K, V> : R|java/util/LinkedHashMap<K, V>| {
         public constructor<K, V>(): R|foo/LinkedHashMap<K, V>| {
             super<R|java/util/LinkedHashMap<K, V>|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

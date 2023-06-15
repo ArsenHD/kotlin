@@ -6,12 +6,18 @@ FILE: B.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun foo(): R|kotlin/Unit| {
     }
     public final fun I(): R|kotlin/Unit| {
     }
     public abstract interface I : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
 FILE: A.kt
     package a
@@ -19,6 +25,9 @@ FILE: A.kt
     public final class YourClass : R|b/MyClass| {
         public constructor(): R|a/YourClass| {
             super<R|b/MyClass|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

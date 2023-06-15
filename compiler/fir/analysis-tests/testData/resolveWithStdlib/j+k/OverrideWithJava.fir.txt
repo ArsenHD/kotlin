@@ -17,7 +17,7 @@ FILE: test.kt
             this@R|/B|.R|/B.bar|()
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

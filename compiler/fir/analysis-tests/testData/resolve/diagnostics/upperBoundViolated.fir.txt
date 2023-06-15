@@ -1,15 +1,24 @@
 FILE: upperBoundViolated.kt
     public abstract interface A : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B<T : R|A|> : R|kotlin/Any| {
         public constructor<T : R|A|>(): R|B<T>| {
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class C : R|A| {
         public constructor(): R|C| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -34,10 +43,16 @@ FILE: upperBoundViolated.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class T<U, Y : R|U|> : R|S<U, Y>| {
         public constructor<U, Y : R|U|>(): R|T<U, Y>| {
             super<R|S<U, Y>|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -46,10 +61,16 @@ FILE: upperBoundViolated.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class P1<T2 : R|kotlin/Number|, T3 : R|kotlin/Number|> : R|kotlin/Any| {
         public constructor<T2 : R|kotlin/Number|, T3 : R|kotlin/Number|>(): R|P1<T2, T3>| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -69,6 +90,9 @@ FILE: upperBoundViolated.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final typealias NL<K> = R|NumColl<kotlin/collections/List<K>>|
     public final val test7: <ERROR TYPE REF: Unresolved name: NumberPhile> = R|/NumColl.NumColl|<R|kotlin/Int|>().<Unresolved name: NumberPhile>#(ERROR_EXPR(No right operand))
@@ -78,6 +102,9 @@ FILE: upperBoundViolated.kt
     public final class NumberPhile<T : R|kotlin/Number|> : R|kotlin/Any| {
         public constructor<T : R|kotlin/Number|>(x: R|T|): R|NumberPhile<T>| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -90,10 +117,16 @@ FILE: upperBoundViolated.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Test2<S2 : R|Test1<S2, *>|> : R|kotlin/Any| {
         public constructor<S2 : R|Test1<S2, *>|>(): R|Test2<S2>| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -102,10 +135,16 @@ FILE: upperBoundViolated.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Test4<S4 : R|Test3<S4, out kotlin/Any>|> : R|kotlin/Any| {
         public constructor<S4 : R|Test3<S4, out kotlin/Any>|>(): R|Test4<S4>| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -114,10 +153,16 @@ FILE: upperBoundViolated.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Test6<S6 : R|Test5<S6, in kotlin/Any>|> : R|kotlin/Any| {
         public constructor<S6 : R|Test5<S6, in kotlin/Any>|>(): R|Test6<S6>| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -126,16 +171,25 @@ FILE: upperBoundViolated.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Test8<S8 : R|Test7<S8, in kotlin/Any>|> : R|kotlin/Any| {
         public constructor<S8 : R|Test7<S8, in kotlin/Any>|>(): R|Test8<S8>| {
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Class<V : R|kotlin/Any|> : R|kotlin/Any| {
         public constructor<V : R|kotlin/Any|>(): R|Class<V>| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -145,16 +199,25 @@ FILE: upperBoundViolated.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class DerivedOut<out O : R|Base<out O>|> : R|kotlin/Any| {
         public constructor<out O : R|Base<out O>|>(): R|DerivedOut<O>| {
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class DerivedIn<in I : R|Base<in I>|> : R|kotlin/Any| {
         public constructor<in I : R|Base<in I>|>(): R|DerivedIn<I>| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

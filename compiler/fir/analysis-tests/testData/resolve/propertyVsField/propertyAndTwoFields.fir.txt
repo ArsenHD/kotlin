@@ -7,6 +7,9 @@ FILE: KotlinBase.kt
         public final val abcd: R|kotlin/String| = String(abcd)
             public get(): R|kotlin/String|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
 FILE: test.kt
     public final fun test(d: R|JavaDerived|): R|kotlin/Unit| {

@@ -4,7 +4,7 @@ FILE: StaticExtensionShadowing.kt
             super<R|kotlin/Any|>()
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             public final static fun foo(): R|kotlin/Int| {
                 ^foo Int(10)
             }

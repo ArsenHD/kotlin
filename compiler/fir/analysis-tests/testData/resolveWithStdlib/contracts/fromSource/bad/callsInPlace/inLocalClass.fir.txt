@@ -40,6 +40,9 @@ FILE: inLocalClass.kt
                 R|<local>/d|.R|SubstitutionOverride<kotlin/Function0.invoke: R|kotlin/Unit|>|()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         R|/LocalClass.LocalClass|().R|<local>/run|()

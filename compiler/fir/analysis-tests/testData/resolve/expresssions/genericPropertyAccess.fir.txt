@@ -9,6 +9,9 @@ FILE: genericPropertyAccess.kt
 
         public abstract fun foo(): R|T|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Derived<T> : R|Base<T>| {
         public constructor<T>(x: R|T|): R|Derived<T>| {
@@ -17,6 +20,9 @@ FILE: genericPropertyAccess.kt
 
         public open override fun foo(): R|T| {
             ^foo this@R|/Derived|.R|SubstitutionOverride</Derived.x: R|T|>|
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

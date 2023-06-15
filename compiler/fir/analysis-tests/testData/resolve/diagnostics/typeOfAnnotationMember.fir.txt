@@ -4,21 +4,27 @@ FILE: typeOfAnnotationMember.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final enum class Enum : R|kotlin/Enum<Enum>| {
         private constructor(): R|Enum| {
             super<R|kotlin/Enum<Enum>|>()
         }
 
-        public final static enum entry Bar: R|Enum|
-        public final static fun values(): R|kotlin/Array<Enum>| {
-        }
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            public final static enum entry Bar: R|Enum|
+            public final static fun values(): R|kotlin/Array<Enum>| {
+            }
 
-        public final static fun valueOf(value: R|kotlin/String|): R|Enum| {
-        }
+            public final static fun valueOf(value: R|kotlin/String|): R|Enum| {
+            }
 
-        public final static val entries: R|kotlin/enums/EnumEntries<Enum>|
-            public get(): R|kotlin/enums/EnumEntries<Enum>|
+            public final static val entries: R|kotlin/enums/EnumEntries<Enum>|
+                public get(): R|kotlin/enums/EnumEntries<Enum>|
+
+        }
 
     }
     public final annotation class Ann1 : R|kotlin/Annotation| {
@@ -44,6 +50,9 @@ FILE: typeOfAnnotationMember.kt
         public final val p6: R|kotlin/Array<out java/lang/Class<*>>| = R|<local>/p6|
             public get(): R|kotlin/Array<out java/lang/Class<*>>|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final annotation class Ann2 : R|kotlin/Annotation| {
         public constructor(p1: R|kotlin/Int?|, p2: R|kotlin/String?|, p3: R|kotlin/IntArray?|, p4: R|kotlin/Array<kotlin/Int>?|, p5: R|Ann1?|, p6: R|Enum?|): R|Ann2| {
@@ -67,5 +76,8 @@ FILE: typeOfAnnotationMember.kt
 
         public final val p6: R|Enum?| = R|<local>/p6|
             public get(): R|Enum?|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

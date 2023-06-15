@@ -4,4 +4,7 @@ FILE: erroneousDelegatedConstructorCall.kt
             super<<ERROR TYPE REF: Symbol not found for Undefined>>(R|/id|<R|ERROR CLASS: Cannot infer argument for type parameter K|>(R|/materialize|<R|ERROR CLASS: Cannot infer argument for type parameter K|>()))
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

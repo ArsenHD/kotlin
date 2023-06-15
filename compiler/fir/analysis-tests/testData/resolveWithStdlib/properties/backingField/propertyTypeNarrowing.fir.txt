@@ -17,7 +17,7 @@ FILE: propertyTypeNarrowing.kt
                 ^ this@R|/A|.F|/A.p|
             }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

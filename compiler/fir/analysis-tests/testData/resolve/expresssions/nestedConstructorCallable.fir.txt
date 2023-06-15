@@ -9,11 +9,17 @@ FILE: nestedConstructorCallable.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final fun main(): R|kotlin/Unit| {
             lval x: R|kotlin/reflect/KFunction0<A.Nested>| = ::R|/A.Nested.Nested|
             lval y: R|kotlin/reflect/KFunction0<A.Nested>| = Q|A|::R|/A.Nested.Nested|
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

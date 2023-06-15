@@ -4,6 +4,9 @@ FILE: RedundantSetterParameterTypeChecker.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final var x: R|kotlin/Int|
         public get(): R|kotlin/Int| {
@@ -36,5 +39,8 @@ FILE: RedundantSetterParameterTypeChecker.kt
             public set(param: R|kotlin/Boolean|): R|kotlin/Unit| {
                 this@R|/My|.F|/My.w| = R|<local>/param|.R|kotlin/Boolean.not|()
             }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

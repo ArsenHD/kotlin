@@ -4,6 +4,9 @@ FILE: getClassLet.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final inline fun <reified K> foo(klass: R|kotlin/reflect/KClass<*>|): R|K| {
         ^foo Null(null)!!

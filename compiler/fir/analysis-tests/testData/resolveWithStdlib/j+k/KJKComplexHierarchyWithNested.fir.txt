@@ -4,6 +4,9 @@ FILE: K1.kt
             super<R|J1|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun main(k: R|KSub|, vString: R|SuperClass.NestedInSuperClass<kotlin/String>|, vInt: R|SuperClass.NestedInSuperClass<kotlin/Int>|): R|kotlin/Unit| {
         R|<local>/k|.R|/J1.getImpl|().R|SubstitutionOverride</J1.NestedIImpl.nestedI: R|kotlin/Unit|>|(R|<local>/vString|)
@@ -15,6 +18,9 @@ FILE: K2.kt
     public open class KFirst : R|SuperClass<kotlin/String>|, R|SuperI<kotlin/Int>| {
         public constructor(): R|KFirst| {
             super<R|SuperClass<kotlin/String>|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -32,6 +38,12 @@ FILE: K3.kt
             public final fun nested(x: R|T|): R|kotlin/Unit| {
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -40,6 +52,12 @@ FILE: K3.kt
             public open fun nestedI(f: R|F|): R|kotlin/Unit| {
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

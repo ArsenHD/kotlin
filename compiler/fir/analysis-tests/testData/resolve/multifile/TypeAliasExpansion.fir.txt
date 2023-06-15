@@ -6,6 +6,9 @@ FILE: B.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final typealias TA = R|b/A|
 FILE: A.kt
@@ -14,6 +17,9 @@ FILE: A.kt
     public final class MyClass : R|b/TA| {
         public constructor(): R|a/MyClass| {
             super<R|b/TA|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

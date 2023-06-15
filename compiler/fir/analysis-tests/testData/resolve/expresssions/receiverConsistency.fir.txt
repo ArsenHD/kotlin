@@ -21,6 +21,12 @@ FILE: receiverConsistency.kt
                 <Unresolved name: err>#()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

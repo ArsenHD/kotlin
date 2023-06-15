@@ -7,10 +7,16 @@ FILE: module_lib_implicitTypeFromOtherModule.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Lib : R|kotlin/Any| {
         public constructor(): R|dependency/Lib| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

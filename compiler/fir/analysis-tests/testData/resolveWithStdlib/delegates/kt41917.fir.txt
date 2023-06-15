@@ -11,6 +11,9 @@ FILE: kt41917.kt
             ^getValue this@R|/DummyDelegate|.R|/DummyDelegate.s|
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun testImplicit(c: R|C|): R|kotlin/Int| {
         ^testImplicit R|<local>/c|.R|/A.implicit|.R|kotlin/String.length|
@@ -33,6 +36,9 @@ FILE: kt41917.kt
                 ^ this@R|/A|.D|/A.explicit|.R|SubstitutionOverride</DummyDelegate.getValue: R|Stub (chain inference): TypeVariable(_V)|>|(this@R|/A|, ::R|/A.explicit|)
             }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface B : R|kotlin/Any| {
         public abstract val implicit: R|kotlin/String|
@@ -41,10 +47,16 @@ FILE: kt41917.kt
         public abstract val explicit: R|kotlin/String|
             public get(): R|kotlin/String|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class C : R|A|, R|B| {
         public constructor(): R|C| {
             super<R|A|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

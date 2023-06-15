@@ -18,6 +18,12 @@ FILE: kt42346.kt
             public final const val STEP_OUT: R|kotlin/Int| = Int(2)
                 public get(): R|kotlin/Int|
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -30,6 +36,9 @@ FILE: kt42346.kt
 
         public final val intValues: R|kotlin/LongArray| = R|<local>/intValues|
             public get(): R|kotlin/LongArray|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     @R|KotlinMagicConstant|(intValues = <implicitArrayOf>(Q|StepRequest|.R|/StepRequest.Companion.STEP_INTO|.R|kotlin/Int.toLong|(), Q|StepRequest|.R|/StepRequest.Companion.STEP_OVER|.R|kotlin/Int.toLong|(), Q|StepRequest|.R|/StepRequest.Companion.STEP_OUT|.R|kotlin/Int.toLong|())) public final val kotlinDepth: R|kotlin/Int| = Int(42)

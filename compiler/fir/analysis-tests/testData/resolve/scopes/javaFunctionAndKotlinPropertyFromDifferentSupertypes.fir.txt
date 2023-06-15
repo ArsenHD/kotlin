@@ -3,11 +3,17 @@ FILE: B.kt
         public abstract val foo: R|kotlin/Int|
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
 FILE: main.kt
     public final class D : R|C| {
         public constructor(): R|D| {
             super<R|C|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

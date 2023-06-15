@@ -12,6 +12,9 @@ FILE: B.kt
             ^testProtected this@R|/B|.R|/B.foo|(String(hello))
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
 FILE: A.kt
     public abstract class A : R|kotlin/Any| {
@@ -20,6 +23,9 @@ FILE: A.kt
         }
 
         protected abstract infix fun foo(s: R|kotlin/String|): R|kotlin/String|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
 FILE: main.kt

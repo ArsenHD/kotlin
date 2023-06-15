@@ -2,10 +2,16 @@ FILE: simpleCapturedTypes.kt
     public abstract interface Ann : R|kotlin/Any| {
         public abstract fun foo(): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface KC<T> : R|kotlin/Any| {
         public abstract val x: R|T|
             public get(): R|T|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final fun <T> id(x: R|KC<T>|): R|KC<T>| {

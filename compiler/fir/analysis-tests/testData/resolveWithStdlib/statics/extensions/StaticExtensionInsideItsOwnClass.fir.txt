@@ -11,7 +11,7 @@ FILE: StaticExtensionInsideItsOwnClass.kt
             (this@R|/A|, Q|A|).R|/A.foo|()
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

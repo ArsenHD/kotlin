@@ -1,5 +1,8 @@
 FILE: localTypes.kt
     public abstract interface Foo : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun foo(): R|kotlin/Unit| {
         lval x: R|kotlin/Int| = Int(1)
@@ -23,6 +26,9 @@ FILE: localTypes.kt
 
             public final fun <T : R|Foo|> id(arg: R|T|): R|T| {
                 ^id R|<local>/arg|
+            }
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }

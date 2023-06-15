@@ -14,6 +14,12 @@ FILE: classifierAccessFromCompanion.kt
                     super<R|kotlin/Any|>()
                 }
 
+                public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+                }
+
+            }
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }
@@ -29,6 +35,12 @@ FILE: classifierAccessFromCompanion.kt
             public final val x: R|Factory.Function.Default| = Q|Factory.Function.Default|
                 public get(): R|Factory.Function.Default|
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

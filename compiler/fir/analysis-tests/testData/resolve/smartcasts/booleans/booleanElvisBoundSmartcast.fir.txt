@@ -10,6 +10,9 @@ FILE: booleanElvisBoundSmartcast.kt
         public final fun foo(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test_1(a: R|A?|): R|kotlin/Unit| {
         when () {

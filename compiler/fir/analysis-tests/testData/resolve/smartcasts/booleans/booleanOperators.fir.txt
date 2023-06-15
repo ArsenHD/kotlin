@@ -4,13 +4,22 @@ FILE: booleanOperators.kt
 
         public abstract fun bool(): R|kotlin/Boolean|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface B : R|A| {
         public abstract fun bar(): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface C : R|A| {
         public abstract fun baz(): R|kotlin/Unit|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final fun test_1(x: R|kotlin/Any|): R|kotlin/Unit| {

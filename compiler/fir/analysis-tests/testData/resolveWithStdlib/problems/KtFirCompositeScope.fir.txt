@@ -2,7 +2,7 @@ FILE: KtFirCompositeScope.kt
     public abstract interface KtScope : R|kotlin/Any| {
         public abstract fun getAllNames(): R|kotlin/collections/Set<kotlin/String>|
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -33,7 +33,7 @@ FILE: KtFirCompositeScope.kt
             )
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

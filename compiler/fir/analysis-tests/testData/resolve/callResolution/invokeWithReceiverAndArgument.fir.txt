@@ -1,9 +1,15 @@
 FILE: invokeWithReceiverAndArgument.kt
     public abstract interface AbstractFirTreeBuilder : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class FirTreeBuilder : R|AbstractFirTreeBuilder| {
         public constructor(): R|FirTreeBuilder| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -17,6 +23,9 @@ FILE: invokeWithReceiverAndArgument.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final inner class LeafBuilderConfigurationContext<T : R|AbstractFirTreeBuilder|> : R|AbstractBuilderConfigurator.BuilderConfigurationContext| {
@@ -24,6 +33,12 @@ FILE: invokeWithReceiverAndArgument.kt
                 super<R|AbstractBuilderConfigurator.BuilderConfigurationContext|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -37,6 +52,9 @@ FILE: invokeWithReceiverAndArgument.kt
             R|<local>/func|.R|SubstitutionOverride<kotlin/Function1.invoke: R|kotlin/Unit|>|(R|<local>/context|)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Outer<E> : R|kotlin/Any| {
         public constructor<E>(): R|Outer<E>| {
@@ -48,6 +66,9 @@ FILE: invokeWithReceiverAndArgument.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final fun foo(x: R|(Outer.Inner<E>) -> kotlin/Unit|, y: R|Outer.Inner<E>.() -> kotlin/Unit|): R|kotlin/Unit| {
@@ -57,6 +78,9 @@ FILE: invokeWithReceiverAndArgument.kt
         }
 
         public final fun bar(i: R|Outer.Inner<E>|): R|kotlin/Unit| {
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

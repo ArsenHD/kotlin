@@ -16,6 +16,9 @@ FILE: copy.kt
 
         public final fun copy(x: R|kotlin/Int| = this@R|/Some|.R|/Some.x|, y: R|kotlin/String| = this@R|/Some|.R|/Some.y|): R|Some|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test(some: R|Some|): R|kotlin/Unit| {
         lval other: R|Some| = R|<local>/some|.R|/Some.copy|(y = String(123))

@@ -4,6 +4,9 @@ FILE: hideBySeverity.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class StoredPropertyDerived<T> : R|StoredPropertyBase<T>| {
         public constructor<T>(): R|StoredPropertyDerived<T>| {
@@ -12,6 +15,9 @@ FILE: hideBySeverity.kt
 
         public final operator fun provideDelegate(thisRef: R|kotlin/Any|, property: R|kotlin/reflect/KProperty<*>|): R|StoredPropertyBase<T>| {
             ^provideDelegate this@R|/StoredPropertyDerived|
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -23,6 +29,9 @@ FILE: hideBySeverity.kt
         protected abstract fun <PROPERTY_TYPE> propertyDerived(initialValue: R|PROPERTY_TYPE|): R|StoredPropertyDerived<PROPERTY_TYPE>|
 
         protected abstract fun <PROPERTY_TYPE> propertyBase(initialValue: R|PROPERTY_TYPE|): R|StoredPropertyBase<PROPERTY_TYPE>|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public abstract class Some : R|BaseState| {
@@ -39,5 +48,8 @@ FILE: hideBySeverity.kt
             public get(): R|kotlin/collections/MutableSet<kotlin/Int>| {
                 ^ this@R|/Some|.D|/Some.hideBySeverityBase|.R|SubstitutionOverride</StoredPropertyBase.getValue: R|Stub (chain inference): TypeVariable(_PROPERTY_TYPE)|>|(this@R|/Some|, ::R|/Some.hideBySeverityBase|)
             }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

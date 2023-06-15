@@ -1,9 +1,15 @@
 FILE: multipleOutersAndMultipleCallableReferences.kt
     public abstract interface Base : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Inv<K> : R|Base| {
         public constructor<K>(): R|Inv<K>| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

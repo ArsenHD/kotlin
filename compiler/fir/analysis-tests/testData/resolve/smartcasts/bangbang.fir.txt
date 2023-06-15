@@ -2,6 +2,9 @@ FILE: bangbang.kt
     public abstract interface A : R|kotlin/Any| {
         public abstract fun foo(): R|kotlin/Boolean|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test_0(a: R|A?|): R|kotlin/Unit| {
         R|<local>/a|!!.R|/A.foo|()

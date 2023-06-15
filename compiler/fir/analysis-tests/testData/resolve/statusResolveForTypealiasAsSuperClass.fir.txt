@@ -7,10 +7,16 @@ FILE: statusResolveForTypealiasAsSuperClass.kt
         public open override fun foo(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final typealias Foo = R|B|
     public abstract interface B : R|kotlin/Any| {
         public open fun foo(): R|kotlin/Unit| {
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

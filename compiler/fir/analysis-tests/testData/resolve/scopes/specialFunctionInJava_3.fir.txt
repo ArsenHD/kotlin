@@ -14,10 +14,16 @@ FILE: main.kt
                 ^ Int(2)
             }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class DImpl : R|D| {
         public constructor(): R|DImpl| {
             super<R|D|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

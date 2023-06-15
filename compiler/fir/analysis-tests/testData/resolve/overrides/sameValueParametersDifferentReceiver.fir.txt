@@ -12,10 +12,16 @@ FILE: sameValueParametersDifferentReceiver.kt
             ^foo Int(1)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B : R|A| {
         public constructor(): R|B| {
             super<R|A|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

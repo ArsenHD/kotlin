@@ -18,10 +18,16 @@ FILE: conflictingOverloads.kt
         public open val u: R|kotlin/Int| = Int(20)
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class A : R|kotlin/Any| {
         public constructor(): R|A| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -42,22 +48,31 @@ FILE: conflictingOverloads.kt
         public open override val u: R|kotlin/Int| = Int(310)
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface B : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final enum class B : R|kotlin/Enum<B>| {
         private constructor(): R|B| {
             super<R|kotlin/Enum<B>|>()
         }
 
-        public final static fun values(): R|kotlin/Array<B>| {
-        }
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            public final static fun values(): R|kotlin/Array<B>| {
+            }
 
-        public final static fun valueOf(value: R|kotlin/String|): R|B| {
-        }
+            public final static fun valueOf(value: R|kotlin/String|): R|B| {
+            }
 
-        public final static val entries: R|kotlin/enums/EnumEntries<B>|
-            public get(): R|kotlin/enums/EnumEntries<B>|
+            public final static val entries: R|kotlin/enums/EnumEntries<B>|
+                public get(): R|kotlin/enums/EnumEntries<B>|
+
+        }
 
     }
     public final val u: R|kotlin/Int| = Int(10)
@@ -91,6 +106,9 @@ FILE: conflictingOverloads.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final val Companion: R|kotlin/Any| = object : R|kotlin/Any| {
@@ -101,6 +119,9 @@ FILE: conflictingOverloads.kt
         }
 
             public get(): R|kotlin/Any|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final fun R|B|.foo(): R|kotlin/Unit| {
@@ -113,12 +134,18 @@ FILE: conflictingOverloads.kt
         public final fun R|B|.foo(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun mest(): R|kotlin/Unit| {
     }
     public final class mest : R|kotlin/Any| {
         public constructor(): R|mest| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

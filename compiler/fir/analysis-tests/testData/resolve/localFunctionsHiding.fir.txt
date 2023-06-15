@@ -3,6 +3,9 @@ FILE: localFunctionsHiding.kt
         public abstract val x: R|kotlin/Int|
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test_1(): R|kotlin/Unit| {
         local final fun R|kotlin/Int|.transform(): R|kotlin/Int| {

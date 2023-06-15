@@ -10,4 +10,7 @@ FILE: settersGetters.kt
                 this@R|/SomeClass|.F|/SomeClass.foo| = R|<local>/value|
             }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

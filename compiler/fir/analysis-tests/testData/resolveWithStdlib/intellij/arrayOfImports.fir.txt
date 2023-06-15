@@ -9,6 +9,9 @@ FILE: arrayOfImports.kt
         public final val value: R|kotlin/Array<kotlin/reflect/KClass<*>>| = R|<local>/value|
             public get(): R|kotlin/Array<kotlin/reflect/KClass<*>>|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final annotation class Second : R|kotlin/Annotation| {
         public constructor(value: R|kotlin/Array<First>|): R|Second| {
@@ -17,6 +20,9 @@ FILE: arrayOfImports.kt
 
         public final val value: R|kotlin/Array<First>| = R|<local>/value|
             public get(): R|kotlin/Array<First>|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final annotation class Third : R|kotlin/Annotation| {
@@ -29,5 +35,8 @@ FILE: arrayOfImports.kt
 
         public final val second: R|Second| = R|<local>/second|
             public get(): R|Second|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

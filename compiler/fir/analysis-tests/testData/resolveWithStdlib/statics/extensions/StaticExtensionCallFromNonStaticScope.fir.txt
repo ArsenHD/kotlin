@@ -7,7 +7,7 @@ FILE: StaticExtensionCallFromNonStaticScope.kt
         public final fun foo(): R|kotlin/Unit| {
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             public final static fun baz(): R|kotlin/Unit| {
             }
 

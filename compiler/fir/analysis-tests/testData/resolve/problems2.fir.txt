@@ -12,6 +12,9 @@ FILE: problems2.kt
             ^intern this@R|/Interner|.R|/Interner.find|(R|<local>/obj|)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Externer : R|kotlin/Any| {
         public constructor(): R|Externer| {
@@ -24,6 +27,9 @@ FILE: problems2.kt
 
         public final fun intern(obj: R|kotlin/Int|): R|kotlin/Int?| {
             ^intern this@R|/Externer|.R|/Externer.find|(R|<local>/obj|)
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -50,6 +56,12 @@ FILE: problems2.kt
 
             public final fun copy(x: R|kotlin/Int| = this@R|/Some.WithPrimary|.R|/Some.WithPrimary.x|, arr: R|kotlin/Array<kotlin/String>?| = this@R|/Some.WithPrimary|.R|/Some.WithPrimary.arr|, s: R|kotlin/String?| = this@R|/Some.WithPrimary|.R|/Some.WithPrimary.s|): R|Some.WithPrimary|
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -63,6 +75,9 @@ FILE: problems2.kt
 
         public final val name: R|kotlin/String| = R|<local>/name|
             public get(): R|kotlin/String|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final val R|KonanTarget|.presetName: R|kotlin/String|

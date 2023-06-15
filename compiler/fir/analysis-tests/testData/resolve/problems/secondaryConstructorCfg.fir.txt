@@ -24,4 +24,7 @@ FILE: secondaryConstructorCfg.kt
             this@R|/B|.R|/B.p3| = String()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

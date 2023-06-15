@@ -7,6 +7,9 @@ FILE: annotationArgumentMustBeConst.kt
         public final val a: R|kotlin/Array<out kotlin/String>| = R|<local>/a|
             public get(): R|kotlin/Array<out kotlin/String>|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final annotation class Ann2 : R|kotlin/Annotation| {
         public constructor(a: R|kotlin/IntArray|): R|Ann2| {
@@ -16,6 +19,9 @@ FILE: annotationArgumentMustBeConst.kt
         public final val a: R|kotlin/IntArray| = R|<local>/a|
             public get(): R|kotlin/IntArray|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final annotation class Ann3 : R|kotlin/Annotation| {
         public constructor(a: R|kotlin/Array<kotlin/String>|): R|Ann3| {
@@ -24,6 +30,9 @@ FILE: annotationArgumentMustBeConst.kt
 
         public final val a: R|kotlin/Array<kotlin/String>| = R|<local>/a|
             public get(): R|kotlin/Array<kotlin/String>|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final var foo: R|kotlin/String| = String(a)
@@ -48,6 +57,9 @@ FILE: annotationArgumentMustBeConst.kt
 
         public final val a: R|kotlin/Int| = Int(1)
             public get(): R|kotlin/Int|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     @R|Ann1|(a = vararg(R|/foo|, R|/foo|.R|kotlin/String.plus|(R|/bar|), <strcat>(R|/foo|, String( ), R|/bar|), <strcat>(R|/baz|(), String( )))) @R|Ann2|(a = <implicitArrayOf>(R|/bar|, R|/baz|(), R|/bar|.R|kotlin/Int.plus|(R|/cnst|))) @R|Ann3|(a = R|/arr|) public final fun test(): R|kotlin/Unit| {

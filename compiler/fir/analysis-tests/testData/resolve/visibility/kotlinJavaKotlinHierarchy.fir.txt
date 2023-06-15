@@ -7,6 +7,9 @@ FILE: C.kt
         public open override fun foo(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
 FILE: A.kt
     public abstract class A : R|kotlin/Any| {
@@ -15,5 +18,8 @@ FILE: A.kt
         }
 
         public abstract fun foo(): R|kotlin/Unit|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

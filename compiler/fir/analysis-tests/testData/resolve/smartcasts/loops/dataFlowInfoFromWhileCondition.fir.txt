@@ -2,10 +2,19 @@ FILE: dataFlowInfoFromWhileCondition.kt
     public abstract interface A : R|kotlin/Any| {
         public abstract fun foo(): R|kotlin/Boolean|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface B : R|A| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface C : R|A| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test(): R|kotlin/Unit| {
         lvar a: R|A?| = Null(null)

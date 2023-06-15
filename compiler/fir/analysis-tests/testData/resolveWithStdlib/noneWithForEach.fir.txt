@@ -3,7 +3,7 @@ FILE: noneWithForEach.kt
         public abstract val name: R|kotlin/String|
             public get(): R|kotlin/String|
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

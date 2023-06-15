@@ -16,6 +16,9 @@ FILE: delegateInference.kt
             this@R|/FreezableVar|.R|/FreezableVar.value| = R|<local>/value|
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class LocalFreezableVar<T> : R|kotlin/Any| {
         public constructor<T>(value: R|T|): R|LocalFreezableVar<T>| {
@@ -32,6 +35,9 @@ FILE: delegateInference.kt
 
         public final operator fun setValue(thisRef: R|kotlin/Nothing?|, property: R|kotlin/reflect/KProperty<*>|, value: R|T|): R|kotlin/Unit| {
             this@R|/LocalFreezableVar|.R|/LocalFreezableVar.value| = R|<local>/value|
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -55,6 +61,9 @@ FILE: delegateInference.kt
             public set(<set-?>: R|kotlin/String|): R|kotlin/Unit| {
                 this@R|/Test|.D|/Test.y|.R|SubstitutionOverride</FreezableVar.setValue: R|kotlin/Unit|>|(this@R|/Test|, ::R|/Test.y|, R|<local>/y|)
             }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final fun test(): R|kotlin/Unit| {

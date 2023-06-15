@@ -7,6 +7,9 @@ FILE: nestedAnnotationConstExprArguments.kt
         public final val text: R|kotlin/String| = R|<local>/text|
             public get(): R|kotlin/String|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final annotation class OuterAnnotation : R|kotlin/Annotation| {
         public constructor(inner: R|InnerAnnotation|): R|OuterAnnotation| {
@@ -16,10 +19,16 @@ FILE: nestedAnnotationConstExprArguments.kt
         public final val inner: R|InnerAnnotation| = R|<local>/inner|
             public get(): R|InnerAnnotation|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     @R|OuterAnnotation|(inner = R|/InnerAnnotation.InnerAnnotation|(text = String(x).R|kotlin/String.plus|(String(x)))) public final class Payload : R|kotlin/Any| {
         public constructor(): R|Payload| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -28,16 +37,25 @@ FILE: nestedAnnotationConstExprArguments.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     @R|OuterAnnotation|(inner = R|/InnerAnnotation.InnerAnnotation|(text = String(x))) public final class Payload3 : R|kotlin/Any| {
         public constructor(): R|Payload3| {
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     @R|OuterAnnotation|(inner = R|/InnerAnnotation.InnerAnnotation|(String(x).R|kotlin/String.plus|(String(x)))) public final class Payload4 : R|kotlin/Any| {
         public constructor(): R|Payload4| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

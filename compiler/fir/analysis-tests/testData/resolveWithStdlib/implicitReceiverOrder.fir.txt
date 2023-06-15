@@ -12,7 +12,7 @@ FILE: implicitReceiverOrder.kt
             ^bar Int(3)
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -29,7 +29,7 @@ FILE: implicitReceiverOrder.kt
             ^bar Int(4)
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

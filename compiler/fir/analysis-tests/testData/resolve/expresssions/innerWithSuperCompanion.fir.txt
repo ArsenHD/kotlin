@@ -12,6 +12,12 @@ FILE: innerWithSuperCompanion.kt
             public final val some: R|kotlin/Int| = Int(0)
                 public get(): R|kotlin/Int|
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -31,6 +37,12 @@ FILE: innerWithSuperCompanion.kt
             public final val c: R|kotlin/String| = this@R|/Outer|.R|/Outer.codegen|
                 public get(): R|kotlin/String|
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

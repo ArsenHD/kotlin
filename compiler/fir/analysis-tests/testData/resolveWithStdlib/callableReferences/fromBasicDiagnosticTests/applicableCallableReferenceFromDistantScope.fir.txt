@@ -20,4 +20,7 @@ FILE: applicableCallableReferenceFromDistantScope.kt
             lval s: R|kotlin/String| = this@R|/Scope|.R|/Scope.bar|<R|kotlin/String|>(::R|/foo|)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

@@ -1,5 +1,8 @@
 FILE: nestedExtensionFunctionType.kt
     public abstract interface A : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test_0(a: R|A|, f: R|A.() -> kotlin/Unit|): R|kotlin/Unit| {
         R|<local>/f|.R|SubstitutionOverride<kotlin/Function1.invoke: R|kotlin/Unit|>|(R|<local>/a|)

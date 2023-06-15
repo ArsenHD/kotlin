@@ -12,6 +12,9 @@ FILE: inlineClassDeclaration.kt
             public final val x: R|kotlin/Int| = R|<local>/x|
                 public get(): R|kotlin/Int|
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final fun foo(): R|kotlin/Unit| {
@@ -22,6 +25,9 @@ FILE: inlineClassDeclaration.kt
 
                 public final val x: R|kotlin/Int| = R|<local>/x|
                     public get(): R|kotlin/Int|
+
+                public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+                }
 
             }
 
@@ -35,6 +41,12 @@ FILE: inlineClassDeclaration.kt
             public final val x: R|kotlin/Int| = R|<local>/x|
                 public get(): R|kotlin/Int|
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -46,6 +58,9 @@ FILE: inlineClassDeclaration.kt
         public final val x: R|kotlin/Int| = R|<local>/x|
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract inline class NotFinalClass2 : R|kotlin/Any| {
         public constructor(x: R|kotlin/Int|): R|NotFinalClass2| {
@@ -54,6 +69,9 @@ FILE: inlineClassDeclaration.kt
 
         public final val x: R|kotlin/Int| = R|<local>/x|
             public get(): R|kotlin/Int|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public sealed inline class NotFinalClass3 : R|kotlin/Any| {
@@ -64,6 +82,9 @@ FILE: inlineClassDeclaration.kt
         public final val x: R|kotlin/Int| = R|<local>/x|
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final inline class CloneableClass1 : R|kotlin/Cloneable| {
         public constructor(x: R|kotlin/Int|): R|CloneableClass1| {
@@ -72,6 +93,9 @@ FILE: inlineClassDeclaration.kt
 
         public final val x: R|kotlin/Int| = R|<local>/x|
             public get(): R|kotlin/Int|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final inline class CloneableClass2 : R|java/lang/Cloneable| {
@@ -82,10 +106,16 @@ FILE: inlineClassDeclaration.kt
         public final val x: R|kotlin/Int| = R|<local>/x|
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class Test : R|kotlin/Any| {
         public constructor(): R|Test| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -97,6 +127,9 @@ FILE: inlineClassDeclaration.kt
         public final val x: R|kotlin/Int| = R|<local>/x|
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final inline class ImplementByDelegation : R|kotlin/Comparable<kotlin/Int>| {
         public constructor(x: R|kotlin/Int|): R|ImplementByDelegation| {
@@ -107,5 +140,8 @@ FILE: inlineClassDeclaration.kt
 
         public final val x: R|kotlin/Int| = R|<local>/x|
             public get(): R|kotlin/Int|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

@@ -5,6 +5,9 @@ FILE: byteArray.kt
         public abstract val array: R|Test/ByteArray|
             public get(): R|Test/ByteArray|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
 FILE: main.kt
     package use
@@ -12,5 +15,8 @@ FILE: main.kt
     public abstract interface My : R|kotlin/Any| {
         public abstract val array: R|kotlin/ByteArray|
             public get(): R|kotlin/ByteArray|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

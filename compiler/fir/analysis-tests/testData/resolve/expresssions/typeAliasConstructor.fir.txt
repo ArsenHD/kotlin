@@ -4,11 +4,17 @@ FILE: typeAliasConstructor.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final typealias AA = R|A|
     public final class B<T> : R|kotlin/Any| {
         public constructor<T>(t: R|T|): R|B<T>| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

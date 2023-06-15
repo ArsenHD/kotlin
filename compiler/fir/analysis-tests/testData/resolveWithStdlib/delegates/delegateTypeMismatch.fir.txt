@@ -5,10 +5,19 @@ FILE: delegateTypeMismatch.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
     public abstract interface KotlinType : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class A : R|kotlin/Any| {
         public constructor(isLocked: R|kotlin/Boolean|): R|A| {
@@ -51,5 +60,8 @@ FILE: delegateTypeMismatch.kt
             public set(<set-?>: R|(KotlinType) -> KotlinType|): R|kotlin/Unit| {
                 this@R|/A|.D|/A.typeNormalizer|.R|SubstitutionOverride<kotlin/properties/ReadWriteProperty.setValue: R|kotlin/Unit|>|(this@R|/A|, ::R|/A.typeNormalizer|, R|<local>/typeNormalizer|)
             }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

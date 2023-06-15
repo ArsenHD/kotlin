@@ -15,6 +15,9 @@ FILE: safeCalls.kt
 
         public abstract fun id(): R|A|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test_2(x: R|kotlin/Any|): R|kotlin/Unit| {
         (R|<local>/x| as? R|A|)?.{ $subj$.R|/A.bar|(R|<local>/x|) }

@@ -8,6 +8,9 @@ FILE: constructors.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun user(f: R|(kotlin/Int) -> Klass|): R|kotlin/Unit| {
     }

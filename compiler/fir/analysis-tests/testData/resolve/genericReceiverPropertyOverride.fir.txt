@@ -9,6 +9,9 @@ FILE: genericReceiverPropertyOverride.kt
                 ^ R|kotlin/TODO|()
             }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class B : R|A| {
         public constructor(): R|B| {
@@ -20,10 +23,16 @@ FILE: genericReceiverPropertyOverride.kt
                 ^ R|kotlin/TODO|()
             }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class Inv<E> : R|kotlin/Any| {
         public constructor<E>(): R|Inv<E>| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -34,6 +43,9 @@ FILE: genericReceiverPropertyOverride.kt
 
         public final fun foo(x: R|Inv<kotlin/String>|): R|kotlin/Unit| {
             (this@R|/C|, R|<local>/x|).R|/B.phasedFir|<R|kotlin/String|>
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

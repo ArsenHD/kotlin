@@ -4,10 +4,16 @@ FILE: threeReceiversCorrect.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B : R|kotlin/Any| {
         public constructor(): R|B| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -20,6 +26,9 @@ FILE: threeReceiversCorrect.kt
             public get(): R|C.() -> kotlin/Unit| {
                 ^ Null(null)
             }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final fun <T, R> with(arg: R|T|, f: R|T.() -> R|): R|R| {

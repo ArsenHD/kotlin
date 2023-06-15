@@ -8,6 +8,9 @@ FILE: module_lib_inherentlyImportedTypeFromOtherModule.kt
         }
 
         public abstract interface Result : R|kotlin/Any| {
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final class Success : R|dependency/Test.Result| {
@@ -15,6 +18,12 @@ FILE: module_lib_inherentlyImportedTypeFromOtherModule.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -29,6 +38,9 @@ FILE: module_main_inherentlyImportedTypeFromOtherModule.kt
 
         public final fun usage(): R|dependency/Test.Result| {
             ^usage R|dependency/Test.Success.Success|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

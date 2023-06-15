@@ -2,8 +2,14 @@ FILE: B.kt
     package b.d
 
     public abstract expect interface Other : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final expect class Another : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun baz(): R|kotlin/Unit| {
     }

@@ -7,6 +7,9 @@ FILE: constructorInInterface.kt
         public open val s: R|kotlin/String| = R|<local>/s|
             public get(): R|kotlin/String|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface B : R|kotlin/Any| {
         public constructor(s: R|kotlin/String|): R|B| {
@@ -16,10 +19,16 @@ FILE: constructorInInterface.kt
         public open val s: R|kotlin/String| = R|<local>/s|
             public get(): R|kotlin/String|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface C : R|kotlin/Any| {
         public constructor(s: R|kotlin/String|): R|C| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

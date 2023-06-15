@@ -9,6 +9,9 @@ FILE: referenceToExtension.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final class B<T> : R|kotlin/Any| {
@@ -21,6 +24,9 @@ FILE: referenceToExtension.kt
 
             public final fun memberFun(): R|GenericTest.A<T>| {
                 ^memberFun R|SubstitutionOverride</GenericTest.A.A>|<R|T|>()
+            }
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }
@@ -44,6 +50,9 @@ FILE: referenceToExtension.kt
             lval extensionFunRef: R|kotlin/reflect/KFunction1<GenericTest.B<*>, GenericTest.A<out kotlin/Any?>>| = Q|GenericTest.B|::R|/GenericTest.extensionFun<CapturedType(*)>|
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class NoGenericTest : R|kotlin/Any| {
         public constructor(): R|NoGenericTest| {
@@ -53,6 +62,9 @@ FILE: referenceToExtension.kt
         public final class A : R|kotlin/Any| {
             public constructor(): R|NoGenericTest.A| {
                 super<R|kotlin/Any|>()
+            }
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }
@@ -67,6 +79,9 @@ FILE: referenceToExtension.kt
 
             public final fun memberFun(): R|NoGenericTest.A| {
                 ^memberFun R|/NoGenericTest.A.A|()
+            }
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }
@@ -88,6 +103,9 @@ FILE: referenceToExtension.kt
         public final fun test_2(): R|kotlin/Unit| {
             lval memberValRef: R|kotlin/reflect/KProperty1<NoGenericTest.B, NoGenericTest.A>| = Q|NoGenericTest.B|::R|/NoGenericTest.B.memberVal|
             lval memberFunRef: R|kotlin/reflect/KFunction1<NoGenericTest.B, NoGenericTest.A>| = Q|NoGenericTest.B|::R|/NoGenericTest.B.memberFun|
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

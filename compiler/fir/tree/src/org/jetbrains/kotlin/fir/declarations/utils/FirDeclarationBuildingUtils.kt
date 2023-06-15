@@ -5,6 +5,7 @@
 
 package org.jetbrains.kotlin.fir.declarations.utils
 
+import org.jetbrains.kotlin.*
 import org.jetbrains.kotlin.descriptors.ClassKind
 import org.jetbrains.kotlin.descriptors.EffectiveVisibility
 import org.jetbrains.kotlin.descriptors.Modality
@@ -40,9 +41,11 @@ fun initSelfStaticObject(
     ownerClassId: ClassId,
     moduleData: FirModuleData,
     scopeProvider: FirScopeProvider,
-    session: FirSession
+    session: FirSession,
+    ownerSourceElement: KtSourceElement? = null,
 ): FirRegularClassBuilder {
     return FirRegularClassBuilder().apply {
+        source = ownerSourceElement?.fakeElement(KtFakeSourceElementKind.SelfStaticObject)
         this.moduleData = moduleData
         origin = FirDeclarationOrigin.Source
         this.name = SpecialNames.SELF_STATIC_OBJECT

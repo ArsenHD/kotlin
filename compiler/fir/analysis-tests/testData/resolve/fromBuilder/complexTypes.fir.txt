@@ -11,11 +11,20 @@ FILE: complexTypes.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
     public abstract interface Test : R|kotlin/Any| {
         public abstract val x: R|a/b/C.D<in kotlin/collections/List<*>, *, out kotlin/CharSequence, *>|
             public get(): R|a/b/C.D<in kotlin/collections/List<*>, *, out kotlin/CharSequence, *>|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

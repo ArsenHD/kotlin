@@ -1,5 +1,8 @@
 FILE: propertyWithFunctionalType.kt
     public abstract interface B : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class A : R|kotlin/Any| {
         public constructor(): R|A| {
@@ -31,5 +34,8 @@ FILE: propertyWithFunctionalType.kt
             public set(<set-?>: R|(B) -> B|): R|kotlin/Unit| {
                 this@R|/A|.D|/A.conventerWithExpectedType|.R|SubstitutionOverride<kotlin/properties/ReadWriteProperty.setValue: R|kotlin/Unit|>|(this@R|/A|, ::R|/A.conventerWithExpectedType|, R|<local>/conventerWithExpectedType|)
             }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

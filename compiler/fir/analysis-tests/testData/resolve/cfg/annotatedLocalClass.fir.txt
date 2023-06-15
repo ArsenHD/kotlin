@@ -4,6 +4,9 @@ FILE: annotatedLocalClass.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun foo(b: R|kotlin/Boolean|): R|kotlin/Unit| {
         when () {
@@ -15,6 +18,9 @@ FILE: annotatedLocalClass.kt
         @R|Ann|() local final class Local : R|kotlin/Any| {
             public constructor(): R|Local| {
                 super<R|kotlin/Any|>()
+            }
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }

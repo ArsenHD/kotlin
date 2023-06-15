@@ -7,6 +7,9 @@ FILE: overridenOpenVal.kt
         public open val x: R|kotlin/Any| = R|<local>/x|
             public get(): R|kotlin/Any|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B : R|A| {
         public constructor(x: R|kotlin/Any|): R|B| {
@@ -20,6 +23,9 @@ FILE: overridenOpenVal.kt
                 }
             }
 
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

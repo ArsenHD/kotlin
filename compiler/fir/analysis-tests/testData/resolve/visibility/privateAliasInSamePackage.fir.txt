@@ -14,10 +14,16 @@ FILE: Third.kt
             ^get Null(null)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Derived : R|first/Base<second/Second.Key>| {
         public constructor(): R|first/Derived| {
             super<R|first/Base<second/Second.Key>|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

@@ -4,6 +4,9 @@ FILE: forLoopChecker.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class NotRange2 : R|kotlin/Any| {
         public constructor(): R|NotRange2| {
@@ -11,6 +14,9 @@ FILE: forLoopChecker.kt
         }
 
         public abstract operator fun iterator(): R|kotlin/Unit|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public abstract class ImproperIterator1 : R|kotlin/Any| {
@@ -20,6 +26,9 @@ FILE: forLoopChecker.kt
 
         public abstract operator fun hasNext(): R|kotlin/Boolean|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class NotRange3 : R|kotlin/Any| {
         public constructor(): R|NotRange3| {
@@ -27,6 +36,9 @@ FILE: forLoopChecker.kt
         }
 
         public abstract operator fun iterator(): R|ImproperIterator1|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public abstract class ImproperIterator2 : R|kotlin/Any| {
@@ -36,6 +48,9 @@ FILE: forLoopChecker.kt
 
         public abstract operator fun next(): R|kotlin/Boolean|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class NotRange4 : R|kotlin/Any| {
         public constructor(): R|NotRange4| {
@@ -43,6 +58,9 @@ FILE: forLoopChecker.kt
         }
 
         public abstract operator fun iterator(): R|ImproperIterator2|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public abstract class ImproperIterator3 : R|kotlin/Any| {
@@ -54,6 +72,9 @@ FILE: forLoopChecker.kt
 
         public abstract operator fun next(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class NotRange5 : R|kotlin/Any| {
         public constructor(): R|NotRange5| {
@@ -61,6 +82,9 @@ FILE: forLoopChecker.kt
         }
 
         public abstract operator fun iterator(): R|ImproperIterator3|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public abstract class AmbiguousHasNextIterator : R|kotlin/Any| {
@@ -77,6 +101,9 @@ FILE: forLoopChecker.kt
 
         public abstract operator fun next(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class NotRange6 : R|kotlin/Any| {
         public constructor(): R|NotRange6| {
@@ -84,6 +111,9 @@ FILE: forLoopChecker.kt
         }
 
         public abstract operator fun iterator(): R|AmbiguousHasNextIterator|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public abstract class ImproperIterator4 : R|kotlin/Any| {
@@ -98,6 +128,9 @@ FILE: forLoopChecker.kt
 
         public abstract operator fun next(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class NotRange7 : R|kotlin/Any| {
         public constructor(): R|NotRange7| {
@@ -105,6 +138,9 @@ FILE: forLoopChecker.kt
         }
 
         public abstract operator fun iterator(): R|ImproperIterator3|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public abstract class GoodIterator : R|kotlin/Any| {
@@ -116,6 +152,9 @@ FILE: forLoopChecker.kt
 
         public abstract operator fun next(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class Range0 : R|kotlin/Any| {
         public constructor(): R|Range0| {
@@ -124,6 +163,9 @@ FILE: forLoopChecker.kt
 
         public abstract operator fun iterator(): R|GoodIterator|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class Range1 : R|kotlin/Any| {
         public constructor(): R|Range1| {
@@ -131,6 +173,9 @@ FILE: forLoopChecker.kt
         }
 
         public abstract operator fun iterator(): R|kotlin/collections/Iterator<kotlin/Int>|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public abstract class ImproperIterator5 : R|kotlin/Any| {
@@ -143,6 +188,9 @@ FILE: forLoopChecker.kt
 
         public abstract operator fun next(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class ImproperIterator6 : R|kotlin/Any| {
         public constructor(): R|ImproperIterator6| {
@@ -153,6 +201,9 @@ FILE: forLoopChecker.kt
 
         public abstract fun next(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class NotRange8 : R|kotlin/Any| {
         public constructor(): R|NotRange8| {
@@ -161,6 +212,9 @@ FILE: forLoopChecker.kt
 
         public abstract operator fun iterator(): R|ImproperIterator5|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class NotRange9 : R|kotlin/Any| {
         public constructor(): R|NotRange9| {
@@ -168,6 +222,9 @@ FILE: forLoopChecker.kt
         }
 
         public abstract fun iterator(): R|ImproperIterator6|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final fun test(notRange1: R|NotRange1|, notRange2: R|NotRange2|, notRange3: R|NotRange3|, notRange4: R|NotRange4|, notRange5: R|NotRange5|, notRange6: R|NotRange6|, notRange7: R|NotRange7|, notRange8: R|NotRange8|, notRange9: R|NotRange9|, range0: R|Range0|, range1: R|Range1|): R|kotlin/Unit| {

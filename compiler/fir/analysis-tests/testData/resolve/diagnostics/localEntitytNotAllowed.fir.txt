@@ -14,11 +14,20 @@ FILE: localEntitytNotAllowed.kt
                     super<R|kotlin/Any|>()
                 }
 
+                public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+                }
+
+            }
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }
 
         public abstract interface X : R|kotlin/Any| {
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final val a: R|kotlin/Any| = object : R|kotlin/Any| {
@@ -36,14 +45,26 @@ FILE: localEntitytNotAllowed.kt
                         super<R|kotlin/Any|>()
                     }
 
+                    public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+                    }
+
                 }
 
                 local abstract interface Z : R|kotlin/Any| {
+                    public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+                    }
+
+                }
+
+                public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
                 }
 
             }
 
             local abstract interface Y : R|kotlin/Any| {
+                public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+                }
+
             }
 
         }
@@ -61,14 +82,26 @@ FILE: localEntitytNotAllowed.kt
                         super<R|kotlin/Any|>()
                     }
 
+                    public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+                    }
+
                 }
 
                 local abstract interface M : R|kotlin/Any| {
+                    public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+                    }
+
+                }
+
+                public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
                 }
 
             }
 
             local abstract interface N : R|kotlin/Any| {
+                public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+                }
+
             }
 
             lval c: R|<anonymous>| = object : R|kotlin/Any| {
@@ -80,10 +113,16 @@ FILE: localEntitytNotAllowed.kt
                     public get(): R|kotlin/String|
 
                 local abstract interface U : R|kotlin/Any| {
+                    public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+                    }
+
                 }
 
             }
 
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

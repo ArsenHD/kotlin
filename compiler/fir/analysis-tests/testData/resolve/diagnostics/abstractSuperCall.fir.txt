@@ -10,6 +10,9 @@ FILE: abstractSuperCall.kt
         public final fun h(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class A : R|C| {
         public constructor(): R|A| {
@@ -29,6 +32,9 @@ FILE: abstractSuperCall.kt
             this@R|/A|.super<R|C|>.R|/C.x|
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B : R|A| {
         public constructor(): R|B| {
@@ -45,6 +51,9 @@ FILE: abstractSuperCall.kt
             this@R|/B|.super<R|A|>.R|/A.y|
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class J : R|A| {
         public constructor(): R|J| {
@@ -56,6 +65,9 @@ FILE: abstractSuperCall.kt
             this@R|/J|.super<R|A|>.R|/A.t|()
             this@R|/J|.super<R|A|>.R|/A.x|
             this@R|/J|.super<R|A|>.R|/A.y|
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

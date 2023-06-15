@@ -16,6 +16,9 @@ FILE: destructuring.kt
 
         public final fun copy(x: R|kotlin/Int| = this@R|/C|.R|/C.x|, y: R|kotlin/String| = this@R|/C|.R|/C.y|): R|C|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun foo1(block: R|(C) -> kotlin/Unit|): R|kotlin/Unit| {
         ^foo1 R|<local>/block|.R|SubstitutionOverride<kotlin/Function1.invoke: R|kotlin/Unit|>|(R|/C.C|(Int(0), String()))

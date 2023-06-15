@@ -11,7 +11,7 @@ FILE: StaticObject.kt
         public final static val x: R|kotlin/Int| = Int(10)
             public get(): R|kotlin/Int|
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

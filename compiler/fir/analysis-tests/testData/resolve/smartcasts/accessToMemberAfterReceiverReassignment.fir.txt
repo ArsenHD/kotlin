@@ -10,6 +10,9 @@ FILE: accessToMemberAfterReceiverReassignment.kt
         public final val z: R|My?| = R|<local>/z|
             public get(): R|My?|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun baseTest(): R|kotlin/Unit| {
         lvar y: R|My?| = R|/My.My|(R|/My.My|(Null(null)))

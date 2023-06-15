@@ -5,6 +5,9 @@ FILE: localObject.kt
     public abstract interface Foo : R|kotlin/Any| {
         public abstract fun foo(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun tesLambda(x: R|kotlin/Int|): R|kotlin/Int| {
         ^tesLambda R|/run|<R|kotlin/Int|>(<L> = run@fun <anonymous>(): R|kotlin/Int| <inline=NoInline>  {
@@ -80,5 +83,8 @@ FILE: localObject.kt
         }
         )
             public get(): R|kotlin/Int|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

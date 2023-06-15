@@ -4,6 +4,9 @@ FILE: K1.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
 FILE: K2.kt
     public final fun main(): R|kotlin/Unit| {

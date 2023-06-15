@@ -9,9 +9,15 @@ FILE: innerTypeFromSuperClassInBody.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final fun foo(x: R|A.Inner<X>.() -> kotlin/Unit|): R|kotlin/Unit| {
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -27,6 +33,9 @@ FILE: innerTypeFromSuperClassInBody.kt
 
             this@R|/B|.R|SubstitutionOverride</B.foo: R|kotlin/Unit|>|(R|<local>/y|)
             R|/baz|(R|<local>/y|)
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

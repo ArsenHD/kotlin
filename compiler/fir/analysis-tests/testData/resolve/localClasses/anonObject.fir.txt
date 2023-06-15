@@ -16,6 +16,9 @@ FILE: a.kt
 
             public get(): R|B|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
 FILE: b.kt
     public abstract class B : R|kotlin/Any| {
@@ -25,5 +28,8 @@ FILE: b.kt
 
         protected abstract val message: R|kotlin/String|
             protected get(): R|kotlin/String|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

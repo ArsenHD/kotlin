@@ -4,10 +4,16 @@ FILE: someOverridesTest.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class B : R|A| {
         public constructor(): R|B| {
             super<R|A|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -19,6 +25,9 @@ FILE: someOverridesTest.kt
         public open fun test(item: R|T|): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class Second : R|First<A>| {
         public constructor(): R|Second| {
@@ -26,6 +35,9 @@ FILE: someOverridesTest.kt
         }
 
         public open override fun test(item: R|A|): R|kotlin/Unit| {
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

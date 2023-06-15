@@ -1,6 +1,6 @@
 FILE: DeepCopyIrTree.kt
     public abstract interface IrType : R|kotlin/Any| {
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -11,7 +11,7 @@ FILE: DeepCopyIrTree.kt
 
         public abstract fun leaveScope(): R|kotlin/Unit|
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -20,12 +20,12 @@ FILE: DeepCopyIrTree.kt
             public get(): R|kotlin/collections/List<IrTypeParameter>|
             public set(value: R|kotlin/collections/List<IrTypeParameter>|): R|kotlin/Unit|
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
     public abstract interface IrDeclaration : R|kotlin/Any| {
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -33,12 +33,12 @@ FILE: DeepCopyIrTree.kt
         public abstract val superTypes: R|kotlin/collections/MutableList<IrType>|
             public get(): R|kotlin/collections/MutableList<IrType>|
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
     public abstract interface IrDeclarationParent : R|kotlin/Any| {
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -78,7 +78,7 @@ FILE: DeepCopyIrTree.kt
             )
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

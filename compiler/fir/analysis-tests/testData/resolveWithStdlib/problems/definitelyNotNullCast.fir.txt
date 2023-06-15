@@ -7,6 +7,9 @@ FILE: test.kt
         public final val s: R|kotlin/String| = R|<local>/s|
             public get(): R|kotlin/String|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final val generator: R|Generator| = R|/Generator.Generator|()
         public get(): R|Generator|

@@ -19,6 +19,9 @@ FILE: invoke.kt
             ^copy R|/My.My|(this@R|/My|.R|/My.x|)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun testInvoke(): R|kotlin/Int| {
         ^testInvoke R|/My.My|(Int(13)).R|/My.invoke|()

@@ -3,8 +3,14 @@ FILE: main.kt
         public abstract val containingClass: R|PsiClass?|
             public get(): R|PsiClass?|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface PsiClass : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test(): R|kotlin/Unit| {
         lval processor: R|AdapterProcessor<PsiMethod, PsiClass>| = R|/AdapterProcessor.AdapterProcessor|<R|PsiMethod|, R|PsiClass|>(R|/Function|<R|PsiMethod!|, R|PsiClass!|>(<L> = Function@fun <anonymous>(method: R|PsiMethod?|): R|PsiClass!| <inline=NoInline>  {

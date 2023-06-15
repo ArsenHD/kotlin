@@ -37,7 +37,9 @@ fun FirClass.primaryConstructorIfAny(session: FirSession): FirConstructorSymbol?
 // TODO: dog shit, rewrite with scopes
 fun FirClass.collectEnumEntries(): Collection<FirEnumEntry> {
     assert(classKind == ClassKind.ENUM_CLASS)
-    return declarations.filterIsInstance<FirEnumEntry>()
+    if (this !is FirRegularClass) return emptyList()
+    val selfStaticObject = selfStaticObjectSymbol?.fir ?: return emptyList()
+    return selfStaticObject.declarations.filterIsInstance<FirEnumEntry>()
 }
 
 fun FirClassSymbol<*>.collectEnumEntries(): Collection<FirEnumEntrySymbol> {

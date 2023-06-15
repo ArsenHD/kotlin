@@ -7,6 +7,9 @@ FILE: varargInPrimaryConstructor.kt
         public final val strings: R|kotlin/Array<out kotlin/String>| = R|<local>/strings|
             public get(): R|kotlin/Array<out kotlin/String>|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test_1(foo: R|Foo|): R|kotlin/Unit| {
          {

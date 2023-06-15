@@ -4,6 +4,9 @@ FILE: superIsNotAnExpression.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B : R|A| {
         public constructor(): R|B| {
@@ -17,6 +20,9 @@ FILE: superIsNotAnExpression.kt
                 ^ <Unresolved name: println>#(ERROR_EXPR(Incorrect character: 'weird'))
             }
             )
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

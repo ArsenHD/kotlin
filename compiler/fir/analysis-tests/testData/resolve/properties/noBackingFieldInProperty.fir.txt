@@ -12,6 +12,9 @@ FILE: noBackingFieldInProperty.kt
                 ^ this@R|/A|.R|/A.field|.R|kotlin/String.length|
             }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B : R|kotlin/Any| {
         public constructor(): R|B| {
@@ -25,5 +28,8 @@ FILE: noBackingFieldInProperty.kt
             public get(): R|kotlin/Int| {
                 ^ this@R|/B|.F|/B.x|.<Unresolved name: length>#
             }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

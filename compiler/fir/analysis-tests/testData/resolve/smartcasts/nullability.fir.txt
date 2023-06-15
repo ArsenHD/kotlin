@@ -4,6 +4,9 @@ FILE: nullability.kt
 
         public abstract fun getA(): R|A|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface MyData : R|kotlin/Any| {
         public abstract val s: R|kotlin/Int|
@@ -11,12 +14,18 @@ FILE: nullability.kt
 
         public abstract fun fs(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface Q : R|kotlin/Any| {
         public abstract val data: R|MyData?|
             public get(): R|MyData?|
 
         public abstract fun fdata(): R|MyData?|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final class QImpl : R|Q| {
@@ -29,6 +38,9 @@ FILE: nullability.kt
 
         public open override fun fdata(): R|MyData?| {
             ^fdata Null(null)
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -45,6 +57,9 @@ FILE: nullability.kt
             ^fdata Null(null)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class QImplWithCustomGetter : R|Q| {
         public constructor(): R|QImplWithCustomGetter| {
@@ -58,6 +73,9 @@ FILE: nullability.kt
 
         public open override fun fdata(): R|MyData?| {
             ^fdata Null(null)
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

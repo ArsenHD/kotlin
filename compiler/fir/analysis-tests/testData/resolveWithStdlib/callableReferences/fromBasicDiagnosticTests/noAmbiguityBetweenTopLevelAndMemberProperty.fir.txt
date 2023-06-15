@@ -15,6 +15,9 @@ FILE: noAmbiguityBetweenTopLevelAndMemberProperty.kt
         public final val subject: R|kotlin/String| = String()
             public get(): R|kotlin/String|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final val someProperty0: R|kotlin/Int| = R|/property|<R|kotlin/String|>(::R|/subject|)
         public get(): R|kotlin/Int|

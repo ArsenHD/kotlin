@@ -44,6 +44,9 @@ FILE: fromLocalMembers.kt
                 R|<local>/y| = Int(0)
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         R|kotlin/io/println|(R|<local>/x|)

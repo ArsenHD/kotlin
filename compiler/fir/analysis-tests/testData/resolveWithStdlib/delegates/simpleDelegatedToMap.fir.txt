@@ -15,6 +15,9 @@ FILE: simpleDelegatedToMap.kt
                 this@R|/C|.D|/C.foo|.R|kotlin/collections/setValue|<R|kotlin/Any|>(this@R|/C|, ::R|/C.foo|, R|<local>/foo|)
             }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final var bar: R|kotlin/Any|by R|kotlin/collections/hashMapOf|<R|kotlin/String|, R|kotlin/Any|>()
         public get(): R|kotlin/Any| {

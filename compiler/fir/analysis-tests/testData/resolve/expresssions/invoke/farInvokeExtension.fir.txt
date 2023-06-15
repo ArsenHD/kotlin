@@ -16,4 +16,7 @@ FILE: farInvokeExtension.kt
             ^foo R|/x|()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

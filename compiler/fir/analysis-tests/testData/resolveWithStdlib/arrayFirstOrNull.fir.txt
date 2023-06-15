@@ -3,7 +3,7 @@ FILE: arrayFirstOrNull.kt
         public abstract val a: R|kotlin/Array<out G>|
             public get(): R|kotlin/Array<out G>|
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

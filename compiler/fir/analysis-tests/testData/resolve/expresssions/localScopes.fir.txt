@@ -7,6 +7,9 @@ FILE: localScopes.kt
         public final fun foo(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test(): R|kotlin/Unit| {
         local open class BaseLocal : R|Bar| {
@@ -15,6 +18,9 @@ FILE: localScopes.kt
             }
 
             public final fun baz(): R|kotlin/Unit| {
+            }
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }
@@ -40,6 +46,9 @@ FILE: localScopes.kt
             }
 
             public final fun gau(): R|kotlin/Unit| {
+            }
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }

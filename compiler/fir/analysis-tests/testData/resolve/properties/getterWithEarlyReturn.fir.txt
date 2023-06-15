@@ -4,6 +4,9 @@ FILE: getterWithEarlyReturn.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final val R|SomeClass|.lore: R|kotlin/collections/List<kotlin/String>|
         public get(): R|kotlin/collections/List<kotlin/String>| {

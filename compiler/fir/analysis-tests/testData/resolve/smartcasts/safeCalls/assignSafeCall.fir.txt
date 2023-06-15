@@ -14,6 +14,9 @@ FILE: assignSafeCall.kt
         public final fun bar(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test_1(a: R|A?|): R|kotlin/Unit| {
         lval x: R|kotlin/Int?| = R|<local>/a|?.{ $subj$.R|/A.x| }
@@ -45,6 +48,9 @@ FILE: assignSafeCall.kt
             public get(): R|kotlin/Int|
 
         public abstract fun bar(): R|kotlin/Unit|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final fun test_1(a: R|B?|): R|kotlin/Unit| {

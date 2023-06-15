@@ -6,6 +6,9 @@ FILE: buildSetWithVisitor.kt
 
         public abstract fun visit(arg: R|Wrapper|): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Wrapper : R|kotlin/Any| {
         public constructor(tag: R|kotlin/String|): R|Wrapper| {
@@ -14,6 +17,9 @@ FILE: buildSetWithVisitor.kt
 
         public final val tag: R|kotlin/String| = R|<local>/tag|
             public get(): R|kotlin/String|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final fun R|Wrapper|.accept(visitor: R|AnyVisitor|): R|kotlin/Unit| {

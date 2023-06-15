@@ -20,7 +20,7 @@ FILE: k.kt
             Q|j/JavaPackageLocal|.R|j/JavaPackageLocal.javaMPackage<HIDDEN: j/JavaPackageLocal.javaMPackage is invisible>#|()
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -43,7 +43,7 @@ FILE: k.kt
             Q|j/JavaPackageLocal|.R|j/JavaPackageLocal.javaMPackage<HIDDEN: j/JavaPackageLocal.javaMPackage is invisible>#|()
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -70,7 +70,7 @@ FILE: j.kt
             Q|j/JavaPackageLocal|.R|j/JavaPackageLocal.javaMPackage|()
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

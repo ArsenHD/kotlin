@@ -6,17 +6,20 @@ FILE: unqualifiedEnum.kt
             super<R|kotlin/Enum<test/Sample>|>()
         }
 
-        public final static enum entry FIRST: R|test/Sample|
-        public final static enum entry SECOND: R|test/Sample|
-        public final static enum entry THIRD: R|test/Sample|
-        public final static fun values(): R|kotlin/Array<test/Sample>| {
-        }
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            public final static enum entry FIRST: R|test/Sample|
+            public final static enum entry SECOND: R|test/Sample|
+            public final static enum entry THIRD: R|test/Sample|
+            public final static fun values(): R|kotlin/Array<test/Sample>| {
+            }
 
-        public final static fun valueOf(value: R|kotlin/String|): R|test/Sample| {
-        }
+            public final static fun valueOf(value: R|kotlin/String|): R|test/Sample| {
+            }
 
-        public final static val entries: R|kotlin/enums/EnumEntries<test/Sample>|
-            public get(): R|kotlin/enums/EnumEntries<test/Sample>|
+            public final static val entries: R|kotlin/enums/EnumEntries<test/Sample>|
+                public get(): R|kotlin/enums/EnumEntries<test/Sample>|
+
+        }
 
     }
     public final fun trivial(s: R|test/Sample|): R|kotlin/Int| {
@@ -75,6 +78,9 @@ FILE: unqualifiedEnum.kt
                 }
             }
 
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

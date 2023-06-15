@@ -2,9 +2,15 @@ FILE: boundSmartcasts.kt
     public abstract interface A : R|kotlin/Any| {
         public abstract fun foo(): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface B : R|kotlin/Any| {
         public abstract fun bar(): R|kotlin/Unit|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final fun test_1(x: R|kotlin/Any|): R|kotlin/Unit| {
@@ -65,6 +71,9 @@ FILE: boundSmartcasts.kt
 
         public final val any: R|kotlin/Any?| = R|<local>/any|
             public get(): R|kotlin/Any?|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final fun R|kotlin/Any|.baz(): R|kotlin/Unit| {

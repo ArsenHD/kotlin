@@ -9,10 +9,16 @@ FILE: singletonConstructors.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final fun foo(): R|kotlin/Unit| {
             <HIDDEN: /A.Comp.Comp is deprecated with DeprecationLevel.HIDDEN>#()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -23,6 +29,9 @@ FILE: singletonConstructors.kt
 
         private final val x: <ERROR TYPE REF: HIDDEN: /B.B is deprecated with DeprecationLevel.HIDDEN> = <HIDDEN: /B.B is deprecated with DeprecationLevel.HIDDEN>#()
             private get(): <ERROR TYPE REF: HIDDEN: /B.B is deprecated with DeprecationLevel.HIDDEN>
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final class D : R|kotlin/Any| {
@@ -38,10 +47,16 @@ FILE: singletonConstructors.kt
             public final operator fun invoke(): R|kotlin/Unit| {
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final fun foo(): R|kotlin/Unit| {
             Q|D.Comp2|.R|/D.Comp2.invoke|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -50,24 +65,27 @@ FILE: singletonConstructors.kt
             super<R|kotlin/Enum<E>|>()
         }
 
-        public final static enum entry X: R|E| = object : R|E| {
-            private constructor(): R|<anonymous>| {
-                super<R|E|>()
-            }
-
-        }
-
         public final fun foo(): R|kotlin/Unit| {
             <Unresolved name: X>#()
         }
 
-        public final static fun values(): R|kotlin/Array<E>| {
-        }
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            public final static enum entry X: R|E| = object : R|E| {
+                private constructor(): R|<anonymous>| {
+                    super<R|E|>()
+                }
 
-        public final static fun valueOf(value: R|kotlin/String|): R|E| {
-        }
+            }
 
-        public final static val entries: R|kotlin/enums/EnumEntries<E>|
-            public get(): R|kotlin/enums/EnumEntries<E>|
+            public final static fun values(): R|kotlin/Array<E>| {
+            }
+
+            public final static fun valueOf(value: R|kotlin/String|): R|E| {
+            }
+
+            public final static val entries: R|kotlin/enums/EnumEntries<E>|
+                public get(): R|kotlin/enums/EnumEntries<E>|
+
+        }
 
     }

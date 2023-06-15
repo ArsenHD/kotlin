@@ -10,6 +10,9 @@ FILE: annotationOnGetClassCall.kt
         public final val s: R|kotlin/String| = R|<local>/s|
             public get(): R|kotlin/String|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test(): R|kotlin/Unit| {
         @R|Ann|(s = String(hello), x = Long(1)) <getClass>(Q|kotlin/String|)

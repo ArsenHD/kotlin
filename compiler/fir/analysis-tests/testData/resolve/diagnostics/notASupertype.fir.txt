@@ -7,6 +7,9 @@ FILE: notASupertype.kt
         public final fun f(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B : R|A| {
         public constructor(): R|B| {
@@ -16,6 +19,9 @@ FILE: notASupertype.kt
         public final fun g(): R|kotlin/Unit| {
             this@R|/B|.super<<ERROR TYPE REF: Not a super type>>.<Unresolved name: f>#()
             this@R|/B|.super<R|A|>.R|/A.f|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

@@ -1,5 +1,8 @@
 FILE: definetelyNotNullForTypeParameter.kt
     public abstract interface Out<out E> : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun <X> id(x: R|Out<X>|): R|Out<X>| {
         ^id R|kotlin/TODO|()

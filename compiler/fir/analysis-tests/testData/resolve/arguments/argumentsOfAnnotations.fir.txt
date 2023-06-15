@@ -13,10 +13,16 @@ FILE: argumentsOfAnnotations.kt
         public final val z: R|kotlin/String| = R|<local>/z|
             public get(): R|kotlin/String|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     @R|Ann|(y = String(y), x = Int(10)) public final class A : R|kotlin/Any| {
         public constructor(): R|A| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -34,10 +40,16 @@ FILE: argumentsOfAnnotations.kt
         public final val z: R|kotlin/Int| = R|<local>/z|
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     @R|AnnVarargs|(x = Int(1), y = Int(2)) public final class B : R|kotlin/Any| {
         public constructor(): R|B| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

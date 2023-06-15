@@ -8,6 +8,9 @@ FILE: Derived.kt
             ^getSomething String(42)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test(): R|kotlin/Unit| {
         lval d: R|Derived| = R|/Derived.Derived|()

@@ -8,6 +8,9 @@ FILE: varProperties.kt
             public get(): R|kotlin/Int|
             public set(value: R|kotlin/Int|): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final var bar: R|kotlin/Int| = Int(1)
         public get(): R|kotlin/Int|

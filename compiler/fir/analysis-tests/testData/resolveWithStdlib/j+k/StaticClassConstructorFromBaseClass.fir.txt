@@ -8,7 +8,7 @@ FILE: User.kt
             lval sc: R|AbstractClass.StaticClass| = R|/AbstractClass.StaticClass.StaticClass|()
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

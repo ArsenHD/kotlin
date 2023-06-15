@@ -1,5 +1,8 @@
 FILE: Base.kt
     public abstract interface First : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class Second : R|kotlin/Any| {
         public constructor(): R|Second| {
@@ -7,6 +10,9 @@ FILE: Base.kt
         }
 
         public open fun R|First|.foo(s: R|kotlin/String|, i: R|kotlin/Int|): R|kotlin/Unit| {
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -18,6 +24,9 @@ FILE: Test.kt
 
         public final fun test(): R|kotlin/Unit| {
             (this@R|/Tester|, this@R|/Tester|).R|/Inheritor.foo|(String(abc), Int(456))
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

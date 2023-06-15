@@ -8,6 +8,9 @@ FILE: lib.kt
         public abstract val y: R|kotlin/Int|
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface B : R|kotlin/Any| {
         public abstract fun foo(): R|kotlin/Any|
@@ -17,6 +20,9 @@ FILE: lib.kt
 
         public abstract val y: R|kotlin/Int|
             public get(): R|kotlin/Int|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
 FILE: main.kt

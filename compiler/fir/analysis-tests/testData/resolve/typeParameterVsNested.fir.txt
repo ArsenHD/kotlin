@@ -6,6 +6,9 @@ FILE: typeParameterVsNested.kt
             ^test Int(10)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class My<T : R|test/Some|> : R|kotlin/Any| {
         public constructor<T : R|test/Some|>(): R|test/My<T>| {
@@ -15,6 +18,9 @@ FILE: typeParameterVsNested.kt
         public open class T : R|kotlin/Any| {
             public constructor(): R|test/My.T| {
                 super<R|kotlin/Any|>()
+            }
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }
@@ -41,12 +47,21 @@ FILE: typeParameterVsNested.kt
                 super<R|T|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
     public abstract class Your<T : R|test/Some|> : <ERROR TYPE REF: Type parameter T cannot be a supertype> {
         public constructor<T : R|test/Some|>(): R|test/Your<T>| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

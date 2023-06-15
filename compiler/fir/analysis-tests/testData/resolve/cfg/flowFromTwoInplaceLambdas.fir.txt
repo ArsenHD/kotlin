@@ -90,10 +90,16 @@ FILE: flowFromTwoInplaceLambdas.kt
         public abstract val x: R|kotlin/Int|
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface I2 : R|kotlin/Any| {
         public abstract val y: R|kotlin/Int|
             public get(): R|kotlin/Int|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final fun test4(x: R|kotlin/Any?|): R|kotlin/Unit| {

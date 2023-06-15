@@ -12,6 +12,9 @@ FILE: bareWithSubjectTypeAlias.kt
             public final val x: R|T1| = R|<local>/x|
                 public get(): R|T1|
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final class C<out T2> : R|A<T2>| {
@@ -22,6 +25,12 @@ FILE: bareWithSubjectTypeAlias.kt
             public final val y: R|T2| = R|<local>/y|
                 public get(): R|T2|
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

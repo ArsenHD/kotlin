@@ -16,6 +16,9 @@ FILE: C.kt
             ^setName Null(null)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
 FILE: main.kt
     public final fun test(d: R|D|): R|kotlin/Unit| {

@@ -7,10 +7,16 @@ FILE: derivedClass.kt
         public final val x: R|T1| = R|<local>/x|
             public get(): R|T1|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Derived<T2 : R|kotlin/Any|> : R|Base<T2>| {
         public constructor<T2 : R|kotlin/Any|>(x: R|T2|): R|Derived<T2>| {
             super<R|Base<T2>|>(R|<local>/x|)
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

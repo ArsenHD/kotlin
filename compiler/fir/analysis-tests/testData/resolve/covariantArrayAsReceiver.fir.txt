@@ -3,12 +3,24 @@ FILE: covariantArrayAsReceiver.kt
         public abstract val usage: R|PsiElement|
             public get(): R|PsiElement|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface PsiElement : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface KtParameter : R|PsiElement| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface KtLightMethod : R|PsiElement| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun <T> R|kotlin/Array<out T>|.filterNot(f: R|(T) -> kotlin/Boolean|): R|kotlin/collections/List<T>| {
         ^filterNot this@R|/filterNot|

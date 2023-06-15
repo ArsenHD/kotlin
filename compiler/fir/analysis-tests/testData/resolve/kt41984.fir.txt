@@ -4,6 +4,9 @@ FILE: main.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class B<V> : R|A<kotlin/Any, V>| {
         public constructor<V>(): R|B<V>| {
@@ -16,6 +19,9 @@ FILE: main.kt
 
         public open override fun takeInv(value: R|Inv<V>|): R|kotlin/String| {
             ^takeInv String()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

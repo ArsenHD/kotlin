@@ -2,6 +2,9 @@ FILE: generics.kt
     public abstract interface I : R|kotlin/Any| {
         public abstract fun <T : R|kotlin/Comparable<T>|> f(t: R|kotlin/collections/List<T>|): R|kotlin/Any|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class Base : R|kotlin/Any| {
         public constructor(): R|Base| {
@@ -11,10 +14,16 @@ FILE: generics.kt
         public final fun <D : R|kotlin/Comparable<D>|> f(t: R|kotlin/collections/List<D>|): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class C : R|Base|, R|I| {
         public constructor(): R|C| {
             super<R|Base|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

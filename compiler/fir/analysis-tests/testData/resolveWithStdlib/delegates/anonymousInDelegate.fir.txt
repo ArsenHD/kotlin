@@ -2,6 +2,9 @@ FILE: anonymousInDelegate.kt
     public abstract interface Foo : R|kotlin/Any| {
         public abstract fun bar(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final val x: R|kotlin/Int|by R|kotlin/lazy|<R|kotlin/Int|>(<L> = lazy@fun <anonymous>(): R|kotlin/Int| <inline=NoInline>  {
         lval foo: R|<anonymous>| = object : R|Foo| {

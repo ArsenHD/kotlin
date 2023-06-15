@@ -1,15 +1,24 @@
 FILE: compilerPhase.kt
     public abstract interface CommonBackendContext : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface PhaserState<Data> : R|kotlin/Any| {
         public abstract var depth: R|kotlin/Int|
             public get(): R|kotlin/Int|
             public set(value: R|kotlin/Int|): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface PhaseConfig : R|kotlin/Any| {
         public abstract val needProfiling: R|kotlin/Boolean|
             public get(): R|kotlin/Boolean|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final inline fun <R, D> R|PhaserState<D>|.downlevel(nlevels: R|kotlin/Int|, block: R|() -> R|): R|R| {
@@ -20,6 +29,9 @@ FILE: compilerPhase.kt
     }
     public abstract interface CompilerPhase<in Context : R|CommonBackendContext|, Input, Output> : R|kotlin/Any| {
         public abstract fun invoke(phaseConfig: R|PhaseConfig|, phaserState: R|PhaserState<Input>|, context: R|Context|, input: R|Input|): R|Output|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final class NamedCompilerPhase<in Context : R|CommonBackendContext|, Data> : R|CompilerPhase<Context, Data, Data>| {
@@ -50,6 +62,9 @@ FILE: compilerPhase.kt
         }
 
         private final fun runAndProfile(phaseConfig: R|PhaseConfig|, phaserState: R|PhaserState<Data>|, context: R|Context|, source: R|Data|): R|Data| {
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

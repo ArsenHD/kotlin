@@ -4,6 +4,9 @@ FILE: withSuppression2.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun foo(i: R|kotlin/Int|): R|kotlin/Unit| {
     }
@@ -23,6 +26,9 @@ FILE: withSuppression2.kt
         @R|kotlin/Suppress|(names = vararg(String(ABSTRACT_PROPERTY_IN_NON_ABSTRACT_CLASS))) public abstract val y: R|kotlin/Int|
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface C : R|kotlin/Any| {
         @R|kotlin/Suppress|(names = vararg(String(PRIVATE_PROPERTY_IN_INTERFACE))) private final val x: R|kotlin/Int|
@@ -30,6 +36,9 @@ FILE: withSuppression2.kt
 
         @R|kotlin/Suppress|(names = vararg(String(METHOD_OF_ANY_IMPLEMENTED_IN_INTERFACE))) public open override fun hashCode(): R|kotlin/Int| {
             ^hashCode Int(42)
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

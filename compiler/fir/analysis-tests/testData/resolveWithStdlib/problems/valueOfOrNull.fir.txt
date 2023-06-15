@@ -4,15 +4,18 @@ FILE: valueOfOrNull.kt
             super<R|kotlin/Enum<SomeEnum>|>()
         }
 
-        public final static enum entry ENTRY: R|SomeEnum|
-        public final static fun values(): R|kotlin/Array<SomeEnum>| {
-        }
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            public final static enum entry ENTRY: R|SomeEnum|
+            public final static fun values(): R|kotlin/Array<SomeEnum>| {
+            }
 
-        public final static fun valueOf(value: R|kotlin/String|): R|SomeEnum| {
-        }
+            public final static fun valueOf(value: R|kotlin/String|): R|SomeEnum| {
+            }
 
-        public final static val entries: R|kotlin/enums/EnumEntries<SomeEnum>|
-            public get(): R|kotlin/enums/EnumEntries<SomeEnum>|
+            public final static val entries: R|kotlin/enums/EnumEntries<SomeEnum>|
+                public get(): R|kotlin/enums/EnumEntries<SomeEnum>|
+
+        }
 
     }
     public final fun foo(s: R|kotlin/String?|): R|kotlin/Unit| {

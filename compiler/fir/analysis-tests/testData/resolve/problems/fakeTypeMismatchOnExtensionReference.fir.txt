@@ -1,5 +1,8 @@
 FILE: fakeTypeMismatchOnExtensionReference.kt
     public abstract interface IrElement : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun R|IrElement|.dumpKotlinLike(options: R|kotlin/String| = String()): R|kotlin/String| {
         ^dumpKotlinLike String()

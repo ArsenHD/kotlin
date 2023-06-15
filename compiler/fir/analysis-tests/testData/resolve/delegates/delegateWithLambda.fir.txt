@@ -11,6 +11,9 @@ FILE: delegateWithLambda.kt
             ^getValue this@R|/LazyDelegate|.R|/LazyDelegate.value|
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun <T> lazy(block: R|() -> T|): R|LazyDelegate<T>| {
         ^lazy R|/LazyDelegate.LazyDelegate|<R|T|>(R|<local>/block|.R|SubstitutionOverride<kotlin/Function0.invoke: R|T|>|())
@@ -33,5 +36,8 @@ FILE: delegateWithLambda.kt
             public get(): R|kotlin/String| {
                 ^ this@R|/Test|.D|/Test.x|.R|SubstitutionOverride</LazyDelegate.getValue: R|Stub (chain inference): TypeVariable(_T)|>|(this@R|/Test|, ::R|/Test.x|)
             }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

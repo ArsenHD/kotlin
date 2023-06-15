@@ -8,12 +8,21 @@ FILE: module_lib1_inherentlyImportedTypeFromOtherModule3.kt
         }
 
         public abstract interface Result : R|kotlin/Any| {
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
     public abstract class SecondBase : R|lib1/FirstBase| {
         public constructor(): R|lib1/SecondBase| {
             super<R|lib1/FirstBase|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -31,6 +40,12 @@ FILE: module_lib2_inherentlyImportedTypeFromOtherModule3.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -45,6 +60,9 @@ FILE: module_main_inherentlyImportedTypeFromOtherModule3.kt
 
         public final fun usage(): R|lib1/FirstBase.Result| {
             ^usage R|lib2/Test.Success.Success|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

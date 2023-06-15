@@ -2,6 +2,9 @@ FILE: noBackingFieldForExtension.kt
     public abstract interface B : R|kotlin/Any| {
         public abstract fun foo(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class A : R|kotlin/Any| {
         public constructor(): R|A| {
@@ -17,5 +20,8 @@ FILE: noBackingFieldForExtension.kt
             public get(): R|B| {
                 ^ R|kotlin/TODO|()
             }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

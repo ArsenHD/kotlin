@@ -30,4 +30,7 @@ FILE: openInInterface.kt
                 this@R|/Some|.F|/Some.zz| = R|<local>/value|
             }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

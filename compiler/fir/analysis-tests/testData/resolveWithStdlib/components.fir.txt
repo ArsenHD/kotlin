@@ -16,7 +16,7 @@ FILE: components.kt
 
         public final fun copy(x: R|kotlin/Int| = this@R|/D|.R|/D.x|, y: R|kotlin/String| = this@R|/D|.R|/D.y|): R|D|
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

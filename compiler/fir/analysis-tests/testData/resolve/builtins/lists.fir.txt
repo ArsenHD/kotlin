@@ -4,10 +4,16 @@ FILE: lists.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class MyMutableStringList : R|kotlin/collections/MutableList<kotlin/String>| {
         public constructor(): R|MyMutableStringList| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

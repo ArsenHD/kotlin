@@ -1,5 +1,8 @@
 FILE: localInnerClass.kt
     public abstract interface Foo : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun bar(): R|kotlin/Unit| {
         object : R|Foo| {
@@ -18,6 +21,9 @@ FILE: localInnerClass.kt
 
                 public final val x: R|kotlin/Int| = R|<local>/x|
                     public get(): R|kotlin/Int|
+
+                public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+                }
 
             }
 

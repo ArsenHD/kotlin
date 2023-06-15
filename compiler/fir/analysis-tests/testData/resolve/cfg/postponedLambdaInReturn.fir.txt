@@ -8,6 +8,9 @@ FILE: postponedLambdaInReturn.kt
             public get(): R|R|
             public set(value: R|R|): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     @R|kotlin/OptIn|(markerClass = vararg(<getClass>(Q|kotlin/contracts/ExperimentalContracts|))) public final inline fun <R : R|kotlin/Any|> build(crossinline builder: R|Lateinit<R>.() -> kotlin/Unit|): R|R|
         [R|Contract description]

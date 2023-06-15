@@ -7,10 +7,16 @@ FILE: lambdaInLambda.kt
         public final fun append(s: R|kotlin/String|): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun buildString(init: R|StringBuilder.() -> kotlin/Unit|): R|kotlin/String| {
     }
     public abstract interface Template<in X> : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class KDocTemplate : R|Template<StringBuilder>| {
         public constructor(): R|KDocTemplate| {
@@ -18,6 +24,9 @@ FILE: lambdaInLambda.kt
         }
 
         public final fun definition(content: R|StringBuilder.() -> kotlin/Unit|): R|kotlin/Unit| {
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

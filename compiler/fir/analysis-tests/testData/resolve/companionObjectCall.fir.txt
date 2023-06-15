@@ -4,6 +4,9 @@ FILE: companionObjectCall.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun case1(a: R|A?|): R|kotlin/Unit| {
         lval test: R|kotlin/String?| = R|<local>/a|?.{ $subj$.R|kotlin/let|<R|A|, R|kotlin/String|>(<L> = let@fun <anonymous>(it: R|A|): R|kotlin/String| <inline=Inline, kind=EXACTLY_ONCE>  {
@@ -32,6 +35,12 @@ FILE: companionObjectCall.kt
                 ^invoke String()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -53,6 +62,12 @@ FILE: companionObjectCall.kt
                 ^invoke String()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -74,6 +89,12 @@ FILE: companionObjectCall.kt
                 ^invoke String()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

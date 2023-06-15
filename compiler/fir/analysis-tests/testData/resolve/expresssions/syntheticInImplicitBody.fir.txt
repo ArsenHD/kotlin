@@ -12,4 +12,7 @@ FILE: User.kt
             ^getText String()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

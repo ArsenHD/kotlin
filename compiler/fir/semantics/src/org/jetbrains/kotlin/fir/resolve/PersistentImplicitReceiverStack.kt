@@ -72,7 +72,7 @@ class PersistentImplicitReceiverStack private constructor(
     }
 
     override operator fun get(name: String?): ImplicitReceiverValue<*>? {
-        if (name == null) return stack.lastOrNull()
+        if (name == null) return stack.lastOrNull { it.originalType.isNotSelfStaticObject }
         return receiversPerLabel[Name.identifier(name)].lastOrNull()
     }
 

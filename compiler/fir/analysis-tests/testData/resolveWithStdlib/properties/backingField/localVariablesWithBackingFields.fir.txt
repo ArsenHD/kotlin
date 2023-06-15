@@ -25,7 +25,7 @@ FILE: localVariablesWithBackingFields.kt
                 ^ this@R|/A|.D|/A.c|.R|kotlin/getValue|<R|kotlin/Int|>(this@R|/A|, ::R|/A.c|)
             }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

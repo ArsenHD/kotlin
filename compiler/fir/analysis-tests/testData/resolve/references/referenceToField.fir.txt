@@ -10,4 +10,7 @@ FILE: referenceToField.kt
                 ^ this@R|/A|.F|/A.x|
             }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

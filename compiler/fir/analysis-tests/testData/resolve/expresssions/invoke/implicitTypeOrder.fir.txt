@@ -12,6 +12,9 @@ FILE: implicitTypeOrder.kt
             ^invoke this@R|/A|
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun create(): R|A| {
         ^create R|/A.A|()

@@ -18,6 +18,9 @@ FILE: TestCase1.kt
                 ^ String(1)
             }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final val R|testsCase1/V|.a: R|kotlin/String|
         public get(): R|kotlin/String| {
@@ -40,6 +43,12 @@ FILE: TestCase1.kt
             public final const val b: R|kotlin/String| = String(1)
                 public get(): R|kotlin/String|
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

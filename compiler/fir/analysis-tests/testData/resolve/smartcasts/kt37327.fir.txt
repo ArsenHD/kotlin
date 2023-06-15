@@ -1,9 +1,15 @@
 FILE: kt37327.kt
     public abstract interface Q : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public sealed class A : R|Q| {
         protected constructor(): R|A| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -14,6 +20,9 @@ FILE: kt37327.kt
 
         public final val x: R|kotlin/Int| = R|<local>/x|
             public get(): R|kotlin/Int|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final fun R|Q|.foo(): R|kotlin/Unit| {

@@ -24,6 +24,9 @@ FILE: lambdaInLhsOfTypeOperatorCall.kt
         public final val v: R|V| = R|<local>/v|
             public get(): R|V|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun <X, R, V> R|B<X, V>|.myMap(transform: R|(B<X, V>) -> R|): R|B<R, V>| {
         ^myMap R|kotlin/TODO|()

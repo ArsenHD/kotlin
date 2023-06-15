@@ -1,11 +1,20 @@
 FILE: doubleGenericDiamond.kt
     public abstract interface Left : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface Right : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Bottom : R|Left|, R|Right| {
         public constructor(): R|Bottom| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -14,10 +23,16 @@ FILE: doubleGenericDiamond.kt
             ^f Null(null)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface B<T : R|Left|> : R|A<T>| {
         public open override fun f(): R|T?| {
             ^f Null(null)
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -26,16 +41,25 @@ FILE: doubleGenericDiamond.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class D<T : R|Right|> : R|C<T>| {
         public constructor<T : R|Right|>(): R|D<T>| {
             super<R|C<T>|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Z : R|D<Bottom>|, R|B<Bottom>| {
         public constructor(): R|Z| {
             super<R|D<Bottom>|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

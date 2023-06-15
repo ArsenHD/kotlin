@@ -11,4 +11,7 @@ FILE: localExtension.kt
             this@R|/Foo|.R|<local>/bar|()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

@@ -14,6 +14,9 @@ FILE: qualifiedExpressions.kt
             public final fun foo(): R|kotlin/Unit| {
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final companion object Companion : R|kotlin/Any| {
@@ -24,9 +27,15 @@ FILE: qualifiedExpressions.kt
             public final fun foo(): R|kotlin/Unit| {
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final fun foo(): R|kotlin/Unit| {
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -35,15 +44,18 @@ FILE: qualifiedExpressions.kt
             super<R|kotlin/Enum<a/b/E>|>()
         }
 
-        public final static enum entry entry: R|a/b/E|
-        public final static fun values(): R|kotlin/Array<a/b/E>| {
-        }
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            public final static enum entry entry: R|a/b/E|
+            public final static fun values(): R|kotlin/Array<a/b/E>| {
+            }
 
-        public final static fun valueOf(value: R|kotlin/String|): R|a/b/E| {
-        }
+            public final static fun valueOf(value: R|kotlin/String|): R|a/b/E| {
+            }
 
-        public final static val entries: R|kotlin/enums/EnumEntries<a/b/E>|
-            public get(): R|kotlin/enums/EnumEntries<a/b/E>|
+            public final static val entries: R|kotlin/enums/EnumEntries<a/b/E>|
+                public get(): R|kotlin/enums/EnumEntries<a/b/E>|
+
+        }
 
     }
     public final fun foo(): R|kotlin/Unit| {

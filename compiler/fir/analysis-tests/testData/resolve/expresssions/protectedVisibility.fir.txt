@@ -21,6 +21,9 @@ FILE: protectedVisibility.kt
                 this@R|/Protected|.R|/Protected.bar|()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         protected open class Nested : R|kotlin/Any| {
@@ -33,6 +36,9 @@ FILE: protectedVisibility.kt
             }
 
             protected final fun bar(): R|kotlin/Unit| {
+            }
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }
@@ -48,6 +54,12 @@ FILE: protectedVisibility.kt
             protected final fun protectedFromCompanion(): R|kotlin/Unit| {
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -73,6 +85,12 @@ FILE: protectedVisibility.kt
                 this@R|/Derived.NestedDerived|.R|/Protected.Nested.bar|()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -94,6 +112,9 @@ FILE: protectedVisibility.kt
             ^foo this@R|/Generic|.R|/Generic.x|
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class DerivedGeneric : R|Generic<kotlin/Int>| {
         public constructor(): R|DerivedGeneric| {
@@ -102,6 +123,9 @@ FILE: protectedVisibility.kt
 
         protected open override fun foo(): R|kotlin/Int| {
             ^foo this@R|/DerivedGeneric|.super<R|Generic<kotlin/Int>|>.R|SubstitutionOverride</Generic.foo: R|kotlin/Int|>|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

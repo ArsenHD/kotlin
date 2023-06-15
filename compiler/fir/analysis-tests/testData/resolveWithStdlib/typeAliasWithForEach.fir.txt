@@ -1,6 +1,6 @@
 FILE: typeAliasWithForEach.kt
     public abstract interface ArgsInfo : R|kotlin/Any| {
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -9,7 +9,7 @@ FILE: typeAliasWithForEach.kt
             super<R|kotlin/Any|>()
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

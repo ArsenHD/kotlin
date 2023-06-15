@@ -9,6 +9,9 @@ FILE: constValNotTopLevelOrObject.kt
         public final const val b: R|kotlin/Int| = Int(2)
             public get(): R|kotlin/Int|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class C : R|kotlin/Any| {
         public constructor(b: R|kotlin/Boolean|): R|C| {
@@ -20,6 +23,9 @@ FILE: constValNotTopLevelOrObject.kt
 
         public final const val c: R|kotlin/Int| = Int(3)
             public get(): R|kotlin/Int|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final class D : R|kotlin/Any| {
@@ -35,6 +41,9 @@ FILE: constValNotTopLevelOrObject.kt
             public final const val e: R|kotlin/Int| = Int(4)
                 public get(): R|kotlin/Int|
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final companion object K : R|kotlin/Any| {
@@ -44,6 +53,9 @@ FILE: constValNotTopLevelOrObject.kt
 
             public final const val k: R|kotlin/Int| = Int(4)
                 public get(): R|kotlin/Int|
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
 
         }
 
@@ -67,6 +79,9 @@ FILE: constValNotTopLevelOrObject.kt
             public open val y: R|kotlin/Int| = Int(8)
                 public get(): R|kotlin/Int|
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final val t: R|D.O| = object : R|D.O| {
@@ -80,6 +95,9 @@ FILE: constValNotTopLevelOrObject.kt
         }
 
             public get(): R|D.O|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final object F : R|kotlin/Any| {
@@ -95,6 +113,12 @@ FILE: constValNotTopLevelOrObject.kt
             public final const val e: R|kotlin/Int| = Int(4)
                 public get(): R|kotlin/Int|
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

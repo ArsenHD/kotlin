@@ -2,6 +2,9 @@ FILE: superCallWithDelegation.kt
     public abstract interface A : R|kotlin/Any| {
         public abstract fun foo(): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class B : R|A| {
         public constructor(a: R|A|): R|B| {
@@ -13,6 +16,9 @@ FILE: superCallWithDelegation.kt
         private final val a: R|A| = R|<local>/a|
             private get(): R|A|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class C : R|B| {
         public constructor(a: R|A|): R|C| {
@@ -21,6 +27,9 @@ FILE: superCallWithDelegation.kt
 
         public open override fun foo(): R|kotlin/Unit| {
             this@R|/C|.super<R|B|>.R|/A.foo|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

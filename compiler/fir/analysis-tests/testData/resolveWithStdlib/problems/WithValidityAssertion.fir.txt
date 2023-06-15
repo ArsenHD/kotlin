@@ -2,7 +2,7 @@ FILE: WithValidityAssertion.kt
     public abstract interface KtLifetimeToken : R|kotlin/Any| {
         public abstract fun assertIsValid(): R|kotlin/Unit|
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -10,7 +10,7 @@ FILE: WithValidityAssertion.kt
         public abstract val token: R|KtLifetimeToken|
             public get(): R|KtLifetimeToken|
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -37,7 +37,7 @@ FILE: WithValidityAssertion.kt
             ^getValue this@R|/ValidityAwareCachedValue|.R|/ValidityAwareCachedValue.lazyValue|.R|SubstitutionOverride<kotlin/Lazy.value: R|T|>|
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -82,24 +82,24 @@ FILE: WithValidityAssertion.kt
 
         public abstract fun getCallableNames(): R|kotlin/collections/Set<kotlin/String>|
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
     public abstract interface FirScope : R|kotlin/Any| {
         public abstract fun getCallableSymbols(callableNames: R|kotlin/collections/Collection<kotlin/String>|, builder: R|KtSymbolByFirBuilder|): R|kotlin/sequences/Sequence<KtCallableSymbol>|
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
     public abstract interface KtCallableSymbol : R|kotlin/Any| {
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
     public abstract interface KtSymbolByFirBuilder : R|kotlin/Any| {
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

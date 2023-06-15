@@ -7,6 +7,9 @@ FILE: buildList.kt
         public final val tag: R|kotlin/String| = R|<local>/tag|
             public get(): R|kotlin/String|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun foo(wrappers: R|kotlin/collections/List<Wrapper>|): R|kotlin/collections/List<kotlin/String>| {
         ^foo R|kotlin/collections/buildList|<R|kotlin/String|>(<L> = buildList@fun R|kotlin/collections/MutableList<kotlin/String>|.<anonymous>(): R|kotlin/Unit| <inline=Inline, kind=EXACTLY_ONCE>  {

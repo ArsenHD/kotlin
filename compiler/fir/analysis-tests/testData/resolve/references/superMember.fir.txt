@@ -7,6 +7,9 @@ FILE: superMember.kt
         public open fun foo(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B : R|A| {
         public constructor(): R|B| {
@@ -15,6 +18,9 @@ FILE: superMember.kt
 
         public final fun bar(): R|kotlin/Unit| {
             this@R|/B|.R|/A.foo|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

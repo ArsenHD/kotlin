@@ -8,6 +8,9 @@ FILE: memberExtension.kt
             R|<local>/arg|.R|/foo|()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun R|Bar|.foo(): R|kotlin/Unit| {
     }
@@ -21,6 +24,9 @@ FILE: memberExtension.kt
 
         public final fun bar(arg: R|Foo|): R|kotlin/Unit| {
             (this@R|/Bar|, R|<local>/arg|).R|/Bar.foo|()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

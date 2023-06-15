@@ -2,6 +2,9 @@ FILE: supertypeGenerics.kt
     public abstract interface I<F> : R|kotlin/Any| {
         public abstract fun <T : R|kotlin/Comparable<T>|> f(t: R|kotlin/collections/List<T>|, f: R|kotlin/collections/List<F>|): R|kotlin/Any|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class Base<E> : R|kotlin/Any| {
         public constructor<E>(): R|Base<E>| {
@@ -11,10 +14,16 @@ FILE: supertypeGenerics.kt
         public final fun <D : R|kotlin/Comparable<D>|> f(t: R|kotlin/collections/List<D>|, e: R|kotlin/collections/List<E>|): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class C : R|Base<kotlin/String>|, R|I<kotlin/String>| {
         public constructor(): R|C| {
             super<R|Base<kotlin/String>|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

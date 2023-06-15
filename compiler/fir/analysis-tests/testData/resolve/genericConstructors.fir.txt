@@ -7,6 +7,9 @@ FILE: genericConstructors.kt
         public final fun foo(x: R|T|): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class B<E> : R|kotlin/Any| {
         public constructor<E>(e: R|E|): R|B<E>| {
@@ -23,6 +26,9 @@ FILE: genericConstructors.kt
             ^id R|<local>/e|
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class C : R|B<kotlin/String>| {
         public constructor(): R|C| {
@@ -31,6 +37,9 @@ FILE: genericConstructors.kt
 
         public final fun bar(): R|kotlin/Unit| {
             this@R|/C|.R|SubstitutionOverride</C.a: R|A<kotlin/String>|>|.R|SubstitutionOverride</A.foo: R|kotlin/Unit|>|(String())
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

@@ -1,5 +1,11 @@
 FILE: ft.kt
     public abstract interface KMutableProperty1<T> : R|KProperty1<T>| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface KProperty1<T> : R|(T) -> kotlin/Int| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

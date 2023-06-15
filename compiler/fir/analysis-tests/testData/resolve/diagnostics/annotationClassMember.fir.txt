@@ -22,4 +22,7 @@ FILE: annotationClassMember.kt
                 ^ Q|kotlin/Unit|
             }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

@@ -11,6 +11,9 @@ FILE: annotationArgumentMapping.kt
             ^build R|/FirAnnotationArgumentMapping.FirAnnotationArgumentMapping|(this@R|/FirAnnotationArgumentMappingBuilder|.R|/FirAnnotationArgumentMappingBuilder.mapping|)
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     @R|kotlin/OptIn|(markerClass = vararg(<getClass>(Q|kotlin/contracts/ExperimentalContracts|))) public final fun buildAnnotationArgumentMapping(init: R|FirAnnotationArgumentMappingBuilder.() -> kotlin/Unit|): R|FirAnnotationArgumentMapping|
         [R|Contract description]
@@ -32,6 +35,9 @@ FILE: annotationArgumentMapping.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class ValueParameter : R|kotlin/Any| {
         public constructor(name: R|kotlin/String|): R|ValueParameter| {
@@ -41,6 +47,9 @@ FILE: annotationArgumentMapping.kt
         public final val name: R|kotlin/String| = R|<local>/name|
             public get(): R|kotlin/String|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Argument : R|kotlin/Any| {
         public constructor(name: R|kotlin/String|): R|Argument| {
@@ -49,6 +58,9 @@ FILE: annotationArgumentMapping.kt
 
         public final val name: R|kotlin/String| = R|<local>/name|
             public get(): R|kotlin/String|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final fun createArgumentMapping(valueParameters: R|kotlin/collections/List<ValueParameter>?|, arguments: R|kotlin/collections/List<Argument>|): R|FirAnnotationArgumentMapping| {

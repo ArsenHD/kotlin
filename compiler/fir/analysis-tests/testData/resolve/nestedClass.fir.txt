@@ -7,6 +7,9 @@ FILE: nestedClass.kt
         public final val s: R|kotlin/String| = R|<local>/s|
             public get(): R|kotlin/String|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class Outer : R|kotlin/Any| {
         public constructor(): R|Outer| {
@@ -18,6 +21,9 @@ FILE: nestedClass.kt
                 super<R|Base|>(R|<local>/s|)
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final object Obj : R|Base| {
@@ -25,6 +31,12 @@ FILE: nestedClass.kt
                 super<R|Base|>(String())
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

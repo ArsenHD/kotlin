@@ -36,4 +36,7 @@ FILE: privateObjectLiteral.kt
         public final val w: <ERROR TYPE REF: Unresolved name: foo> = this@R|/C|.R|/C.z|.<Unresolved name: foo>#()
             public get(): <ERROR TYPE REF: Unresolved name: foo>
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

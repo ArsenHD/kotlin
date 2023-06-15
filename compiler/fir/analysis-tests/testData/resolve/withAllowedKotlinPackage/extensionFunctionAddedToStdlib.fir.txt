@@ -10,6 +10,9 @@ FILE: main.kt
             <Unresolved name: extensionFun>#()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
 FILE: stdlibExt.kt
     package kotlin
@@ -17,6 +20,9 @@ FILE: stdlibExt.kt
     public final class MyClass : R|kotlin/Any| {
         public constructor(): R|kotlin/MyClass| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

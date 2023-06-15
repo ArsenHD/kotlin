@@ -14,6 +14,9 @@ FILE: plusAssignWithLambdaInRhs.kt
         private final val executor: R|(kotlin/Function1<T, kotlin/Unit>) -> kotlin/Unit| = R|<local>/executor|
             private get(): R|(kotlin/Function1<T, kotlin/Unit>) -> kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun <T> postpone(computation: R|() -> T|): R|A<T>| {
         lval queue: R|kotlin/collections/MutableList<kotlin/Function0<kotlin/Unit>>| = R|kotlin/collections/mutableListOf|<R|() -> kotlin/Unit|>()

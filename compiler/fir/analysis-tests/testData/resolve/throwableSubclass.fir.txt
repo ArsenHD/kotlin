@@ -9,11 +9,17 @@ FILE: throwableSubclass.kt
                 super<R|kotlin/Throwable|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final class Test3 : R|kotlin/NullPointerException| {
             public constructor(): R|Test1.Test3| {
                 super<R|kotlin/NullPointerException|>()
+            }
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }
@@ -23,6 +29,12 @@ FILE: throwableSubclass.kt
                 super<R|kotlin/Throwable|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -36,6 +48,9 @@ FILE: throwableSubclass.kt
                 super<R|kotlin/Exception|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final fun foo(): R|kotlin/Unit| {
@@ -44,8 +59,14 @@ FILE: throwableSubclass.kt
                     super<R|kotlin/Throwable|>()
                 }
 
+                public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+                }
+
             }
 
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -53,6 +74,9 @@ FILE: throwableSubclass.kt
         local final class Test8<Z> : R|kotlin/Error| {
             public constructor(): R|Test8<Z>| {
                 super<R|kotlin/Error|>()
+            }
+
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
             }
 
         }

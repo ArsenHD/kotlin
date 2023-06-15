@@ -16,6 +16,9 @@ FILE: buildListLazy.kt
 
         public final fun copy(name: R|kotlin/String| = this@R|/NameAndSafeValue|.R|/NameAndSafeValue.name|, value: R|kotlin/Int| = this@R|/NameAndSafeValue|.R|/NameAndSafeValue.value|): R|NameAndSafeValue|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun getEnv(): R|kotlin/collections/List<NameAndSafeValue>| {
         ^getEnv R|kotlin/collections/listOf|<R|NameAndSafeValue|>()

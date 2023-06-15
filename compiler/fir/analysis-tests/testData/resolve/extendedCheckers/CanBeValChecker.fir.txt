@@ -20,6 +20,9 @@ FILE: CanBeValChecker.kt
             this@R|/LocalFreezableVar|.R|/LocalFreezableVar.value| = R|<local>/value|
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final operator fun R|C|.plus(a: R|kotlin/Any|): R|C| {
         ^plus this@R|/plus|
@@ -229,6 +232,9 @@ FILE: CanBeValChecker.kt
         public final fun foo(): R|kotlin/Unit| {
             R|kotlin/io/print|(this@R|/C|.R|/C.field|)
             R|kotlin/io/print|(R|/global|)
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

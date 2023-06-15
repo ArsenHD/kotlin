@@ -7,6 +7,9 @@ FILE: unstableSmartcastAndAmbiguity.kt
         public abstract val settingsLogic: R|kotlin/String|
             public get(): R|kotlin/String|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class XdIssueBasedSwimlaneSettings : R|XdSwimlaneSettings| {
         public constructor(): R|XdIssueBasedSwimlaneSettings| {
@@ -18,6 +21,9 @@ FILE: unstableSmartcastAndAmbiguity.kt
                 ^ String(hello)
             }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class XdAgile : R|kotlin/Any| {
         public constructor(swimlaneSettings: R|XdSwimlaneSettings?|): R|XdAgile| {
@@ -27,6 +33,9 @@ FILE: unstableSmartcastAndAmbiguity.kt
         public final var swimlaneSettings: R|XdSwimlaneSettings?| = R|<local>/swimlaneSettings|
             public get(): R|XdSwimlaneSettings?|
             public set(value: R|XdSwimlaneSettings?|): R|kotlin/Unit|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final fun test(x: R|XdAgile|): R|kotlin/Unit| {

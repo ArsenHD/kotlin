@@ -11,4 +11,7 @@ FILE: sameReceiver.kt
             (this@R|/Foo|, this@R|/Foo|).R|/Foo.bar|()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

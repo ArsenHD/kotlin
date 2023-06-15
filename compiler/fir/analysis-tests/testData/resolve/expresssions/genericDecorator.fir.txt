@@ -8,4 +8,7 @@ FILE: test.kt
             ^getLookupString this@R|/MyDecorator|.R|/Decorator.delegate|.R|/LookupElement.lookupString|
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }

@@ -9,10 +9,16 @@ FILE: main.kt
         )
     }
     public abstract interface SomeType : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract class TypeWithBoundedGeneric<T : R|SomeType|> : R|kotlin/Any| {
         public constructor<T : R|SomeType|>(): R|TypeWithBoundedGeneric<T>| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

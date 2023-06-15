@@ -16,6 +16,9 @@ FILE: simple.kt
             ^buz this@R|/A|
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class B : R|A| {
         public constructor(): R|B| {
@@ -38,6 +41,9 @@ FILE: simple.kt
             this@R|/B|.R|/B.foo|()
             this@R|/B|.R|/B.bar|()
             <Ambiguity: buz, [/B.buz, /A.buz]>#()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

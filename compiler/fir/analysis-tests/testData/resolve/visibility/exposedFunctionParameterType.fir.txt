@@ -9,6 +9,12 @@ FILE: exposedFunctionParameterType.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -18,6 +24,9 @@ FILE: exposedFunctionParameterType.kt
         }
 
         public final fun foo(value: <ERROR TYPE REF: HIDDEN: A.AInner is invisible>): R|kotlin/Unit| {
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

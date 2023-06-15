@@ -4,15 +4,18 @@ FILE: annotationArgumentMustBeEnumConst.kt
             super<R|kotlin/Enum<TestEnum>|>()
         }
 
-        public final static enum entry Foo: R|TestEnum|
-        public final static fun values(): R|kotlin/Array<TestEnum>| {
-        }
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            public final static enum entry Foo: R|TestEnum|
+            public final static fun values(): R|kotlin/Array<TestEnum>| {
+            }
 
-        public final static fun valueOf(value: R|kotlin/String|): R|TestEnum| {
-        }
+            public final static fun valueOf(value: R|kotlin/String|): R|TestEnum| {
+            }
 
-        public final static val entries: R|kotlin/enums/EnumEntries<TestEnum>|
-            public get(): R|kotlin/enums/EnumEntries<TestEnum>|
+            public final static val entries: R|kotlin/enums/EnumEntries<TestEnum>|
+                public get(): R|kotlin/enums/EnumEntries<TestEnum>|
+
+        }
 
     }
     public final annotation class Ann : R|kotlin/Annotation| {
@@ -22,6 +25,9 @@ FILE: annotationArgumentMustBeEnumConst.kt
 
         public final val a: R|kotlin/Array<out TestEnum>| = R|<local>/a|
             public get(): R|kotlin/Array<out TestEnum>|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public final val foo: R|TestEnum| = Q|TestEnum|.R|/TestEnum.Foo|

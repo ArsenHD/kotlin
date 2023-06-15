@@ -4,10 +4,16 @@ FILE: cyclicConstructorDelegationCall.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class C : R|kotlin/Any| {
         public constructor(): R|C| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -48,6 +54,9 @@ FILE: cyclicConstructorDelegationCall.kt
             this<R|A|>(R|/C.C|())
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class D : R|kotlin/Any| {
         public constructor(i: R|kotlin/Boolean|): R|D| {
@@ -58,16 +67,25 @@ FILE: cyclicConstructorDelegationCall.kt
             this<R|D|>(Int(3))
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class E<T> : R|kotlin/Any| {
         public constructor<T>(e: R|T|, i: R|kotlin/Int|): R|E<T>| {
             this<R|E<T>|>(R|<local>/i|, Int(10))
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class I<T> : R|kotlin/Any| {
         public constructor<T>(e: R|T|, i: R|kotlin/Int|): R|I<T>| {
             this<R|I<T>|>(R|<local>/i|, Int(10))
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -78,6 +96,9 @@ FILE: cyclicConstructorDelegationCall.kt
 
         public constructor<T>(e: R|kotlin/Int|, i: R|kotlin/Int|): R|J<T>| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -94,6 +115,9 @@ FILE: cyclicConstructorDelegationCall.kt
             this<R|F|>(Int(3))
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class G : R|kotlin/Any| {
         public constructor(x: R|kotlin/Int|): R|G| {
@@ -102,6 +126,9 @@ FILE: cyclicConstructorDelegationCall.kt
 
         public constructor(): R|G| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -114,6 +141,9 @@ FILE: cyclicConstructorDelegationCall.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class K : R|kotlin/Any| {
         public constructor(x: R|kotlin/Int|): R|K| {
@@ -124,16 +154,25 @@ FILE: cyclicConstructorDelegationCall.kt
             this<R|K|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class M : R|kotlin/Any| {
         public constructor(m: R|kotlin/Int|): R|M| {
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class U : R|M| {
         public constructor(): R|U| {
             super<R|M|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

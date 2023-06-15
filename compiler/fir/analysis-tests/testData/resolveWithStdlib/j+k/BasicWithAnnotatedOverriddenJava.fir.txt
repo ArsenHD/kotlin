@@ -9,7 +9,7 @@ FILE: jvm.kt
             lval y: R|kotlin/String| = this@R|/User|.R|/AnnotatedDerived.foo|(Null(null))
         }
 
-        public final static object <SELF_STATIC_OBJECT> {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

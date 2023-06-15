@@ -3,10 +3,16 @@ FILE: objectOverrideCallViaImport.kt
         public open fun foo(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final object Derived : R|Base| {
         private constructor(): R|Derived| {
             super<R|kotlin/Any|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

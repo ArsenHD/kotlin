@@ -12,10 +12,16 @@ FILE: main.kt
             public final val FIELD: R|kotlin/Int| = Int(1)
                 public get(): R|kotlin/Int|
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
         }
 
         public final fun foo(): R|kotlin/Unit| {
             this@R|/A.Companion|.R|/A.Companion.FIELD|
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

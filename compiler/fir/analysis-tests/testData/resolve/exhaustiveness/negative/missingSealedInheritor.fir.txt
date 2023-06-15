@@ -4,10 +4,16 @@ FILE: a.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class A : R|Base| {
         public constructor(): R|A| {
             super<R|Base|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -15,6 +21,9 @@ FILE: b.kt
     public final object B : R|Base| {
         private constructor(): R|B| {
             super<R|Base|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

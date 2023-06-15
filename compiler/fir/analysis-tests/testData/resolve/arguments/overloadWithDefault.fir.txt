@@ -4,6 +4,9 @@ FILE: overloadWithDefault.kt
 
         public abstract fun foo(block: R|() -> kotlin/Boolean|): R|A|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test(a: R|A|): R|kotlin/Unit| {
         R|<local>/a|.R|/A.foo|(<L> = foo@fun <anonymous>(): R|kotlin/Boolean| <inline=NoInline>  {

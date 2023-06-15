@@ -1,12 +1,21 @@
 FILE: complexIfWithOr.kt
     public abstract interface State : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface Complex : R|kotlin/Any| {
         public abstract val superClass: R|Complex?|
             public get(): R|Complex?|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface ExceptionState : R|State| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test(qualifier: R|State?|): R|kotlin/Unit| {
         when () {

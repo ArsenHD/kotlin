@@ -4,17 +4,29 @@ FILE: expectConstructor.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final expect class Derived : R|Base| {
         public expect constructor(v: R|kotlin/String|): R|Derived|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public open expect class ExpectBase : R|kotlin/Any| {
         public expect constructor(v: R|kotlin/String|): R|ExpectBase|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final expect class ExpectDerived : R|ExpectBase| {
         public expect constructor(v: R|kotlin/String|): R|ExpectDerived|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }
     public open expect class IOException : R|kotlin/Any| {
@@ -24,8 +36,14 @@ FILE: expectConstructor.kt
             super<R|kotlin/Any|>()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final expect class EOFException : R|IOException| {
         public expect constructor(message: R|kotlin/String|): R|EOFException|
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
 
     }

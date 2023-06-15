@@ -1,9 +1,18 @@
 FILE: main.kt
     public abstract interface KI1 : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface KI2 : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface KI12 : R|KI1|, R|KI2| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public open class KBase : R|kotlin/Any| {
         public constructor(): R|KBase| {
@@ -13,6 +22,9 @@ FILE: main.kt
         public open fun <P : R|KI1|, R|KI2|> foo(): R|kotlin/Unit| {
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class KDerived : R|KBase| {
         public constructor(): R|KDerived| {
@@ -20,6 +32,9 @@ FILE: main.kt
         }
 
         public open override fun <P : R|KI2|, R|KI1|> foo(): R|kotlin/Unit| {
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

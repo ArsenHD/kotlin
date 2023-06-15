@@ -59,6 +59,9 @@ FILE: KotlinClass.kt
 
             public get(): R|(KotlinClass) -> kotlin/Boolean|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class BooCase1 : R|kotlin/Any| {
         public constructor(): R|BooCase1| {
@@ -76,6 +79,12 @@ FILE: KotlinClass.kt
 
                 public get(): R|(JavaClass) -> kotlin/Boolean|
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -89,6 +98,9 @@ FILE: KotlinClass.kt
 
         public open override operator fun compareTo(that: R|KotlinClass|): R|kotlin/Int| {
             ^compareTo this@R|/KotlinClass|.R|/KotlinClass.name|.R|kotlin/String.compareTo|(R|<local>/that|.R|/KotlinClass.name|)
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -152,6 +164,9 @@ FILE: KotlinClass.kt
 
             public get(): R|(KotlinClass) -> kotlin/Boolean|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final class BooCase2 : R|kotlin/Any| {
         public constructor(): R|BooCase2| {
@@ -169,6 +184,12 @@ FILE: KotlinClass.kt
 
                 public get(): R|(KotlinClass) -> kotlin/Boolean|
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

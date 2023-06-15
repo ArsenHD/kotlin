@@ -1,11 +1,20 @@
 FILE: bareTypes.kt
     public abstract interface A<out T> : R|kotlin/Any| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface MutableA<T> : R|A<T>| {
         public abstract fun add(x: R|T|): R|kotlin/Unit|
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public abstract interface MutableString : R|MutableA<kotlin/String>| {
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun test(a: R|A<kotlin/String>|): R|kotlin/Unit| {
         (R|<local>/a| as? R|MutableA<kotlin/String>|)?.{ $subj$.R|SubstitutionOverride</MutableA.add: R|kotlin/Unit|>|(String()) }

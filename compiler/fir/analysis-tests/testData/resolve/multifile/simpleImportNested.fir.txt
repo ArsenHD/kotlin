@@ -11,6 +11,12 @@ FILE: A.kt
                 super<R|kotlin/Any|>()
             }
 
+            public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            }
+
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }
@@ -20,6 +26,9 @@ FILE: B.kt
     public final class YourClass : R|a/MyClass.MyNested| {
         public constructor(): R|b/YourClass| {
             super<R|a/MyClass.MyNested|>()
+        }
+
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
         }
 
     }

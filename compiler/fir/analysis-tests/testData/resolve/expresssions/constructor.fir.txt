@@ -8,6 +8,9 @@ FILE: constructor.kt
             ^create R|/C.C|()
         }
 
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+        }
+
     }
     public final fun foo(): R|C| {
         ^foo R|/C.C|()

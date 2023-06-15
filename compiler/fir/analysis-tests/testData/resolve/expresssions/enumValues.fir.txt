@@ -4,21 +4,24 @@ FILE: enumValues.kt
             super<R|kotlin/Enum<MyEnum>|>()
         }
 
-        public final static enum entry FIRST: R|MyEnum|
-        public final static enum entry SECOND: R|MyEnum|
-        public final static enum entry LAST: R|MyEnum|
         public final fun bar(): R|kotlin/Int| {
             ^bar Int(42)
         }
 
-        public final static fun values(): R|kotlin/Array<MyEnum>| {
-        }
+        public final static object <SELF_STATIC_OBJECT> : R|kotlin/Any| {
+            public final static enum entry FIRST: R|MyEnum|
+            public final static enum entry SECOND: R|MyEnum|
+            public final static enum entry LAST: R|MyEnum|
+            public final static fun values(): R|kotlin/Array<MyEnum>| {
+            }
 
-        public final static fun valueOf(value: R|kotlin/String|): R|MyEnum| {
-        }
+            public final static fun valueOf(value: R|kotlin/String|): R|MyEnum| {
+            }
 
-        public final static val entries: R|kotlin/enums/EnumEntries<MyEnum>|
-            public get(): R|kotlin/enums/EnumEntries<MyEnum>|
+            public final static val entries: R|kotlin/enums/EnumEntries<MyEnum>|
+                public get(): R|kotlin/enums/EnumEntries<MyEnum>|
+
+        }
 
     }
     public final fun foo(): R|kotlin/Unit| {
