@@ -59,6 +59,7 @@ enum class ModifierFlag(val value: Long) {
             KtTokens.INNER_KEYWORD to CLASS_INNER,
             KtTokens.COMPANION_KEYWORD to CLASS_COMPANION,
             KtTokens.FUN_KEYWORD to CLASS_FUN,
+            KtTokens.STATIC_KEYWORD to OBJECT_STATIC,
 
             // Member
             KtTokens.OVERRIDE_KEYWORD to MEMBER_OVERRIDE,

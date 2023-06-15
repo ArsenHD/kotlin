@@ -57,7 +57,6 @@ import org.jetbrains.kotlin.fir.types.impl.ConeClassLikeTypeImpl
 import org.jetbrains.kotlin.fir.types.impl.FirQualifierPartImpl
 import org.jetbrains.kotlin.fir.types.impl.FirTypeArgumentListImpl
 import org.jetbrains.kotlin.lexer.KtModifierKeywordToken
-import org.jetbrains.kotlin.lexer.KtTokens
 import org.jetbrains.kotlin.lexer.KtTokens.*
 import org.jetbrains.kotlin.name.*
 import org.jetbrains.kotlin.psi.stubs.elements.KtStubElementTypes
@@ -460,12 +459,16 @@ class DeclarationsConverter(
         var superTypeList: LighterASTNode? = null
         var typeParameterList: LighterASTNode? = null
 
+        classNode.getChildNodeByType(MODIFIER_LIST)?.let { modifierListNode ->
+            modifiers = convertModifierList(modifierListNode, isInClass = true)
+        }
+        val hasStaticModifier = modifiers.hasStatic()
+
         classNode.forEachChildren {
             when (it.tokenType) {
-                MODIFIER_LIST -> modifiers = convertModifierList(it, isInClass = true)
                 CLASS_KEYWORD -> classKind = ClassKind.CLASS
                 INTERFACE_KEYWORD -> classKind = ClassKind.INTERFACE
-                OBJECT_KEYWORD -> classKind = ClassKind.OBJECT
+                OBJECT_KEYWORD -> classKind = if (hasStaticModifier) ClassKind.STATIC_OBJECT else ClassKind.OBJECT
                 IDENTIFIER -> identifier = it.asText
                 TYPE_PARAMETER_LIST -> typeParameterList = it
                 PRIMARY_CONSTRUCTOR -> primaryConstructor = it
@@ -487,7 +490,7 @@ class DeclarationsConverter(
         val isLocal = isClassLocal(classNode) { getParent() }
         val classIsExpect = modifiers.hasExpect() || context.containerIsExpect
 
-        return withChildClassName(className, isExpect = classIsExpect, isLocal) {
+        return withChildClassName(className, isExpect = classIsExpect, isLocal, isStatic = hasStaticModifier) {
             val status = FirDeclarationStatusImpl(
                 if (isLocal) Visibilities.Local else modifiers.getVisibility(),
                 modifiers.getModality(isClassOrObject = true)
@@ -500,7 +503,7 @@ class DeclarationsConverter(
                 isInline = modifiers.isInlineClass()
                 isFun = modifiers.isFunctionalInterface()
                 isExternal = modifiers.hasExternal()
-                isStatic = modifiers.hasStatic()
+                isStatic = hasStaticModifier
             }
 
             val classSymbol = FirRegularClassSymbol(context.currentClassId)

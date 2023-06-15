@@ -40,6 +40,10 @@ class ClassWrapper(
         return classKind == ClassKind.OBJECT
     }
 
+    private fun isStaticObject(): Boolean {
+        return classKind == ClassKind.STATIC_OBJECT
+    }
+
     fun isSealed(): Boolean {
         return modifiers.hasModality(Modality.SEALED)
     }
@@ -63,7 +67,7 @@ class ClassWrapper(
     // See DescriptorUtils#getDefaultConstructorVisibility in core.descriptors
     fun defaultConstructorVisibility(): Visibility {
         return when {
-            isObject() || isEnum() || isEnumEntry() -> Visibilities.Private
+            isObject() || isStaticObject() || isEnum() || isEnumEntry() -> Visibilities.Private
             isSealed() -> Visibilities.Protected
             else -> Visibilities.Unknown
         }
