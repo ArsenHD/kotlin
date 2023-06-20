@@ -1015,10 +1015,6 @@ object SetDeclarationsParentVisitor : IrElementVisitor<Unit, IrDeclarationParent
 }
 
 
-// TODO: question 13: what does this 'isStatic' mean? It seems like it's not the same as new static functions and properties.
-val IrFunction.isStatic: Boolean
-    get() = parent is IrClass && dispatchReceiverParameter == null
-
 val IrDeclaration.isTopLevel: Boolean
     get() {
         if (parent is IrPackageFragment) return true
