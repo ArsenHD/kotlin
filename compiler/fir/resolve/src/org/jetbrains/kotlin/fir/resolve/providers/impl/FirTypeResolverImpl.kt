@@ -75,12 +75,8 @@ class FirTypeResolverImpl(private val session: FirSession) : FirTypeResolver() {
                 }
             }
             is FirTypeParameterSymbol -> {
-                if (qualifier.size == 2 && qualifier[1].name == SpecialNames.SELF_STATIC_OBJECT) {
-                    error("Accessing a self static object on a type parameter reference (e.g. T.static) is not supported")
-                } else {
-                    assert(qualifier.size == 1)
-                    symbol
-                }
+                assert(qualifier.size == 1)
+                symbol
             }
             else -> error("!")
         }

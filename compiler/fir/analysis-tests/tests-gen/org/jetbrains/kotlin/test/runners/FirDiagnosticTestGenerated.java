@@ -6522,6 +6522,12 @@ public class FirDiagnosticTestGenerated extends AbstractFirDiagnosticTest {
             }
 
             @Test
+            @TestMetadata("StaticDeclarationImport.kt")
+            public void testStaticDeclarationImport() throws Exception {
+                runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/StaticDeclarationImport.kt");
+            }
+
+            @Test
             @TestMetadata("StaticInNonStaticScope.kt")
             public void testStaticInNonStaticScope() throws Exception {
                 runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/StaticInNonStaticScope.kt");
@@ -6543,12 +6549,6 @@ public class FirDiagnosticTestGenerated extends AbstractFirDiagnosticTest {
             @TestMetadata("StaticObjectInsideOfStaticBlock.kt")
             public void testStaticObjectInsideOfStaticBlock() throws Exception {
                 runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/StaticObjectInsideOfStaticBlock.kt");
-            }
-
-            @Test
-            @TestMetadata("StaticScopeAccessibleWithNoQualifier.kt")
-            public void testStaticScopeAccessibleWithNoQualifier() throws Exception {
-                runTest("compiler/fir/analysis-tests/testData/resolveWithStdlib/statics/StaticScopeAccessibleWithNoQualifier.kt");
             }
 
             @Test
