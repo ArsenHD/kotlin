@@ -31,6 +31,7 @@ import org.jetbrains.kotlin.fir.declarations.utils.modality
 import org.jetbrains.kotlin.fir.declarations.utils.visibility
 import org.jetbrains.kotlin.fir.moduleData
 import org.jetbrains.kotlin.fir.resolve.fullyExpandedType
+import org.jetbrains.kotlin.fir.resolve.isSelfStaticObject
 import org.jetbrains.kotlin.fir.resolve.providers.FirProvider
 import org.jetbrains.kotlin.fir.resolve.providers.firProvider
 import org.jetbrains.kotlin.fir.resolve.toSymbol
@@ -119,7 +120,9 @@ class FirJavaElementFinder(
         stub.addSupertypesReferencesLists(firClass, superTypeRefs, session)
 
         for (nestedClass in firClass.declarations.filterIsInstance<FirRegularClass>()) {
-            buildStub(nestedClass, stub)
+            if (!nestedClass.isSelfStaticObject) {
+                buildStub(nestedClass, stub)
+            }
         }
 
         return stub
