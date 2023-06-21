@@ -175,6 +175,12 @@ class Flag(private val offset: Int, private val bitWidth: Int, private val value
         val IS_OBJECT = Flag(F.CLASS_KIND, ClassKind.OBJECT_VALUE)
 
         /**
+         * A class kind flag, signifying that the corresponding class is a 'static object'.
+         */
+        @JvmField
+        val IS_STATIC_OBJECT = Flag(F.CLASS_KIND, ClassKind.STATIC_OBJECT_VALUE)
+
+        /**
          * A class kind flag, signifying that the corresponding class is a `companion object`.
          */
         @JvmField

@@ -600,7 +600,7 @@ class IrDeclarationDeserializer(
                     flags.isOperator,
                     flags.isInfix,
                     flags.isExpect,
-                    TODO("question 9, add isStatic flag for ProtoFunction?"),
+                    flags.isStatic,
                     flags.isFakeOverride
                 )
             }.apply {
@@ -743,7 +743,7 @@ class IrDeclarationDeserializer(
                     flags.isLateinit,
                     flags.isDelegated,
                     flags.isExternal || isEffectivelyExternal,
-                    TODO("question 9.1: should we add isStatic flag to ProtoBuf of Ir properties and Ir functions?"),
+                    flags.isStatic,
                     flags.isExpect,
                     flags.isFakeOverride
                 )
