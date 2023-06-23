@@ -222,8 +222,9 @@ class Fir2IrConverter(
         irClass: IrClass = classifierStorage.getCachedIrClass(regularClass)!!
     ): IrClass {
         val allDeclarations = mutableListOf<FirDeclaration>().apply {
-            addAll(regularClass.nonStaticDeclarations)
-            addAll(regularClass.staticDeclarations)
+//            addAll(regularClass.nonStaticDeclarations)
+//            addAll(regularClass.staticDeclarations)
+            addAll(regularClass.declarations.toMutableList())
             if (generatorExtensions.isNotEmpty()) {
                 addAll(regularClass.generatedMembers(session))
                 addAll(regularClass.generatedNestedClassifiers(session))
@@ -312,22 +313,11 @@ class Fir2IrConverter(
     }
 
     private fun registerNestedClasses(klass: FirClass, irClass: IrClass) {
-        klass.declarations
-            .filterIsInstance<FirRegularClass>()
-            .forEach { nestedClass ->
-                // Self static objects are not needed in IR.
-                // They are only used by frontend to store static declarations
-                // and are also convenient for their resolution.
-                // But the classes and objects declared inside of self static objects
-                // are considered equivalent to regular nested classes and objects of the outer class.
-                if (nestedClass.isSelfStaticObject) {
-                    nestedClass.declarations
-                        .filterIsInstance<FirRegularClass>()
-                        .forEach { registerClassAndNestedClasses(it, irClass) }
-                } else {
-                    registerClassAndNestedClasses(nestedClass, irClass)
-                }
+        klass.declarations.forEach {
+            if (it is FirRegularClass) {
+                registerClassAndNestedClasses(it, irClass)
             }
+        }
         if (generatorExtensions.isNotEmpty()) {
             klass.generatedNestedClassifiers(session).forEach {
                 if (it is FirRegularClass) {
@@ -343,20 +333,11 @@ class Fir2IrConverter(
     }
 
     private fun processNestedClassHeaders(klass: FirClass) {
-        klass.declarations
-            .filterIsInstance<FirRegularClass>()
-            .forEach { nestedClass ->
-                // Self static objects are not needed in IR.
-                // They are only used by frontend to store static declarations
-                // and are also convenient for their resolution.
-                // But the classes and objects declared inside of self static objects
-                // are considered equivalent to regular nested classes and objects of the outer class.
-                if (nestedClass.isSelfStaticObject) {
-                    processNestedClassHeaders(nestedClass)
-                } else {
-                    processClassAndNestedClassHeaders(nestedClass)
-                }
+        klass.declarations.forEach {
+            if (it is FirRegularClass) {
+                processClassAndNestedClassHeaders(it)
             }
+        }
         if (generatorExtensions.isNotEmpty()) {
             klass.generatedNestedClassifiers(session).forEach {
                 if (it is FirRegularClass) {
@@ -561,12 +542,9 @@ class Fir2IrConverter(
 
             val irModuleFragment = IrModuleFragmentImpl(moduleDescriptor, irBuiltIns)
 
-            val staticsTransformer = FirStaticsTransformer(components)
             val allFirFiles = buildList {
                 addAll(firFiles)
                 addAll(session.createFilesWithGeneratedDeclarations())
-            }.map {
-                it.transform<FirFile, Nothing?>(staticsTransformer, null)
             }
 
             converter.runSourcesConversion(

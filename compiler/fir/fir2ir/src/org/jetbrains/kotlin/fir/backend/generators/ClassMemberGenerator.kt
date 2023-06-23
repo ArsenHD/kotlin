@@ -55,8 +55,9 @@ internal class ClassMemberGenerator(
         declarationStorage.enterScope(irClass)
         conversionScope.withClass(irClass) {
             val allDeclarations = buildList {
-                addAll(klass.nonStaticDeclarations)
-                addAll(klass.staticDeclarations)
+//                addAll(klass.nonStaticDeclarations)
+//                addAll(klass.staticDeclarations)
+                addAll(klass.declarations)
                 if (session.extensionService.declarationGenerators.isNotEmpty()) {
                     addAll(klass.generatedMembers(session))
                     addAll(klass.generatedNestedClassifiers(session))

@@ -132,7 +132,7 @@ interface ClassicTypeSystemContext : TypeSystemInferenceExtensionContext, TypeSy
     }
 
     override fun KotlinTypeMarker.isSelfStaticObject(): Boolean {
-        // TODO
+        // TODO!!!
         return false
     }
 
